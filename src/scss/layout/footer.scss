@@ -1,0 +1,43 @@
+footer{
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+	.content{
+
+		padding: 35px 25px 0 25px;
+	}
+	.cms_list{
+		dl{
+			width: 295px;
+			float: left;
+			dt{
+				font-size: 14px;
+				font-weight: 700;
+			}
+			dd{
+				padding-top: 10px;
+			}
+		}
+	}
+	.sns{
+		width: 263px;
+	}
+	.qIndex{
+		width: 100%;
+		float: left;
+		text-align: center;
+		margin-top: 50px;
+		ul{
+			display: inline;
+			li{
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+	}
+	.friendlyImg{
+		text-align: center;
+	}
+	.copyright{
+		text-align: center;
+	}
+}

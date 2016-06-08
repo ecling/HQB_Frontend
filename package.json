@@ -1,0 +1,17 @@
+{
+  "name": "HQB",
+  "version": "1.0.0",
+  "description": "HQB Frontend",
+  "homepage": "",
+  "author": {
+    "name": "adam",
+    "email": "php@highqb.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
