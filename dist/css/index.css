@@ -43,34 +43,44 @@ li {
 
 header {
   border-bottom: 2px solid #f39c11; }
-  header .tool {
-    margin-top: 6px; }
-    header .tool .left {
-      float: left;
-      margin-top: 4px; }
-      header .tool .left i {
-        font-size: 12px; }
-    header .tool .right {
-      float: right; }
-      header .tool .right .login {
-        display: inline-block;
-        margin-top: 4px; }
-    header .tool .live_chat i {
-      font-size: 15px;
-      color: #f39c11;
-      display: inline-block;
-      margin-left: 4px; }
+  header .dropdown {
+    position: relative; }
+    header .dropdown .drop_content {
+      position: absolute;
+      display: none; }
+  header .language_title, header .currency_title, header .chat_title, header .vertical {
+    line-height: 30px; }
+  header .language li {
+    width: 82px; }
+    header .language li a {
+      line-height: 36px; }
+  header .tool .left {
+    float: left; }
+    header .tool .left i {
+      line-height: 0;
+      font-size: 12px; }
+  header .tool .right {
+    float: right; }
+    header .tool .right .login {
+      display: inline-block; }
+      header .tool .right .login a {
+        line-height: 30px; }
+  header .tool .live_chat i {
+    font-size: 18px;
+    color: #f39c11;
+    display: inline-block;
+    line-height: 0; }
   header p {
     color: #cfcfcf;
     margin: 0 16px; }
   header .logo {
-    margin-top: 28px; }
+    margin-top: 20px; }
   header .search {
     width: 568px;
     height: 36px;
     background-color: #f39c11;
     border-radius: 30px;
-    margin: 41px 0 0 49px; }
+    margin: 34px 0 0 88px; }
     header .search .cata_drop {
       line-height: 30px;
       color: #fff;
@@ -106,58 +116,62 @@ header {
       margin-left: 277px;
       padding-top: 6px; }
       header .top_nav .nav li a {
-        line-height: 41px; }
-  header .menu_title {
+        line-height: 41px;
+        color: #666; }
+  header .menu {
     position: absolute;
     width: 270px;
-    padding-top: 11px;
     font-size: 17px;
     color: #333;
     box-shadow: 1px 2px 10px #aaa; }
-    header .menu_title i {
-      font-size: 22px;
-      color: #f39c11;
-      display: inline-block;
-      margin-left: 32px; }
-    header .menu_title span {
+    header .menu .menu_title {
       font-style: italic;
       font-weight: normal;
       display: inline-block;
-      line-height: 32px; }
-    header .menu_title .menu {
+      line-height: 44px;
+      padding-left: 30px; }
+      header .menu .menu_title i {
+        font-size: 22px;
+        color: #f39c11;
+        display: inline-block;
+        line-height: 0; }
+    header .menu .list {
       height: 480px;
-      margin-top: 2px;
-      padding-top: 12px; }
-      header .menu_title .menu li {
+      padding-top: 4px;
+      background-color: #fff; }
+      header .menu .list li {
         float: none;
-        margin: 0 38px 0 35px; }
-        header .menu_title .menu li a {
-          color: #333;
+        margin: 0 36px 0 33px;
+        text-transform: none; }
+        header .menu .list li a {
+          color: #666;
           font-size: 14px;
-          line-height: 40px;
+          line-height: 38px;
           display: block; }
-        header .menu_title .menu li a:before {
+        header .menu .list li a:before {
           font-family: "iconfont" !important;
-          font-size: 20px;
+          font-size: 18px;
           font-style: normal;
           margin-right: 7px;
           color: #f39c11;
+          line-height: 0;
           -webkit-font-smoothing: antialiased;
           -webkit-text-stroke-width: 0.2px;
           -moz-osx-font-smoothing: grayscale; }
-        header .menu_title .menu li a:after {
+        header .menu .list li a:after {
           font-family: "iconfont" !important;
           font-size: 12px;
           font-style: normal;
           margin-right: 7px;
           color: #cfcfcf;
+          line-height: 38px;
           content: "\e618";
           display: block;
           float: right;
           -webkit-font-smoothing: antialiased;
           -webkit-text-stroke-width: 0.2px;
           -moz-osx-font-smoothing: grayscale; }
-  header ul li {
+  header .top_nav li {
     float: left;
     font-size: 14px;
     text-transform: uppercase;

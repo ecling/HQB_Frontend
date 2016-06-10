@@ -1,11 +1,28 @@
 header{
 	border-bottom: 2px solid #f39c11;
+	.dropdown{
+		position: relative;
+		.drop_content{
+			position: absolute;
+			display: none;
+		}
+	}
+	.language_title,.currency_title,.chat_title,.vertical{
+		line-height: 30px;
+	}
+	.language{
+		li{
+			width: 82px;
+			a{
+				line-height: 36px;
+			}
+		}
+	}
 	.tool{
-		margin-top: 6px;
 		.left{
 			float: left;
-			margin-top:  4px;
 			i{
+				line-height: 0;
 				font-size: 12px;
 			}
 		}
@@ -13,15 +30,17 @@ header{
 			float: right;
 			.login{
 				display: inline-block;
-				margin-top: 4px;
+				a{
+					line-height: 30px;
+				}
 			}
 		}
 		.live_chat{
 			i{
-				font-size: 15px;
+				font-size: 18px;
 				color: #f39c11;
 				display: inline-block;
-				margin-left: 4px;
+				line-height: 0;
 			}
 		}
 	}
@@ -30,14 +49,14 @@ header{
 		margin: 0 16px;
 	}
 	.logo{
-		margin-top: 28px;
+		margin-top: 20px;
 	}
 	.search{
 		width: 568px;
 		height: 36px;
 		background-color: #f39c11;
 		border-radius: 30px;
-		margin: 41px 0 0 49px;
+		margin: 34px 0 0 88px;
 		.cata_drop{
 			line-height: 30px;
 			color: #fff;
@@ -82,48 +101,51 @@ header{
 			li{
 				a{
 					line-height: 41px;
+					color: #666;
 				}
 			}
 		}
 	}
-	.menu_title{
+	.menu{
 		position: absolute;
 		width: 270px;
-		padding-top: 11px;
 		font-size: 17px;
 		color: #333;
 		box-shadow: 1px 2px 10px #aaa;
-		i{
-			font-size: 22px;
-			color: #f39c11;
-			display: inline-block;
-			margin-left: 32px;
-		}
-		span{
+		.menu_title{
 			font-style: italic;
 			font-weight: normal;
 			display: inline-block;
-			line-height: 32px;
+			line-height: 44px;
+			padding-left: 30px;
+			i{
+				font-size: 22px;
+				color: #f39c11;
+				display: inline-block;
+				line-height: 0;
+			}
 		}
-		.menu{
+		.list{
 			height: 480px;
-			margin-top: 2px;
-			padding-top: 12px;
+			padding-top: 4px;
+			background-color: #fff;
 			li{
 				float: none;
-				margin: 0 38px 0 35px;
+				margin: 0 36px 0 33px;
+				text-transform: none;
 				a{
-					color: #333;
+					color: #666;
 					font-size: 14px;
-					line-height: 40px;
+					line-height: 38px;
 					display: block;
 				}
 				a:before{
 					font-family: "iconfont" !important;
-					font-size: 20px;
+					font-size: 18px;
 					font-style: normal;
 					margin-right: 7px;
 					color: #f39c11;
+					line-height: 0;
 					-webkit-font-smoothing: antialiased;
 					-webkit-text-stroke-width: 0.2px;
 					-moz-osx-font-smoothing: grayscale;					
@@ -134,6 +156,7 @@ header{
 					font-style: normal;
 					margin-right: 7px;
 					color: #cfcfcf;
+					line-height: 38px;
 					content: "\e618";
 					display: block;
 					float: right;
@@ -144,7 +167,7 @@ header{
 			}
 		}
 	}
-	ul{
+	.top_nav{
 		li{
 			float: left;
 			font-size: 14px;
