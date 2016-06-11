@@ -229,13 +229,16 @@ footer {
       margin-top: 6px; }
 
 .home_hot {
-  margin-top: 83px; }
+  margin-top: 83px;
+  width: 1200px;
+  overflow: hidden; }
   .home_hot .title {
     background-color: #68f1cd;
     width: 270px;
     height: 368px;
     float: left; }
   .home_hot ul {
+    float: left;
     padding-top: 20px; }
     .home_hot ul li {
       width: 226px;

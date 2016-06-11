@@ -22,6 +22,8 @@
 }
 .home_hot{
 	margin-top: 83px;
+	width: 1200px;
+	overflow: hidden;
 	.title{
 		background-color: #68f1cd;
 		width: 270px;
@@ -29,6 +31,7 @@
 		float: left;
 	}
 	ul{
+		float: left;
 		padding-top: 20px;
 		li{
 			width: 226px;

@@ -1,5 +1,10 @@
 (function($){
-	var Scroll = function(){
+	var Scroll = function(element){
 
 	};
+
 })(jQuery);
+
+$(function(){
+	
+});
