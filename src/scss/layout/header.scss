@@ -32,6 +32,9 @@ header{
 				display: inline-block;
 				a{
 					line-height: 30px;
+					span{
+						color: #f39c11;
+					}
 				}
 			}
 		}
@@ -133,13 +136,14 @@ header{
 				float: none;
 				margin: 0 36px 0 33px;
 				text-transform: none;
-				a{
+				position: relative;
+				>a{
 					color: #666;
 					font-size: 14px;
 					line-height: 38px;
 					display: block;
 				}
-				a:before{
+				>a:before{
 					font-family: "iconfont" !important;
 					font-size: 18px;
 					font-style: normal;
@@ -150,7 +154,7 @@ header{
 					-webkit-text-stroke-width: 0.2px;
 					-moz-osx-font-smoothing: grayscale;					
 				}
-				a:after{
+				>a:after{
 					font-family: "iconfont" !important;
 					font-size: 12px;
 					font-style: normal;
@@ -164,6 +168,31 @@ header{
 					-webkit-text-stroke-width: 0.2px;
 					-moz-osx-font-smoothing: grayscale;
 				}	
+			}
+			.subNav{
+				position: absolute;
+				width: 769px;
+				height: 441px;
+				left: 237px;
+				top: 0;
+				background-color: #fff; 
+				padding: 30px 0 0 30px;
+				dl{
+					float: left;
+					margin-left: 20px;
+					dt{
+						a{
+							font-size: 14px;
+							color: #333;
+						}
+					}
+					dd{
+						a{
+							font-size: 14px;
+							color: #818181;
+						}
+					}
+				}
 			}
 		}
 	}
