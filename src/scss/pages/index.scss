@@ -9,9 +9,45 @@
 		height: 480px;
 		background-color: #3e95df;
 		margin: 6px 6px 0 7px;
+		position: relative;
 		li{
 			width: 762px;
 			height: 480px; 
+		}
+		i{
+			font-size: 70px;
+			color: #fff;
+			position: absolute;
+			width: 24px;
+			height: 82px;
+			opacity: 0.2;
+			background-color: #000;
+		}
+		.carousel_extra{
+			position: relative;
+			li{
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: #f39c11;
+			}
+		}
+		.prev{
+			top: 200px;
+			&:before{
+				content: "\e623";
+				position: absolute;
+				left: -39px;
+			}
+		}
+		.next{
+			top: 200px;
+			left: 738px;
+			&:before{
+				content: "\e622";
+				position: absolute;
+				left: -5px;
+			}
 		}
 	}
 	.banners{

@@ -239,10 +239,39 @@ footer {
     width: 762px;
     height: 480px;
     background-color: #3e95df;
-    margin: 6px 6px 0 7px; }
+    margin: 6px 6px 0 7px;
+    position: relative; }
     .menu_slide .carousel li {
       width: 762px;
       height: 480px; }
+    .menu_slide .carousel i {
+      font-size: 70px;
+      color: #fff;
+      position: absolute;
+      width: 24px;
+      height: 82px;
+      opacity: 0.2;
+      background-color: #000; }
+    .menu_slide .carousel .carousel_extra {
+      position: relative; }
+      .menu_slide .carousel .carousel_extra li {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #f39c11; }
+    .menu_slide .carousel .prev {
+      top: 200px; }
+      .menu_slide .carousel .prev:before {
+        content: "\e623";
+        position: absolute;
+        left: -39px; }
+    .menu_slide .carousel .next {
+      top: 200px;
+      left: 738px; }
+      .menu_slide .carousel .next:before {
+        content: "\e622";
+        position: absolute;
+        left: -5px; }
   .menu_slide .banners {
     width: 155px;
     height: 480px; }

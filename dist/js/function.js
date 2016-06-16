@@ -5,10 +5,10 @@
 		var list_num = list.length;
 		var index = 0;
 		var init = function(){
-			element.append('<div class="carousel_extra"><i class="prev">prev</i><i class="next">next</i><ul></ul></div>');
+			element.append('<div class="carousel_extra"><i class="prev iconfont"></i><i class="next iconfont"></i><ul></ul></div>');
 			extra_ul = $(".carousel_extra ul");
 			list.each(function(i){
-				extra_ul.append("<li>"+(i+1)+"</li>");
+				extra_ul.append("<li></li>");
 				if(i>0){
 					$(this).hide();
 				}
