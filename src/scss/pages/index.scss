@@ -24,18 +24,25 @@
 			background-color: #000;
 		}
 		.carousel_extra{
-			position: relative;
+			position: absolute;
+			width: 100%;
+			top: 445px;
+			text-align: center;
 			li{
 				width: 10px;
 				height: 10px;
 				border-radius: 5px;
+				background-color: #fff;
+				display: inline-block;
+				margin: 0 5px;
+			}
+			li.active{
 				background-color: #f39c11;
 			}
 		}
 		.prev{
 			top: 200px;
 			&:before{
-				content: "\e623";
 				position: absolute;
 				left: -39px;
 			}
@@ -44,7 +51,6 @@
 			top: 200px;
 			left: 738px;
 			&:before{
-				content: "\e622";
 				position: absolute;
 				left: -5px;
 			}
@@ -64,6 +70,7 @@
 	margin-top: 83px;
 	width: 1200px;
 	overflow: hidden;
+	position: relative;
 	.title{
 		background-color: #68f1cd;
 		width: 270px;
@@ -81,6 +88,28 @@
 			margin-left: 57px;
 		}
 	}
+	i{
+		width: 18px;
+		height: 119px;
+		position: absolute;
+		top: 124px;
+		&:before{
+			position: absolute;
+			font-size: 120px;
+		}
+	}
+	.next{
+		left: 1139px;
+		&:before{
+			left: -29px;
+		}
+	}
+	.prev{
+		left: 288px;
+		&:before{
+			left: -70px;
+		}
+	}
 }
 .home_cate{
 	.title{
@@ -94,16 +123,50 @@
 }
 .home_show{
 	margin-top: 83px;
+	position: relative;
+	.title{
+		font-size: 72px;
+		color: #f39c11;
+		margin-bottom: 32px;
+		float: left;
+		border-bottom: 1px solid #f39c11;
+		i{
+			position: relative;
+			top: 0;
+			font-size: 0;
+		}
+	}
 	ul{
 		li{
 			background-color: #526989;
 			float:left;
 			width: 210px;
 			height: 282px;
-			margin-left: 37px;
+			margin-right: 37px;
 		}
-		li:first-child{
-			margin-left: 0;
+	}
+	i{
+		font-size: 70px;
+		color: #fff;
+		position: absolute;
+		width: 24px;
+		height: 82px;
+		opacity: 0.2;
+		background-color: #000;
+		top: 214px;
+		&:before{
+			position: absolute;
 		}
-	}	
+	}
+	.next{
+		left: 1173px;
+		&:before{
+			left: -4px;
+		}
+	}
+	.prev{
+		&:before{
+			left: -39px;
+		}
+	}
 }

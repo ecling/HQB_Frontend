@@ -1,5 +1,5 @@
 (function($){
-	var Scroll = function(element){
+	var Scroll = function(element,num,width){
 		var ul = element.children("ul");
 		var lists = ul.children("li");
 		var list_width = 0;
@@ -7,7 +7,7 @@
 		var init = function(){
 			ul.wrap('<div class="temwap"></div>');
 			var wap = element.children(".temwap");
-			wap.css({"width":"849","overflow":"hidden","position":"relative"});
+			wap.css({"width":width,"overflow":"hidden","position":"relative"});
 		};
 		var ListWidth = function(){
 			lists.each(function(i){
@@ -20,19 +20,19 @@
 		};
 		var next = function(){
 			var left = ul.css("left");
-			if(parseInt(left)==(-totalWidth+list_width*3)){
+			if(parseInt(left)==(-totalWidth+list_width*num)){
 				left = 0;
 			}else{
-				left = parseInt(left)-list_width*3;
+				left = parseInt(left)-list_width*num;
 			}
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
 		};
 		var prev = function(){
 			var left = ul.css("left");
 			if(parseInt(left)==0){
-				left = -totalWidth+list_width*3;
+				left = -totalWidth+list_width*num;
 			}else{
-				left = parseInt(left)+list_width*3;
+				left = parseInt(left)+list_width*num;
 			}
 			
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
@@ -46,11 +46,12 @@
 			next();
 		});
 	};
-	$.fn.scroll = function(){
-		var scroll = new Scroll(this);
+	$.fn.scroll = function(num,width){
+		var scroll = new Scroll(this,num,width);
 	};
 })(jQuery);
 
 $(function(){
-	$('.scroll').scroll();
+	$('.home_hot').scroll(3,849);
+	$('.home_show').scroll(5,1200);
 });

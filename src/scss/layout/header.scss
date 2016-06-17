@@ -3,22 +3,67 @@ header{
 	.dropdown{
 		position: relative;
 		.drop_content{
+			border: 1px solid #ddd;
 			position: absolute;
 			display: none;
+			background-color: #fff;
+			z-index: 1;
 		}
 	}
 	.language_title,.currency_title,.chat_title,.vertical{
 		line-height: 30px;
 	}
 	.language{
+		ul{
+			padding-top: 12px;
+		}
 		li{
+			padding-left: 12px;
 			width: 82px;
 			a{
 				line-height: 36px;
 			}
 		}
+		em{
+			left: 64px;
+		}
+		.drop_content{
+			left: -22px;
+		}
 	}
+	.currency{
+		li{
+			width: 82px;
+			padding-left: 12px;
+			a{
+				line-height: 36px;
+			}
+		}
+		.drop_content{
+			left: -12px;
+		}
+		em{
+			left: 45px;
+		}
+	}
+
 	.tool{
+		em{
+			width: 0;
+			height: 0;
+			border-width:0 7px 7px;
+			border-color: transparent;
+			border-style: solid;
+			position: absolute;
+			top: -8px;
+		}
+		em.triangle_gb{
+			border-bottom-color: #ddd;
+		}
+		em.triangle_wb{
+			top: -7px;
+			border-bottom-color: #fff;
+		}
 		.left{
 			float: left;
 			i{
@@ -44,6 +89,38 @@ header{
 				color: #f39c11;
 				display: inline-block;
 				line-height: 0;
+			}
+			em{
+				left: 258px;
+			}
+			.drop_content{
+				width: 259px;
+				left: -222px;
+				padding: 0 18px 16px 18px;
+				i{
+					font-size: 32px;
+					display: block;
+					float: left;
+					line-height: normal;
+				}
+			}
+			span{
+				color: #333;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			div{
+				padding-top: 18px;
+				float: left;
+			}
+			p{
+				color: #666;
+				font-size: 12px;
+				margin: 0;
+				float: left;
+				width: 207px;
+				padding-left: 18px;
+				line-height: 16px;
 			}
 		}
 	}

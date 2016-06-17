@@ -5,7 +5,7 @@
 		var list_num = list.length;
 		var index = 0;
 		var init = function(){
-			element.append('<div class="carousel_extra"><i class="prev iconfont"></i><i class="next iconfont"></i><ul></ul></div>');
+			element.append('<i class="prev iconfont icon-arrows-left"></i><i class="next iconfont icon-arrows-right"></i><div class="carousel_extra"><ul></ul></div>');
 			extra_ul = $(".carousel_extra ul");
 			list.each(function(i){
 				extra_ul.append("<li></li>");
@@ -47,10 +47,10 @@
 			nav();
 		};
 		init();
-		$(".carousel_extra .next").on("click",function(){
+		element.children(".next").on("click",function(){
 			next();
 		});
-		$(".carousel_extra .prev").on("click",function(){
+		element.children(".prev").on("click",function(){
 			prev();
 		});
 		
