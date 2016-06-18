@@ -137,37 +137,54 @@ header {
     margin-top: 20px; }
   header .search {
     width: 568px;
-    height: 36px;
     background-color: #f39c11;
     border-radius: 30px;
     margin: 34px 0 0 88px; }
     header .search .cata_drop {
-      line-height: 30px;
+      line-height: 36px;
       color: #fff;
       float: left;
       margin-left: 36px; }
+      header .search .cata_drop i {
+        line-height: 0; }
     header .search .search-input {
       border-radius: 30px;
       float: right;
       width: 346px;
-      height: 24px;
       background-color: #fff;
-      margin: 4px 4px 0 0;
-      padding-top: 3px; }
+      margin: 4px 4px 4px 0; }
       header .search .search-input input {
         border: none;
-        margin-left: 20px; }
+        outline: none;
+        margin-left: 20px;
+        height: 28px; }
       header .search .search-input button {
         border: medium none;
         background: transparent none repeat scroll 0 0;
         vertical-align: middle;
         float: right; }
+        header .search .search-input button i {
+          display: inline-block;
+          margin-top: 5px; }
   header .user {
     margin-top: 34px; }
     header .user i {
       font-size: 36px;
       margin-left: 21px;
       display: inline-block; }
+    header .user .cart {
+      position: relative; }
+      header .user .cart .qty {
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #f30c0c;
+        color: #fff;
+        text-align: center;
+        top: -7px;
+        left: 44px; }
   header .top_nav {
     position: relative;
     margin-top: 22px;
@@ -274,7 +291,7 @@ footer {
       font-weight: 700; }
     footer .cms_list dl dd {
       padding-top: 10px; }
-  footer .sns {
+  footer #newsletter {
     width: 263px; }
   footer .qIndex {
     width: 100%;

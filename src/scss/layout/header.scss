@@ -133,33 +133,39 @@ header{
 	}
 	.search{
 		width: 568px;
-		height: 36px;
 		background-color: #f39c11;
 		border-radius: 30px;
 		margin: 34px 0 0 88px;
 		.cata_drop{
-			line-height: 30px;
+			line-height: 36px;
 			color: #fff;
 			float: left;
 			margin-left: 36px;
+			i{
+				line-height: 0;
+			}
 		}
 		.search-input{
 			border-radius: 30px;
 			float: right;
 			width: 346px;
-			height: 24px;
 			background-color: #fff;
-			margin: 4px 4px 0 0; 
-			padding-top: 3px;
+			margin: 4px 4px 4px 0; 
 			input{
 				border: none;
+				outline: none;
 				margin-left:20px;
+				height: 28px;
 			}
 			button{
 				border: medium none;
 				background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
 				vertical-align: middle;
 				float: right;
+				i{
+					display: inline-block;
+					margin-top: 5px;
+				}
 			}
 		}
 	}
@@ -169,6 +175,21 @@ header{
 			font-size: 36px;
 			margin-left: 21px;
 			display: inline-block;
+		}
+		.cart {
+			position: relative;
+			.qty{
+				position: absolute;
+				display: block;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #f30c0c;
+				color: #fff;
+				text-align: center;
+				top: -7px;
+				left: 44px;
+			}
 		}
 	}
 	.top_nav{
