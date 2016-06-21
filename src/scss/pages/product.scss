@@ -1,0 +1,1247 @@
+@import "../help/_helper";
+@import "../base/_normalize";
+@import "../components/_colors";
+@import "../components/_form";
+@import "../components/_buttons";
+@import "../components/_selectDrop";
+@import "../layout/_layout";
+@import "../layout/_product";
+@import "../widget/color.scss";
+@import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+.proOneFree {
+    display: inline-block;
+    width: 100%;
+
+    h4 {
+        background: #eee;
+        font-size: pxToRem(18px);
+        color: $basecol;
+        text-transform: capitalize;
+        padding: 10px 20px;
+    }
+
+    ul {
+        margin-top: 20px;
+        font-size: 0px;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: pxToRem(14px);
+            position: relative;
+
+            &:nth-of-type(n+3):nth-last-of-type(n+4) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    div {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+        }
+    }
+
+    span {
+        color: $red;
+    }
+
+    p {
+        span {
+            display: block;
+        }
+
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        &:last-of-type {
+            border-bottom: 1px solid #ededed;
+        }
+    }
+
+    .total {
+        font-size: pxToRem(40px);
+        font-weight: bold;
+
+        &:first-letter {
+            font-size: pxToRem(20px);
+        }
+    }
+
+    .proText {
+        width: 230px;
+    }
+
+    i {
+        margin: 0px 10px;
+    }
+
+    .btn {
+        font-size: pxToRem(24px);
+    }
+
+    .options {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .btn {
+        font-size: pxToRem(14px);
+    }
+
+    dl {
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    dt {
+        margin-bottom: 10px;
+    }
+
+    .input-box {
+        text-align: center;
+    }
+}
+
+.proReview {
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+
+    .active {
+        color: $basecol;
+    }
+}
+
+.addthis_sharing_toolbox {
+    vertical-align: middle !important;
+    margin-left: 20px;
+}
+
+.proDetailList {
+    font-size: 0px;
+    margin-top: 10px;
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: pxToRem(12px);
+        margin-right: 20px;
+        transition: all 0.2s ease-in-out;
+        text-transform: capitalize;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+
+    i {
+        margin-right: 5px;
+        opacity: 0.7;
+    }
+}
+
+.proDetailSimilar {
+    h5 {
+        font-size: pxToRem(16px);
+        font-weight: normal;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+
+    ul {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    li {
+        display: inline-block;
+        border: 1px solid #ededed;
+        border-radius: 2px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+}
+
+/* scrollbyside */
+
+.moreInfo {
+    margin: auto;
+    font-size: 0px;
+    position: relative;
+    text-align: left;
+}
+
+.productAddon {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+.moreInfoAside {
+    display: inline-block;
+    vertical-align: top;
+    width: 270px;
+    background: white;
+    p {
+        a {
+            display: block;
+        }
+    }
+}
+
+.moreAsideSec {
+    font-size: pxToRem(12px);
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+
+    h4 {
+        font-size: pxToRem(14px);
+        color: #666;
+        text-align: center;
+        padding: 10px 0px;
+    }
+}
+
+.moreInfoCon {
+    display: inline-block;
+    vertical-align: top;
+    width: 900px;
+    margin-right: 30px;
+}
+
+.moreInfoBar {
+    background: white;
+    width: $mainwidth;
+
+    ul {
+        font-size: 0px;
+        width: 100%;
+        border-bottom: 1px solid #dcdcdc;
+        background: white;
+    }
+
+    li {
+        display: inline-block;
+        font-size: pxToRem(14px);
+    }
+
+    a {
+        color: #666;
+        display: block;
+        padding: 10px 15px;
+        border-bottom: none;
+        transition: all 0.2s ease-in-out;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        border-top: 2px solid white;
+
+        &.active, &:hover {
+            border-top: 2px solid $basecol;
+            border-left: 1px solid #dcdcdc;
+            border-right: 1px solid #dcdcdc;
+            transition: all ease-in 0.2s;
+            position: relative;
+            border-bottom: 1px solid white;
+            bottom: -1px;
+        }
+    }
+}
+
+.moreInfoSec {
+    margin-bottom: 20px;
+    font-size: pxToRem(14px);
+    box-sizing: border-box;
+    border-top: none;
+    border-radius: 2px;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    h4 {
+        background: #eee;
+        font-size: pxToRem(18px);
+        color: $basecol;
+        text-transform: capitalize;
+        padding: 10px 20px;
+    }
+
+    > div {
+        padding: 20px;
+        border: 1px solid #dcdcdc;
+        border-top: none;
+    }
+}
+
+.backUp {
+    width: 100%;
+    height: 42px;
+    display: none;
+}
+
+.backUp.active {
+    display: block;
+}
+
+.showlist {
+    padding: 10px;
+    border-top: none;
+
+    ul {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 10px;
+        border: 1px solid #ededed;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            border-color: $basecol;
+        }
+    }
+
+    a {
+        width: 120px;
+        height: 120px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .first {
+        line-height: 120px;
+        text-align: center;
+        background: #c3c3c3;
+        color: white;
+        width: 120px;
+        height: 120px;
+        font-size: pxToRem(16px);
+    }
+}
+
+#reviews {}
+
+.reviewAll {
+    font-size: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ededed;
+
+    > span {
+        font-size: pxToRem(20px);
+        color: $basecol;
+        width: 320px;
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+        width: 518px;
+    }
+
+    .range {
+        font-size: pxToRem(14px);
+        margin-bottom: 5px;
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            color: darken($textcol, 5%);
+            width: 100px;
+        }
+
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            width: 300px;
+            height: 10px;
+            position: relative;
+            background: #ddd;
+
+            strong {
+                position: absolute;
+                background: $basecol;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        em {
+            font-style: normal;
+            color: darken(#ddd, 5%);
+            width: 30px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+    }
+}
+
+.reviewItem {
+    padding: 20px 0px 20px 80px;
+    border-bottom: 1px solid #ededed;
+    position: relative;
+
+    > img {
+        position: absolute;
+        left: 0px;
+        top: 20px;
+    }
+
+    .name {
+        color: darken(#ddd, 10%);
+        margin-right: 10px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .brief {
+        color: darken($textcol, 10%);
+    }
+
+    .option {
+        span {
+            color: darken($textcol, 10%);
+
+            &:after {
+                content: "|";
+                display: inline-block;
+                margin: 0px 5px;
+                color: darken(#ddd, 10%);
+                opacity: 0.5;
+            }
+        }
+
+        strong {
+            color: lighten($textcol, 10%);
+        }
+    }
+
+    .measure {
+        color: darken(#ddd, 10%);
+    }
+}
+
+.buttonMore {
+    text-align: right;
+    margin-top: 20px;
+    overflow: hidden;
+    border: none;
+    padding: 0px !important;
+
+    .btn {
+        float: left;
+    }
+
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+#question {
+    > div > div {
+        padding: 10px;
+        border-bottom: 1px solid #ededed;
+        overflow: hidden;
+    }
+
+    strong {
+        margin-right: 5px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .que, .ans {
+        border: 1px solid #ededed;
+        border-radius: 4px;
+        position: relative;
+        padding: 10px;
+        color: #666;
+        max-width: 50%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 8px;
+            top: 10px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 8px;
+            top: 10px;
+        }
+    }
+
+    .que {
+        margin-bottom: 10px;
+        float: left;
+        clear: both;
+
+        &:before {
+            left: -17px;
+            border-color: transparent #ededed transparent transparent;
+        }
+
+        &:after {
+            border-color: transparent white transparent transparent;
+            left: -15px;
+        }
+    }
+
+    .ans {
+        background: #eeeeee;
+        float: right;
+        clear: both;
+
+        &:before {
+            border-color: transparent  transparent transparent #ededed;
+            right: -17px;
+        }
+
+        &:after {
+            border-color: transparent transparent transparent #eeeeee;
+            right: -15px;
+        }
+    }
+
+    .ansp {
+        text-align: right;
+    }
+}
+
+#wholesale {
+    label {
+        display: block;
+        margin-bottom: 10px;
+
+        > span {
+            width: 140px;
+            text-align: right;
+            margin-right: 10px;
+
+            &:after {
+                content: "*";
+                margin-left: 5px;
+                color: $red;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        &:nth-of-type(7) {
+            span {
+                &:after {
+                    content: "";
+                    margin-left: 5px;
+                    display: inline-block;
+                    width: 5px;
+                }
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .input-box {
+        display: inline-block;
+        vertical-align: middle;
+        width: 200px;
+        box-sizing: border-box;
+
+        + em {
+            margin-left: 20px;
+        }
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input, textarea {
+        @include inputfocus;
+    }
+
+    .sp {
+        height: 28px;
+
+        input {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            padding-left: 20px;
+        }
+
+        div {
+            position: relative;
+            padding-left: 10px;
+            height: 100%;
+
+            span {
+                position: absolute;
+                line-height: 28px;
+                z-index: 2;
+            }
+        }
+    }
+
+    .validation-advice {
+        display: inline-block;
+        vertical-align: middle;
+        color: $red;
+        margin-left: 20px;
+    }
+}
+
+#payment {
+    position: relative;
+    clear: both;
+
+    p {
+        padding: 0px 10px;
+        margin: 10px 0px;
+        font-size: pxToRem(14px);
+    }
+
+    h5 {
+        font-size: 16px;
+        color: #c1c1c1;
+        padding-left: 70px;
+    }
+
+    img {
+        padding-left: 70px;
+    }
+}
+
+.weddingInfo {
+    margin-top: 20px;
+    padding: 10px 0px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+
+    p {
+        font-size: pxToRem(14px);
+        color: #767b84;
+        text-align: center;
+    }
+}
+
+.weddingTailor {
+    color: #767b84;
+    margin-top: 10px;
+
+    .f1 {
+        padding: 10px 0px;
+        border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+        font-size: 0px;
+        margin-bottom: 10px;
+    }
+
+    span {
+        font-size: pxToRem(14px);
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .f2 {
+        padding-left: 120px;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        a {
+            font-size: pxToRem(12px);
+            margin-right: 10px;
+        }
+    }
+
+    p {
+        font-size: pxToRem(12px);
+        margin: 10px 0px;
+    }
+
+    .proDetailList {
+        font-size: 0px;
+        margin-top: 30px;
+    }
+}
+
+.shipChange {
+    .selectDrop {
+        width: 230px;
+    }
+
+    > div {
+        h3 {
+            font-size: pxToRem(18px);
+            margin-bottom: 10px;
+            color: $textcol;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ededed;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            width: 15px;
+            height: 15px;
+
+            @include radio(15px);
+        }
+    }
+
+    thead {
+        border-bottom: 1px solid #ededed;
+    }
+
+    td {
+        font-size: pxToRem(16px);
+        color: #aaa;
+        padding: 10px 20px;
+    }
+
+    tr {}
+
+    .price {
+        color: $basecol;
+    }
+
+    > div {
+        > label {
+            font-size: pxToRem(16px);
+        }
+    }
+
+    .field {
+        margin-bottom: 20px;
+    }
+}
+
+.bestSell {
+    margin-top: 20px;
+
+    h5 {
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        padding: 10px 0px;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        width: 210px;
+    }
+
+    ul {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+.reviewPop {
+    h5 {
+        font-size: pxToRem(16px);
+    }
+
+    .proReview {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60px;
+    }
+
+    form {
+        width: 570px;
+
+        > div {
+            margin-bottom: 20px;
+
+            > span {
+                width: 180px;
+            }
+
+            > input, > textarea {
+                width: 345px;
+            }
+        }
+    }
+
+    h6 {
+        font-size: pxToRem(16px);
+        margin: 10px 0px;
+        font-weight: normal;
+    }
+
+    input, textarea {
+        @include inputfocus;
+
+        vertical-align: middle;
+        margin-bottom: 5px;
+    }
+}
+
+.reviewConfirm {
+    form {
+        box-sizing: border-box;
+        border: 1px solid #ededed;
+        border-top: none;
+        padding: 20px;
+
+        p {
+            margin-bottom: 10px;
+            font-size: pxToRem(14px);
+        }
+
+        > div {
+            margin-bottom: 10px;
+
+            span {
+                display: block;
+                margin: 5px 0px;
+                font-size: pxToRem(14px);
+                text-transform: capitalize;
+            }
+
+            + p {
+                color: $red;
+                text-align: right;
+            }
+        }
+
+        .action {
+            border-top: 1px solid #ededed;
+            padding: 10px 0px;
+
+            a, button {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            .fb {
+                margin-right: 10px;
+            }
+        }
+
+        button + a {
+            margin-left: 10px;
+        }
+    }
+
+    h4 {
+        background: #eee;
+        font-size: 18px;
+        color: #f39c11;
+        text-transform: capitalize;
+        padding: 10px 20px;
+    }
+
+    input[type='text'], input[type='password'] {
+        @include inputfocus;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+    label {
+        display: block;
+        padding: 2px 0px 2px 30px;
+        margin-bottom: 5px;
+
+        @include checkbox;
+
+        a {
+            color: #404040;
+            text-decoration: underline;
+        }
+    }
+}
+
+.reviewBuyIt {
+    .popInner {
+        text-align: center;
+    }
+    p {
+        font-size: pxToRem(20px);
+        white-space: nowrap;
+    }
+    a {
+        font-size: pxToRem(24px);
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+.rating {
+    > div {
+        margin: 5px 0px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0px 10px;
+    }
+}
+
+.reviewSummary {
+    span {
+        width: auto !important;
+        margin-left: 10px;
+    }
+}
+
+.reviewOption {
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0px;
+        margin: 0px 10px 10px 0px;
+        width: 175px;
+    }
+
+    span {
+        width: 85px;
+        font-size: pxToRem(14px);
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    strong {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    input {
+        width: 40px;
+    }
+
+    .selectDrop {
+        width: 90px;
+    }
+}
+
+.rate {
+    cursor: pointer;
+
+    i {
+        margin-right: 0px;
+        font-size: pxToRem(16px);
+    }
+
+    &.big i {
+        font-size: pxToRem(20px);
+    }
+
+    &.large i {
+        font-size: pxToRem(24px);
+    }
+
+    &.small i {
+        font-size: pxToRem(14px);
+    }
+
+    .fa:before {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .fa {
+        color: #999999;
+    }
+
+    .fa.hover, .fa.active {
+        opacity: 1;
+        color: #FFB70A;
+    }
+
+    .fa.hover.active {
+        transition: all 0.2s ease-in-out;
+        color: darken(#FFB70A, 5%);
+    }
+}
+
+.reviewImage {
+    display: block;
+    cursor: pointer;
+    cursor: zoom-in;
+    margin-top: 5px;
+}
+
+@keyframes targetchange {
+    0% {
+        background: rgba($basecol, 0.5);
+    }
+
+    100% {
+        background: rgba($basecol, 0);
+    }
+}
+
+section:target {
+    animation: targetchange 1s ease-in-out;
+}
+
+/* wedding description */
+
+#weddingDetails {
+    height: auto;
+    overflow: hidden;
+    font-family: tahoma, arial, helvetica, sans-serif;
+    font-size: 12px;
+
+    ul {
+        font-size: 0px;
+    }
+
+    > p {}
+
+    h3 {
+        font-size: 18px;
+        color: #4B4B4B;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-weight: normal;
+    }
+
+    img {
+        border: 1px solid #ededed;
+        border-radius: 4px;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px 60px;
+        width: 300px;
+
+        p {
+            color: $basecol;
+            height: 120px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+    }
+}
+
+.alsobought {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+
+    h4 {
+        background: #eee;
+        font-size: 18px;
+        color: $basecol;
+        text-transform: capitalize;
+        padding: 10px 20px;
+    }
+
+    ul {
+        text-align: left;
+        font-size: 0px;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 17px;
+        width: 230px;
+        font-size: pxToRem(13px);
+    }
+
+    .inner-also {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+        height: 296px;
+        position: relative;
+
+        &:hover i {
+            opacity: 1;
+        }
+    }
+
+    i {
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+
+    .disable {
+        color: lighten($gray, 10%);
+    }
+}
+
+// price match
+.priceMatch {
+    h4 {
+        font-size: pxToRem(16px);
+    }
+
+    input, textarea {
+        @include inputfocus;
+    }
+
+    .top {
+        > div {
+            font-size: 0px;
+            margin: 20px 0px;
+
+            div {
+                display: inline-block;
+                vertical-align: top;
+                font-size: pxToRem(14px);
+                width: 450px;
+                margin-left: 20px;
+            }
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+            margin: auto;
+        }
+    }
+
+    textarea {
+        max-height: 72px;
+        box-sizing: border-box;
+    }
+}
+
+#price_match {
+    label {
+        display: block;
+        margin: 0px 0px 10px 0px;
+    }
+
+    span {
+        display: inline-block;
+        padding-left: 10px;
+        position: relative;
+        font-weight: bold;
+        width: 180px;
+
+        i {
+            position: absolute;
+            left: 0px;
+            top: 20%;
+            color: $red;
+        }
+    }
+
+    .btn {
+        margin-left: 10px;
+    }
+}

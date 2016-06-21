@@ -1,0 +1,805 @@
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+@keyframes bounceOut {
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    50%, 55% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+
+.error {
+    color: $red;
+    font-style: normal;
+    transition: all 0.2s ease-in-out;
+}
+button.disabled,a.disabled {
+    cursor: not-allowed!important;
+    background: #ADABA8!important;
+    &:hover {
+        background: #ADABA8!important;
+    }
+}
+input.error, textarea.error {
+    border: 1px solid $red !important;
+}
+
+#wrap {
+    width: $mainwidth;
+    margin: auto;
+    min-height: calc(100vh - 386px);
+    padding-left: calc(100vw - 100%);
+}
+
+.justifyFix {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.proItem {
+    // overflow: hidden;
+}
+
+.proImg {
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    img {
+        transition: all 0.2s ease-in-out;
+        display: block;
+    }
+}
+
+.proText {
+    font-size: pxToRem(14px);
+    color: #4a5856;
+    margin-bottom: 5px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+    &:hover {
+        color: $basecol;
+    }
+}
+
+.proPrice {
+    margin-bottom: 5px;
+    .pricey {
+        color: #aaaaaa;
+        font-size: pxToRem(14px);
+        text-decoration: line-through;
+        + span {
+            margin-left: 10px;
+        }
+    }
+    .cheap {
+        // color: #ff6a82;
+        color: $red;
+        font-size: pxToRem(16px);
+    }
+}
+
+.proToCart {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    > a {
+        font-size: pxToRem(14px);
+        display: inline-block;
+        padding: 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        i {
+            color: #4a5856;
+            margin-right: 5px;
+        }
+        border: 2px solid #dcdcdc;
+        border-radius: 4px;
+    }
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in;
+    opacity: 0.4;
+    font-size: 40px;
+    cursor: pointer;
+    &:hover {
+        color: $basecol;
+    }
+}
+
+/* loading style css */
+@keyframes square-spin {
+    25% {
+        transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+}
+
+
+.square-spin > div {
+    animation-fill-mode: both;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+}
+
+.ajax-loading {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes ball-pulse-sync {
+    33% {
+        transform: translateY(10px);
+    }
+    66% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.ball-pulse-sync > div:nth-child(0) {
+    animation: ball-pulse-sync 0.6s -0.21s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(1) {
+    animation: ball-pulse-sync 0.6s -0.14s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(2) {
+    animation: ball-pulse-sync 0.6s -0.07s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(3) {
+    animation: ball-pulse-sync 0.6s 0s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin: 2px;
+    animation-fill-mode: both;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*  */
+.breadcrumb {
+    padding: 10px 0px;
+    color: #7b7b7b !important;
+    font-size: pxToRem(14px);
+    li {
+        display: inline-block;
+    }
+    i {
+        font-size: pxToRem(14px);
+        margin-right: 5px;
+    }
+    a {
+        margin: 0px 5px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            span {
+                color: $basecol;
+            }
+        }
+        span {
+            color: #7b7b7b;
+        }
+    }
+    span {
+        transition: all 0.2s ease-in-out;
+        color: $basecol;
+    }
+}
+
+.columnCon {
+    width: 100%;
+    // font-size: 0px;
+    text-align: justify;
+    margin-bottom: 20px;
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+.leftCol {
+    width: $columnL;
+    display: inline-block;
+    vertical-align: top;
+    font-size: pxToRem(13px);
+    text-align: left;
+}
+
+.rightCol {
+    // margin-left: $columnGap;
+    width: $columnR;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    font-size: pxToRem(13px);
+}
+
+.asideAD {
+    margin-bottom: 20px;
+    a {
+        display: inline-block;
+        position: relative;
+        &:after {
+            box-sizing: border-box;
+            border: 0px solid rgba(255, 255, 255, 0.5);
+            bottom: 0;
+            content: "";
+            left: 0;
+            overflow: visible;
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            &:after {
+                border: 10px solid rgba(255, 255, 255, 0.5);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.cssanimations {
+    .popUp {
+        transform-origin: center center;
+        &.active {
+            animation: bounceIn 0.75s forwards;
+        }
+        &.noactive {
+            animation: bounceOut 0.75s both;
+        }
+    }
+}
+
+.popDimmer {
+    position: fixed;
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px;
+    left: 0px;
+    z-index: 12;
+    background: url(../images/alpha.png) repeat;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popUp {
+    background: white;
+    display: none;
+    font-size: pxToRem(14px);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #ededed;
+    box-sizing: content-box !important;
+    transition:width 0.1s ease,height 0.1s ease;
+    .fa-times-circle {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        cursor: pointer;
+        color: black;
+        font-size: pxToRem(30px);
+        line-height: 1;
+        opacity: 1;
+    }
+}
+
+.popInner {
+    display: inline-block;
+    transition:width 0.1s ease,height 0.1s ease;
+}
+
+.require, .required {
+    &:after {
+        content: "*";
+        font-size: pxToRem(14px);
+        color: $red;
+        display: inline-block;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
+
+.proReview {
+    .active {
+        color: $basecol;
+    }
+    color: $gray;
+}
+
+.messages {
+    span {
+        display: block;
+        font-size: pxToRem(14px);
+        margin: 10px;
+        padding: 0px 10px;
+    }
+}
+
+.success-msg {
+    span {
+        color: $green;
+    }
+}
+
+.error-msg {
+    span {
+        color: $red;
+    }
+}
+
+.notice-msg {
+    span {
+        color: $blue;
+    }
+}
+
+.selectDrop.disable {
+    // pointer-events:none;
+    cursor: not-allowed;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.5);
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+}
+
+/* popUp a window when user browses the site at the first time */
+
+.firstIn {
+    color: #2c2c2c;
+    em {
+        margin-left: 140px;
+    }
+    .popInner {
+        background: url(../images/b1.png) no-repeat left top, url(../images/b2.png) no-repeat right bottom;
+    }
+    .switch {
+        margin: 10px 0px;
+        text-align: center;
+    }
+    form {
+        padding: 60px 0px;
+    }
+    .female {
+        li {
+            width: 75px;
+        }
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
+    a.close {
+        text-decoration: underline;
+    }
+    ul {
+        width: 600px;
+        font-size: 0px;
+        display: none;
+        img {
+            display: block;
+            width: 90px;
+            height: 90px;
+        }
+        input {
+            display: none;
+        }
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        li {
+            margin-left: 10px;
+            display: inline-block;
+            font-size: pxToRem(12px);
+            width: 90px;
+            vertical-align: top;
+            position: relative;
+            cursor: pointer;
+            &.selected {
+                img {
+                    outline: 1px solid $basecol;
+                }
+                &:after {
+                    color: white;
+                    content: "\f00c";
+                    font-family: FontAwesome;
+                    font-size: 16px;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    transform: translate(0, 0);
+                }
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    border-width: 15px;
+                    border-style: solid;
+                    border-color: $basecol $basecol transparent transparent;
+                }
+                &:after, &:before {
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+    div > input {
+        @include inputfocus;
+        width: 300px;
+        margin: 20px auto 10px;
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        font-size: pxToRem(40px);
+        text-transform: uppercase;
+        + p {
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        text-align: center;
+        font-size: pxToRem(14px);
+        span {
+            color: $red;
+        }
+        a {
+            color: inherit;
+        }
+    }
+    button {
+        display: block;
+        margin: auto;
+        border-radius: 2px;
+        padding: 2px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        background: #f39c11;
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 10px;
+        span {
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-size: pxToRem(20px);
+            border: 1px solid white;
+            padding: 5px 10px;
+            color: white;
+            background: #f39c11;
+            display: block;
+        }
+        &:hover {
+            background: darken(#f39c11, 10%);
+        }
+        + p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.shopProcess {
+    padding: 25px 0px;
+    margin: 10px auto;
+    width: 70%;
+    ul {
+        font-size: 0px;
+        background: $gray;
+    }
+    li {
+        position: relative;
+        width: 25%;
+        box-sizing: border-box;
+        height: 10px;
+        display: inline-block;
+        border-radius: 4px;
+        &.active {
+            background: lighten($green, 10%);
+            .name {
+                color: black;
+            }
+            .num {
+                background: darken($green, 10%);
+            }
+        }
+        &.last {
+            .name {
+                left: auto;
+                right: -33px;
+            }
+            .num {
+                right: -10px;
+                left: auto;
+            }
+        }
+    }
+    .name, .num {
+        font-size: pxToRem(14px);
+        color: white;
+        position: absolute;
+    }
+    .num {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        left: -10px;
+        top: -6px;
+        background: $gray;
+        text-align: center;
+        line-height: 20px;
+    }
+    .name {
+        color: $gray;
+        top: -25px;
+        left: -33px;
+    }
+}
+
+.reviewNotice {
+    font-size: pxToRem(18px);
+    color: $red;
+    text-align: center;
+}
+
+.topBanner {
+    position: relative;
+    > a {
+        display: block;
+        width: 100%;
+        min-width: $mainwidth;
+        overflow: hidden;
+    }
+    img {
+        display: block;
+        margin: 0px auto;
+    }
+    i {
+        position: absolute;
+        right: 50px;
+        top: 45%;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        color: $basecol;
+        cursor: pointer;
+    }
+}
+
+.tally {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.proClearence {
+    background: url(../images/Clearence.png) no-repeat;
+    width: 91px;
+    height: 90px;
+    top: -5px;
+    left: -7px;
+}
+
+.proHot {
+    background: url(../images/Hot.png) no-repeat;
+    width: 61px;
+    height: 53px;
+}
+
+.proNew {
+    background: url(../images/New.png) no-repeat;
+    width: 51px;
+    height: 46px;
+}
+
+.proPresale {
+    background: url(../images/Presale.png) no-repeat;
+    width: 87px;
+    height: 30px;
+    left: -5px;
+}
+
+.proSale {
+    background: url(../images/sale.png) no-repeat;
+    width: 51px;
+    height: 39px;
+}
+
+.off {
+    background: url(../images/label.png) no-repeat;
+    position: absolute;
+    width: 52px;
+    height: 51px;
+    right: 0px;
+    top: 0px;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    line-height: 27px;
+    text-indent: -5px;
+    text-align: center;
+}
+
+.onefrees {
+    position: relative;
+    &:after {
+        content: url(../images/onefrees.png);
+        position: absolute;
+        right: -30px;
+        top: -15px;
+        width: 70px;
+        height: 45px;
+    }
+}
+
+.onefreel {
+    position: relative;
+    &:after {
+        content: url(../images/onefreel.png);
+        left: 0px;
+        top: 0px;
+        width: 128px;
+        height: 82px;
+        position: absolute;
+    }
+}
+.commonSlide {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+
+    h5 {
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        padding: 10px 0px;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        font-size: 0px;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+        margin-left: 25px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+
+    .next {
+        right: 0px;
+    }
+
+    .prev {
+        left: 0px;
+    }
+
+    .next, .prev {
+        position: absolute;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        will-change: opacity,transform;
+        color:lighten(#aaaaaa,5%);
+        &:hover {
+            color:$basecol;
+        }
+    }
+
+    &:hover {
+        .next, .prev {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

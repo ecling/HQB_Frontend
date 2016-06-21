@@ -61,6 +61,37 @@
 	var EasyDialog = function(){
 
 	};
+	var SelectDrop = function(element,sl){
+		var init = function(){
+			element.each(function(i){
+				var select_id = 'abc';
+				$(this).wrap('<div class=""><span><i class="iconfont icon-down"></i></span></div>');
+				createOption(this);
+			});
+		};
+		var createOption = function(select){
+			var options = $(select).children('option');
+			var select_id = 'abc';
+			$(select_id).children("span").after('<div class="option"><ul></ul></div>');
+			options.earch(function(i){
+				$(select_id).find("ul").append('<li date-valeu=""></li>');
+			});
+		};
+		var drop = function(){
+			element.earch(function(i){
+				$(this).on("onclick",function(){
+
+				});
+				$(this).find("option").earch(function(i){
+					$(this).on("onclick",function(){
+						
+					});
+				});
+			});
+		};
+		init();
+		drop();
+	};
 	$.fn.slider = function(){
 		var slider = new Slider(this);
 	};
@@ -69,3 +100,4 @@
 $(function(){
 	$(".carousel").slider();
 });
+

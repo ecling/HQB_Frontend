@@ -2,13 +2,13 @@ footer{
 	margin-top: 30px;
 	border-top: 1px solid #cfcfcf;
 	.content{
-
 		padding: 35px 25px 0 25px;
 	}
 	.cms_list{
 		dl{
-			width: 295px;
+			width: 277px;
 			float: left;
+			margin: 0;
 			dt{
 				font-size: 14px;
 				font-weight: 700;
@@ -18,13 +18,45 @@ footer{
 			}
 		}
 	}
+	.social{
+		margin-bottom: 16px;
+		li{
+			float: left;
+			margin-right: 21px;
+			i{
+				font-size: 44px;
+				color: #808080;
+			}
+		}
+		li:last-child{
+			margin-right: 0;
+		}
+	}
 	#newsletter{
-		width: 263px;
+		width: 369px;
 		div{
-			
+			height: 41px;
+			background-color: #e73620;
+			border-radius: 2px;
 		}
 		input{
-
+			height: 100%;
+			width: 266px;
+			height: 39px;
+			border:none;
+			padding: 0;
+			margin: 1px 0 0 1px;
+			outline: none;
+		}
+		bottom{
+			width: 102px;
+			height: 41px;
+			font-size: 18px;
+			color: #fff;
+			display: block;
+			float: right;
+			line-height: 41px;
+			text-align: center;
 		}
 	}
 	.qIndex{
@@ -41,9 +73,13 @@ footer{
 		}
 	}
 	.friendlyImg{
+		width: 100%;
+		float: left;
 		text-align: center;
 	}
 	.copyright{
+		width: 100%;
+		float: left;
 		text-align: center;
 	}
 }

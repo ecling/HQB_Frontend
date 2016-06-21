@@ -11,7 +11,7 @@ a{
 	text-decoration: none;
 	color: #333;
 }
-ul,dd{
+dl,h1,ul,dd{
 	margin: 0;
 	padding: 0;	
 }
@@ -40,5 +40,14 @@ li{
     height: 0;
     clear: both;
     visibility: hidden;
+}
+
+.content{
+	.left{
+		width: 271px;
+	}
+	.right{
+		width: 902px;
+	}
 }
 
