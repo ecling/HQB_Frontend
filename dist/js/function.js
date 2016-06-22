@@ -33,7 +33,8 @@
 			}else{
 				index++;
 			}
-			list.eq(index).show();
+			//list.eq(index).show();
+			list.eq(index).animate({opacity:'show'},1000);
 			nav();
 		};
 		var prev = function(){
@@ -43,10 +44,11 @@
 			}else{
 				index--;
 			}
-			list.eq(index).show();
+			list.eq(index).animate({opacity:'show'},1000);
 			nav();
 		};
 		init();
+		setInterval(next,5000);
 		element.children(".next").on("click",function(){
 			next();
 		});

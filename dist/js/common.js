@@ -2,10 +2,10 @@
 	var DropDown = function(element){
 		element.each(function(i){
 			$(this).mouseenter (function(){
-				$(this).find(".drop_content").slideDown("fast");
+				$(this).find(".drop_content").show();
 			});
 			$(this).mouseleave (function(){
-				$(this).find(".drop_content").slideUp("fast");
+				$(this).find(".drop_content").hide();
 			});
 		});
 	};

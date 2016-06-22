@@ -4,6 +4,7 @@
 		var lists = ul.children("li");
 		var list_width = 0;
 		var totalWidth = 0;
+		var left = 0;
 		var init = function(){
 			ul.wrap('<div class="temwap"></div>');
 			var wap = element.children(".temwap");
@@ -19,23 +20,23 @@
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
 		};
 		var next = function(){
-			var left = ul.css("left");
+			//var left = ul.css("left");
 			if(parseInt(left)==(-totalWidth+list_width*num)){
 				left = 0;
 			}else{
 				left = parseInt(left)-list_width*num;
 			}
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
+			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
 		};
 		var prev = function(){
-			var left = ul.css("left");
+			//var left = ul.css("left");
 			if(parseInt(left)==0){
 				left = -totalWidth+list_width*num;
 			}else{
 				left = parseInt(left)+list_width*num;
 			}
 			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
+			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
 		};
 		init();
 		ListWidth();
