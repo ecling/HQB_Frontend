@@ -30,6 +30,7 @@
 			color: #666;
 		}
 		dd{
+			display:none;
 			a{
 				color: #aaa;
 				line-height: 20px;
@@ -42,6 +43,7 @@
 				font-style: italic;
 			}
 			dd{
+				display:block;
 				margin: 22px 49px 0 17px;
 				float: left;
 				a{
