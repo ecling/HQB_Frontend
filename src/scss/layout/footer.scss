@@ -27,6 +27,11 @@ footer{
 				font-size: 44px;
 				color: #808080;
 			}
+			&:hover{
+				i{
+					color: #e73620;
+				}
+			}
 		}
 		li:last-child{
 			margin-right: 0;
@@ -41,14 +46,15 @@ footer{
 		}
 		input{
 			height: 100%;
-			width: 266px;
+			width: 251px;
 			height: 39px;
 			border:none;
 			padding: 0;
 			margin: 1px 0 0 1px;
+			padding-left: 15px;
 			outline: none;
 		}
-		bottom{
+		button{
 			width: 102px;
 			height: 41px;
 			font-size: 18px;
@@ -57,6 +63,8 @@ footer{
 			float: right;
 			line-height: 41px;
 			text-align: center;
+			border: none;
+			background-color: #e73620;
 		}
 	}
 	.qIndex{
@@ -76,6 +84,9 @@ footer{
 		width: 100%;
 		float: left;
 		text-align: center;
+		img{
+			display: inline-block;
+		}
 	}
 	.copyright{
 		width: 100%;

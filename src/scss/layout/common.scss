@@ -11,12 +11,18 @@ a{
 	text-decoration: none;
 	color: #333;
 }
-dl,h1,ul,dd{
+dl,h1,ul,dd,img{
 	margin: 0;
 	padding: 0;	
 }
+img{
+	display: block;
+}
 li{
 	list-style: none;
+}
+button{
+	cursor: pointer;
 }
 .w1200{
 	margin: 0 auto;
@@ -48,14 +54,5 @@ li{
 	}
 	.right{
 		width: 902px;
-	}
-}
-
-i{
-	&.prev,&.next{
-		cursor: pointer;
-		&:hover{
-			opacity: 0.5;
-		}
 	}
 }

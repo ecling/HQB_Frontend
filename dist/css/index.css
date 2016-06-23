@@ -11,12 +11,18 @@ a {
   text-decoration: none;
   color: #333; }
 
-dl, h1, ul, dd {
+dl, h1, ul, dd, img {
   margin: 0;
   padding: 0; }
 
+img {
+  display: block; }
+
 li {
   list-style: none; }
+
+button {
+  cursor: pointer; }
 
 .w1200 {
   margin: 0 auto;
@@ -49,20 +55,34 @@ li {
 header {
   border-bottom: 2px solid #f39c11; }
   header .dropdown {
+    cursor: pointer;
     position: relative; }
+    header .dropdown .title {
+      line-height: 30px; }
+      header .dropdown .title i {
+        display: inline-block;
+        transition: all 0.2s ease-in-out; }
     header .dropdown .drop_content {
       border: 1px solid #ddd;
       position: absolute;
       display: none;
       background-color: #fff;
       z-index: 1; }
-  header .language_title, header .currency_title, header .chat_title, header .vertical {
+    header .dropdown.active .title {
+      color: #f39c11; }
+      header .dropdown.active .title i.icon-down {
+        transform: rotate(180deg); }
+  header .vertical {
     line-height: 30px; }
   header .language ul {
     padding-top: 12px; }
   header .language li {
     padding-left: 12px;
     width: 82px; }
+    header .language li:hover {
+      background-color: #f39c11; }
+      header .language li:hover a {
+        color: #fff; }
     header .language li a {
       line-height: 36px; }
   header .language em {
@@ -72,6 +92,10 @@ header {
   header .currency li {
     width: 82px;
     padding-left: 12px; }
+    header .currency li:hover {
+      background-color: #f39c11; }
+      header .currency li:hover a {
+        color: #fff; }
     header .currency li a {
       line-height: 36px; }
   header .currency .drop_content {
@@ -174,12 +198,15 @@ header {
         header .search .search-input button i {
           display: inline-block;
           margin-top: 5px; }
+        header .search .search-input button:hover i {
+          color: #ec9100; }
   header .user {
     margin-top: 34px; }
     header .user i {
       font-size: 36px;
       margin-left: 21px;
-      display: inline-block; }
+      display: inline-block;
+      cursor: pointer; }
     header .user .cart {
       position: relative; }
       header .user .cart .qty {
@@ -200,6 +227,8 @@ header {
     header .top_nav .nav {
       margin-left: 277px;
       padding-top: 6px; }
+      header .top_nav .nav li a:hover {
+        color: #f39c11; }
       header .top_nav .nav li a {
         line-height: 41px;
         color: #666; }
@@ -257,6 +286,8 @@ header {
           -webkit-font-smoothing: antialiased;
           -webkit-text-stroke-width: 0.2px;
           -moz-osx-font-smoothing: grayscale; }
+        header .menu .list li.active a {
+          color: #f39c11; }
       header .menu .list .subNav {
         position: absolute;
         width: 769px;
@@ -264,7 +295,8 @@ header {
         left: 237px;
         top: 0;
         background-color: #fff;
-        padding: 30px 0 0 30px; }
+        padding: 30px 0 0 30px;
+        z-index: 10; }
         header .menu .list .subNav dl {
           float: left;
           margin-left: 20px; }
@@ -308,6 +340,8 @@ footer {
       footer .social li i {
         font-size: 44px;
         color: #808080; }
+      footer .social li:hover i {
+        color: #e73620; }
     footer .social li:last-child {
       margin-right: 0; }
   footer #newsletter {
@@ -318,13 +352,14 @@ footer {
       border-radius: 2px; }
     footer #newsletter input {
       height: 100%;
-      width: 266px;
+      width: 251px;
       height: 39px;
       border: none;
       padding: 0;
       margin: 1px 0 0 1px;
+      padding-left: 15px;
       outline: none; }
-    footer #newsletter bottom {
+    footer #newsletter button {
       width: 102px;
       height: 41px;
       font-size: 18px;
@@ -332,7 +367,9 @@ footer {
       display: block;
       float: right;
       line-height: 41px;
-      text-align: center; }
+      text-align: center;
+      border: none;
+      background-color: #e73620; }
   footer .qIndex {
     width: 100%;
     float: left;
@@ -347,6 +384,8 @@ footer {
     width: 100%;
     float: left;
     text-align: center; }
+    footer .friendlyImg img {
+      display: inline-block; }
   footer .copyright {
     width: 100%;
     float: left;
@@ -360,17 +399,27 @@ footer {
     background-color: #3e95df;
     margin: 6px 6px 0 7px;
     position: relative; }
+    .menu_slide .carousel:hover i {
+      opacity: 0.2; }
+      .menu_slide .carousel:hover i.next {
+        transform: translatex(-20px); }
+      .menu_slide .carousel:hover i.prev {
+        transform: translatex(20px); }
     .menu_slide .carousel li {
       width: 762px;
       height: 480px; }
+    .menu_slide .carousel i:hover {
+      opacity: 0.5; }
     .menu_slide .carousel i {
       font-size: 70px;
       color: #fff;
       position: absolute;
       width: 24px;
       height: 82px;
-      opacity: 0.2;
-      background-color: #000; }
+      opacity: 0;
+      background-color: #000;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out; }
     .menu_slide .carousel .carousel_extra {
       position: absolute;
       width: 100%;
@@ -386,23 +435,19 @@ footer {
       .menu_slide .carousel .carousel_extra li.active {
         background-color: #f39c11; }
     .menu_slide .carousel .prev {
-      top: 200px; }
+      top: 200px;
+      left: -20px; }
       .menu_slide .carousel .prev:before {
         position: absolute;
         left: -39px; }
     .menu_slide .carousel .next {
       top: 200px;
-      left: 738px; }
+      left: 758px; }
       .menu_slide .carousel .next:before {
         position: absolute;
         left: -5px; }
-  .menu_slide .banners {
-    width: 155px;
-    height: 480px; }
-    .menu_slide .banners li {
-      height: 154px;
-      background-color: #477324;
-      margin-top: 6px; }
+  .menu_slide .banners li {
+    margin-top: 6px; }
 
 .home_hot {
   margin-top: 83px;
@@ -410,10 +455,9 @@ footer {
   overflow: hidden;
   position: relative; }
   .home_hot .title {
-    background-color: #68f1cd;
-    width: 270px;
-    height: 368px;
-    float: left; }
+    float: left;
+    padding: 19px;
+    border: 1px dashed #dfdfdf; }
   .home_hot ul {
     float: left;
     padding-top: 20px; }
@@ -427,7 +471,10 @@ footer {
     width: 18px;
     height: 119px;
     position: absolute;
-    top: 124px; }
+    top: 124px;
+    cursor: pointer; }
+    .home_hot i:hover {
+      color: #f39c11; }
     .home_hot i:before {
       position: absolute;
       font-size: 120px; }
@@ -440,16 +487,61 @@ footer {
     .home_hot .prev:before {
       left: -70px; }
 
-.home_cate .content {
-  height: 480px;
-  margin-top: 30px;
-  border: 1px dashed #dfdfdf; }
+.home_cate {
+  margin-top: 75px; }
+  .home_cate .title {
+    padding-right: 20px;
+    text-align: right; }
+    .home_cate .title span {
+      font-size: 44px;
+      color: #f39c11;
+      display: inline-block;
+      border-bottom: 1px solid #f39c11; }
+  .home_cate .content {
+    padding: 19px;
+    margin-top: 22px;
+    border: 1px dashed #dfdfdf; }
+  .home_cate .cate_promotion {
+    float: left;
+    width: 502px; }
+    .home_cate .cate_promotion li {
+      float: left; }
+  .home_cate .cate_recommend {
+    padding: 19px 23px 0 23px;
+    float: left; }
+    .home_cate .cate_recommend li {
+      width: 135px;
+      height: 135px;
+      padding: 2px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      position: relative;
+      border: 1px dashed #dfdfdf; }
+      .home_cate .cate_recommend li:hover img {
+        transform: scale(1.1, 1.1); }
+      .home_cate .cate_recommend li img {
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        transition: all 0.25s ease-in-out; }
+      .home_cate .cate_recommend li span {
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        opacity: 0.6;
+        font-size: 25px;
+        top: 54px;
+        left: 0;
+        position: absolute;
+        text-align: center; }
+  .home_cate .cate_main {
+    float: right; }
 
 .home_show {
   margin-top: 83px;
   position: relative; }
   .home_show .title {
-    font-size: 72px;
+    font-size: 30px;
     color: #f39c11;
     margin-bottom: 32px;
     float: left;
@@ -472,7 +564,10 @@ footer {
     height: 82px;
     opacity: 0.2;
     background-color: #000;
-    top: 214px; }
+    top: 214px;
+    cursor: pointer; }
+    .home_show i:hover {
+      opacity: 0.5; }
     .home_show i:before {
       position: absolute; }
   .home_show .next {

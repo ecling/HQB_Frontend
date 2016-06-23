@@ -2,9 +2,11 @@
 	var DropDown = function(element){
 		element.each(function(i){
 			$(this).mouseenter (function(){
+				$(this).addClass("active");
 				$(this).find(".drop_content").show();
 			});
 			$(this).mouseleave (function(){
+				$(this).removeClass("active");
 				$(this).find(".drop_content").hide();
 			});
 		});
