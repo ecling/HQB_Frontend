@@ -3,8 +3,8 @@
 		var dl = element.children("dl");
 		dl.each(function(i){
 			$(this).on("click",function(event){
-				$(this).children("dd").slideUp("slow");
-				$(this).siblings().slideToggle();
+				$(this).children("dd").slideDown("slow");
+				$(this).siblings(".list").children("dd").slideUp("slow");
 			});
 		});
 	};
@@ -13,3 +13,7 @@
 		var accordion = Accordion(this);
 	};
 })(jQuery);
+
+$(function(){
+	$(".shop_by").accordion();
+});

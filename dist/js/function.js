@@ -60,8 +60,28 @@
 	var Tab = function(){
 
 	};
-	var EasyDialog = function(){
+	var EasyDialog = function(options){
+		var container = options.container;
+			content = options.container.content;
+			header = options.container.header;
+			autoClose = options.autoClose;
+			//fixed = options.fixed;
+			var open = function(){
+				if(content){
+					$("body").appendChild('<div class="dialogwrap"><div class="dialogcon"></div></div>');
+					createHeader();
+					createClose();
+				}else{
+					$(container).wrap('<div class="dialogbox"></div>');
+					createClose();
+				}
+			};
+			var createHeader = function(){
 
+			};
+			var createClose = function(){
+
+			};
 	};
 	var SelectDrop = function(element,sl){
 		var init = function(){
@@ -96,6 +116,9 @@
 	};
 	$.fn.slider = function(){
 		var slider = new Slider(this);
+	};
+	$.fn.easyDialog = function(options){
+		var easyDialog = new EasyDialog(options);
 	};
 })(jQuery);
 
