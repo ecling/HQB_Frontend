@@ -1978,6 +1978,16 @@ button {
 .content .right {
   width: 902px; }
 
+.sel_container {
+  position: relative; }
+  .sel_container .option {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    min-width: 100px;
+    color: #000;
+    z-index: 12; }
+
 header {
   border-bottom: 2px solid #f39c11; }
   header .dropdown {

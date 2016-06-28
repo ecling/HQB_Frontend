@@ -56,3 +56,15 @@ button{
 		width: 902px;
 	}
 }
+
+.sel_container{
+	position: relative;
+	.option{
+		position: absolute;
+		display:none;
+		background-color: #fff;
+		min-width: 100px;
+		color: #000;
+		z-index: 12;
+	}
+}

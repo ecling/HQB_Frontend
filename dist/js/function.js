@@ -69,6 +69,17 @@
 			var open = function(){
 				if(content){
 					$("body").appendChild('<div class="dialogwrap"><div class="dialogcon"></div></div>');
+					$("body").appendChild('<div class="dialoggb"></div>');
+					$("dialogwrap").css({
+						"margin":0,
+						"padding":0,
+						"border": 0,
+						"width": "100%",
+						"height": "100%",
+						"position": "fixed",
+						"left": 0,
+						"top": 0
+					});
 					createHeader();
 					createClose();
 				}else{
@@ -86,27 +97,44 @@
 	var SelectDrop = function(element,sl){
 		var init = function(){
 			element.each(function(i){
-				var select_id = 'abc';
-				$(this).wrap('<div class=""><span><i class="iconfont icon-down"></i></span></div>');
+				var select_id = $(this).attr("id");
+				$(this).before('<div class="'+select_id+' sel_container"><span></span><i class="iconfont icon-down"></i></div>');
 				createOption(this);
 			});
 		};
 		var createOption = function(select){
 			var options = $(select).children('option');
-			var select_id = 'abc';
-			$(select_id).children("span").after('<div class="option"><ul></ul></div>');
-			options.earch(function(i){
-				$(select_id).find("ul").append('<li date-valeu=""></li>');
+			var select_id = $(select).attr("id");
+			var select_value = $(select).val();
+			$('.'+select_id).children("i").after('<div class="option"><ul></ul></div>');
+			options.each(function(i){
+				if($(this).attr("selected")){
+					$('.'+select_id).children("span").text($(this).text());
+				}else if(i==0){
+					$('.'+select_id).children("span").text($(this).text());
+				}
+				$('.'+select_id).find("ul").append('<li date-value="'+$(this).attr('value')+'">'+$(this).text()+'</li>');
 			});
 		};
 		var drop = function(){
-			element.earch(function(i){
-				$(this).on("onclick",function(){
-
+			element.each(function(i){
+				var select_id = $(this).attr("id");
+				that = $(this);
+				$('.'+select_id).on("click",function(){
+					$(this).find('.option').toggle();
 				});
-				$(this).find("option").earch(function(i){
-					$(this).on("onclick",function(){
-						
+				$('.'+select_id).find("li").each(function(i){
+					$(this).on("click",function(){
+						li_that = $(this);
+						that.children("option").each(function(i){
+							console.log(i);
+							if(i==li_that.index()){
+								$(this).attr('selected',true);
+							}else{
+								$(this).removeAttr("selected");
+							}
+						});
+						$('.'+select_id).find("span").text($(this).text());
 					});
 				});
 			});
@@ -120,9 +148,13 @@
 	$.fn.easyDialog = function(options){
 		var easyDialog = new EasyDialog(options);
 	};
+	$.fn.selectDrop = function(){
+		var selectDrop = new SelectDrop(this);
+	};
 })(jQuery);
 
 $(function(){
 	$(".carousel").slider();
+	$(".select_drop").selectDrop();
 });
 
