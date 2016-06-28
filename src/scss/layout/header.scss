@@ -229,56 +229,120 @@ header{
 			}
 		}
 	}
+	.account {
+		i{
+			display: inline-block;
+		}
+		&.active .icon-account{
+			border-bottom: 2px solid #f39c11;
+		}
+		.drop_content{
+			width: 134px;
+			border: none;
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);
+			text-align: center;
+			padding-top: 18px;
+			top: 43px;
+			left: -76px;
+			.sign_in{
+				line-height: 29px;
+				width: 102px;
+				background-color: #f39c11;
+				display: inline-block;
+				border-radius: 2px;
+				color: #fff;
+			}
+			.or{
+				display:block;
+			}
+			.register{
+				width: 102px;
+				line-height: 29px;
+				color: #f39c11;
+				border: 1px solid #f39c11;
+				border-radius: 2px;
+				display: inline-block;
+				margin: 20px 0;
+			}
+			.sign_with{
+				display: block;
+				height: 20px;
+				border-bottom: 1px dashed #333;
+			}
+			ul{
+				li{
+					line-height: 27px;
+				}
+			}
+		}
+	}
 	.top_nav{
 		position: relative;
 		margin-top: 22px;
-		height: 45px;
 		.nav{
-			margin-left: 277px;
-			padding-top: 6px;
+			margin-left: 285px;
+			padding-top: 4px;
 			li{
-				a:hover{
-					color: #f39c11;
+				float: left;
+				font-size: 14px;
+				text-transform: uppercase;
+				margin-right:60px;
+				cursor: pointer;
+				&:hover{
+					a{
+						color: #f39c11;
+					}
 				}
 				a{
 					line-height: 41px;
 					color: #666;
+					font-weight: bold;
 				}
 			}
 		}
 	}
 	.menu{
 		position: absolute;
-		width: 270px;
+		width: 250px;
 		font-size: 17px;
 		color: #333;
-		box-shadow: 1px 2px 10px #aaa;
+		box-shadow: 0px 2px 5px rgba(0,0,0,.3);
+		z-index: 10;
 		.menu_title{
 			font-style: italic;
 			font-weight: normal;
 			display: inline-block;
 			line-height: 44px;
-			padding-left: 30px;
+			padding-left: 25px;
 			i{
 				font-size: 22px;
 				color: #f39c11;
 				display: inline-block;
 				line-height: 0;
 			}
+			.icon-down{
+				color: #333;
+				margin-left: 13px;
+				font-size: 18px;
+			}
+			.icon-all{
+				margin-right:4px;
+			}
 		}
 		.list{
 			height: 480px;
-			padding-top: 4px;
+			padding-top: 5px;
 			background-color: #fff;
 			li{
 				float: none;
-				margin: 0 36px 0 33px;
+				padding: 0 20px 0 28px;
 				text-transform: none;
-				position: relative;
+				margin: 0;
+				cursor: pointer;
 				>a{
-					color: #666;
+					color: #333;
 					font-size: 14px;
-					line-height: 38px;
+					line-height: 41px;
 					display: block;
 				}
 				>a:before{
@@ -298,7 +362,6 @@ header{
 					font-style: normal;
 					margin-right: 7px;
 					color: #cfcfcf;
-					line-height: 38px;
 					content: "\e618";
 					display: block;
 					float: right;
@@ -310,49 +373,97 @@ header{
 					a{
 						color: #f39c11;
 					}
+					a::after{
+						color: #f39c11;
+					}
 				}	
 			}
 			.subNav{
 				position: absolute;
-				width: 769px;
-				height: 441px;
-				left: 237px;
-				top: 0;
+				width: 789px;
+				min-height: 462px;
+				left: 250px;
+				top: 47px;
 				background-color: #fff; 
-				padding: 30px 0 0 30px;
+				padding-top: 20px; 
 				z-index: 10;
+				box-shadow: 0 2px 5px rgba(0,0,0,.3);
+				&::before{
+					content: " ";
+					position: absolute;
+					width: 20px;
+					min-height: 482px;
+					top: 0;
+					left: -13px;
+					background-color: #fff;
+					z-index: 10;
+				}
 				dl{
 					float: left;
 					margin-left: 20px;
+					max-width: 177px;
+					min-width: 177px;
+					min-height: 150px;
 					dt{
+						margin-bottom: 8px;
+						a:hover{
+							color: #f39c11;
+						}
 						a{
-							font-size: 14px;
+							font-size: 13px;
+							font-weight: bold;
 							color: #333;
 						}
 					}
 					dd{
+						margin: 0 0 4px 8px;
+						a:hover{
+							color: #f39c11;
+						}
 						a{
-							font-size: 14px;
+							font-size: 13px;
 							color: #818181;
 						}
 					}
 				}
+				dl:nth-child(4n){
+					clear: right;
+				}
 			}
-		}
-	}
-	.top_nav{
-		li{
-			float: left;
-			font-size: 14px;
-			text-transform: uppercase;
-			margin-left:60px;
 		}
 	}
 }
 
-.cate113:before{
+.h113:before{
+	content: "\e611";
+}
+.h114:before{
+	content: "\e62d";
+}
+.h498:before{
+	content: "\e610";
+}
+.h885:before{
+	content: "\e606";
+}
+.h340:before{
+	content: "\e60e";
+}
+.h173:before{
+	content: "\e60a";
+}
+.h367:before{
+	content: "\e62a";
+}
+.h431:before{
+	content: "\e603";
+}
+.h199:before{
+	content: "\e62b";
+}
+.h269:before{
 	content: "\e605";
 }
-.cate114:before{
-	content: "\e606";
+.h154:before{
+	content: "\e629";
 }
