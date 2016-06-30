@@ -215,6 +215,40 @@ header{
 		}
 		.cart {
 			position: relative;
+			.drop_content{
+				width: 287px;
+				left: -232px;
+				top: 39px;
+				padding: 15px 0;
+				text-align: center;
+				ul{
+					text-align: left;
+					padding: 0 16px;
+					border-bottom: 1px dashed #dfdfdf;
+					max-height: 260px;
+					li{
+						margin-bottom: 16px;
+						img{
+							width: 70px;
+							height: 70px;
+							margin-right: 16px;
+						}
+						p,div{
+							float: left;
+						}
+					}
+				}
+				.view_cart{
+					display: inline-block;
+					width: 150px;
+					height: 30px;
+					border-radius: 2px;
+					background-color: #f39c11;
+					line-height: 30px;
+					color: #fff;
+					margin-top: 16px;
+				}
+			}
 			.qty{
 				position: absolute;
 				display: block;

@@ -65,34 +65,75 @@
 			content = options.container.content;
 			header = options.container.header;
 			autoClose = options.autoClose;
+
+			w_height = $(window).height();
+			w_width = $(window).width();
 			//fixed = options.fixed;
-			var open = function(){
-				if(content){
-					$("body").appendChild('<div class="dialogwrap"><div class="dialogcon"></div></div>');
-					$("body").appendChild('<div class="dialoggb"></div>');
-					$("dialogwrap").css({
-						"margin":0,
-						"padding":0,
-						"border": 0,
-						"width": "100%",
-						"height": "100%",
-						"position": "fixed",
-						"left": 0,
-						"top": 0
-					});
-					createHeader();
-					createClose();
-				}else{
-					$(container).wrap('<div class="dialogbox"></div>');
-					createClose();
-				}
-			};
-			var createHeader = function(){
-
-			};
-			var createClose = function(){
-
-			};
+		var init = function(){
+			if($(".dialoggb").length==0){
+				$("body").append('<div class="dialoggb"></div>');
+				$(".dialoggb").css({
+					"display": "none",
+					"position": "fixed",
+				    "top": "0",
+				    "left": "0",
+				    "width": "100%",
+				    "height": "100%",
+				    "background-color": "#333",
+				    "opacity": "0.8",
+				    "z-index": "99"
+				});
+			}
+			if($(".dialogwrap").length==0){
+				$(".dialoggb").after('<div class="dialogwrap"><div class="dialogcon"></div></div>');
+				$(".dialogwrap").css({
+						"display": "none",
+					    "position": "fixed",
+					    "background-color": "#fff",
+					    "z-index": "100"
+				});
+			}
+			open();
+		};
+		var open = function(){
+			if(content){
+				$(".dialogcon").html(content);
+				var dialog_w = $(".dialogwrap").outerHeight();
+					dialog_h = $(".dialogwrap").outerWidth();
+				$(".dialoggb").css({
+					"display": "block",
+				});
+				$(".dialogwrap").css({
+					"display": "block",
+					"top": w_height/2-dialog_h/2,
+					"left": w_width/2-dialog_w/2
+				});
+				createHeader();
+				createClose("dialogwrap");
+			}else{
+				$(container).wrap('<div class="dialogbox"></div>');
+				createClose("dialogbox");
+			}
+		};
+		var createHeader = function(){
+			$(".dialogcon").before('<div class="header"><span>Title</span></div>');
+		};
+		var createClose = function(className){
+			var d_width = $('.'+className).width();
+				d_height = $('.'+className).height();
+			$('.'+className).prepend('<span class="close">xx</span>');
+			$(".close").css({
+				"cursor": "pointer",
+				"position": "absolute",
+				"top": "-10px",
+				"left": d_width
+			});
+			$(".close").on("click",function(){
+				$(this).parent().hide();
+				$(".dialoggb").hide();
+			});
+		};
+		init();
 	};
 	var SelectDrop = function(element,sl){
 		var init = function(){
@@ -156,5 +197,14 @@
 $(function(){
 	$(".carousel").slider();
 	$(".select_drop").selectDrop();
+	/*
+	$().easyDialog({
+		"container":{
+			"content":"test test test test",
+			"header":"message"
+		},
+		"autoClose":200
+	});
+	*/
 });
 

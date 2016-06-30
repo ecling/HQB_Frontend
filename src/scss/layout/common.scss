@@ -40,7 +40,7 @@ button{
 .fr{
 	float: right;
 }
-.clearfix:after{
+ul::after,.clearfix:after{
 	content: ".";
     display: block;
     height: 0;

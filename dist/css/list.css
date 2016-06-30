@@ -40,7 +40,7 @@ button {
 .fr {
   float: right; }
 
-.clearfix:after {
+ul::after, .clearfix:after {
   content: ".";
   display: block;
   height: 0;
@@ -219,6 +219,34 @@ header {
       cursor: pointer; }
     header .user .cart {
       position: relative; }
+      header .user .cart .drop_content {
+        width: 287px;
+        left: -232px;
+        top: 39px;
+        padding: 15px 0;
+        text-align: center; }
+        header .user .cart .drop_content ul {
+          text-align: left;
+          padding: 0 16px;
+          border-bottom: 1px dashed #dfdfdf;
+          max-height: 260px; }
+          header .user .cart .drop_content ul li {
+            margin-bottom: 16px; }
+            header .user .cart .drop_content ul li img {
+              width: 70px;
+              height: 70px;
+              margin-right: 16px; }
+            header .user .cart .drop_content ul li p, header .user .cart .drop_content ul li div {
+              float: left; }
+        header .user .cart .drop_content .view_cart {
+          display: inline-block;
+          width: 150px;
+          height: 30px;
+          border-radius: 2px;
+          background-color: #f39c11;
+          line-height: 30px;
+          color: #fff;
+          margin-top: 16px; }
       header .user .cart .qty {
         position: absolute;
         display: block;

@@ -36,12 +36,6 @@
 			});
 		});
 	};
-	var AutoComplete = function(){
-
-	};
-	var TopMiniCart = function(){
-		
-	};
 
 	$.fn.dropDown = function(){
 		var dropDown = new DropDown(this);
@@ -55,4 +49,31 @@
 $(function(){
 	$(".dropdown").dropDown();
 	$(".menu ").menu();
+
+	//Top Mini Cart
+	(function(){
+		var topCart = $(".cart");
+		topCart.on("mouseover",function(){
+			if(!topCart.attr("data-load")){
+				$.ajax({
+					cache: false,
+					type: "GET",
+					url: "data-topcart.json",
+					dataType: "json",
+					success: function(msg){
+						topCart.find('.qty').text(msg.qty);
+						topCart.addClass("dropdown");
+						topCart.dropDown();
+						topCart.children(".drop_content").show();
+						topCart.attr("data-load",true);
+					}
+				});
+			}
+		});
+	})();
+
+	//Auto Complete
+	(function(){
+
+	})();
 });	
