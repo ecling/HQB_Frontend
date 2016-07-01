@@ -74,6 +74,60 @@ $(function(){
 
 	//Auto Complete
 	(function(){
+		var input = $(".search-input input");
+			is_load = false;
+			t = '';
+		var autoComplete = function(){
+			$.ajax({
+				cache: false,
+				type: "GET",
+				url: "data-autoComplete.json",
+				dataType: "json",
+				success: function(msg){
+					show(msg);
+					//console.log(msg);
+				}
+			});
+		};
+		var show = function(msg){
+			$(".search").append('<div class="search_complete"></div>');
+			$(".search_complete").css({
+				"display": "none"
+			});
+			$(".search_complete").html(msg.html);
+		};
+		var onkeyup = function(){
+			if(!input.val().length>0){
+				return;
+			}
+			if(is_load){
+				clearTimeout(t);
+			}
+			is_load = true;
+			t =setTimeout(autoComplete,500);
+		};
+		var selectList = function(){
 
+		};
+		input.on("keyup",function(event){
+			if(event.keyCode>=48&&event.keyCode<=57){
+				onkeyup();
+			}
+			if(event.keyCode>=65&&event.keyCode<=90){
+				onkeyup();
+			}
+			if(event.keyCode>=96&&event.keyCode<=105){
+				onkeyup();
+			}
+			if(event.keyCode==8){
+				onkeyup();
+			}
+			if(event.keyCode==38||event.keyCode==40){
+				selectList();
+			}
+		});
+		input.on("blur",function(){
+
+		});
 	})();
 });	

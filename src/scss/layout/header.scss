@@ -160,26 +160,11 @@ header{
 		margin-top: 20px;
 	}
 	.search{
-		width: 568px;
-		background-color: #f39c11;
-		border-radius: 30px;
-		margin: 34px 0 0 88px;
-		.cata_drop{
-			line-height: 36px;
-			color: #fff;
-			float: left;
-			margin-left: 36px;
-			font-weight: bold;
-			i{
-				display: inline-block;
-				margin-left: 55px;
-				line-height: 0;
-			}
-		}
+		width: 480px;
+		margin: 34px 0 0 150px;
+		border: 1px solid #cfcfcf;
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.1) inset;
 		.search-input{
-			border-radius: 30px;
-			float: right;
-			width: 346px;
 			background-color: #fff;
 			margin: 4px 4px 4px 0; 
 			input{
@@ -187,6 +172,7 @@ header{
 				outline: none;
 				margin-left:20px;
 				height: 28px;
+				width: 88%;
 			}
 			button{
 				border: medium none;
