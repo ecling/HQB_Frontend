@@ -1973,10 +1973,10 @@ ul::after, .clearfix:after {
   clear: both;
   visibility: hidden; }
 
-.content .left {
-  width: 271px; }
-.content .right {
-  width: 902px; }
+.wrap .left {
+  width: 250px; }
+.wrap .right {
+  width: 916px; }
 
 .sel_container {
   position: relative; }
@@ -2104,7 +2104,8 @@ header {
     width: 480px;
     margin: 34px 0 0 150px;
     border: 1px solid #cfcfcf;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset; }
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+    position: relative; }
     header .search .search-input {
       background-color: #fff;
       margin: 4px 4px 4px 0; }
@@ -2124,6 +2125,22 @@ header {
           margin-top: 5px; }
         header .search .search-input button:hover i {
           color: #ec9100; }
+    header .search .search_complete {
+      display: block;
+      left: 0px;
+      position: absolute;
+      top: 37px;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.1) inset;
+      z-index: 20; }
+      header .search .search_complete li a {
+        line-height: 30px;
+        display: block;
+        padding-left: 22px; }
+        header .search .search_complete li a:hover {
+          background-color: #ddd;
+          border-radius: 1px; }
   header .user {
     margin-top: 34px; }
     header .user i {
@@ -2145,13 +2162,20 @@ header {
           border-bottom: 1px dashed #dfdfdf;
           max-height: 260px; }
           header .user .cart .drop_content ul li {
-            margin-bottom: 16px; }
+            margin-bottom: 16px;
+            float: left; }
+            header .user .cart .drop_content ul li a {
+              display: inline-block;
+              float: left; }
             header .user .cart .drop_content ul li img {
               width: 70px;
               height: 70px;
               margin-right: 16px; }
             header .user .cart .drop_content ul li p, header .user .cart .drop_content ul li div {
               float: left; }
+            header .user .cart .drop_content ul li p {
+              width: 169px;
+              margin: 0; }
         header .user .cart .drop_content .view_cart {
           display: inline-block;
           width: 150px;
@@ -2230,7 +2254,6 @@ header {
     width: 250px;
     font-size: 17px;
     color: #333;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 10; }
     header .menu .menu_title {
       font-style: italic;
@@ -2252,7 +2275,8 @@ header {
     header .menu .list {
       height: 480px;
       padding-top: 5px;
-      background-color: #fff; }
+      background-color: #fff;
+      display: none; }
       header .menu .list li {
         float: none;
         padding: 0 20px 0 28px;
@@ -2333,6 +2357,11 @@ header {
         header .menu .list .subNav dl:nth-child(4n) {
           clear: right; }
 
+.cms-index-index .menu {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); }
+  .cms-index-index .menu .list {
+    display: block; }
+
 .h113:before {
   content: "\e611"; }
 
@@ -2397,7 +2426,7 @@ footer {
     footer #newsletter div {
       height: 41px;
       background-color: #e73620;
-      border-radius: 2px; }
+      border-radius: 1px; }
     footer #newsletter input {
       height: 100%;
       width: 251px;

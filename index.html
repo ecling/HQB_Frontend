@@ -8,11 +8,12 @@
 		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1467081069_1105943.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/index.css" />
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
 		<script type="text/javascript" src="dist/js/index.js"></script>
 	</head>
-	<body>
+	<body class="cms-index-index">
 		<header>
 			<div class="tool w1200 clearfix">
 				<div class="left">
@@ -656,7 +657,6 @@
 						<dd><a href="" rel="nofollow">Contact Us</a></dd>
 						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
 					</dl>
-
 				</div>
 				<div class="newsletter fr">
 					<ul class="social clearfix">
@@ -669,7 +669,7 @@
 					</ul>
 					<form id="newsletter">
 						<div>
-							<input type="text" name="" class="" id="" maxlength="" placeholder="Enter Your E-mail Address" />
+							<input type="email" name="email" class="" id="" maxlength="" placeholder="Enter Your E-mail Address" required />
 							<button>Subscribe</button>
 						</div>
 						<p>Newsletter:subscribe to win cash prizes</p>

@@ -15,10 +15,14 @@
 		var ul = element.find("ul");
 		var li = element.find("li");
 		var subs = element.find(".subNav");
-		var init = function(element){
+		var is_active = false;
+		var init = function(){
 			subs.each(function(i){
 				$(this).hide();
 			});
+			if($(element).hasClass("active")==true){
+				is_active = true;
+			}
 		};
 		init();
 		li.each(function(i){
@@ -29,12 +33,24 @@
 				$(this).find(".subNav").show();
 			});
 		});
+		
 		ul.on("mouseleave",function(){
 			ul.find(".active").removeClass("active");
 			subs.each(function(i){
 				$(this).hide();
 			});
 		});
+
+		if(is_active==false){
+			element.on("mouseenter",function(event){
+				element.css({"box-shadow": "0 2px 5px rgba(0, 0, 0, 0.3)"});
+				element.children(".list").show();
+			});
+			element.on("mouseleave",function(event){
+				element.css({"box-shadow": "none"});
+				element.children(".list").hide();
+			});
+		}
 	};
 
 	$.fn.dropDown = function(){
@@ -90,10 +106,9 @@ $(function(){
 			});
 		};
 		var show = function(msg){
-			$(".search").append('<div class="search_complete"></div>');
-			$(".search_complete").css({
-				"display": "none"
-			});
+			if($(".search").length){
+				$(".search").append('<div class="search_complete"></div>');
+			}
 			$(".search_complete").html(msg.html);
 		};
 		var onkeyup = function(){
@@ -126,8 +141,13 @@ $(function(){
 				selectList();
 			}
 		});
-		input.on("blur",function(){
-
+		input.on("blur",function(event){
+			$(".search_complete").css({
+				"display": "none"
+			});
 		});
 	})();
+
+	//Newsletter form validate
+	$("#newsletter").validate();
 });	
