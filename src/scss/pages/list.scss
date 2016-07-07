@@ -152,6 +152,7 @@
 			display: inline-block;
 			transform: rotate(-90deg);
 		}
+
 		.view_mode_list{
 			background:white;
 			display:block;
@@ -161,6 +162,9 @@
 			left: 30px;
 			box-shadow:0 0 5px #888;
 			z-index: 3;
+			&.right{
+				left:200px;
+			}
 			li{
 				height: 25px;
 				line-height: 25px;
