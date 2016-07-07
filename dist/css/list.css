@@ -1,3 +1,4 @@
+@import url(../css/pagination.css);
 html {
   font-family: arial, georgia, verdana, simsun, helvetica, sans-serif; }
 
@@ -551,15 +552,55 @@ footer {
   .pager li {
     float: left; }
 
+.fixDiv {
+  position: fixed;
+  margin-left: -480px;
+  margin-top: -280px;
+  width: 930px;
+  height: 530px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid red;
+  padding: 30px;
+  background: #888;
+  z-index: 66; }
+  .fixDiv .leftDiv {
+    width: 317px;
+    height: 100%; }
+    .fixDiv .leftDiv .leftDivimg {
+      width: 332px;
+      margin-top: 10px; }
+      .fixDiv .leftDiv .leftDivimg img {
+        float: left;
+        margin-right: 12px; }
+    .fixDiv .leftDiv .fontImg {
+      height: 50px;
+      line-height: 50px;
+      text-align: center; }
+      .fixDiv .leftDiv .fontImg span {
+        color: red; }
+
 .wrap {
   padding-top: 30px; }
 
 .sidebox .color dd {
-  float: left;
-  width: 35px;
-  height: 35px;
-  padding-left: 30px;
-  padding-bottom: 15px; }
+  padding-left: 20px; }
+  .sidebox .color dd a {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px dashed #888;
+    border-radius: 50%;
+    padding: 10px 0 13px 25px;
+    margin-top: 10px; }
+    .sidebox .color dd a span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-left: -18px;
+      margin-top: -4px; }
 .sidebox .list dt {
   cursor: pointer; }
   .sidebox .list dt:hover {
@@ -616,13 +657,40 @@ footer {
     font-size: 18px;
     float: left; }
   .header .view_mode {
+    position: relative;
     width: 250px;
     float: right;
     padding: 0 6px 0 25px;
     border-top: 1px solid #f39c11;
     border-bottom: 1px solid #f39c11; }
+    .header .view_mode span {
+      position: absolute;
+      top: 12px;
+      right: 137px;
+      display: inline-block;
+      transform: rotate(-90deg); }
+    .header .view_mode .view_mode_list {
+      background: white;
+      display: block;
+      position: absolute;
+      width: 130px;
+      top: 40;
+      left: 30px;
+      box-shadow: 0 0 5px #888;
+      z-index: 3; }
+      .header .view_mode .view_mode_list li {
+        height: 25px;
+        line-height: 25px;
+        padding-left: 15px; }
+        .header .view_mode .view_mode_list li a {
+          display: block;
+          width: 100%;
+          color: #888;
+          font-size: 16px; }
+          .header .view_mode .view_mode_list li a:hover {
+            color: #f39c11; }
     .header .view_mode .view {
-      margin-left: 29px; }
+      margin-left: 52px; }
       .header .view_mode .view i {
         margin-left: 5px; }
     .header .view_mode .sort i {
@@ -640,7 +708,11 @@ footer {
     margin-bottom: 20px;
     padding: 5px; }
     .product_list li:hover {
-      box-shadow: 1px 1px 15px red; }
+      transition: box-shadow 500ms ease-out;
+      -moz-transition: box-shadow 500ms ease-out;
+      -webkit-transition: box-shadow 500ms ease-out;
+      -o-transition: box-shadow 500ms ease-out;
+      box-shadow: 0 0  5px red; }
       .product_list li:hover .hidediv {
         display: block; }
     .product_list li .hidediv {
@@ -656,6 +728,8 @@ footer {
       height: 25px;
       line-height: 25px;
       background-color: rgba(255, 255, 255, 0.6); }
+      .product_list li .hidediv span {
+        margin-right: 5px; }
     .product_list li i {
       float: right; }
     .product_list li img {
@@ -673,7 +747,8 @@ footer {
       color: #e73620; }
       .product_list li .price .original {
         color: #bbb;
-        font-size: 12px; }
+        font-size: 12px;
+        text-decoration: line-through; }
       .product_list li .price .off {
         display: block;
         font-size: 16px;
@@ -688,16 +763,12 @@ footer {
         padding: 9px 0 0 9px; }
     .product_list li .label {
       display: block;
-      height: 0;
-      width: 0;
-      border-width: 46px 59px 46px 0;
-      border-color: transparent;
-      border-style: solid;
-      border-top-color: #f6a118;
+      width: 63px;
+      height: 50px;
+      background: url(../../design/hot.png);
       position: absolute;
-      top: 5px;
-      left: 5px;
-      transform: rotate(0deg); }
+      top: 3px;
+      left: 3px; }
   .product_list li:nth-child(4n) {
     margin-right: 0; }
 

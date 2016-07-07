@@ -3,7 +3,7 @@
 		var dl = element.children("dl");
 		dl.each(function(i){
 			$(this).on("click",function(event){
-				$(this).children("dd").slideDown("slow");
+				$(this).children("dd").toggle("slow");
 				$(this).siblings(".list").children("dd").slideUp("slow");
 			});
 		});

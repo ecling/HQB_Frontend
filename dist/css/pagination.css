@@ -1,0 +1,65 @@
+@charset "utf-8";
+.pages {
+	width:430px;
+  margin-top:30px;
+  float: right;
+ text-align: right;
+}
+.pages #Pagination {
+  padding-left:35px;
+  position: relative;
+  width: 400px;
+  float: left;
+  overflow: hidden;
+}
+.pages #Pagination .pagination {
+  margin-left: 10px;
+  height: 40px;
+  text-align: right;
+  font-family: \u5b8b\u4f53,Arial;
+}
+
+.pages #Pagination .pagination a,
+.pages #Pagination .pagination span {
+  float: left;
+  display: inline;
+  border-right: none;
+  background: white;
+  color: #666666;
+  font-size: 18px;
+  cursor: pointer;
+}
+.pagination a{
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.pages #Pagination .pagination .current {
+  background: #ffac59;
+  color: #fff;
+}
+.pages #Pagination .pagination .prev,
+.pages #Pagination .pagination .next {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  background:white;
+  color: #666666;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.next{
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+
