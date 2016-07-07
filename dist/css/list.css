@@ -554,6 +554,20 @@ footer {
 .wrap {
   padding-top: 30px; }
 
+.sidebox .color dd {
+  float: left;
+  width: 35px;
+  height: 35px;
+  padding-left: 30px;
+  padding-bottom: 15px; }
+.sidebox .list dt {
+  cursor: pointer; }
+  .sidebox .list dt:hover {
+    color: #f39711; }
+.sidebox .list .iconfont {
+  color: #f39711; }
+.sidebox .list dd {
+  margin-top: 10px; }
 .sidebox .title {
   font-size: 18px;
   line-height: 30px;
@@ -577,15 +591,17 @@ footer {
       color: #aaa;
       line-height: 20px;
       margin-left: 17px; }
-  .sidebox.shop_by dl.color, .sidebox.shop_by dl.size {
+      .sidebox.shop_by dl dd a:hover {
+        color: #f39711; }
+  .sidebox.shop_by dl.size {
     float: left; }
-    .sidebox.shop_by dl.color dt, .sidebox.shop_by dl.size dt {
+    .sidebox.shop_by dl.size dt {
       font-style: italic; }
-    .sidebox.shop_by dl.color dd, .sidebox.shop_by dl.size dd {
+    .sidebox.shop_by dl.size dd {
       display: block;
       margin: 22px 49px 0 17px;
       float: left; }
-      .sidebox.shop_by dl.color dd a, .sidebox.shop_by dl.size dd a {
+      .sidebox.shop_by dl.size dd a {
         display: inline-block;
         padding: 5px;
         margin: 0;
@@ -600,58 +616,90 @@ footer {
     font-size: 18px;
     float: left; }
   .header .view_mode {
+    width: 250px;
     float: right;
     padding: 0 6px 0 25px;
     border-top: 1px solid #f39c11;
     border-bottom: 1px solid #f39c11; }
     .header .view_mode .view {
-      margin-left: 39px; }
+      margin-left: 29px; }
+      .header .view_mode .view i {
+        margin-left: 5px; }
+    .header .view_mode .sort i {
+      margin-left: 5px; }
 
-.product_list li {
-  min-height: 348px;
-  width: 216px;
-  float: left;
-  position: relative;
-  margin-right: 12px; }
-  .product_list li img {
-    width: 216px;
-    height: 320px; }
-  .product_list li .name {
-    padding: 9px 0;
-    margin: 0; }
-    .product_list li .name a {
-      color: #818181; }
-  .product_list li .price {
-    font-size: 14px;
-    color: #e73620; }
-    .product_list li .price .original {
-      color: #bbb;
-      font-size: 12px; }
-    .product_list li .price .off {
-      display: block;
-      font-size: 16px;
-      color: #fff;
+.product_list {
+  width: 930px; }
+  .product_list li {
+    min-height: 348px;
+    height: 387px;
+    width: 211px;
+    float: left;
+    position: relative;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    padding: 5px; }
+    .product_list li:hover {
+      box-shadow: 1px 1px 15px red; }
+      .product_list li:hover .hidediv {
+        display: block; }
+    .product_list li .hidediv {
+      display: none;
       position: absolute;
-      width: 41px;
-      height: 41px;
-      border-radius: 50%;
-      background-color: #000;
-      left: 160px;
-      top: 263px;
-      padding: 9px 0 0 9px; }
-  .product_list li .label {
-    display: block;
-    height: 0;
-    width: 0;
-    border-width: 46px 59px 46px 0;
-    border-color: transparent;
-    border-style: solid;
-    border-top-color: #f6a118;
-    top: 0;
-    left: 0;
-    transform: rotate(30deg); }
-.product_list li:nth-child(4n) {
-  margin-right: 0; }
+      text-align: center;
+      color: black;
+      font-size: 15px;
+      top: 55%;
+      left: 50%;
+      margin: -23px 0 0 -54px;
+      width: 108px;
+      height: 25px;
+      line-height: 25px;
+      background-color: rgba(255, 255, 255, 0.6); }
+    .product_list li i {
+      float: right; }
+    .product_list li img {
+      width: 212px;
+      height: 320px; }
+    .product_list li .name {
+      padding: 9px 0;
+      margin: 0; }
+      .product_list li .name a {
+        color: #818181; }
+        .product_list li .name a:hover {
+          color: #f39711; }
+    .product_list li .price {
+      font-size: 14px;
+      color: #e73620; }
+      .product_list li .price .original {
+        color: #bbb;
+        font-size: 12px; }
+      .product_list li .price .off {
+        display: block;
+        font-size: 16px;
+        color: #fff;
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        left: 160px;
+        top: 263px;
+        padding: 9px 0 0 9px; }
+    .product_list li .label {
+      display: block;
+      height: 0;
+      width: 0;
+      border-width: 46px 59px 46px 0;
+      border-color: transparent;
+      border-style: solid;
+      border-top-color: #f6a118;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      transform: rotate(0deg); }
+  .product_list li:nth-child(4n) {
+    margin-right: 0; }
 
 
 
