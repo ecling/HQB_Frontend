@@ -552,34 +552,6 @@ footer {
   .pager li {
     float: left; }
 
-.fixDiv {
-  position: fixed;
-  margin-left: -480px;
-  margin-top: -280px;
-  width: 930px;
-  height: 530px;
-  top: 50%;
-  left: 50%;
-  border: 1px solid red;
-  padding: 30px;
-  background: #888;
-  z-index: 66; }
-  .fixDiv .leftDiv {
-    width: 317px;
-    height: 100%; }
-    .fixDiv .leftDiv .leftDivimg {
-      width: 332px;
-      margin-top: 10px; }
-      .fixDiv .leftDiv .leftDivimg img {
-        float: left;
-        margin-right: 12px; }
-    .fixDiv .leftDiv .fontImg {
-      height: 50px;
-      line-height: 50px;
-      text-align: center; }
-      .fixDiv .leftDiv .fontImg span {
-        color: red; }
-
 .wrap {
   padding-top: 30px; }
 
@@ -664,39 +636,76 @@ footer {
     border-top: 1px solid #f39c11;
     border-bottom: 1px solid #f39c11; }
     .header .view_mode span {
-      position: absolute;
-      top: 12px;
-      right: 137px;
-      display: inline-block;
-      transform: rotate(-90deg); }
+      padding-right: 10px; }
     .header .view_mode .view_mode_list {
       background: white;
-      display: block;
       position: absolute;
       width: 130px;
-      top: 40;
+      top: 32px;
       left: 30px;
-      box-shadow: 0 0 5px #888;
-      z-index: 3; }
+      box-shadow: 0 0 1px #888;
+      -webkit-box-shadow: 0 0 1px #888;
+      -o-box-shadow: 0 0 1px #888;
+      -moz-box-shadow: 0 0 1px #888;
+      z-index: 3;
+      display: none; }
       .header .view_mode .view_mode_list.right {
-        left: 200px; }
+        left: 216px;
+        width: 110px; }
       .header .view_mode .view_mode_list li {
         height: 25px;
         line-height: 25px;
         padding-left: 15px; }
+        .header .view_mode .view_mode_list li:hover {
+          background: #f39c11; }
+          .header .view_mode .view_mode_list li:hover a {
+            color: white; }
         .header .view_mode .view_mode_list li a {
           display: block;
           width: 100%;
           color: #888;
-          font-size: 16px; }
-          .header .view_mode .view_mode_list li a:hover {
-            color: #f39c11; }
+          font-size: 12px;
+          font-family: arial, georgia, verdana, simsun, helvetica, sans-serif; }
     .header .view_mode .view {
-      margin-left: 52px; }
+      margin-left: 45px; }
+      .header .view_mode .view ul i {
+        position: absolute;
+        top: -19px;
+        right: 51px;
+        color: #888;
+        border-bottom: 1px solid white;
+        height: 18px; }
+      .header .view_mode .view:hover {
+        cursor: pointer;
+        color: #f39711; }
+        .header .view_mode .view:hover i.icon-down {
+          transform: rotate(180deg); }
+        .header .view_mode .view:hover i i {
+          display: block; }
+        .header .view_mode .view:hover .right {
+          display: block; }
       .header .view_mode .view i {
         margin-left: 5px; }
-    .header .view_mode .sort i {
-      margin-left: 5px; }
+    .header .view_mode .sort ul i {
+      position: absolute;
+      top: -19px;
+      left: 97px;
+      color: #888;
+      border-bottom: 1px solid white;
+      height: 18px; }
+    .header .view_mode .sort:hover {
+      cursor: pointer;
+      color: #f39711; }
+      .header .view_mode .sort:hover i.icon-down {
+        transform: rotate(180deg); }
+      .header .view_mode .sort:hover i i {
+        display: block; }
+      .header .view_mode .sort:hover .view_mode_list {
+        display: block; }
+
+.view_mode .fl i {
+  display: inline-block;
+  transition: all 0.2s ease-in-out; }
 
 .product_list {
   width: 930px; }
@@ -729,11 +738,17 @@ footer {
       width: 108px;
       height: 25px;
       line-height: 25px;
-      background-color: rgba(255, 255, 255, 0.6); }
+      background-color: rgba(255, 255, 255, 0.6);
+      cursor: pointer; }
       .product_list li .hidediv span {
         margin-right: 5px; }
     .product_list li i {
+      color: #d8d8d8;
+      font-size: 20px;
       float: right; }
+      .product_list li i:hover {
+        cursor: pointer;
+        color: red; }
     .product_list li img {
       width: 212px;
       height: 320px; }
