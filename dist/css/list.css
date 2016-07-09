@@ -591,6 +591,8 @@ footer {
   .sidebox.sub_cate li a {
     font-style: italic;
     color: #818181; }
+    .sidebox.sub_cate li a:hover {
+      color: #f39711; }
 .sidebox.shop_by dl {
   float: left;
   width: 100%;
@@ -650,7 +652,7 @@ footer {
       z-index: 3;
       display: none; }
       .header .view_mode .view_mode_list.right {
-        left: 216px;
+        left: 210px;
         width: 110px; }
       .header .view_mode .view_mode_list li {
         height: 25px;
@@ -685,7 +687,7 @@ footer {
         .header .view_mode .view:hover .right {
           display: block; }
       .header .view_mode .view i {
-        margin-left: 5px; }
+        margin-left: 7px; }
     .header .view_mode .sort ul i {
       position: absolute;
       top: -19px;
@@ -746,9 +748,6 @@ footer {
       color: #d8d8d8;
       font-size: 20px;
       float: right; }
-      .product_list li i:hover {
-        cursor: pointer;
-        color: red; }
     .product_list li img {
       width: 212px;
       height: 320px; }

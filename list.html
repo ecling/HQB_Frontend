@@ -769,6 +769,22 @@
 				
 				</div>
 				<script type="text/javascript">
+					$(document).ready(function(){
+						var $i = $(".product_list i");
+						$i.on('click',function(){
+							$this = $(this);
+							$this.css(
+								{
+									'color': 'red',
+									'transform': 'scale(2,2)',
+									'transition':'all 500ms linear',
+								}
+							
+							);
+						})
+					});
+				</script>
+				<script type="text/javascript">
 				$(document).ready(function() {
 					$("#Pagination").pagination("20");
 				});

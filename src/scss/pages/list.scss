@@ -57,6 +57,9 @@
 		a{
 			font-style: italic;
 			color: #818181;
+			&:hover{
+				color:#f39711;
+			}
 		}
 	}
 	&.shop_by dl{
@@ -124,7 +127,7 @@
 			z-index: 3;
 			display: none;
 			&.right{
-				left:216px;
+				left:210px;
 				width: 110px;
 			}
 			li{
@@ -180,7 +183,7 @@
 			}
 			margin-left: 45px;
 			i{
-				margin-left:5px;
+				margin-left:7px;
 			}
 		}
 		.sort{
@@ -258,12 +261,9 @@
 			}
 		}
 		i{
+			
 			color:#d8d8d8;
 			font-size: 20px;
-			&:hover{
-				cursor: pointer;
-				color:red;
-			}
 			float:right;
 		}
 		img{

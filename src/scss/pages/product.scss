@@ -166,6 +166,9 @@
     }
 }
 
+.productDetail form div{
+    margin-top:10px;
+}
 .proDetailSimilar {
     h5 {
         font-size: pxToRem(16px);
@@ -498,7 +501,16 @@
         }
     }
 }
+.switchImg{
+    .addthis_sharing_toolbox{
+        margin: 40px 0 0 176px;
+        a{
+            border-radius:50%;
+            margin-left:10px;
+        }
 
+    }
+}
 #question {
     > div > div {
         padding: 10px;
