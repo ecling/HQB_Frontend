@@ -1,0 +1,2911 @@
+@import "../help/_helper";
+@import "../base/_normalize";
+@import "../components/_colors";
+@import "../components/_buttons";
+@import "../components/_form";
+@import "../layout/_layout";
+@import "../components/_dropdown";
+@import "../components/_selectDrop";
+@import "../layout/common";
+@import "../layout/header";
+@import "../layout/footer";
+
+
+.askQuestion {
+    h4 {
+        color: $basecol;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ededed;
+        margin-bottom: 10px;
+        font-size: pxToRem(16px);
+    }
+
+    form {
+        > div {
+            margin-bottom: 10px;
+
+            span {
+                display: block;
+                margin-bottom: 10px;
+                color: #404040;
+                font-size: pxToRem(16px);
+                text-transform: capitalize;
+            }
+        }
+
+        input[type='text'], textarea {
+            @include inputfocus;
+
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-right: 20px;
+        }
+
+        > a {
+            text-decoration: underline;
+        }
+    }
+
+    .radio {
+        label {
+            padding-left: 20px;
+
+            @include radio(15px);
+
+            margin-right: 20px;
+        }
+    }
+}
+
+.askProduct {
+    text-align: right;
+
+    .product {
+        text-align: right;
+        width: 100%;
+
+        h4 {
+            background: #fe6900;
+            color: white;
+            text-align: left;
+            font-size: 16px;
+            font-weight: normal;
+            position: relative;
+            padding: 5px 10px;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 0px;
+                height: 0px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: darken(#fe6900, 5%) darken(#fe6900, 5%) white white;
+                left: -1px;
+                top: 29px;
+                position: absolute;
+            }
+        }
+    }
+
+    .content {
+        text-align: left;
+        border: 1px solid #dcdcdc;
+        width: 98%;
+        font-size: 0px;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        display: inline-block;
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+            width: 100px;
+        }
+
+        & > div {
+            display: inline-block;
+            font-size: 14px;
+            margin-left: 12px;
+            width: 130px;
+            vertical-align: top;
+
+            p {
+                word-wrap: break-word;
+            }
+        }
+
+        .regular {
+            text-decoration: line-through;
+        }
+
+        .cheaper {
+            color: red;
+        }
+
+        .rate {
+            margin-top: 20px;
+            margin-left: 0px;
+        }
+
+        .price {
+            margin-top: 20px;
+        }
+    }
+
+    .tips {
+        text-align: left;
+        border: 1px solid #dcdcdc;
+        margin-top: 20px;
+        color: #666666;
+        width: 98%;
+        display: inline-block;
+        padding-bottom: 10px;
+
+        h5 {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        ol {
+            padding: 0px 10px;
+
+            // counter-reset: num 0;
+            list-style: none;
+        }
+
+        li {
+            font-size: 14px;
+            font-weight: normal;
+
+            // counter-increment: num;
+            // &:before {
+            //     content: counter(num) ".";
+            //     margin-right: 2px;
+            // }
+
+        }
+    }
+}
+
+.questionList {
+    .product {
+        text-align: justify;
+        border-bottom: 1px solid #ededed;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .proImg {
+        display: inline-block;
+        vertical-align: top;
+
+        img {
+            width: 210px;
+            height: 210px;
+        }
+    }
+
+    a ~ div {
+        display: inline-block;
+        vertical-align: top;
+
+        > strong {
+            display: block;
+            font-size: pxToRem(18px);
+            margin-bottom: 20px;
+        }
+    }
+
+    a + div {
+        max-width: 580px;
+
+        p {
+            font-size: pxToRem(16px);
+            color: #404040;
+
+            span {
+                font-size: pxToRem(14px);
+                color: $textcol;
+            }
+        }
+    }
+
+    .pricey {
+        font-size: pxToRem(38px);
+        color: $red;
+        display: block;
+        font-weight: bold;
+        margin: 20px 0px;
+
+        + a {
+            font-size: pxToRem(18px);
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 4px;
+            background: #f39c11;
+            color: white;
+            border: none;
+            transition: all 0.2s ease-in-out;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .list {
+        > div {
+            padding: 10px;
+            border-bottom: 1px solid #ededed;
+            overflow: hidden;
+        }
+
+        strong {
+            margin-right: 5px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        .que, .ans {
+            border: 1px solid #ededed;
+            border-radius: 4px;
+            position: relative;
+            padding: 10px;
+            color: #666;
+            max-width: 50%;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 8px;
+                top: 10px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 8px;
+                top: 10px;
+            }
+        }
+
+        .que {
+            margin-bottom: 10px;
+            float: left;
+            clear: both;
+
+            &:before {
+                left: -17px;
+                border-color: transparent #ededed transparent transparent;
+            }
+
+            &:after {
+                border-color: transparent white transparent transparent;
+                left: -15px;
+            }
+        }
+
+        .ans {
+            background: #eeeeee;
+            float: right;
+            clear: both;
+
+            &:before {
+                border-color: transparent  transparent transparent #ededed;
+                right: -17px;
+            }
+
+            &:after {
+                border-color: transparent transparent transparent #eeeeee;
+                right: -15px;
+            }
+        }
+
+        .ansp {
+            text-align: right;
+        }
+    }
+}
+
+.pager {
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    ul {
+        font-size: 0px;
+        float: right;
+        padding: 5px 0px;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0px 5px;
+    }
+
+    li.current {
+        font-size: pxToRem(14px);
+        padding: 5px 10px;
+        border: 1px solid $basecol;
+        color: $basecol;
+    }
+
+    span {
+        float: left;
+        margin-top: 10px;
+        font-size: pxToRem(14px);
+    }
+
+    a {
+        font-size: pxToRem(14px);
+        padding: 5px 10px;
+        display: block;
+        border: 1px solid #ededed;
+        transition: all 0.2s ease-in-out;
+
+        &.active, &:hover {
+            color: $basecol;
+            border-color: $basecol;
+        }
+    }
+}
+
+.bestSell {
+    margin-top: 20px;
+
+    h5 {
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        padding: 10px 0px;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    ul {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+.reviewPro {
+    .proReview {
+        font-size: pxToRem(16px);
+        margin-right: 10px;
+
+        + span {
+            font-size: pxToRem(16px);
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    > div {
+        margin-top: 20px;
+    }
+
+    .range {
+        font-size: pxToRem(14px);
+        margin-bottom: 5px;
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            color: darken($textcol, 5%);
+            width: 100px;
+        }
+
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            width: 200px;
+            height: 10px;
+            position: relative;
+            background: #ddd;
+
+            strong {
+                position: absolute;
+                background: $basecol;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        em {
+            font-style: normal;
+            color: darken(#ddd, 5%);
+            width: 30px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+    }
+}
+
+.reviewList {
+    > div {
+        padding: 20px 0px;
+        border-bottom: 1px solid #dcdcdc;
+        font-size: 0px;
+
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+    }
+
+    .options {
+        width: 200px;
+
+        span {
+            display: block;
+            text-transform: capitalize;
+            font-size: pxToRem(14px);
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+
+        strong {
+            margin-left: 5px;
+            color: $textcol;
+            font-weight: normal;
+        }
+    }
+
+    .details {
+        width: 700px;
+        font-size: pxToRem(14px);
+    }
+
+    time {
+        color: #aaa;
+    }
+
+    .brief {
+        display: block;
+        margin: 5px 0px;
+        color: darken($textcol, 10%);
+    }
+
+    .measure {
+        margin: 5px 0px;
+        color: #aaa;
+    }
+}
+
+.reviewImage {
+    display: block;
+    cursor: pointer;
+    cursor: zoom-in;
+    margin-top: 5px;
+}
+
+/* login and register */
+.loginRegister {
+    text-align: justify;
+    margin-top: 20px;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    section {
+        display: inline-block;
+        vertical-align: top;
+        width: 566px;
+    }
+
+    > header {
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: pxToRem(18px);
+        display: inline-block;
+        padding: 10px 0px;
+        border-bottom: 2px solid $basecol;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        background: #eee;
+        padding: 10px 20px;
+        font-size: pxToRem(16px);
+    }
+
+    form {
+        box-sizing: border-box;
+        border: 1px solid #ededed;
+        border-top: none;
+        padding: 20px;
+
+        p {
+            margin-bottom: 10px;
+            font-size: pxToRem(14px);
+            text-align: left;
+        }
+
+        > div {
+            margin-bottom: 10px;
+
+            span {
+                display: block;
+                margin: 5px 0px;
+                font-size: pxToRem(14px);
+                text-transform: capitalize;
+            }
+
+            + p {
+                color: $red;
+                text-align: right;
+            }
+        }
+
+        .action {
+            border-top: 1px solid #ededed;
+            padding: 10px 0px;
+
+            a, button {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            .fb {
+                margin-right: 10px;
+            }
+        }
+
+        button + a {
+            margin-left: 10px;
+        }
+    }
+
+    input[type='text'], input[type='password'] {
+        @include inputfocus;
+
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+    label {
+        display: block;
+        padding: 2px 0px 2px 30px;
+        margin-bottom: 5px;
+
+        @include checkbox;
+
+        a {
+            color: #404040;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* shoppingCart */
+.shoppingCart, .userCenter {
+    position: relative;
+
+    > header {
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+        font-size: 0px;
+        text-align: justify;
+        margin-top: 20px;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        button {
+            display: inline-block;
+            font-size: pxToRem(22px);
+            text-transform: uppercase;
+        }
+    }
+
+    h3 {
+        font-size: pxToRem(18px);
+        display: inline-block;
+        padding: 15px 0px;
+        border-bottom: 2px solid $basecol;
+    }
+}
+
+.cartList {
+    margin-bottom: 20px;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ededed;
+    }
+
+    th {
+        background: lighten(#eee, 2%);
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        font-weight: normal;
+        border: 1px solid #ededed;
+    }
+
+    td {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ededed;
+
+        > a {
+            display: block;
+            margin: 5px auto;
+            width: 16px;
+            height: 16px;
+            transform-origin: center center;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            i {
+                font-size: pxToRem(16px);
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    img {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+
+    label {
+        display: inline-block;
+        padding: 2px 0px 2px 30px;
+        margin-bottom: 5px;
+
+        @include checkbox;
+    }
+
+    input[type="number"] {
+        @include inputfocus;
+
+        width: 50px;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: pxToRem(14px);
+        font-weight: normal;
+
+        ~ span {
+            display: block;
+            text-align: left;
+            color: #aaa;
+            font-size: pxToRem(14px);
+        }
+    }
+
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+
+    .action {
+        padding: 10px 20px;
+        font-size: pxToRem(14px);
+        border: 1px solid #ededed;
+        border-top: none;
+        text-align: justify;
+        font-size: 0px;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        > button, > span, > a {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: pxToRem(14px);
+        }
+
+        .waytosave {
+            float: none;
+            color: #66b4ff;
+            border: 2px solid #ededed;
+            border-radius: 4px;
+            padding: 10px;
+            position: relative;
+            margin-left: 200px;
+            transition: all 0.2s ease-in-out;
+
+            &:before {
+                content: url(../images/waytosave.png);
+                position: absolute;
+                left: -28px;
+                top: -15px;
+            }
+
+            &:hover {
+                color: white;
+                background: $basecol;
+            }
+        }
+    }
+
+    .shipProImg {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+
+    .original-price {
+        text-decoration: line-through;
+    }
+
+    .cart-price, .save {
+        color: $red;
+    }
+
+    .original-price, .cart-price, .save {
+        display: block;
+        font-size: pxToRem(16px);
+    }
+
+    tr td:last-of-type span {
+        color: $textcol;
+        font-weight: bold;
+    }
+}
+
+.total-save {
+    font-weight: bold;
+
+    strong {
+        color: $red;
+    }
+}
+
+.estimate {
+    text-align: justify;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid #dcdcdc;
+        padding: 20px;
+        position: relative;
+        box-sizing: border-box;
+
+        > p {
+            font-size: 0px;
+            box-sizing: border-box;
+
+            > span, strong {
+                display: inline-block;
+                text-align: right;
+            }
+
+            > span {
+                font-size: pxToRem(18px);
+                text-transform: capitalize;
+                width: 50%;
+                white-space: nowrap;
+            }
+
+            strong {
+                font-size: pxToRem(20px);
+                color: $textcol;
+                width: 50%;
+            }
+        }
+    }
+
+    h4 {
+        font-size: pxToRem(22px);
+    }
+
+    header {
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 10px;
+
+        p {
+            font-size: pxToRem(14px);
+
+            span {
+                color: $red;
+            }
+        }
+    }
+
+    form {
+        margin: 10px 0px;
+        position: relative;
+
+        > div {
+            margin-bottom: 10px;
+            font-size: 0px;
+
+            span {
+                font-size: pxToRem(12px);
+                display: inline-block;
+                width: 100px;
+            }
+        }
+
+        p {
+            text-align: right;
+
+            span {
+                color: $red;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    input, select {
+        @include inputfocus;
+
+        box-sizing: border-box;
+    }
+
+    input + button {
+        width: 80px;
+        text-align: center;
+        padding: 5px 10px;
+        margin-left: 10px;
+        background: $gray;
+        color: white;
+    }
+
+    .input-box, .input-box ~ div {
+        margin-bottom: 10px;
+
+        input, select {
+            width: calc(100% - 100px);
+            margin-bottom: 5px;
+        }
+
+        span {
+            margin-bottom: 5px;
+        }
+    }
+
+    .grand {
+        border-top: 2px solid $gray;
+        padding-top: 20px;
+        margin-top: 20px;
+
+        > span {
+            color: #404040;
+        }
+
+        .price {
+            font-size: pxToRem(60px);
+            color: darken($red, 5%);
+        }
+    }
+
+    .checkout {
+        margin-top: 20px;
+        padding: 20px 0px;
+        position: relative;
+
+        > a:first-child {
+            position: absolute;
+            left: 0px;
+            top: -55px;
+        }
+
+        p, button {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .btn {
+            font-size: pxToRem(22px);
+            text-transform: uppercase;
+            vertical-align: 1px;
+        }
+    }
+}
+
+.paypal-logo {
+    font-size: 0px;
+
+    a, span {
+        font-size: pxToRem(12px);
+        display: inline-block;
+    }
+
+    span {
+        margin: 0px 10px;
+    }
+}
+
+#coupon_code, #points_form input {
+    width: calc(100% - 190px);
+}
+
+.recently {
+    margin: 20px 0px;
+
+    h5 {
+        background: #eee;
+        font-size: pxToRem(18px);
+        color: #f39c11;
+        text-transform: capitalize;
+        padding: 10px 20px;
+    }
+
+    ul {
+        font-size: 0px;
+        margin-top: 20px;
+    }
+
+    li {
+        display: inline-block;
+        width: 210px;
+        margin: 10px 15px;
+    }
+}
+
+/* usercenter page */
+.userCenter {
+    input, select, textarea {
+        @include inputfocus;
+    }
+
+    .leftCol {
+        h4 {
+            color: $basecol;
+            font-size: pxToRem(14px);
+            padding: 20px;
+            background: #eee;
+            text-transform: capitalize;
+        }
+
+        ul {
+            border: 1px solid #ededed;
+            border-top: none;
+        }
+
+        li {
+            padding: 15px 0px;
+            width: 230px;
+            margin: auto;
+            border-bottom: 1px solid #ededed;
+            cursor: pointer;
+
+            &:last-of-type {
+                border: none;
+            }
+
+            transition: all 0.2s ease-in-out;
+
+            &.selected {
+                a {
+                    color: $basecol;
+                }
+            }
+        }
+
+        a {
+            transition: all 0.2 ease-in-out;
+
+            &:hover {
+                color: $basecol;
+            }
+        }
+    }
+
+    .rightCol {
+        > div, > section {
+            font-size: pxToRem(14px);
+            margin-bottom: 20px;
+        }
+
+        > div {
+            border: 1px solid darken(#ededed, 3%);
+            padding: 20px;
+        }
+
+        > section {
+            a {
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    color: $basecol;
+                }
+            }
+
+            h4 {
+                padding: 20px;
+                text-transform: capitalize;
+                background: #f1f1f1;
+                font-size: pxToRem(16px);
+                color: $textcol;
+            }
+
+            table {
+                border: 1px solid darken(#ededed, 3%);
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            tr {
+                border-bottom: 1px solid darken(#ededed, 3%);
+            }
+
+            th, td {
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            th {
+                text-transform: capitalize;
+                padding: 15px 20px;
+            }
+
+            header + p {
+                padding: 10px;
+            }
+        }
+
+        .taps {
+            > span,>a {
+                display: inline-block;
+                background: white;
+                border: 1px solid #dcdcdc;
+                padding: 15px 30px;
+                text-transform: capitalize;
+                border-bottom: none;
+                border-right: none;
+                transition: all 0.2s ease-in-out;
+                font-size: pxToRem(14px);
+                cursor: pointer;
+
+                &:last-child {
+                    border-right: 1px solid #dcdcdc;
+                }
+
+                &.active {
+                    border-top: 2px solid $basecol;
+                    color: $basecol;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    background: $basecol;
+                    color: white;
+                }
+            }
+
+            margin: 10px 0px;
+            font-size: 0px;
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                height: 1px;
+                background: #dcdcdc;
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+
+        .tapc {
+            td:first-child {
+                font-weight: bold;
+                color: $basecol;
+                text-decoration: underline;
+                font-size: pxToRem(16px);
+            }
+        }
+
+        .tapc ~ .tapc {
+            display: none;
+        }
+
+        .pager {
+            margin: 20px 0px;
+        }
+    }
+}
+
+.userSummary {
+    text-align: justify;
+    background: #f7f7f7;
+
+    i {
+        font-size: pxToRem(18px);
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        color: lighten($gray, 20%);
+        margin-right: 5px;
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+
+        > p {
+            display: inline-block;
+            text-align: center;
+            margin: 0px 20px;
+
+            span {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            em {
+                font-size: pxToRem(20px);
+                color: #f66306;
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+
+        a {
+            display: inline-block;
+            margin: 5px 0px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+
+            a:hover {
+                color: $basecol;
+            }
+        }
+    }
+
+    .userImg {
+        margin-right: 20px;
+    }
+
+    + div {
+        border: none !important;
+        padding: 0px !important;
+
+        li {
+            margin-left: 10px;
+        }
+    }
+}
+
+.userDetailPay {
+    text-align: justify;
+    background: #f7f7f7;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    th {
+        font-size: pxToRem(16px);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    table {
+        border-collapse: collapse;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 550px;
+    }
+
+    th, td {
+        padding: 5px 10px;
+    }
+
+    th {
+        width: 150px;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 270px;
+
+        > a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+    }
+}
+
+.userCartSum {
+    td > div {
+        font-size: 0px;
+        text-align: left;
+
+        > a {
+            display: inline-block;
+            vertical-align: top;
+            width: 80px;
+            height: 80px;
+        }
+
+        > div {
+            font-size: pxToRem(14px);
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            width: 290px;
+
+            a, span {
+                display: block;
+            }
+
+            span {
+                text-align: left;
+                color: #aaa;
+            }
+        }
+    }
+
+    .btn {
+        display: inline-block;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+
+    > p {
+        text-align: right;
+        padding: 10px;
+    }
+
+    > div {
+        border-top: 1px solid darken(#ededed, 3%);
+        font-size: pxToRem(16px);
+        text-transform: uppercase;
+        text-align: right;
+        padding: 10px;
+        font-weight: bold;
+    }
+}
+
+.userAddress {
+    h4 {
+        text-align: left;
+    }
+    .addNew {
+        padding:10px 20px;
+        font-size: pxToRem(16px);
+        border:1px solid #dcdcdc;
+        color:$basecol;
+        border-radius: 2px;
+        margin: 20px 0px;
+        display: inline-block;
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    li {
+        font-size: 0px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 10px;
+        text-align: justify;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        >p {
+            font-size: pxToRem(14px);
+            color:$basecol;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        div {
+            font-size: pxToRem(14px);
+            display: inline-block;
+            text-align: left;
+            a {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    text-align: left;
+    .default {
+        color:$basecol;
+        pointer-events:none;
+    }
+}
+.newAddress {
+    > form {
+        padding: 20px;
+    }
+
+    .input-box {
+        margin-bottom: 10px;
+
+        span {
+            display: inline-block;
+            width: 150px;
+            vertical-align: middle;
+        }
+    }
+
+    input, select {
+        width: 250px;
+        box-sizing: border-box;
+    }
+
+    em {
+        margin-left: 10px;
+    }
+}
+
+.userPoint {
+    text-align: justify;
+
+    &:after {
+        content: "";
+        width: 100%;
+        display: inline-block;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    div:last-child, div:nth-last-of-type(2) {
+        display: inline-block;
+
+        p {
+            padding: 5px 0px;
+            margin-bottom: 0px;
+
+            a {
+                color: $basecol;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    p {
+        text-align: left;
+
+        em {
+            color: $basecol;
+        }
+    }
+
+    > p {
+        padding: 10px;
+        border-bottom: 1px solid darken(#ededed, 3%);
+        margin-bottom: 10px;
+    }
+}
+
+.userProfile {
+    font-size: pxToRem(14px);
+
+    form {
+        > div {
+            margin-bottom: 10px;
+            font-size: 0px;
+        }
+
+        span {
+            width: 210px;
+            text-transform: capitalize;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+
+    strong, label, span {
+        vertical-align: middle;
+        display: inline-block;
+        font-size: pxToRem(14px);
+    }
+
+    input {
+        display: inline-block;
+        vertical-align: middle;
+
+        + img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    input[type='text'], select {
+        font-size: pxToRem(14px);
+        width: 200px;
+        box-sizing: border-box;
+    }
+
+    label {
+        @include radio;
+
+        padding: 2px 0px 2px 30px;
+        margin-right: 20px;
+    }
+
+    button {
+        margin-left: 220px;
+    }
+
+    .tapc {
+        padding: 20px;
+    }
+
+    .userimg {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        > div, form {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        > div {
+            img {
+                display: block;
+                margin: 0px auto 10px auto;
+                width: 110px;
+                height: 110px;
+            }
+
+            p {
+                font-size: inherit;
+            }
+
+            width: 250px;
+            text-align: center;
+            position: relative;
+
+            button {
+                margin-left: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+        input[type='file'] {
+            display: none;
+        }
+    }
+
+    .beatpicker-clear {
+        margin-left: 5px;
+        position: relative;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        background: $basecol;
+        cursor: pointer;
+        padding: 5px;
+        vertical-align: middle;
+        font-size: pxToRem(14px);
+        outline: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background: #f58500;
+        }
+
+        &:active {
+            background: #f58500;
+            top: 2px;
+        }
+    }
+
+    .input-parent {
+        font-size: 0px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 200px;
+
+        input {
+            width: 150px;
+        }
+    }
+
+    em.error {
+        font-size: pxToRem(12px);
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+}
+
+.userReview {
+    > ul {
+        padding: 20px;
+
+        > li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid darken(#ededed, 3%);
+            font-size: 0px;
+
+            > a {
+                font-size: pxToRem(14px);
+                display: inline-block;
+                vertical-align: top;
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 2px;
+                margin-right: 10px;
+            }
+
+            > div {
+                font-size: pxToRem(14px);
+                display: inline-block;
+                vertical-align: top;
+                max-width: 730px;
+
+                a {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                time, p {
+                    color: #aaa;
+                    margin: 5px 0px;
+                }
+
+                p {
+                    color: darken(#aaa, 10%);
+                }
+            }
+        }
+    }
+}
+
+.proShipping {
+    i {
+        color: white;
+        background: $basecol;
+        font-size: pxToRem(16px);
+        width: 14px;
+        height: 14px;
+        padding: 2px;
+        text-align: center;
+        line-height: 14px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    text-transform: capitalize;
+    font-size: pxToRem(12px);
+    border: 1px solid $basecol;
+    color: $basecol;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.userWishlist {
+    > ul {
+        padding: 20px;
+
+        > li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid darken(#ededed, 3%);
+            font-size: 0px;
+
+            > a {
+                display: inline-block;
+                font-size: pxToRem(14px);
+                vertical-align: middle;
+                width: 110px;
+                height: 110px;
+                overflow: hidden;
+                border-radius: 2px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    li > div {
+        display: inline-block;
+        font-size: pxToRem(14px);
+        vertical-align: top;
+        width: 540px;
+        margin-right: 10px;
+
+        a, span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        span:last-child {
+            font-size: pxToRem(12px);
+            color: lighten($textcol, 30%);
+        }
+    }
+
+    .btn {
+        width: auto;
+        height: auto;
+        padding: 10px 20px;
+        margin-right: 0px;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+
+    .cheap {
+        font-size: pxToRem(20px);
+        color: $red;
+        font-weight: bold;
+    }
+
+    .pricey {
+        text-decoration: line-through;
+    }
+
+    .proShipping {
+        display: inline-block;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.wishAction {
+    width: auto !important;
+    margin-right: 0px !important;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.userNewsletter {
+    > p {
+        padding: 20px;
+        color: $basecol;
+        border-bottom: 1px solid darken(#ededed, 3%);
+    }
+
+    form {
+        padding: 20px;
+        font-size: 0px;
+
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    label {
+        font-size: pxToRem(14px);
+
+        @include checkbox;
+
+        padding: 2px 0px 2px 30px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    span {
+        display: block;
+        font-size: pxToRem(16px);
+        text-transform: capitalize;
+
+        ~ div {
+            border-left: 2px solid $basecol;
+            width: 600px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        + div {
+            width: 200px;
+            margin-right: 30px;
+            border: none;
+            padding-left: 0px;
+        }
+    }
+}
+
+.page-title {
+    margin-top: 20px;
+}
+
+.cart-empty {
+    p {
+        font-size: pxToRem(14px);
+        padding: 10px;
+    }
+}
+
+.sp-methods {
+    > div {
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: pxToRem(14px);
+        padding-left: 4px;
+        width: 210px;
+    }
+
+    .method {
+        font-size: pxToRem(0px);
+
+        span {
+            font-size: 14px;
+            margin: 0px 5px;
+            text-align: left;
+        }
+    }
+
+    .time {
+        width: 150px;
+    }
+
+    .pric {
+        color: $red;
+        font-size: pxToRem(16px) !important;
+        font-weight: bold;
+    }
+}
+
+.buttons-set {
+    padding: 0px !important;
+    border: none !important;
+
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+.nobr {
+    white-space: nowrap;
+
+    a, span {
+        white-space: nowrap;
+    }
+}
+
+#customer-info-form {
+    margin-left: 22px;
+}
+
+.orderReceived {
+    h1, h2, p {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: pxToRem(14px);
+    }
+}
+
+.notice {
+    color: $blue;
+}
+
+.orderTrack {
+    text-align: justify;
+
+    input {
+        @include inputfocus;
+    }
+
+    form {
+        span {
+            display: block;
+            margin-left: 105px;
+        }
+    }
+
+    .notic {
+        border-bottom: 2px solid $basecol;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        width: 520px;
+        padding: 20px;
+
+        p {
+            font-size: pxToRem(14px);
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    label {
+        display: inline-block;
+        width: 100px;
+        vertical-align: middle;
+    }
+
+    a {
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+.forgotPass {
+    padding: 20px;
+
+    .notice {
+        font-size: pxToRem(14px);
+    }
+
+    input {
+        @include inputfocus;
+    }
+
+    h2, p, div {
+        margin-bottom: 10px;
+    }
+}
+
+.paypal-logo {
+    text-align: center;
+}
+
+.paypal-or {
+    display: block;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+/* happy hour */
+
+@keyframes imgbig {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    30%,  70% {
+        transform: translateX(-5px);
+    }
+
+    50%, 90% {
+        transform: translateX(5px);
+    }
+}
+
+.end h4 {
+    background: #e7380e !important;
+}
+
+.slide h4 {
+    background: #e95b0c !important;
+}
+
+/* about us */
+.shit {
+    h4 {
+        color: #f39c11;
+        font-size: pxToRem(14px);
+        padding: 20px;
+        background: #eee;
+        text-transform: capitalize;
+    }
+
+    li {
+        padding: 15px 0px;
+        width: 230px;
+        margin: auto;
+        border-bottom: 1px solid #ededed;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    ul {
+        border: 1px solid #ededed;
+        border-top: none;
+    }
+
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+/* char-nav */
+.char-nav {
+    font-size: 0px;
+    margin-bottom: 20px;
+
+    a {
+        padding: 5px 10px;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid #ededed;
+        border-radius: 2px;
+        margin-right: 5px;
+        display: inline-block;
+        font-size: pxToRem(12px);
+
+        &:hover {
+            background: $basecol;
+            color: white;
+        }
+    }
+}
+
+.numberlist {
+    font-size: 0px;
+
+    li {
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        width: 380px;
+    }
+
+    a {
+        font-size: pxToRem(14px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+.bestSell {
+    margin-top: 20px;
+
+    h5 {
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        padding: 10px 0px;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        width: 210px;
+    }
+
+    ul {
+        text-align: justify;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+
+
+.aboutUs {
+    font-size: 14px;
+
+    h4 {
+        padding: 10px 20px;
+        text-transform: uppercase;
+        background: #f1f1f1;
+        font-size: 16px;
+    }
+
+    > div {
+        padding: 20px 5px;
+
+        > a {
+            display: inline-block;
+            clear: both;
+        }
+    }
+
+    h5 {
+        font-size: pxToRem(20px);
+        font-weight: normal;
+        border-bottom: 1px solid #dcdcdc;
+        padding: 0px 0px 2px 10px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    p {
+        line-height: 25px;
+    }
+
+    img {
+        clear: both;
+        display: inline-block;
+    }
+
+    .story {
+        h5 {
+            display: inline-block;
+            padding-right: 240px;
+        }
+    }
+
+    .advantage {
+        p {
+            padding-right: 320px;
+        }
+    }
+
+    .produce {
+        margin-top: 30px;
+    }
+
+    .imgHold {
+        font-size: 0px;
+    }
+}
+
+.contacts {
+    margin-bottom: 20px;
+
+    .page-title {
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 18px;
+        display: inline-block;
+        padding: 10px 0px;
+        border-bottom: 2px solid $basecol;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        background: #eee;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    input, textarea {
+        @include inputfocus;
+
+        vertical-align: middle;
+        width: 270px;
+    }
+
+    form {
+        > div {
+            margin-bottom: 10px;
+            padding: 0px 20px;
+        }
+    }
+
+    label {
+        display: inline-block;
+        width: 70px;
+        vertical-align: middle;
+    }
+
+    button {
+        margin-left: 20px;
+    }
+
+    em {
+        margin-left: 10px;
+    }
+}
+
+.Hpoints {
+    font-size: pxToRem(14px);
+
+    > img {
+        display: block;
+        margin-top: 10px;
+    }
+
+    > div {
+        margin-top: 10px;
+    }
+
+    h5 {
+        color: #7e0a05;
+        font-size: pxToRem(24px);
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    h6 {
+        font-size: pxToRem(18px);
+        margin-bottom: 10px;
+
+        + p {
+            line-height: 20px;
+        }
+    }
+
+    .get {
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    .sp {
+        strong {
+            font-size: pxToRem(24px);
+            color: $red;
+        }
+
+        span {
+            color: #b7b7b7;
+            margin-left: 10px;
+        }
+
+        margin-bottom: 10px;
+
+        + p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .use {
+        ul {
+            margin-top: 10px;
+            line-height: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 10px auto;
+
+            + p {
+                margin-bottom: 20px;
+
+                a {
+                    text-transform: capitalize;
+                    color: black;
+                    text-decoration: underline;
+                    margin-left: 240px;
+                }
+            }
+        }
+    }
+}
+
+/* waterfall */
+
+.waterfall {
+    border-top: 1px solid #dcdcdc;
+    box-sizing: border-box;
+
+    h2 {
+        padding: 20px 0px;
+        font-size: pxToRem(30px);
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    .fall {
+        background: white;
+        width: 270px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: block;
+
+        img {
+            display: block;
+        }
+    }
+
+    .pic {
+        width: 270px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .text {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+        color: black;
+    }
+
+    .action {
+        margin-top: 5px;
+        font-size: 0px;
+        overflow: hidden;
+        padding: 6px 0px;
+
+        div {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    .share {
+        font-size: pxToRem(16px);
+
+        a {
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $basecol;
+            }
+        }
+    }
+
+    .like {
+        i {
+            font-size: pxToRem(18px);
+            color: $red;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: pxToRem(14px);
+            color: $textcol;
+            border: 1px solid #dcdcdc;
+            padding: 5px;
+            position: relative;
+            margin-left: 10px;
+            box-sizing: border-box;
+
+            &:after, &:before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                border-width: 5px;
+                border-style: solid;
+                position: absolute;
+                top: 8px;
+            }
+
+            &:after {
+                border-color: transparent white transparent transparent;
+                left: -9px;
+            }
+
+            &:before {
+                border-color: transparent #dcdcdc transparent transparent;
+                left: -11px;
+            }
+        }
+    }
+
+    .detail {
+        float: right;
+        margin-top: 2px;
+
+        a {
+            padding: 5px 10px;
+            font-size: pxToRem(14px);
+            background: #cc3400;
+            color: white;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* happy hour */
+.happyhour {
+    .info {
+        font-size: pxToRem(20px);
+
+        p {
+            font-size: pxToRem(14px);
+            text-align: left;
+            text-indent: 2em;
+            line-height: 1.5;
+
+            &:last-of-type {
+                text-align: right;
+                font-style: italic;
+            }
+        }
+    }
+
+    .backUp {
+        display: none;
+        height: 40px;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    > header {
+        margin-bottom: 10px;
+    }
+
+    time {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+        font-weight: bold;
+
+        &:before {
+            content: "\f017";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            margin-right: 5px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    > div {
+        background: #fee5b7;
+        margin-bottom: 20px;
+        position: relative;
+
+        h2 {
+            font-size: pxToRem(24px);
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        h3 {
+            text-align: left;
+            padding: 20px 20px 20px 30px;
+            font-size: pxToRem(22px);
+            font-weight: normal;
+
+            time {
+                display: inline-block;
+                margin-bottom: 0px;
+                margin-right: 5px;
+            }
+
+            span {
+                font-size: pxToRem(16px);
+                display: inline-block;
+                background: $red;
+                color: white;
+                margin-left: 20px;
+                position: relative;
+                padding: 3px 5px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 6px;
+                    left: -12px;
+                    top: 12px;
+                    border-color: $red $red transparent transparent;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 6px;
+                    left: -12px;
+                    top: 0px;
+                    border-color: transparent $red $red transparent;
+                }
+            }
+        }
+
+        > ul {
+            padding: 20px 35px 8px;
+            text-align: justify;
+
+            &:after {
+                content: "";
+                overflow: hidden;
+                height: 0px;
+                width: 100%;
+                display: inline-block;
+            }
+
+            li {
+                padding: 15px;
+                position: relative;
+                width: 250px;
+                background: white;
+                box-sizing: border-box;
+            }
+        }
+
+        .mainList {
+            li {
+                width: 544px;
+                padding: 15px 112px;
+            }
+
+            &:last-of-type {
+                .likePrice {
+                    text-align: center;
+
+                    a, span {
+                        font-size: pxToRem(16px);
+                        padding: 8px 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .switch {
+        font-size: 0px;
+        padding: 0px;
+        width: 1200px;
+        margin-top: 0px;
+        background: none;
+        box-sizing: border-box;
+
+        li {
+            width: 25%;
+            transition: all 0.2s ease-in-out;
+            padding: 0px;
+            box-sizing: border-box;
+
+            a {
+                text-align: center;
+                text-transform: capitalize;
+                color: black;
+                font-size: pxToRem(22px);
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                box-sizing: border-box;
+                background: #fed500;
+
+                &.active, &:hover {
+                    background: black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    li {
+        font-size: pxToRem(14px);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .cheap {
+        font-size: pxToRem(30px);
+        font-weight: bold;
+
+        &:first-letter {
+            font-size: pxToRem(12px);
+        }
+    }
+
+    .proPrice {
+        a {
+            float: right;
+        }
+    }
+
+    h4 {
+        text-transform: capitalize;
+        font-size: pxToRem(20px);
+        color: black;
+        padding-bottom: 5px;
+        border-bottom: 2px solid black;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .storage {
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        margin: 10px 0px;
+
+        div {
+            background: #d4d4d4;
+            height: 5px;
+            border-radius: 5px;
+            padding: 3px 10px;
+            margin: 5px 0px;
+        }
+
+        p {
+            text-align: justify;
+            width: 100%;
+            line-height: 0px;
+
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+
+        strong {
+            height: 5px;
+            width: 20%;
+            display: block;
+            background: #f3a828;
+        }
+
+        span {
+            display: inline-block;
+            font-size: pxToRem(13px);
+            width: 50px;
+            text-align: left;
+            line-height: normal;
+        }
+    }
+
+    .cart {
+        background: #edab3a;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .likePrice {
+        text-align: justify;
+        line-height: 0px;
+
+        div {
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+        .proPrice {
+            font-size: pxToRem(14px);
+            display: inline-block;
+        }
+
+        &:after {
+            content: '';
+            height: 0px;
+            width: 100%;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .cart {
+            margin-left: 10px;
+        }
+    }
+
+    .like {
+        font-size: pxToRem(14px);
+        border: 1px solid #dcdcdc;
+        display: inline-block;
+        vertical-align: middle;
+        >i {
+            margin-left: 5px;
+        }
+        a {
+            display: inline-block;
+            padding: 2px 5px;
+
+            &:hover {
+                i {
+                    color: $red;
+                }
+            }
+        }
+
+        i {
+            transition: color 0.2s ease;
+        }
+
+        span {
+            background: black;
+            color: white;
+            display: inline-block;
+            padding: 2px 5px;
+        }
+    }
+}
+
+.happyOff {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: white;
+    font-size: pxToRem(35px);
+    width: 90px;
+    height: 90px;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    background: url(../images/offbg.png) no-repeat left top;
+    background: linear-gradient(135deg, $red 0%, $red 50%, transparent 50%);
+
+    strong {
+        font-size: pxToRem(14px);
+        display: block;
+    }
+
+    em {
+        font-size: pxToRem(14px);
+        margin-left: -5px;
+        font-style: normal;
+        vertical-align: super;
+    }
+}
+
+.unsubscribe {
+    width: 600px;
+    padding: 20px 10px;
+    height: 312px;
+    margin: 10px auto 0px;
+    box-sizing: border-box;
+    border: 1px dashed gray;
+
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin: 10px 0px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #0a79dd;
+    }
+
+    .cpr {
+        margin-top: 100px;
+        text-align: center;
+    }
+}
+
+.registerSuccess {
+    > div {
+        margin-bottom: 20px;
+    }
+}
+
+.regSInfo {
+    text-align: center;
+    margin-top: 20px;
+
+    p {
+        font-size: pxToRem(20px);
+        font-weight: bold;
+        margin: 20px 0px;
+    }
+}
+
+.regSList {
+    li {
+        line-height: 1.5;
+        font-size: pxToRem(14px);
+        list-style-type: disc;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+.regSCheck {
+    > p {
+        color: $basecol;
+        font-size: pxToRem(16px);
+        font-weight: bold;
+
+        span {
+            color: $textcol;
+        }
+    }
+
+    div {
+        background: #f5f5f5;
+        padding: 10px;
+        border: 1px solid #b2b2b2;
+        margin-top: 20px;
+    }
+
+    ol {
+        padding-left: 20px;
+        margin: 10px 0px;
+    }
+
+    li {
+        line-height: 1.5;
+        font-size: pxToRem(14px);
+        list-style-type: decimal;
+    }
+}
+
+/* reset password */
+.resetPwd {
+    padding: 20px;
+    h1 {
+        color:$textcol;
+        margin-bottom: 20px;
+    }
+    input{
+        @include inputfocus;
+    }
+    .field {
+        font-size: 0px;
+        margin-bottom: 10px;
+    }
+    label,.input-box {
+        display: inline-block;
+        font-size: pxToRem(14px);
+    }
+    label {
+        width: 200px;
+    }
+    .buttons-set {
+        margin-top: 20px;
+        p{
+            margin-bottom: 10px;
+        }
+    }
+}
