@@ -166,43 +166,238 @@
     }
 }
 
-.productDetail form div{
-    margin-top:10px;
-}
-.proDetailSimilar {
-    h5 {
-        font-size: pxToRem(16px);
-        font-weight: normal;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-bottom: 1px solid #ededed;
-        padding-bottom: 10px;
-        font-weight: bold;
+.productDetail {
+    form:first-child{
+        margin-top:40px;
     }
-
-    ul {
-        text-align: justify;
-
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 100%;
-            height: 0;
-            overflow: hidden;
+    .cheap{
+        height: 80px;
+        line-height: 80px;
+    }
+    .save{
+        margin-left:5px;
+        margin-right:20px;
+    }
+    .proInfo{
+        span{
+            color:#eb9712;
+        }
+        .tubiao{
+            float: left; 
+            margin-right: 35px;   
         }
     }
 
-    li {
+    .proDetailOption{
+        span{
+                display: block;
+                float: left;
+                height: 20px;
+                width: 50px;
+                font-size: 16px;
+                 margin-top:18px;
+            }
+        li{
+            border: 1px solid transparent;
+        }
+        .size{
+            span{
+                margin-top:7px;
+            }
+            li{
+                margin-right:15px;
+                line-height: 20px;
+                text-align:center;
+                width: 20px;
+                height: 20px;
+                border-radius:50%;
+                &:hover{
+                    border:1px solid red;
+                }
+            }
+            
+        }
+    }
+    .optionItem{
+        i{
+            display: inline-block;
+            text-decoration: normal;
+            text-align: center;
+            width: 57px;    
+        }
+      a{
         display: inline-block;
-        border: 1px solid #ededed;
-        border-radius: 2px;
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        border-radius:50%;
+        border:1px dashed transparent;
+        text-align: center;
+        font-size: 18px;
+        margin-left:10px;
+        &:hover{
+            border:1px dashed #888;
+        }
+        }
+    }
+    .proDetailAction{
+        span{
+            font-family:Microsoft YaHei;
+            text-transform:none;
+            color:#818181;
+            font-size:14px;
+        }
+        button{
+            margin-right:30px;
+            vertical-align:0;
+            width: 220px;
+            height: 40px;
+            background: red;
+        }
+
     }
 }
-
+.proDetailSimilar {
+    ul{
+        margin-top:40px;
+        position: relative;
+        border-top: 1px solid #ededed;
+        h5{
+            position: absolute;
+            margin-left:-35px;
+            top:-10px;
+            width: 80px;
+            height: 10px;
+            text-align: center;
+            background: white;
+            font-size: 16px;
+            color:#888;
+         }
+        li{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 15px 5px;
+            img{
+                margin:auto;
+            }
+        }
+    }
+}
+/* saveMoney*/
+.saveMoney{
+    margin-top:20px;
+    height: 340px;
+    position:relative;
+    border-top:1px solid #ededed;
+    h2{
+        position:absolute;
+        top:-10px;
+        width: 150px;
+        height: 10px;
+        background: white;
+    }
+    img{
+        margin-top:20px;
+        margin-bottom:5px;
+        float: left;
+        &:hover{
+            box-shadow:0 0 3px #818181;
+           transition: all 300ms ease-in-out; 
+        }
+    }
+    .listimg{
+        width: 720px;
+        height: 250px;       
+        float: left;
+        overflow:scroll ;
+        overflow-y:hidden;
+        ul{
+            height: 250px;
+            width:200%;
+        }
+        li{
+            height:250px;
+            width:170px;
+            float: left;
+            margin-left:10px;
+            a:first-child{
+                display: block;
+                width: 70px;
+                height: 70px;
+            }
+            a{
+                display: inline-block;
+                height: 20px;
+                &:hover{
+                    color:#e5941a;
+                }
+            }
+            i{
+                font-style: normal;
+                margin-left:5px;
+                text-decoration: line-through;
+            }
+            span{
+                color:red;
+            } 
+            .checkboxFive{
+                cursor: pointer;
+                float: right;
+                width: 16px;
+                height: 16px;
+                border:1px solid #888;
+                em{
+                   display: none;
+                }
+                &:hover{
+                    border:1px solid #e5941a;
+                    background:#e5941a;
+                    em{
+                        color:white;
+                        display: block;
+                    }
+                }
+            }     
+        }
+    }
+    .fuhao{
+         float: left;
+        width:60px;
+        height: 210px;
+        font-size:45px;
+        color:#818181;
+        text-align: center;
+        padding-top:120px;
+        font-weight: bold;
+    }
+    .inAll{
+        text-align: right;
+        p{
+            color:#818181;
+            margin-top:90px;
+            height: 20px;
+        }
+        i{
+             color:#818181;
+            font-style:normal;
+        }
+        span{
+            font-size: 20px;
+            color:red;
+        }
+        button{
+            margin-top:10px;
+            width: 95px;
+            height: 20px;
+            line-height: 20px;
+            background:#e5941a;
+            text-align: center;
+            border:none;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
 /* scrollbyside */
 
 .moreInfo {
@@ -502,6 +697,7 @@
     }
 }
 .switchImg{
+    margin-top:40px;
     .addthis_sharing_toolbox{
         margin: 40px 0 0 176px;
         a{
@@ -702,7 +898,6 @@
         padding-left: 70px;
     }
 }
-
 .weddingInfo {
     margin-top: 20px;
     padding: 10px 0px;
