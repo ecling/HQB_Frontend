@@ -708,7 +708,11 @@ footer {
 .view_mode .fl i {
   display: inline-block;
   transition: all 0.2s ease-in-out; }
-
+#feiji{
+  display: inline-block;
+  transform:rotate(180deg);
+  margin-right: 5px;
+}
 .product_list {
   width: 930px; }
   .product_list li {
@@ -728,6 +732,39 @@ footer {
       box-shadow: 0 0  5px red; }
       .product_list li:hover .hidediv {
         display: block; }
+          .product_list li label{
+            position: absolute;
+            top:336px;
+            right:-28px;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border:1px solid #f39c11;
+            box-shadow: 0 0 4px  #f39c11;
+            background: white;
+            color:#818181; 
+            opacity: 0;
+            z-index: 100;}
+          .product_list li label .iconfont{
+            position: absolute;
+            transform:rotate(180deg);
+            top:19px;
+            right: 42px;
+            height: 8px;
+            border-bottom: 7px solid white;
+            color:#f39c11;}
+        .product_list li i:hover{
+          transition:all .5s ease-in-out;
+          color:#f39c11;  }
+        .product_list li i:hover+.label1{
+          transition:all .5s ease-in-out;
+           opacity: 1;
+          right: -39px;}
+        .product_list li i:hover+label{
+          transition:all .5s ease-in-out;
+          opacity: 1;
+          right: -15px;}
     .product_list li .hidediv {
       display: none;
       position: absolute;

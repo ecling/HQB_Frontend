@@ -443,6 +443,34 @@
     vertical-align: top;
     width: 900px;
     margin-right: 30px;
+    .leftD{
+        height: 580px;
+        width: 45px;
+        float: left;
+        position: relative;
+        span{
+            display: block;
+            position:absolute;
+            top:-57px;
+            left:20px ;
+            height: 130px;
+            width: 2px;
+            background: #e5941a;
+            transform:rotate(60deg);
+        }
+    }
+    .std{
+        p{
+            height: 20px;
+        }
+        .td{
+            border-right:none;
+            border-left:none;
+        }
+        .tt{
+            border-right:none;
+        }
+    }
 }
 
 .moreInfoBar {
@@ -465,20 +493,16 @@
         color: #666;
         display: block;
         padding: 10px 15px;
-        border-bottom: none;
+        border-bottom: 3px solid transparent;
         transition: all 0.2s ease-in-out;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        border-top: 2px solid white;
 
-        &.active, &:hover {
-            border-top: 2px solid $basecol;
-            border-left: 1px solid #dcdcdc;
-            border-right: 1px solid #dcdcdc;
+         &:hover {         
             transition: all ease-in 0.2s;
+            border-bottom: 3px solid #e5941a;
             position: relative;
-            border-bottom: 1px solid white;
-            bottom: -1px;
+            bottom:-2px;
+            color:#e5941a;
+
         }
     }
 }
@@ -491,21 +515,29 @@
     border-radius: 2px;
     position: relative;
 
+    i{
+        display: block;
+        position:absolute;
+        top:-10px;
+        left:70px ;
+        height: 130px;
+        width: 2px;
+        background: #e5941a;
+        transform:rotate(60deg);
+    }
+
     &:last-of-type {
         margin-bottom: 0px;
     }
 
     h4 {
-        background: #eee;
         font-size: pxToRem(18px);
-        color: $basecol;
         text-transform: capitalize;
         padding: 10px 20px;
     }
 
     > div {
-        padding: 20px;
-        border: 1px solid #dcdcdc;
+        padding: 40px;
         border-top: none;
     }
 }
@@ -568,7 +600,63 @@
     }
 }
 
-#reviews {}
+#reviews {
+    width: 860px;
+    height: auto;
+    label{
+        margin-left:20px;
+    }
+    .evaluate{
+        a{
+            display: block;
+            width: 117px;
+            border-bottom: 2px solid #818181;
+            margin: 5px auto;
+            color:black;
+        }
+        padding-left:90px;
+        .xingji{
+            padding-bottom:20px;
+            color:#003333;
+            border-bottom:1px solid #818181;
+            span{
+                font-size:24px;
+                color:#e04c1a;
+            }
+            label{
+                font-size: 16px;
+                margin-left:20px;
+                margin-right:50px;
+            }
+            p{
+                margin-top:10px;
+            }
+        }
+        .content{
+            padding:20px 0;
+             border-bottom:1px solid #818181;
+             position:relative;
+             .time{
+                position:absolute;
+                top:20px;
+                right: 0;
+             }
+            span{
+                color:#e5941a;
+            }
+            label{
+                margin-left:20px;
+            }
+            ul{
+                margin: 10px 0;
+                li{
+                    float: left;
+                    margin-right:20px;
+                }
+            }
+        }
+    }   
+}
 
 .reviewAll {
     font-size: 0px;
@@ -630,52 +718,7 @@
     }
 }
 
-.reviewItem {
-    padding: 20px 0px 20px 80px;
-    border-bottom: 1px solid #ededed;
-    position: relative;
 
-    > img {
-        position: absolute;
-        left: 0px;
-        top: 20px;
-    }
-
-    .name {
-        color: darken(#ddd, 10%);
-        margin-right: 10px;
-    }
-
-    p {
-        margin-bottom: 5px;
-    }
-
-    .brief {
-        color: darken($textcol, 10%);
-    }
-
-    .option {
-        span {
-            color: darken($textcol, 10%);
-
-            &:after {
-                content: "|";
-                display: inline-block;
-                margin: 0px 5px;
-                color: darken(#ddd, 10%);
-                opacity: 0.5;
-            }
-        }
-
-        strong {
-            color: lighten($textcol, 10%);
-        }
-    }
-
-    .measure {
-        color: darken(#ddd, 10%);
-    }
-}
 
 .buttonMore {
     text-align: right;
@@ -708,94 +751,35 @@
     }
 }
 #question {
-    > div > div {
-        padding: 10px;
-        border-bottom: 1px solid #ededed;
-        overflow: hidden;
+    label{
+        margin-left:20px;
     }
-
-    strong {
-        margin-right: 5px;
+    .buttonMore{
+        width:150px;
+        margin:0 auto;
+        margin-bottom:40px;
     }
-
-    p {
-        margin-bottom: 5px;
-    }
-
-    .que, .ans {
-        border: 1px solid #ededed;
-        border-radius: 4px;
-        position: relative;
-        padding: 10px;
-        color: #666;
-        max-width: 50%;
-
-        &:before {
-            content: "";
-            position: absolute;
+    .reply{
+        margin-bottom:40px;
+        margin-left:55px;
+        label{
             display: block;
-            width: 0px;
-            height: 0px;
-            border-style: solid;
-            border-width: 8px;
-            top: 10px;
+            height:6px;
         }
-
-        &:after {
-            content: "";
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-style: solid;
-            border-width: 8px;
-            top: 10px;
-        }
-    }
-
-    .que {
-        margin-bottom: 10px;
-        float: left;
-        clear: both;
-
-        &:before {
-            left: -17px;
-            border-color: transparent #ededed transparent transparent;
-        }
-
-        &:after {
-            border-color: transparent white transparent transparent;
-            left: -15px;
-        }
-    }
-
-    .ans {
-        background: #eeeeee;
-        float: right;
-        clear: both;
-
-        &:before {
-            border-color: transparent  transparent transparent #ededed;
-            right: -17px;
-        }
-
-        &:after {
-            border-color: transparent transparent transparent #eeeeee;
-            right: -15px;
-        }
-    }
-
-    .ansp {
-        text-align: right;
     }
 }
 
 #wholesale {
+    textarea{
+        resize: none;
+    }
     label {
         display: block;
         margin-bottom: 10px;
 
         > span {
-            width: 140px;
+            color:#003333;
+            width: 260px;
             text-align: right;
             margin-right: 10px;
 
@@ -815,7 +799,13 @@
                     margin-left: 5px;
                     display: inline-block;
                     width: 5px;
+
                 }
+            }
+        }
+        &:nth-of-type(8) {
+            span{
+                margin-top:-70px;
             }
         }
     }
@@ -844,37 +834,12 @@
     input, textarea {
         @include inputfocus;
     }
-
-    .sp {
-        height: 28px;
-
-        input {
-            position: absolute;
-            width: 100%;
-            left: 0px;
-            top: 0px;
-            z-index: 1;
-            padding-left: 20px;
-        }
-
-        div {
-            position: relative;
-            padding-left: 10px;
-            height: 100%;
-
-            span {
-                position: absolute;
-                line-height: 28px;
-                z-index: 2;
-            }
-        }
-    }
-
-    .validation-advice {
-        display: inline-block;
-        vertical-align: middle;
-        color: $red;
-        margin-left: 20px;
+    .btn{
+        width: 245px;
+        height: 30px;
+        background:#eeb053;
+        margin-left:273px;
+        font-size: 16px;
     }
 }
 
@@ -1020,13 +985,16 @@
 
 .bestSell {
     margin-top: 20px;
+     border-top: 1px solid #dcdcdc;
+     position: relative;
+     padding:30px 0;
 
-    h5 {
-        text-transform: uppercase;
+    h3{
         font-size: pxToRem(16px);
-        padding: 10px 0px;
-        border-bottom: 1px solid #dcdcdc;
-        margin-bottom: 20px;
+        width: 160px;
+        background:white;
+        position: absolute;
+        top:-12px;
     }
 
     li {
@@ -1036,6 +1004,7 @@
     }
 
     ul {
+
         text-align: justify;
 
         &:after {
@@ -1048,51 +1017,7 @@
     }
 }
 
-.reviewPop {
-    h5 {
-        font-size: pxToRem(16px);
-    }
 
-    .proReview {
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    span {
-        display: inline-block;
-        vertical-align: middle;
-        width: 60px;
-    }
-
-    form {
-        width: 570px;
-
-        > div {
-            margin-bottom: 20px;
-
-            > span {
-                width: 180px;
-            }
-
-            > input, > textarea {
-                width: 345px;
-            }
-        }
-    }
-
-    h6 {
-        font-size: pxToRem(16px);
-        margin: 10px 0px;
-        font-weight: normal;
-    }
-
-    input, textarea {
-        @include inputfocus;
-
-        vertical-align: middle;
-        margin-bottom: 5px;
-    }
-}
 
 .reviewConfirm {
     form {
