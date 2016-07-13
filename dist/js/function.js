@@ -183,6 +183,62 @@
 		init();
 		drop();
 	};
+
+	var LazyLoadImg = function(){
+		var imgs = $(imgs);
+	    	imgsArray = [];
+	    var init = function(){
+	    	for (var i = this.imgs.length - 1; i >= 0; i--) {
+	        	placeHolder(this.imgs.eq(i));
+	        };
+	        loadFirst();
+	        loadBind();
+	    };
+	    var placeHolder = function(dom){
+	    	var dimmer = new Dimmer({
+            	contain: dom.parent()
+	        });
+	        dom.data("dimmer", dimmer);
+	        dimmer.showUp();
+	    }
+	    var loadBind = function(){
+	    	var that = this;
+	    	$(window).scroll(function(event) {
+	            that.checkLoad();
+	        });
+	    };
+	    var checkLoad = function(){
+	    	for (var i = 0; i < imgs.length; i++) {
+	            if (imgs[i]) {
+	                var top = imgs.get(i).getBoundingClientRect().top;
+	                winHeight = $(window).height();
+	                if (top <= winHeight) {
+	                    loadNow(imgs.eq(i));
+	                    imgs[i] = null;
+	                }
+	            }
+	        }	
+	    };
+	    var loadFirst = function(){
+	    	checkLoad();
+	    };
+	    var loadNow = function(dom){
+	    	var src = dom.attr('data-src');
+	    	dom.attr('src', src),
+	    	that = this;
+	    	dom.css('opacity', '0');
+	    	dom.load(function(event) {
+	            dom.data('dimmer').hideDown(function() {
+	                dom.css('opacity', '1');
+	            })
+	        });
+	        dom.error(function() {
+	            dom.data('dimmer').hideDown();
+	        });
+	    };
+	    init();
+	};
+
 	$.fn.slider = function(){
 		var slider = new Slider(this);
 	};
@@ -191,6 +247,9 @@
 	};
 	$.fn.selectDrop = function(){
 		var selectDrop = new SelectDrop(this);
+	};
+	$.fn.lazyLoadImg = function(){
+
 	};
 })(jQuery);
 

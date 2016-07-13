@@ -1,0 +1,213 @@
+@import "../help/_helper";
+@import "../base/_normalize";
+@import "../components/_colors";
+@import "../components/_form";
+@import "../components/_slider";
+@import "../components/_buttons";
+@import "../layout/_layout";
+@import "../components/_dropdown";
+@import "../components/_selectDrop";
+@import "../layout/header";
+@import "../layout/footer";
+
+
+.page-title {
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+    h1 {
+        font-size: pxToRem(16px);
+        display: inline-block;
+        padding: 10px 0px;
+        border-bottom: 2px solid $basecol;
+    }
+}
+
+.sub-title {
+    background: #f3f3f3;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: pxToRem(14px);
+    font-weight: normal;
+    border: 1px solid #ededed;
+}
+
+.paypal-review-order {
+    input[type='text'], select, textarea {
+        @include inputfocus;
+        box-sizing: border-box;
+        width: 320px;
+    }
+}
+
+.legend, .box-title h3 {
+    font-size: pxToRem(14px);
+    padding: 5px 10px;
+    margin: 10px 0px;
+    border-bottom: 1px solid #dedede;
+}
+
+.form-list-narrow {
+    li {
+        margin-bottom: 10px;
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .name-firstname {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .name-middlename {
+            display: block;
+        }
+        > label {
+            display: inline-block;
+            vertical-align: middle;
+            width: 150px;
+        }
+    }
+    .field {
+        display: block !important;
+        margin-bottom: 10px;
+        > div, > label {
+            display: inline-block;
+            vertical-align: middle;
+            width: 150px;
+        }
+    }
+}
+
+.input-box {
+    width: auto !important;
+}
+
+.required {
+    em {
+        display: none;
+    }
+    &:after {
+        content: "*";
+        color: $red;
+        margin-left: 5px;
+    }
+}
+
+#shipping-method-container {
+    margin-left: 168px;
+}
+
+#details-reload {
+    padding: 10px;
+    position: relative;
+    > p {
+        font-size: pxToRem(16px);
+    }
+    .price {
+        color: $red;
+        font-size: pxToRem(20px);
+        margin-left: 5px;
+    }
+}
+
+#details-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid darken(#ededed, 3%);
+    margin-top: 20px;
+    th {
+        background: lighten(#eee, 2%);
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: pxToRem(16px);
+        font-weight: normal;
+        border: 1px solid darken(#ededed, 3%);
+    }
+    td {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid darken(#ededed, 3%);
+        > a {
+            display: block;
+            margin: 5px auto;
+            width: 16px;
+            height: 16px;
+            transform-origin: center center;
+            &:hover {
+                transform: scale(1.1);
+            }
+            i {
+                font-size: pxToRem(16px);
+                width: 16px;
+                height: 16px;
+            }
+        }
+        > span {
+            display: block;
+            text-align: left;
+            color: #aaa;
+        }
+        h3 {
+            text-align: left;
+        }
+    }
+}
+
+#review-buttons-container {
+    padding: 10px;
+    text-align: right;
+    button {
+        background: $basecol;
+        border-radius: 1px;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: pxToRem(14px);
+        padding: 5px 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: all 0.2s ease-in-out;
+        font-family: inherit;
+        outline: none;
+        letter-spacing: normal;
+        line-height: normal !important;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+        outline: none;
+        font-size: pxToRem(20px);
+        &:hover {
+            background: #f58500;
+        }
+        &:active {
+            background: #f58500;
+            top: 1px;
+        }
+        &.disable {
+            background: $gray;
+            color: #404040;
+            cursor: not-allowed;
+        }
+    }
+}
+
+fieldset + .field {
+    .input-box {
+        padding-left: 20px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+em.error {
+    margin-left: 10px;
+}
+#totals {
+    margin-top: 20px;
+    text-align: right;
+    span {
+        font-size: pxToRem(14px);
+    }
+}
+.paypal-shipping-method {
+    position: relative;
+}

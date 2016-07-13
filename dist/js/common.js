@@ -53,12 +53,61 @@
 		}
 	};
 
+	var Dimmer = function(option){
+		this.option = {
+	        color: "#f39c11",
+	        bg: "rgba(255,255,255,0.5)"
+	    };
+	   	var init = function(){
+	   		var dimmer = $("<div></div>");
+	   		dimmer.css({
+	            width: '100%',
+	            height: '100%',
+	            left: '0px',
+	            top: '0px',
+	            background: this.option.bg,
+	            display: 'none',
+	            zIndex: 2,
+	            position: 'absolute'
+	        });
+	        loader = $("<div class='square-spin ajax-loading'><div></div></div>");
+	        loader.find('div').css('background', this.option.color);
+	        dimmer.append(loader);
+	   	};
+	   	var showUp = function(fn){
+	   		var fn = fn ? fn : function() {};
+	   		dimmer.appendTo(contain);
+	   		dimmer.fadeIn('fast', function() {
+	            fn();
+	        });
+	   	};
+	   	var hideDown = function(fn){
+	   		var fn = fn ? fn : function() {};
+	   			that = this;
+	   		dimmer.fadeOut('fast', function() {
+	            that.dimmer.remove();
+	            fn();
+	        });
+	   	};
+	   	var extend = function(option){
+	   		for (var i in option) {
+	            this.option[i] = option[i];
+	        }
+	   	};
+	    extend(option);
+	    contain = $(this.option.contain);
+	   	init();
+	};
+
 	$.fn.dropDown = function(){
 		var dropDown = new DropDown(this);
 	};
 	$.fn.menu = function(){
 		var menu = new Menu(this);
 	};
+	$.fn.dimmer = function(){
+		var dimmer = new Dimmer(this);
+	}
 })(jQuery);
 
 

@@ -1,0 +1,546 @@
+.listContain {
+    h3 {
+        color: $basecol !important;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ff6a82;
+        margin-bottom: 10px !important;
+    }
+}
+
+.listFilter {
+    font-size: 0px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10px;
+    p {
+        display: inline-block;
+        text-transform: capitalize;
+        margin-right: 10px;
+        vertical-align: middle;
+        font-size: pxToRem(13px);
+        i {
+            margin-right: 5px;
+            width: 13px;
+            height: 13px;
+            text-align: center;
+            padding: 2px;
+        }
+    }
+    a {
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+        margin: 0px 10px;
+        &:hover {
+            color: $basecol;
+        }
+        &.active {
+            color: $basecol;
+            i {
+                color: white;
+                background: $basecol;
+            }
+        }
+    }
+    div {
+        font-size: 0px;
+        float: right;
+        a {
+            padding: 0px 0px 4px 0px;
+            vertical-align: top;
+            font-size: pxToRem(13px);
+            position: relative;
+            margin-right: 10px;
+            position: relative;
+            &:before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: white;
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                border: 1px solid #ededed;
+                border-radius: 2px;
+                transition: all 0.2s ease-in-out;
+            }
+            &:after {
+                font-family: FontAwesome;
+                content: "\f00c";
+                width: 16px;
+                height: 16px;
+                display: block;
+                position: absolute;
+                font-size: pxToRem(20px);
+                left: 0px;
+                top: 0px;
+                color: #f39c11;
+                cursor: pointer;
+                text-align: center;
+                line-height: 16px;
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+            &.selected, &:hover {
+                &:after {
+                    opacity: 1;
+                }
+                &:before {
+                    border-color: $basecol;
+                }
+            }
+        }
+    }
+}
+
+.listSort {
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ededed;
+    a {
+        display: inline-block;
+        margin: 0px 5px;
+        font-size: pxToRem(15px);
+        padding-bottom: 5px;
+        &:after, &:before {
+            display: inline-block;
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+        &:before {
+            margin-right: 10px;
+            content: '[';
+            transform: translateX(20px);
+        }
+        &:after {
+            margin-left: 10px;
+            content: ']';
+            transform: translateX(-20px);
+        }
+        &:hover, &.active {
+            &:after, &:before {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        &.active {
+            border-bottom: 1px solid $basecol;
+            &:after, &:before {
+                color: $basecol;
+            }
+        }
+    }
+}
+
+.listProduct {
+    text-align: justify;
+    margin-bottom: 10px;
+    // &:after {
+    //     content: "";
+    //     display: inline-block;
+    //     width: 100%;
+    //     height: 0;
+    //     overflow: hidden;
+    // }
+}
+.proText {
+    padding: 0 5px;
+    span {
+        transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+        span {
+            color:$basecol;
+        }
+    }
+}
+.proPrice {
+    margin-bottom: 5px;
+    padding: 0 5px;
+    .pricey {
+        color: #aaaaaa;
+        font-size: pxToRem(14px);
+        text-decoration: line-through;
+        + span {
+            margin-left: 10px;
+        }
+    }
+    .cheap {
+        // color: #ff6a82;
+        color: $red;
+        font-size: pxToRem(16px);
+    }
+}
+.proItem {
+    display: inline-block;
+    vertical-align: top;
+    width: 210px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        box-shadow:1px 1px 1px 1px #d4d4d4,-1px -1px 1px 1px #d4d4d4;
+        // .proToCart {
+        //     transform: scale(1);
+        //     opacity: 1;
+        //     filter:alpha(opacity=100);
+        // }
+        .proImg span {
+            bottom: 0px;
+        }
+
+    }
+    margin-right:6px;
+    &:nth-of-type(4n+4){
+        margin-right: 0px;
+    }
+}
+.proImg {
+    span {
+        font-size: pxToRem(14px);
+        text-transform: capitalize;
+        padding:5px 10px;
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        bottom: -26px;
+        left: 30%;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.proReview {
+    margin-bottom: 5px;
+    padding: 0px 5px;
+    a {
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: $basecol;
+        }
+    }
+    .active {
+        color: $basecol;
+    }
+}
+
+.proToCart {
+    display: none;
+    a {
+        border: none;
+        color: white;
+        background: $basecol;
+        background: rgba($basecol, 0.8);
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background:#f58500;
+        }
+        i {
+            color: white;
+        }
+    }
+}
+
+.proShipping {
+    margin-left: 5px;
+    i {
+        color: white;
+        background: $basecol;
+        font-size: pxToRem(16px);
+        width: 14px;
+        height: 14px;
+        padding: 2px;
+        text-align: center;
+        line-height: 14px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    text-transform: capitalize;
+    font-size: pxToRem(12px);
+    border: 1px solid $basecol;
+    color: $basecol;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.listView {
+    li {
+        text-align: justify;
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    .proImg {
+        width: 210px;
+        height: 210px;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        &:hover {
+            span {
+                bottom: 0px;
+            }
+        }
+    }
+    .proMid {
+        width: 430px;
+        display: inline-block;
+        vertical-align: top;
+        p {
+            color: lighten($textcol, 5%);
+            a {
+                color: $basecol;
+                text-decoration: underline;
+            }
+        }
+    }
+    .proMon {
+        width: 160px;
+        display: inline-block;
+        vertical-align: top;
+        span {
+            display: block;
+            margin-bottom: 5px;
+        }
+        strong {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+    }
+    em {
+        font-style: normal;
+        color: $basecol;
+    }
+    .cheap {
+        font-size: pxToRem(30px);
+        // color: #ff6a82;
+        color: $red;
+    }
+    .pricey {
+        strong {
+            text-decoration: line-through;
+            color: #aaaaaa;
+        }
+    }
+    .proToCart {
+        position: static;
+        display: block;
+        top: 0px;
+        opacity: 1;
+        transform: none;
+        text-align: left;
+    }
+}
+
+.pager {
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 10px;
+    ul {
+        font-size: 0px;
+        float: right;
+        padding: 5px 0px;
+    }
+    li {
+        display: inline-block;
+        margin: 0px 5px;
+    }
+    li.current {
+        font-size: pxToRem(14px);
+        padding: 5px 10px;
+        border: 1px solid $basecol;
+        color: $basecol;
+    }
+    span {
+        float: left;
+        margin-top: 10px;
+        font-size: pxToRem(14px);
+    }
+    a {
+        font-size: pxToRem(14px);
+        padding: 5px 10px;
+        display: block;
+        border: 1px solid #ededed;
+        transition: all 0.2s ease-in-out;
+        &.active, &:hover {
+            color: $basecol;
+            border-color: $basecol;
+        }
+    }
+}
+
+.alist {
+    h4 {
+        color: $basecol;
+        font-size: pxToRem(16px);
+        padding: 20px;
+        background: #eee;
+        text-transform: capitalize;
+    }
+    ul {
+        border: 1px solid #ededed;
+        border-top: none;
+    }
+    li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px 20px;
+        background: white;
+    }
+    margin-bottom: 20px;
+    > div {
+        padding: 20px;
+        border: 1px solid #ededed;
+        border-top: 0px;
+    }
+    .more {
+        padding: 5px 10px;
+        color:$basecol;
+        display: inline-block;
+        text-decoration: underline;
+        text-transform: capitalize;
+    }
+}
+
+.currentCate {
+    header {}
+    h4 {
+        color: $basecol;
+    }
+    i {
+        margin-right: 5px;
+        transition: all 0.2s ease-in-out;
+    }
+    li {
+        padding: 15px 0px;
+        width: $columnL - 40px;
+        margin: auto;
+        border-bottom: 1px solid #ededed;
+        cursor: pointer;
+        text-indent: 10px;
+        &:last-of-type{
+            border:none;
+        }
+    }
+    .hasNav {
+        text-indent: 0px;
+        &:hover {
+            > i {
+                color: $basecol;
+            }
+        }
+        ul {
+            border: none;
+            display: none;
+            li {
+                text-indent: 25px;
+            }
+        }
+        .hasNav {
+            text-indent: 6px;
+        }
+        &.expand {
+            > i {
+                transform: rotate(90deg);
+            }
+            border-color: white;
+        }
+    }
+    a {
+        text-transform: capitalize;
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: $basecol;
+        }
+    }
+}
+
+.proLite {
+    li {
+        font-size: 0px;
+        text-transform: capitalize;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ededed;
+        transition: all 0.2s ease-in-out;
+        &:last-of-type {
+            border: none;
+        }
+    }
+    .leftLite {
+        display: inline-block;
+        vertical-align: top;
+        font-size: pxToRem(14px);
+        width: 80px;
+        a {
+            position: relative;
+        }
+    }
+    i {
+        letter-spacing: -1px;
+    }
+    .fa-user {
+        margin-right: 5px;
+    }
+    .rightLite {
+        display: inline-block;
+        vertical-align: top;
+        font-size: pxToRem(14px);
+        width: 140px;
+        margin-left: 8px;
+    }
+    .proPrice,.proReview {
+        padding: 0px;
+        margin-top: 5px;
+    }
+}
+
+.hsearch {
+    div {
+        padding: 20px;
+    }
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        &:hover {
+            &:before {
+                transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        &:before {
+            color: $basecol;
+            content: attr(data-hover);
+            position: absolute;
+            opacity: 0;
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+            transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+            transition: transform 0.3s, opacity 0.3s;
+            pointer-events: none;
+        }
+    }
+}
+.weddinglist {
+    .proImg img {
+        margin-left: -55px;
+    }
+    .proToCart {
+        top:130px;
+    }
+    .listView .porImg {
+        height: auto;
+    }
+}
