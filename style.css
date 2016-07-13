@@ -1,7 +1,7 @@
 body{
 	font-family: "Microsoft YaHei";
 	width: 100%;
-	background: url(imgs/bj.jpg) 0 49% repeat-y;
+	background: url(images/bj.jpg) 0 49% repeat-y;
 }
 .navs{
 	background: white;
@@ -17,7 +17,7 @@ body{
 	height: 30px;
 	line-height: 30px;
 	margin-left:15%;
-	background: url(imgs/navs.jpg);
+	background: url(images/navs.jpg);
 }
 .banner{
 	width:100%;
@@ -160,8 +160,16 @@ button:hover,
 	bottom: 40px;
 	cursor: pointer;
 	z-index: 9999;
-	border: 1px solid red;
 }
+.gotop span{
+	width: 30px;
+	height: 30px;
+	font-size: 40px;
+	border: 2px solid black;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 
 .pages {
 	width:430px;
@@ -226,5 +234,3 @@ button:hover,
 .prev {
   left: 0;
 }
-
-
