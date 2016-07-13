@@ -2587,8 +2587,16 @@ footer {
   border: 1px solid transparent; }
 .productDetail .proDetailOption .size span {
   margin-top: 7px; }
+  .productDetail .proDetailOption .size a{
+    width:80px;
+    margin-top:7px;
+    font-size: 14px;
+    float: right;
+    margin-right: 245px;
+    color:#818181;
+    border-bottom: 1px solid #818181;}
 .productDetail .proDetailOption .size li {
-  margin-right: 15px;
+  margin-left: 18px;
   line-height: 20px;
   text-align: center;
   width: 20px;
@@ -2601,7 +2609,7 @@ footer {
   text-decoration: normal;
   text-align: center;
   width: 57px; }
-.productDetail .optionItem a {
+.productDetail .qty a {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -2610,8 +2618,11 @@ footer {
   text-align: center;
   font-size: 18px;
   margin-left: 10px; }
-  .productDetail .optionItem a:hover {
+  .productDetail .qty a:hover {
     border: 1px dashed #888; }
+    .productDetail .qty label{
+      margin-left:30px;
+      color:red; }
 .productDetail .proDetailAction span {
   font-family: Microsoft YaHei;
   text-transform: none;
@@ -2623,7 +2634,10 @@ footer {
   width: 220px;
   height: 40px;
   background: red; }
-
+.productDetail .proDetailAction .iconfont{
+  color:white;
+  font-size:20px;
+}
 .proDetailSimilar ul {
   margin-top: 40px;
   position: relative;
