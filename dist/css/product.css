@@ -1565,13 +1565,8 @@ input.error, textarea.error {
   .optionItem.qty label {
     color: red;
     margin-left: 30px; }
-  .optionItem.size a {
-    margin-right: 256px;
-    color: #818181;
-    float: right;
-    margin-top: 7px; }
   .optionItem > span {
-    width: 40px;
+    width: 50px;
     display: inline-block; }
   .optionItem > ul {
     display: inline-block;
@@ -1681,7 +1676,6 @@ input.error, textarea.error {
     padding: 0px 10px;
     display: inline-block;
     opacity: 0.7;
-    vertical-align: middle;
     transition: all 0.2s ease-in-out; }
     .proDetailAction a:hover {
       color: #ff6a82; }
@@ -2584,6 +2578,13 @@ footer {
 .productDetail .proInfo .tubiao {
   float: left;
   margin-right: 35px; }
+.productDetail .proInfo .shipping {
+  width: 156px;
+  float: left; }
+.productDetail .proInfo .ship {
+  float: left; }
+.productDetail .countDown {
+  font-weight: bold; }
 .productDetail .proDetailOption span {
   display: block;
   float: left;
@@ -2593,10 +2594,19 @@ footer {
   margin-top: 18px; }
 .productDetail .proDetailOption li {
   border: 1px solid transparent; }
-.productDetail .proDetailOption .size span {
+.productDetail .proDetailOption .size a {
+  width: 80px;
+  font-size: 16px;
+  border-bottom: 1px solid #818181;
+  margin-right: 250px;
+  color: #818181;
+  float: right;
   margin-top: 7px; }
+.productDetail .proDetailOption .size span {
+  margin-top: 7px;
+  margin-right: 10px; }
 .productDetail .proDetailOption .size li {
-  margin-right: 15px;
+  margin-right: 27px;
   line-height: 20px;
   text-align: center;
   width: 20px;
@@ -2604,33 +2614,35 @@ footer {
   border-radius: 50%; }
   .productDetail .proDetailOption .size li:hover {
     border: 1px solid red; }
-.productDetail .optionItem i {
+.productDetail .qty i {
   display: inline-block;
   text-decoration: normal;
   text-align: center;
-  width: 57px; }
-.productDetail .optionItem a {
+  width: 90px; }
+.productDetail .qty .prev, .productDetail .qty .next {
   display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px dashed transparent;
+  border: 1px dashed #888;
   text-align: center;
-  font-size: 18px;
+  font-size: 18px; }
+.productDetail .qty .next {
+  border: 1px solid #888; }
+.productDetail .qty .prev {
   margin-left: 10px; }
-  .productDetail .optionItem a:hover {
-    border: 1px dashed #888; }
 .productDetail .proDetailAction span {
   font-family: Microsoft YaHei;
   text-transform: none;
-  color: #818181;
-  font-size: 14px; }
+  font-size: 14px;
+  color: #818181; }
 .productDetail .proDetailAction button {
   margin-right: 30px;
   vertical-align: 0;
   width: 220px;
   height: 40px;
-  background: red; }
+  background: red;
+  margin-top: 10px; }
 
 .proDetailSimilar ul {
   margin-top: 40px;
@@ -2739,7 +2751,7 @@ footer {
       color: red; }
     .saveMoney .inAll button {
       margin-top: 10px;
-      width: 95px;
+      width: 110px;
       height: 20px;
       line-height: 20px;
       background: #e5941a;
@@ -2747,6 +2759,12 @@ footer {
       border: none;
       color: white;
       font-weight: bold; }
+      .saveMoney .inAll button:hover {
+        transition: all 1s ease;
+        box-shadow: 1px 1px 5px #e5941a;
+        -webkit-box-shadow: 1px 1px 5px #e5941a;
+        -o-box-shadow: 1px 1px 5px #e5941a;
+        -moz-box-shadow: 1px 1px 5px #e5941a; }
 
 /* scrollbyside */
 .moreInfo {
@@ -2903,6 +2921,90 @@ footer {
   height: auto; }
   #reviews label {
     margin-left: 20px; }
+  #reviews .hideDiv {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    padding-left: 200px;
+    position: relative; }
+    #reviews .hideDiv > p {
+      color: #d2d2d2;
+      margin-bottom: 10px; }
+    #reviews .hideDiv > a {
+      z-index: 3;
+      display: inline-block;
+      float: left;
+      width: 0;
+      height: 0;
+      border-top: 115px solid #f0aa42;
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-bottom: 80px solid transparent; }
+    #reviews .hideDiv > label {
+      position: absolute;
+      color: white;
+      top: 70px;
+      left: 210px;
+      z-index: 2; }
+    #reviews .hideDiv button {
+      border: none;
+      background: white; }
+    #reviews .hideDiv button > span {
+      font-size: 35px;
+      color: white;
+      position: absolute;
+      top: 90px;
+      left: 263px;
+      z-index: 1; }
+    #reviews .hideDiv .sanjiao {
+      width: 0;
+      height: 0;
+      border-top: 76px solid transparent;
+      border-left: 26px solid transparent;
+      border-right: 54px solid #f0f0f0;
+      border-bottom: 35px solid #f0f0f0;
+      float: left;
+      margin-left: -63px; }
+    #reviews .hideDiv .cont {
+      width: 330px;
+      height: 81px;
+      float: left;
+      padding: 15px;
+      background: #f0f0f0; }
+      #reviews .hideDiv .cont h2 {
+        font-size: 34px;
+        color: #e5941a; }
+      #reviews .hideDiv .cont p {
+        color: #d2d2d2;
+        height: 20px;
+        line-height: 20px; }
+      #reviews .hideDiv .cont a {
+        margin: 10px 0;
+        color: #e5941a;
+        width: 100px;
+        border-bottom: 1px solid #e5941a; }
+      #reviews .hideDiv .cont label {
+        display: block;
+        float: right;
+        margin-top: -54px;
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px dashed #e5941a; }
+        #reviews .hideDiv .cont label span {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+          border-radius: 50%;
+          background: #e5941a;
+          font-size: 30px;
+          margin-top: 5px;
+          margin-left: 5px; }
   #reviews .evaluate {
     padding-left: 90px; }
     #reviews .evaluate a {
@@ -2911,6 +3013,10 @@ footer {
       border-bottom: 2px solid #818181;
       margin: 5px auto;
       color: black; }
+      #reviews .evaluate a:hover {
+        transition: all .3s ease;
+        color: #e5941a;
+        border-bottom: 2px solid #e5941a; }
     #reviews .evaluate .xingji {
       padding-bottom: 20px;
       color: #003333;
@@ -2990,15 +3096,15 @@ footer {
 .buttonMore {
   text-align: right;
   margin-top: 20px;
-  overflow: hidden;
   border: none;
   padding: 0px !important; }
   .buttonMore .btn {
-    float: left; }
+    width: 245px;
+    height: 30px;
+    background: #eeb053;
+    text-align: center; }
   .buttonMore a {
     transition: all 0.2s ease-in-out; }
-    .buttonMore a:hover {
-      color: #f39c11; }
 
 .switchImg {
   margin-top: 40px; }
@@ -3012,7 +3118,7 @@ footer {
   margin-left: 20px; }
 #question .buttonMore {
   width: 150px;
-  margin: 0 auto;
+  margin-left: 275px;
   margin-bottom: 40px; }
 #question .reply {
   margin-bottom: 40px;

@@ -157,3 +157,17 @@
     height: auto;
     margin-right: 10px;
 }
+.product_list{
+    i{
+        position: relative
+    }
+    label{
+        position:absolute;
+        top:0;
+        right: 0;
+        width: 100px;
+        height: 30px;
+        background:red;
+        display: block;
+    }
+}

@@ -186,8 +186,18 @@
             float: left; 
             margin-right: 35px;   
         }
-    }
+        .shipping{
+            width: 156px;
+            float: left;
+        }
+        .ship{
 
+            float:left;
+        }
+    }
+    .countDown{
+        font-weight: bold;
+    }
     .proDetailOption{
         span{
                 display: block;
@@ -201,11 +211,21 @@
             border: 1px solid transparent;
         }
         .size{
+            a{
+               width: 80px;
+               font-size: 16px;
+               border-bottom: 1px solid #818181;
+               margin-right:250px;
+               color:#818181;
+               float: right;
+               margin-top:7px;
+            }
             span{
                 margin-top:7px;
+                margin-right:10px;
             }
             li{
-                margin-right:15px;
+                margin-right:27px;
                 line-height: 20px;
                 text-align:center;
                 width: 20px;
@@ -218,33 +238,35 @@
             
         }
     }
-    .optionItem{
+    .qty{
         i{
             display: inline-block;
             text-decoration: normal;
             text-align: center;
-            width: 57px;    
+            width:90px;    
         }
-      a{
+      .prev,.next{
         display: inline-block;
         width: 20px;
         height: 20px;
         border-radius:50%;
-        border:1px dashed transparent;
+        border:1px dashed #888;
         text-align: center;
         font-size: 18px;
-        margin-left:10px;
-        &:hover{
-            border:1px dashed #888;
         }
+        .next{
+             border:1px solid #888;
+        }
+        .prev{
+            margin-left:10px;
         }
     }
     .proDetailAction{
         span{
             font-family:Microsoft YaHei;
             text-transform:none;
-            color:#818181;
             font-size:14px;
+            color:#818181;
         }
         button{
             margin-right:30px;
@@ -252,6 +274,7 @@
             width: 220px;
             height: 40px;
             background: red;
+            margin-top:10px;
         }
 
     }
@@ -387,7 +410,7 @@
         }
         button{
             margin-top:10px;
-            width: 95px;
+            width:110px;
             height: 20px;
             line-height: 20px;
             background:#e5941a;
@@ -395,6 +418,13 @@
             border:none;
             color: white;
             font-weight: bold;
+            &:hover{
+                transition: all 1s ease;
+                box-shadow:1px 1px 5px #e5941a;
+                -webkit-box-shadow:1px 1px 5px #e5941a;
+                -o-box-shadow:1px 1px 5px #e5941a;
+                -moz-box-shadow:1px 1px 5px #e5941a;
+            }
         }
     }
 }
@@ -606,6 +636,105 @@
     label{
         margin-left:20px;
     }
+    .hideDiv{
+        width: 100%;
+        height:160px;
+        margin: 0 auto;
+        padding-left:200px;
+        position:relative;
+        >p{
+            color:#d2d2d2;
+            margin-bottom:10px;
+        }
+        >a{
+            z-index: 3;
+            display:inline-block;
+            float: left;
+            width: 0;
+            height: 0;
+            border-top:115px solid #f0aa42;
+            border-left:80px solid transparent;
+            border-right:80px solid transparent;
+            border-bottom:80px solid transparent;
+        }
+        >label{
+            position: absolute;
+            color:white;
+            top:70px;
+            left:210px;
+            z-index: 2;
+        }
+        button{
+            border:none;
+            background: white;
+        }
+        button>span{
+            font-size: 35px;
+            color:white;
+            position: absolute;
+            top:90px;
+            left:263px;
+            z-index: 1;
+        }
+        .sanjiao{
+             width: 0;
+            height: 0;
+            border-top:76px solid transparent;
+            border-left:26px solid transparent;
+            border-right:54px solid #f0f0f0;
+            border-bottom:35px solid #f0f0f0;
+            float: left;
+            margin-left:-63px;
+        }
+        .cont{
+            width: 330px;
+            height: 81px;
+            float: left;
+            padding:15px;
+            background:#f0f0f0;
+            h2{
+                font-size: 34px;
+                color:#e5941a;
+             
+            }
+            p{
+                color:#d2d2d2;
+                height: 20px;
+                line-height: 20px;
+        
+            }
+            a{
+                margin: 10px 0 ;
+                color: #e5941a;
+                width: 100px;
+                border-bottom:1px solid #e5941a;
+            }
+            label{
+                display: block;
+                float: right;
+                margin-top:-54px;
+                margin-right:10px;
+                width: 60px;
+                height:60px;
+                border-radius:50%;
+                border:3px dashed #e5941a;
+                span{
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    color:white;
+                    font-weight: bold;
+                    border-radius:50%;
+                    background:#e5941a;
+                    font-size:30px;
+                    margin-top:5px;
+                    margin-left:5px;
+                }
+            }
+        }
+    }
     .evaluate{
         a{
             display: block;
@@ -613,6 +742,11 @@
             border-bottom: 2px solid #818181;
             margin: 5px auto;
             color:black;
+            &:hover{
+                transition: all .3s ease;
+                color:#e5941a;
+                border-bottom: 2px solid #e5941a;
+            }
         }
         padding-left:90px;
         .xingji{
@@ -723,20 +857,20 @@
 .buttonMore {
     text-align: right;
     margin-top: 20px;
-    overflow: hidden;
     border: none;
     padding: 0px !important;
-
     .btn {
-        float: left;
+        width: 245px;
+        height: 30px;
+        background: #eeb053;
+        text-align: center;
+
     }
 
     a {
         transition: all 0.2s ease-in-out;
 
-        &:hover {
-            color: $basecol;
-        }
+
     }
 }
 .switchImg{
@@ -756,7 +890,7 @@
     }
     .buttonMore{
         width:150px;
-        margin:0 auto;
+        margin-left:275px;
         margin-bottom:40px;
     }
     .reply{

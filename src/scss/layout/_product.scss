@@ -233,21 +233,11 @@
             margin-left:30px;
         }
     }
-    &.size{
-        a{
-            margin-right:256px;
-            color:#818181;
-            float: right;
-            margin-top:7px;
-
-
-        }
-    }
     font-size: pxToRem(14px);
     margin-bottom: 10px;
 
     > span {
-        width: 40px;
+        width: 50px;
         display: inline-block;
     }
 
@@ -385,7 +375,6 @@
         padding: 0px 10px;
         display: inline-block;
         opacity: 0.7;
-        vertical-align: middle;
         transition: all 0.2s ease-in-out;
 
         &:hover {
