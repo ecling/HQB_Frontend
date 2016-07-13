@@ -227,6 +227,22 @@
 }
 
 .optionItem {
+    &.qty{
+        label{
+            color:red;
+            margin-left:30px;
+        }
+    }
+    &.size{
+        a{
+            margin-right:256px;
+            color:#818181;
+            float: right;
+            margin-top:7px;
+
+
+        }
+    }
     font-size: pxToRem(14px);
     margin-bottom: 10px;
 
@@ -296,6 +312,7 @@
 }
 
 .proDetailAction {
+
     text-transform: uppercase;
     font-size: pxToRem(16px);
     position: relative;
