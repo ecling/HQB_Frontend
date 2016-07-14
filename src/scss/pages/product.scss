@@ -10,7 +10,6 @@
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
-//abc
 .proOneFree {
     display: inline-block;
     width: 100%;
@@ -639,97 +638,59 @@
     .hideDiv{
         width: 100%;
         height:160px;
-        margin: 0 auto;
-        padding-left:200px;
+        padding-left:240px;
         position:relative;
         >p{
-            color:#d2d2d2;
-            margin-bottom:10px;
+            width: 170px;
+           color:#818181; 
+           margin-bottom:5px;
+           margin-left:-10px;
         }
-        >a{
-            z-index: 3;
-            display:inline-block;
-            float: left;
-            width: 0;
-            height: 0;
-            border-top:115px solid #f0aa42;
-            border-left:80px solid transparent;
-            border-right:80px solid transparent;
-            border-bottom:80px solid transparent;
-        }
-        >label{
-            position: absolute;
-            color:white;
-            top:70px;
-            left:210px;
-            z-index: 2;
-        }
-        button{
-            border:none;
-            background: white;
-        }
-        button>span{
-            font-size: 35px;
-            color:white;
-            position: absolute;
-            top:90px;
-            left:263px;
-            z-index: 1;
-        }
-        img{
-            display:inline-block;
-            float: left;
-            width: 67px;
-            height: 113px;
-            background: url(../../dist/images/sanjiao.jpg);
-        } 
-        .cont{
-            width: 330px;
-            height: 81px;
-            float: left;
-            padding:15px;
-            background:#f0f0f0;
-            h2{
-                font-size: 34px;
-                color:#e5941a;
-             
+        .hide1{
+            color: white;
+            img{
+                display: block;
+                float: left;
             }
             p{
-                color:#d2d2d2;
-                height: 20px;
-                line-height: 20px;
-        
-            }
-            a{
-                margin: 10px 0 ;
-                color: #e5941a;
-                width: 100px;
-                border-bottom:1px solid #e5941a;
+                color:#818181;
             }
             label{
-                display: block;
-                float: right;
-                margin-top:-54px;
-                margin-right:10px;
-                width: 60px;
-                height:60px;
-                border-radius:50%;
-                border:3px dashed #e5941a;
-                span{
-                    display: inline-block;
-                    width: 50px;
-                    height: 50px;
-                    line-height: 50px;
-                    text-align: center;
-                    color:white;
-                    font-weight: bold;
-                    border-radius:50%;
-                    background:#e5941a;
-                    font-size:30px;
-                    margin-top:5px;
-                    margin-left:5px;
-                }
+                position:absolute;
+                top: 75px;
+                left: 240px;
             }
+            span{
+                position:absolute;
+                top: 90px;
+                left: 290px;
+                font-size: 40px;
+                color: white;
+            }
+        }
+        .hide2{
+            margin-left:-323px;
+            margin-top:15px;
+            float: left;
+            h2{
+                color: #e5941a;
+                font-size: 34px;
+            }
+            p{
+                height:20px;
+                color:#818181;
+            }
+            a{
+                color: #e5941a;
+                border-bottom:1px solid #e5941a;
+                margin-right:10px;
+            }
+        }
+        >img{
+            display: block;
+            float: left;
+            margin-left:-60px;
+            margin-top:4px;
         }
     }
     .evaluate{

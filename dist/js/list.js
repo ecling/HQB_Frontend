@@ -3,8 +3,10 @@
 		var dl = element.children("dl");
 		dl.each(function(i){
 			$(this).on("click",function(event){
-				$(this).children("dd").toggle("slow");
+				$(this).children("dd").slideDown("slow");
+				$(this).find(".iconfont").addClass('iconfontStyle');
 				$(this).siblings(".list").children("dd").slideUp("slow");
+				$(this).siblings(".list").find('.iconfont').removeClass('iconfontStyle');
 			});
 		});
 	};
@@ -16,4 +18,9 @@
 
 $(function(){
 	$(".shop_by").accordion();
+});
+jQuery(document).ready(function($) {
+	$(".clearfix .iconfont").on('click',function(){
+		$(this).css("color","red");
+	})
 });

@@ -6,6 +6,10 @@
 .wrap{
 	padding-top: 30px;
 }
+.iconfontStyle{	
+	transition: transform 0.5s ease;
+	transform: rotate(90deg);
+}
 .sidebox{
 	.color{
 		dd{
@@ -39,6 +43,7 @@
 				}
 			}
 			.iconfont{
+				display: inline-block;
 				color:#f39711;
 			}
 			dd{
@@ -373,6 +378,7 @@
 	padding-left:30px;
 	text-align: center;
 	color:#818181;
+	margin-top:20px;
 	span{
 		position:absolute;
 		display:block;
