@@ -3,7 +3,6 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 @import "../widget/page.scss";
-@import "../css/pagination.css";
 .wrap{
 	padding-top: 30px;
 }
@@ -118,12 +117,10 @@
 			background:white;
 			position:absolute;
 			width: 130px;
-			top:32px;
+			top:29px;
 			left: 30px;
-			box-shadow:0 0 1px #888;
-			-webkit-box-shadow:0 0 1px #888;
-			-o-box-shadow:0 0 1px #888;
-			-moz-box-shadow:0 0 1px #888;
+			border:1px solid #ddd;
+			
 			z-index: 3;
 			display: none;
 			&.right{
@@ -160,7 +157,7 @@
 					position:absolute;
 					top: -19px;
 					right:51px;
-					color:#b7b7b9;
+					color:#ddd;
 					border-bottom: 1px solid white;
 					height: 18px;				
 				}
@@ -192,7 +189,7 @@
 					position:absolute;
 					top:-19px;
 					left:97px;
-					color:#b7b7b9;
+					color:#ddd;
 					border-bottom: 1px solid white;
 					height: 18px;
 				}
@@ -306,7 +303,7 @@
 			display: block;
 			width: 63px;
 			height: 50px;
-			background:url(../../design/hot.png);
+			background:url(../../dist/images/hot.png);
 			position:absolute;
 			top: 3px;
 			left: 3px;
@@ -363,9 +360,63 @@
 			}
 			.i2{
 				border-top:10px solid white;
-				top:19px;
+				top:18px;
 				z-index: 300;
 			}
 		}
 	}
 }
+.pages{
+	width:418px;
+	float:right;
+	position:relative;
+	padding-left:30px;
+	text-align: center;
+	color:#818181;
+	span{
+		position:absolute;
+		display:block;
+		width: 30px;
+		height:30px;
+		line-height:30px;
+		font-size: 30px;
+		border-radius:50%;
+		cursor: pointer;
+		top:0;
+		&:hover{
+				background:#e5941a;
+				color:white;
+			}
+	}
+	.prev{
+		left:0;
+	}
+	.next{
+		right:0;
+	}	
+	ul{
+		label{
+			width: 30px;
+			height: 30px;
+			line-height:30px;
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		li a{
+			color:#818181;
+			float: left;
+			width: 30px;
+			height: 30px;
+			line-height:30px; 
+			border-radius:50%;
+			font-size: 16px;
+			margin: 0 3px;
+			&:hover{
+				background:#e5941a;
+				color:white;
+			}
+		}
+	}
+}
+

@@ -675,9 +675,13 @@
             left:263px;
             z-index: 1;
         }
-        .sanjiao{
-            background: url();
-        }
+        img{
+            display:inline-block;
+            float: left;
+            width: 67px;
+            height: 113px;
+            background: url(../../dist/images/sanjiao.jpg);
+        } 
         .cont{
             width: 330px;
             height: 81px;

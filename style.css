@@ -1,7 +1,7 @@
 body{
 	font-family: "Microsoft YaHei";
 	width: 100%;
-	background: url(images/bj.jpg) 0 49% repeat-y;
+	background: url(dist/images/bj.jpg) 0 49% repeat-y;
 }
 .navs{
 	background: white;
@@ -17,7 +17,7 @@ body{
 	height: 30px;
 	line-height: 30px;
 	margin-left:15%;
-	background: url(images/navs.jpg);
+	background: url(dist/images/navs.jpg);
 }
 .banner{
 	width:100%;
@@ -105,6 +105,12 @@ button:hover,
 	background: white;
 	
 }
+.box1 ul li a img{
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	background:url(images/img1.jpg);
+}
 .box1 button{
 	width: 140px;
 	height: 33px;
@@ -153,84 +159,55 @@ button:hover,
 	font-size: 14px;
 	margin-top:-5px;
 }
-.gotop{
-
-	position:fixed;
-	right: 40px;
-	bottom: 40px;
-	cursor: pointer;
-	z-index: 9999;
-}
-.gotop span{
-	width: 30px;
-	height: 30px;
-	font-size: 40px;
-	border: 2px solid black;
-	padding: 5px;
-	border-radius: 5px;
-}
-
-
-.pages {
-	width:430px;
- 	float: right;
- 	text-align: right;
- 	margin-right:30px;
- 	margin-top:10px;
-}
-.pages #Pagination {
-  padding-left:35px;
-  position: relative;
-  width: 400px;
-  float: left;
-  overflow: hidden;
-}
-.pages #Pagination .pagination {
-  margin-left: 10px;
-  height: 40px;
-  text-align: right;
-  font-family: \u5b8b\u4f53,Arial;
-}
-
-.pages #Pagination .pagination a,
-.pages #Pagination .pagination span {
-  float: left;
-  display: inline;
-  border-right: none;
-  background: #D9E6EE;
-  color: #666666;
-  font-size: 18px;
-  cursor: pointer;
-}
-.pagination a{
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 50%;
-}
-.pages #Pagination .pagination .current {
-  background: #ffac59;
-  color: #fff;
-}
-.pages #Pagination .pagination .prev,
-.pages #Pagination .pagination .next {
-  float: left;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-weight: bold;
- background: #D9E6EE;
-  color: #666666;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-}
-
+.pages{
+	margin-top:-50px;
+	margin-right: 137px;
+	width:418px;
+	float:right;
+	position:relative;
+	padding-left:30px;
+	text-align: center;
+	color:#818181;}
+.pages	span{
+		position:absolute;
+		display:block;
+		width: 30px;
+		height:30px;
+		line-height:30px;
+		font-size: 30px;
+		border-radius:50%;
+		cursor: pointer;
+		top:0;}
+.pages span:hover{
+				background:#e5941a;
+				color:white;}
+.prev{
+		left:0;
+	}
 .next{
-  right: 0;
-}
-
-.prev {
-  left: 0;
+		right:0;
+	}	
+.pages label{
+			width: 30px;
+			height: 30px;
+			line-height:30px;
+			display: block;
+			float: left;
+			cursor: pointer;}
+.pages	li a{
+			color:#818181;
+			float: left;
+			width: 30px;
+			height: 30px;
+			line-height:30px; 
+			border-radius:50%;
+			font-size: 16px;
+			margin: 0 3px;}
+.pages	li a:hover{
+				background:#e5941a;
+				color:white;
+			}
+.liStyle{
+	background:#e5941a;
+	color:white;
 }
