@@ -404,7 +404,6 @@
 			cursor: pointer;
 		}
 		li a{
-			color:#818181;
 			float: left;
 			width: 30px;
 			height: 30px;
@@ -418,5 +417,9 @@
 			}
 		}
 	}
+}
+.liStyle{
+	background:#e5941a;
+	color:white;
 }
 
