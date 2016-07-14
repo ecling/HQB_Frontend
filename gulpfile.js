@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require("gulp-ruby-sass");
 var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('serve',['sass'],function(){
@@ -8,7 +9,8 @@ gulp.task('serve',['sass'],function(){
         server: "./"
     });
 	gulp.watch("./src/scss/**/*.scss", ['sass']);
-	gulp.watch("./*.html").on('change', browserSync.reload);
+	gulp.watch("./*.html").on('change', reload);
+    gulp.watch("./dist/js/*.js").on('change',reload);
 });
 
 gulp.task('sass',function(){
@@ -18,10 +20,10 @@ gulp.task('sass',function(){
         })
         .pipe(sourcemaps.write('./', {
             includeContent: false,
-            sourceRoot: './src/scss'
+            sourceRoot: '../../src/scss/pages/'
         }))
         .pipe(gulp.dest('./dist/css/'))
-        .pipe(browserSync.stream({match: './dist/css/*.css'}));
+        .pipe(browserSync.stream());
 });
 
 
