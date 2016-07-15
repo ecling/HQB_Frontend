@@ -198,5 +198,5 @@ $(function(){
 	})();
 
 	//Newsletter form validate
-	$("#newsletter").validate();
+	//$("#newsletter").validate();
 });	
