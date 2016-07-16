@@ -1,0 +1,57 @@
+.pages{
+	width:418px;
+	float:right;
+	position:relative;
+	padding-left:30px;
+	text-align: center;
+	color:#818181;
+	margin-top:20px;
+	span{
+		position:absolute;
+		display:block;
+		width: 26px;
+		height:26px;
+		line-height:26px;
+		font-size: 18px;
+		border-radius:50%;
+		cursor: pointer;
+		top:0;
+	}
+	.icon-xiangzuo{
+		left:0;
+	}
+	.icon-you{
+		right:0;
+	}	
+	ul{
+		label{
+			width: 26px;
+			height: 26px;
+			line-height:26px;
+			display: block;
+			float: left;
+			cursor: pointer;
+
+		}
+		li{
+			
+			a{
+			float: left;
+			width:26px;
+			height:26px;
+			line-height:26px; 
+			border-radius:50%;
+			font-size: 16px;
+			margin: 0 3px;
+				&:hover{
+				background:#e5941a;
+				color:white;
+				}
+			}
+		}
+	}
+}
+.liStyle{
+	background:#e5941a;
+	color:white;
+}

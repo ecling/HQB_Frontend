@@ -68,12 +68,13 @@ ul::after, .clearfix:after {
 .tabdiv i{
 	margin-left: 5px;
 	display: inline-block;
-	width: 20px;
-	height: 20px;}
+	width: 16px;
+	height: 16px;}
 .tabdiv span{
 	display: inline-block;
 	color: black;
 	width:15px;
+	font-size: 14px;
 	text-align: center;}
 .tabdiv2{
 	text-align: center;
@@ -182,9 +183,9 @@ ul::after, .clearfix:after {
 		font-size: 18px;
 		cursor: pointer;
 		top:0;}
-.icon-xiangzuo01{
+.icon-xiangzuo{
 		left:0;}
-.icon-right{
+.icon-you{
 		right:0;}	
 .pages label{
 			width: 30px;
