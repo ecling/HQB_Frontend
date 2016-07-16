@@ -10,9 +10,9 @@
 	.progress{
 		height: 150px;
 		width: 100%;
+		border: 1px solid red;
 	}
 	.items{
-		height:auto;
 		.leftD{
 			width:800px;
 			h2{
@@ -31,14 +31,30 @@
 			}
 			.list{
 				height: 100px;
+				width: 1200px;
 				position: relative;
 				margin-top:35px;
+<<<<<<< HEAD
 				input{
 					width: 20px;
 					height: 20px;
 					float: left;
 					margin-top:38px;
 					margin-right:16px;
+=======
+				.button{
+					display: inline-block;
+					float: left;
+					width: 40px;
+					height: 100px;
+					float: left;
+					button{
+						width: 20px;
+						height: 20px;
+						display: inline-block;
+						margin: 36px -2px;
+					}
+>>>>>>> ling/master
 				}
 				.commodity{
 					width: 285px;
@@ -53,6 +69,7 @@
 				}
 				.listInformation{
 					color:#818181;
+<<<<<<< HEAD
 					width:162px;
 					height: 60px;
 					font-size: 12px;
@@ -64,6 +81,14 @@
 							transition:color .3s ease;
 							color:#e5941a;
 						}
+=======
+					width:220px;
+					height: 70px;
+					float: left;
+					clear:right;
+					p{
+						font-size: 14px;
+>>>>>>> ling/master
 					}
 				}
 				.listSize{
@@ -168,11 +193,11 @@
 			}
 			float:right;
 			width: 358px;
-			height: 530px;
-			box-shadow:1px 1px 10px #bdbdbd;
+			height: 570px;
+			border:1px solid red;	
 			padding: 30px 20px;
-			border-radius:3px;
 			.rightHead{
+<<<<<<< HEAD
 				margin-bottom:50px;
 				label{
 					display: block;
@@ -360,6 +385,9 @@
 				color:red;
 				border-bottom:1px solid red;
 				margin-right:30px;
+=======
+				
+>>>>>>> ling/master
 			}
 		}
 	}
