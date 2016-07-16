@@ -1,7 +1,8 @@
-@import "../layout/footer.scss";
-@import "../widget/page.scss";
 @import "../widget/color.scss";
 @import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+@import "../widget/page.scss"
 body{
 	font-family: "Arial";
 	width: 100%;
@@ -232,4 +233,5 @@ button:hover,
 .liStyle{
 	background:#e5941a;
 	color:white;
+	
 }
