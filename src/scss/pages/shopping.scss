@@ -4,23 +4,12 @@
 @import "../layout/footer.scss";
 @import "../widget/page.scss";
 .content{
-	.checkboxFive{
-                cursor: pointer;
-                width: 16px;
-                height: 16px;
-                border:1px solid #888;
-                float: left;
-                margin-right:20px;
-                em{
-                   display: none;
-                }	
-            }
 	.progress{
 		height: 150px;
 		width: 100%;
+		border: 1px solid red;
 	}
 	.items{
-		height:auto;
 		.leftD{
 			width:800px;
 			float: left;
@@ -40,10 +29,21 @@
 			}
 			.list{
 				height: 100px;
+				width: 1200px;
 				position: relative;
 				margin-top:35px;
-				.checkboxFive{
-					margin-top:38px;
+				.button{
+					display: inline-block;
+					float: left;
+					width: 40px;
+					height: 100px;
+					float: left;
+					button{
+						width: 20px;
+						height: 20px;
+						display: inline-block;
+						margin: 36px -2px;
+					}
 				}
 				img{
 					display: inline-block;
@@ -60,7 +60,6 @@
 					float: left;
 					clear:right;
 					p{
-						color:#818181;
 						font-size: 14px;
 					}
 				}
@@ -161,193 +160,11 @@
 			}
 			float:right;
 			width: 358px;
-			height: 530px;
-			box-shadow:1px 1px 10px #bdbdbd;
+			height: 570px;
+			border:1px solid red;	
 			padding: 30px 20px;
-			border-radius:3px;
 			.rightHead{
-				margin-bottom:50px;
-				h3{
-					font-size: 14px;
-					height: 30px;
-					font-weight:bold;
-				}
-				input[type="text"]{
-					font-size: 14px;
-					width: 235px;
-					height: 35px;
-					margin-right:20px;
-					margin-bottom:10px;
-					border:1px solid #dfdfdf;
-					border-radius:5px;
-					text-indent: 10px;
-					&:hover{
-						transition: box-shadow .5s ease;
-						box-shadow:0 0 10px red;
-					}
-				}
-				input[type="submit"]{
-					width: 98px;
-					height: 35px;
-					line-height: 35px;
-					text-align:center;
-					color: white;
-					background:#eeb053;
-					border:none;
-					border-radius:5px;
-					cursor: pointer;
-					font-size:18px;
-				}
-				p{
-					color:#bdbdbd;
-				}
-			}
-			.rightcenter{
-				color:#666;
-				height: 100px;
-				border-bottom:1px dashed #bdbdbd;
-				font-size: 14px;
-				span{
-					float: left;
-					height: 20px;
-					width: 60%;
-				}
-				label{
-					float: right;
-					height: 20px;
-					width: 40%;
-					text-align: right;
-				}
-			}
-			.rightfoot{
-				height: 80px;
-				margin-top:20px;
-				p{
-					font-size: 16px;
-					strong{
-						font-weight: bold;
-					}
-					span{
-						float: right;
-						color: red;
-						font-weight: bold;
-					}
-					&+p{
-						text-align: right;
-						font-size: 14px;
-						height: 50px;
-					}
-				}
-				label{
-					display: inline-block;
-					line-height: 43px;
-					height: 43px;
-					width: 139px;
-					text-align: center;
-				}
-				img{
-					float: right;
-				}
-				input{
-					width: 100%;
-					height: 40px;
-					background:#df8d0a;
-					color:white;
-					font-size: 14px;
-					font-weight: bold;
-					border:none;
-					border-radius:5px;
-					margin-top:10px;
-					cursor: pointer;
-				}
-				i{
-					display: inline-block;
-					font-style: normal;
-					width:100%;
-					text-align:center;
-					margin-top:20px;
-				}
-			}
-		}
-		.itemsfoot{
-			margin-top:30px;
-			a{
-				color:#bdbdbd;
-				border-bottom:1px solid #bdbdbd;
-				margin-left:30px;
-			}
-		}
-	}
-	.saveforlater{
-		border-top:1px solid #bdbdbd;
-		margin-top:80px;
-		li{
-			padding:5px;
-			width: 310px;
-			height: 136px;
-			float: left;
-			margin-right:78px;
-			margin-bottom:20px;
-			&:hover{
-				transition:box-shadow 0.5s ease;
-				-o-transition:box-shadow 0.5s ease;
-				-moz-transition:box-shadow 0.5s ease;
-				-webkit-transition:box-shadow 0.5s ease;
-				box-shadow:0 0 10px #bdbdbd;
-				-o-box-shadow:0 0 10px #bdbdbd;
-				-moz-box-shadow:0 0 10px #bdbdbd;
-				-webkit-box-shadow:0 0 10px #bdbdbd;
-			}
-		}
-		h3{
-			width: 190px;
-			height: 20px;
-			background:white;
-			margin-top:-40px;
-			font-size:18px;
-			padding:30px 0;
-		}
-		p{
-			color:#bdbdbd;
-			height: 20px;
-		}
-		li>label{
-			color:red;
-			font-weight: bold;
-			font-size: 16px;
-			margin-right:5px;
-
-		}
-		a{
-			display: inline-block;
-			width: 136px;
-			height: 136px;
-			float: left;
-			margin-right:10px;
-		}
-		i{
-			font-style: normal;
-			color:#bdbdbd;
-			text-decoration: line-through;
-		}
-		.saveforlaterSize{
-			margin-top:10px;
-			margin-bottom:10px;
-			span{
-				margin-right:10px;
-			}
-			p{
-				height: 14px;
-				color:black;
-			}
-		}
-		.delete{
-			a{
-				height:14px;
-				width:auto;
-				color:red;
-				border-bottom:1px solid red;
-				margin-right:30px;
+				
 			}
 		}
 	}

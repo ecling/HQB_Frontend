@@ -1,8 +1,6 @@
 
 .sass-cache
 node_modules
-<<<<<<< HEAD
 dist/css/
-=======
-dist/css
->>>>>>> ling/master
+
+
