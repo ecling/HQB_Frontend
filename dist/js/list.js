@@ -20,7 +20,7 @@ $(function(){
 	$(".shop_by").accordion();
 });
 jQuery(document).ready(function($) {
-	$(".clearfix .iconfont").on('click',function(){
+	$(".clearfix .icon-xin").on('click',function(){
 		$(this).css("color","red");
 	})
 });

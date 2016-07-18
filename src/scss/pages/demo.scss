@@ -1,16 +1,19 @@
-@import "../layout/footer.scss";
-@import "../widget/page.scss";
 @import "../widget/color.scss";
 @import "../layout/common.scss";
+@import "../layout/footer.scss";
+@import "../widget/page.scss";
 body{
 	font-family: "Arial";
 	width: 100%;
-	background: url(dist/images/bj.jpg) 0 49% repeat-y;
+	background: url(../../dist/images/bj.jpg) 0 50% repeat-y;
+}
+.iconfont:hover{
+	color:#e5941a;
 }
 .navs{
 	background: white;
 	color:#747474;
-	width: 100%
+	width: 100%;
 	height:30px;
 	line-height: 30px;
 }
@@ -21,7 +24,7 @@ body{
 	height: 30px;
 	line-height: 30px;
 	margin-left:15%;
-	background: url(dist/images/navs.jpg);
+	background: url(../../dist/images/navs.jpg);
 }
 .banner{
 	width:100%;
@@ -30,7 +33,7 @@ body{
 .box1{
 	text-align: center;
 	width: 1200px;
-	height:2200px;
+	height:auto;
 	background:#D9E6EE;
 	margin:-40px auto 0;
 	position: relative;
@@ -49,12 +52,6 @@ body{
 	display: block;
 	float: left
 }
-.tabdiv2 input:hover,
-button:hover,
-.tabdiv input:hover{
-	cursor: pointer;
-	box-shadow: 0 0 9px #3fc;	
-}
 .tabdiv{
 	color:#818181;
 	text-align: right;
@@ -71,8 +68,7 @@ button:hover,
 	color: black;
 	width:15px;
 	font-size: 14px;
-	text-align: center;}
-
+	text-align: center;
 	line-height: 54px;
 }
 .tabdiv span{
@@ -112,6 +108,7 @@ button:hover,
 }
 .box1 ul{
 	margin:0px 9px 94px 18px;
+	padding-bottom:50px;
 }
 .box1 ul li{
 	margin-left: 7px;
@@ -120,6 +117,20 @@ button:hover,
 	width: 280px;
 	height: 490px;
 	background: white;
+	border:1px solid transparent;
+	text-align:center;
+	a{
+		display: inline-block;
+		color:#aaa;
+		width: 260px;
+		margin-bottom:20px;
+		word-break: break-all;
+		word-wrap: break-word;
+		&:hover{
+			transition:all 0.5s ease;
+			color:red;
+		}
+	}
 	
 }
 .box1 ul li a img{
@@ -132,104 +143,61 @@ button:hover,
 	width: 140px;
 	height: 33px;
 	font-size: 16px;
-	font-weight: bold;
 	background: red;
 	color:white;
 	border: none;
 	margin-top: 20px;
+	&:hover{
+		border:2px solid red;
+		background: white;
+		color:red;
+	}
 }
 .box1 ul li:hover{
-	cursor: pointer;
-	box-shadow: 0 0 9px #3fc;	
+	transition:all 0.5s ease;
+	border:1px solid red;
 }
-.box1 p{
-	width: 100%;
-	height:45px;
-	color:#888;
-	overflow: hidden;
-}
+
 .box1 img{
 	margin: 10px auto;
 }
 .price{
 	width: 130px;
 	height: 50px;
-	margin:10px 0;
 	float: left;
 }
 .one{
+	margin-left:10px;
 	border-right: 1px dashed #888;
-}
-.one h5{
-	text-align: left;
-	margin-left:25px;
-	text-decoration: line-through;
-}
-.price h3{
-	font-size: 24px;
-	font-weight: bold;
-	margin-top:8px;
-	color:red;
-}
-.price h5{
-	color:#888;
-	font-size: 14px;
-	margin-top:-5px;
-}
-.pages{
-	margin-top:-50px;
-	margin-right: 137px;
-	width:418px;
-	float:right;
-	position:relative;
-	padding-left:30px;
-	text-align: center;
-	color:#818181;}
-.pages	span{
-		position:absolute;
-		display:block;
-		width: 30px;
-		height:30px;
-		line-height:30px;
-		font-size: 30px;
-		border-radius:50%;
-		cursor: pointer;
-		top:0;}
-.icon-xiangzuo{
-		left:0;}
-.icon-you{
-		right:0;}	
-
-.pages span:hover{
-				background:#e5941a;
-				color:white;}
-.prev{
-		left:0;
+	h3{
+		color: red;
+		font-size: 24px;
 	}
-.next{
-		right:0;
-	}	
-.pages label{
-			width: 30px;
-			height: 30px;
-			line-height:30px;
-			display: block;
-			float: left;
-			cursor: pointer;}
-.pages	li a{
-			color:#818181;
-			float: left;
-			width: 30px;
-			height: 30px;
-			line-height:30px; 
-			border-radius:50%;
-			font-size: 16px;
-			margin: 0 3px;}
-.pages	li a:hover{
-				background:#e5941a;
-				color:white;
-			}
-.liStyle{
-	background:#e5941a;
-	color:white;
+	h5{
+		font-size: 12px;
+		text-decoration: line-through;
+		color:#b3b3b3;
+		margin-left:-24px;
+	}
+}
+.tow{
+	padding-top:6px;
+	h3{
+		color:red;
+		font-size: 18px;
+	}
+	h5{
+		font-size: 12px;
+		color:#b3b3b3;
+	}
+}
+
+
+.pages{
+	margin-top:-145px;
+	margin-right:127px;
+}
+footer{
+	background:white;
+	margin-top:120px;
 }
