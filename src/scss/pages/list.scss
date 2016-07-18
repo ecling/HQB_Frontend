@@ -4,17 +4,12 @@
 @import "../layout/header.scss";
 @import "../widget/breadcrumb.scss";
 @import "../widget/page.scss";
-<<<<<<< HEAD
 @import "../widget/libiao.scss";
-
+@import "../layout/footer.scss";
 .wrap{
 	padding-top: 30px;
 }
-=======
-@import "../layout/footer.scss";
 
-
->>>>>>> ling/master
 .iconfontStyle{	
 	transition: transform 0.5s ease;
 	transform: rotate(90deg);
