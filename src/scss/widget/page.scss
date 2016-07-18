@@ -53,10 +53,16 @@
 			}
 		}
 	}
-}
-.liStyle{
-	background:#e5941a;
-	a{
-		color:white;
+	.liStyle{
+		background:#e5941a;
+		a{
+			color:white;
+		}
+	}
+	.more:hover{
+		background:transparent;
+		a{
+			color:black;
+		}
 	}
 }
