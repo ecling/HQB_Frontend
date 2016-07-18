@@ -40,17 +40,17 @@ i,label,input,span,button,a{
 					left:88px;
 					top:-18px;
 					width:0px;
-					  height:0px;
-					  border-width:6px;
-					  border-style:solid;
-					  border-color:#f39c11 #f39c11  transparent transparent;
-					  background-color:transparent;
-					  transform:rotate(45deg);
-					  -webkit-transform:rotate(45deg);
-					  -moz-transform:rotate(45deg);
-					  -ms-transform:rotate(45deg);
-					  -o-transform:rotate(45deg);
-					  border-radius:50%;
+				    height:0px;
+				  	border-width:6px;
+				  	border-style:solid;
+				  	border-color:#f39c11 #f39c11  transparent transparent;
+				  	background-color:transparent;
+				  	transform:rotate(45deg);
+				  	-webkit-transform:rotate(45deg);
+				  	-moz-transform:rotate(45deg);
+				  	-ms-transform:rotate(45deg);
+				  	-o-transform:rotate(45deg);
+				  	border-radius:50%;
 				}
 				.span2{
 					left:336px;
@@ -163,7 +163,6 @@ i,label,input,span,button,a{
 					span{
 						margin-right:10px;
 					}
-
 				}
 				.Save{
 					text-align:center;
@@ -201,10 +200,9 @@ i,label,input,span,button,a{
 					margin-right:30px;
 					span{
 						width: 20px;
-
 					}
 					 a{
-					      text-decoration: normal;  
+					    text-decoration: normal;  
 					  }
 					.prev,.next{
 					  width: 27px;
@@ -213,13 +211,13 @@ i,label,input,span,button,a{
 					  border-radius:50%;
 					  border:1px dashed #888;
 					  font-size: 18px;
+					}
+					.next{
+					    border:1px solid #888;
 					  }
-					  .next{
-					       border:1px solid #888;
-					  }
-					  .prev{
-					      margin-left:10px;
-					  }
+					.prev{
+					    margin-left:10px;
+					}
 				}
 				.listmoney{
 					width: 100px;
@@ -246,8 +244,8 @@ i,label,input,span,button,a{
 						}
 					}
 					label{
-							font-size:12px;
-						}
+						font-size:12px;
+				    }
 				}
 			}
 		}

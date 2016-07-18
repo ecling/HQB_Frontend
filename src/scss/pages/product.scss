@@ -329,7 +329,7 @@
     }
     .listimg{
         width: 720px;
-        height: 250px;       
+        height: 265px;       
         float: left;
         overflow:scroll ;
         overflow-y:hidden;
@@ -362,23 +362,12 @@
             span{
                 color:red;
             } 
-            .checkboxFive{
+            input{
                 cursor: pointer;
                 float: right;
-                width: 16px;
-                height: 16px;
+                width: 20px;
+                height: 20px;
                 border:1px solid #888;
-                em{
-                   display: none;
-                }
-                &:hover{
-                    border:1px solid #e5941a;
-                    background:#e5941a;
-                    em{
-                        color:white;
-                        display: block;
-                    }
-                }
             }     
         }
     }
