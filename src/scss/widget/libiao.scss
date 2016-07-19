@@ -6,6 +6,11 @@
 		float: left;
 	}
 	.view_mode{
+		width: 250px;
+		float:right;
+		padding: 0 6px 0 25px;
+		border-top: 1px solid #f39c11;
+		border-bottom: 1px solid #f39c11;
 		position:relative;
 		span{
 			padding-right:10px;
@@ -17,7 +22,6 @@
 			top:29px;
 			left: 30px;
 			border:1px solid #ddd;
-			
 			z-index: 3;
 			display: none;
 			&.right{
@@ -43,11 +47,6 @@
 				}
 			}
 		}
-		width: 250px;
-		float:right;
-		padding: 0 6px 0 25px;
-		border-top: 1px solid #f39c11;
-		border-bottom: 1px solid #f39c11;
 		.view{
 			ul{
 				i{
@@ -60,13 +59,12 @@
 				}
 			}
 			&:hover{
-				i.icon-down{
- 				transform: rotate(180deg);
- 				}
 				cursor:pointer;
 				color:#f39711;
+				i.icon-down{
+ 					transform: rotate(180deg);
+ 				}
 				i{
-
 					i{
 						display: block;
 					}
@@ -92,11 +90,11 @@
 				}
 			}
 			&:hover{
+				cursor:pointer;
+				color:#f39711;
 				i.icon-down{
  				transform: rotate(180deg);
  				}
-				cursor:pointer;
-				color:#f39711;
 				i{
 					i{
 						display: block;
@@ -117,6 +115,14 @@
 .product_list{
 	width:930px;
 	li{
+		min-height: 348px;
+		height: 387px;
+		width: 211px;
+		float: left;
+		position: relative;
+		margin-right: 12px;
+		margin-bottom:20px;
+		padding:5px;
 		&:hover{
 			.hidediv{
 				display: block;
@@ -127,14 +133,6 @@
 			-o-transition: box-shadow 500ms ease-out;
 			box-shadow:0 0  5px red;
 		}
-		min-height: 348px;
-		height: 387px;
-		width: 211px;
-		float: left;
-		position: relative;
-		margin-right: 12px;
-		margin-bottom:20px;
-		padding:5px;
 		.hidediv{
 			display: none;
 			position: absolute;
@@ -233,7 +231,6 @@
 			text-align:center;
 			background:white;
 			border:1px solid #e5941a;
-			// box-shadow:0 0 6px #e5941a;
 			position:absolute;
 			top:338px;
 			right:-19px;
@@ -247,7 +244,6 @@
 				border-left:10px solid transparent ;
 				border-right:10px solid transparent;
 				border-bottom:10px solid transparent;
-
 			}
 			.i1{
 				border-top:10px solid #e5941a ;
