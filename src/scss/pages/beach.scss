@@ -1,4 +1,112 @@
-@import "../layout/footer.scss";
-@import "../layout/header.scss";
 @import "../widget/color.scss";
 @import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+header{
+	padding-bottom:10px;
+}
+.banner{
+	span{
+		display:block;
+		width: 1200px;
+		margin:5px auto;
+		color:#666;
+		label{
+			font-size: 12px;
+			font-family: Arial;	
+			margin-left: 5px;
+		}
+	}
+	img{
+		width: 100%;
+	}
+}
+.wrap{
+	.navbar{
+		ul{
+			position: relative;
+			li{
+				float: left;
+				position:absolute;
+				text-align: center;
+				width: 140px;
+				height: 150px;
+				span{
+					display:block;
+					margin-top: -80px;
+					font-family: Courier New;
+					font-size: 24px;
+					font-weight: bold;
+				}
+			}
+			.swimwear{
+				top:-176px;
+				left:210px;
+			}
+			.sandal{
+				top:-166px;
+				left:428px;
+			}
+			.jewelry{
+				top:-138px;
+				left:648px;
+			}
+			.sunglasses{
+				top:-130px;
+				left:866px;
+			}
+		}		
+	}
+	.liebiao{
+		height: auto;
+		li{
+			float: left;
+			border: 1px dashed #cfcfcf;
+			padding:10px 5px;
+			text-align: center;
+			width: 261px;
+			margin-top:20px;
+			margin-left:20px;
+			&:hover{
+				transition:all 0.5s ease;
+				border:1px solid #f39c11 ;
+			}
+			a{
+				color:#666;
+				word-break: break-normal ; 
+				word-wrap:break-word;
+				&:hover{
+					transition:color 0.5s ease;
+					color:#f39c11;
+				}
+			}
+			img{
+				margin-bottom: 5px;
+			}
+			h2{
+				color:red;
+				font-size: 24px;
+				font-weight: bold;
+			}
+			h3{
+				color:#333;
+				font-size: 18px;
+			}
+			button{
+				display: block;
+				width: 140px;
+				height: 30px;
+				background:#292929;
+				color:white;
+				border:none;
+				margin:0 auto;
+				margin-bottom: 20px;
+				border-radius:3px;
+				&:hover{
+					transition:all .5s ease;
+					background:#f39c11 ;
+				}
+			}
+		}
+	}
+}
