@@ -1,31 +1,5 @@
 header{
 	border-bottom: 2px solid $maincolor;
-	.dropdown{
-		cursor: pointer;
-		.title{
-			line-height: 30px;
-			i{
-				display: inline-block;
-				transition: all 0.2s ease-in-out;
-			}
-		}
-		position: relative;
-		.drop_content{
-			border: 1px solid #ddd;
-			position: absolute;
-			display: none;
-			background-color: #fff;
-			z-index: 11;
-		}
-		&.active{
-			.title{
-				color: #f39c11;
-				i.icon-down{
-					transform: rotate(180deg);
-				}
-			}
-		}
-	}
 	.vertical{
 		line-height: 30px;
 	}
@@ -76,22 +50,6 @@ header{
 	}
 
 	.tool{
-		em{
-			width: 0;
-			height: 0;
-			border-width:0 7px 7px;
-			border-color: transparent;
-			border-style: solid;
-			position: absolute;
-			top: -8px;
-		}
-		em.triangle_gb{
-			border-bottom-color: #ddd;
-		}
-		em.triangle_wb{
-			top: -7px;
-			border-bottom-color: #fff;
-		}
 		.left{
 			float: left;
 			i{
@@ -480,6 +438,49 @@ header{
 				dl:nth-child(4n){
 					clear: right;
 				}
+			}
+		}
+	}
+}
+
+.dropdown{
+	cursor: pointer;
+	.title{
+		line-height: 30px;
+		i{
+			display: inline-block;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+	position: relative;
+	.drop_content{
+		border: 1px solid #ddd;
+		position: absolute;
+		display: none;
+		background-color: #fff;
+		z-index: 11;
+		em{
+			width: 0;
+			height: 0;
+			border-width:0 7px 7px;
+			border-color: transparent;
+			border-style: solid;
+			position: absolute;
+			top: -8px;
+		}
+		em.triangle_gb{
+			border-bottom-color: #ddd;
+		}
+		em.triangle_wb{
+			top: -7px;
+			border-bottom-color: #fff;
+		}
+	}
+	&.active{
+		.title{
+			color: #f39c11;
+			i.icon-down{
+				transform: rotate(180deg);
 			}
 		}
 	}

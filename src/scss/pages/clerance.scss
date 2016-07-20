@@ -5,7 +5,7 @@
 body{
 	font-family: "Arial";
 	width: 100%;
-	background: url(../../dist/images/bj.jpg) 0 50% repeat-y;
+	background: url(../images/bj.jpg) 0 50% repeat-y;
 }
 .iconfont:hover{
 	color:#e5941a;
@@ -24,11 +24,12 @@ body{
 	height: 30px;
 	line-height: 30px;
 	margin-left:15%;
-	background: url(../../dist/images/navs.jpg);
+	background: url(../images/navs.jpg);
 }
 .banner{
 	width:100%;
 	height: 677px;
+	background: url(../images/banner.jpg) center center;
 }
 .box1{
 	text-align: center;
@@ -37,6 +38,7 @@ body{
 	background:#D9E6EE;
 	margin:-40px auto 0;
 	position: relative;
+	padding-top: 20px;
 }
 .tabdiv2 input,	
 .tabdiv input{
@@ -115,7 +117,6 @@ body{
 	margin-bottom: 30px;
 	float: left;
 	width: 280px;
-	height: 490px;
 	background: white;
 	border:1px solid transparent;
 	text-align:center;
@@ -131,13 +132,15 @@ body{
 			color:red;
 		}
 	}
-	
+}
+.box1{
+	li:nth-child(4n+1){
+		clear: left;
+	}
 }
 .box1 ul li a img{
 	display: inline-block;
 	width: 260px;
-	height: 260px;
-	background:url(images/img1.jpg);
 }
 .box1 button{
 	width: 140px;
@@ -146,7 +149,7 @@ body{
 	background: red;
 	color:white;
 	border: none;
-	margin-top: 20px;
+	margin: 20px 0;
 	&:hover{
 		border:2px solid red;
 		background: white;
@@ -163,7 +166,6 @@ body{
 }
 .price{
 	width: 130px;
-	height: 50px;
 	float: left;
 }
 .one{
@@ -181,10 +183,9 @@ body{
 	}
 }
 .tow{
-	padding-top:6px;
 	h3{
 		color:red;
-		font-size: 18px;
+		font-size: 24px;
 	}
 	h5{
 		font-size: 12px;
