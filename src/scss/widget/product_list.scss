@@ -94,13 +94,6 @@
 		font-size: 20px;
 		float:right;
 	}
-	img{
-		width: 320px;
-		height: 320px;
-		position: relative;
-		overflow: hidden;
-		left: -54px;
-	}
 	.name{
 		padding: 9px 0;
 		margin: 0;
@@ -128,8 +121,8 @@
 			height: 41px;
 			border-radius: 50%;
 			background-color:rgba(0,0,0,0.7);
+			top: 150px;
 			left: 160px;
-			top: 263px;
 			padding: 9px 0 0 9px;
 		}
 	}
@@ -144,6 +137,18 @@
 	}
 	+li:nth-child(4n){
 		margin-right: 0;
+	}
+}
+.weddinglist{
+	.proItem{
+		img{
+			position: relative;
+			overflow: hidden;
+			left: -54px;
+		}
+		.price .off{
+			top: 263px;
+		}	
 	}
 }
 

@@ -1,12 +1,11 @@
 @import "../help/_helper";
 @import "../base/_normalize";
-@import "../components/_colors";
-@import "../components/_form";
-@import "../components/_buttons";
-@import "../components/_selectDrop";
-@import "../layout/_layout";
-@import "../layout/_product";
 @import "../widget/color.scss";
+@import "../widget/form";
+@import "../widget/buttons";
+@import "../widget/selectDrop";
+@import "../widget/loading";    
+@import "../widget/product";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";

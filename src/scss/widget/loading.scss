@@ -72,3 +72,61 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.cssanimations {
+    .popUp {
+        transform-origin: center center;
+        &.active {
+            animation: bounceIn 0.75s forwards;
+        }
+        &.noactive {
+            animation: bounceOut 0.75s both;
+        }
+    }
+}
+
+.popDimmer {
+    position: fixed;
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px;
+    left: 0px;
+    z-index: 12;
+    background: url(../images/alpha.png) repeat;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popUp {
+    background: white;
+    display: none;
+    font-size: pxToRem(14px);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #ededed;
+    box-sizing: content-box !important;
+    transition:width 0.1s ease,height 0.1s ease;
+    .fa-times-circle {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        cursor: pointer;
+        color: black;
+        font-size: pxToRem(30px);
+        line-height: 1;
+        opacity: 1;
+    }
+}
+
+.popInner {
+    display: inline-block;
+    transition:width 0.1s ease,height 0.1s ease;
+}
+
+
