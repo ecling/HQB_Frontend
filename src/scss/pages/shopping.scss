@@ -284,12 +284,18 @@ i,label,input,span,button,a{
 					height: 35px;
 					line-height: 35px;
 					text-align:center;
-					color: white;
-					background:#eeb053;
+					color:#eeb053;
+					background:white;
 					border:none;
 					border-radius:3px;
 					cursor: pointer;
 					font-size:18px;
+					border:1px solid #eeb053;
+					&:hover{
+						transition: all .5s ease;
+						background: #eeb053;
+						color:white;
+					}
 				}
 				p{
 					color:#bdbdbd;

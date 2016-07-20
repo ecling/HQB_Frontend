@@ -10,21 +10,16 @@
 		line-height:26px;
 		font-size: 18px;
 		border-radius:50%;
+		cursor: pointer;
+		top:0;
 	}
 		
 	ul{
-		label{
-			width: 26px;
-			height: 26px;
-			line-height:26px;
-			display: block;
-			float: left;
-			cursor: pointer;
-		}
 		li{
-			width: 26px;
-			height: 26px;
-			float: left;	
+			float: left;
+			width:26px;
+			height:26px;
+			line-height:26px; 
 			border-radius:50%;
 			margin: 0 3px;
 			line-height:26px;
@@ -42,5 +37,11 @@
 	.current{
 		background:#e5941a;
 		color:white;
+	}
+	.more:hover{
+		background:transparent;
+		a{
+			color:black;
+		}
 	}
 }
