@@ -1,0 +1,69 @@
+.progress{
+	height: 150px;
+	width: 100%;
+	img{
+		margin:30px auto 0;
+	}
+	ul{
+		width:810px;
+		margin: 0 auto;
+		li{
+			margin-top:5px;
+			width: 25%;
+			float: left;
+			text-align:center;
+			position:relative;
+			word-wrap: break-word;
+			word-break: normal; 
+			ul{
+				width: 1200px;
+				margin-top:-20px;
+				li{
+					width: 248px;
+					float: left;
+				}
+			}
+			span{
+				position:absolute;
+				left:88px;
+				top:-18px;
+				width:0px;
+			    height:0px;
+			  	border-width:6px;
+			  	border-style:solid;
+			  	border-color:#f39c11 #f39c11  transparent transparent;
+			  	background-color:transparent;
+			  	transform:rotate(45deg);
+			  	-webkit-transform:rotate(45deg);
+			  	-moz-transform:rotate(45deg);
+			  	-ms-transform:rotate(45deg);
+			  	-o-transform:rotate(45deg);
+			  	border-radius:50%;
+			}
+			.span2{
+				left:336px;
+				transform:rotate(-135deg);
+			}
+			i{
+				position:absolute;
+				top:-13px;
+				left:100px;
+				width:235px;
+				height:2px;
+				background:#f39c11;
+			}
+		}
+		.bag{
+			left:-62px;
+		}
+		.PlaceOrder{
+			left:-23px;
+		}
+		.pay{
+			left:24px;
+		}
+		.orderComplete{
+			left:68px;
+		}
+	}
+}
