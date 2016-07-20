@@ -7,6 +7,16 @@
 @import "../widget/libiao.scss";
 @import "../layout/footer.scss";
 
+//old version
+@import "../help/_helper.scss";
+@import "../base/_normalize.scss";
+@import "../components/_colors.scss";
+@import "../components/_form.scss";
+@import "../layout/_layout.scss";
+@import "../layout/_product.scss";
+@import "../components/_dropdown";
+@import "../components/_selectDrop";
+
 .wrap{
 	padding-top:5px;
 }
@@ -66,7 +76,7 @@
 		a{
 			font-style: italic;
 			color: #818181;
-			&:hover{
+			&:hover,&.currency{
 				color:#f39711;
 			}
 		}
@@ -110,4 +120,158 @@
 			}
 		}
 	}
+}
+
+/* qiuck view */
+.quickView {
+    text-align: left;
+
+    .productAside {
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .switchImg {
+        text-align: left;
+
+        ul {
+            display: block;
+            font-size: 0px;
+            width: auto;
+            margin-top: 10px;
+            margin-right: 0px;
+        }
+
+        li {
+            margin: 0px 5px 0px 0px;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+        }
+
+        > div {
+            width: 400px;
+        }
+    }
+
+    .productDetail {
+        width: 500px;
+        text-align: left;
+    }
+
+    .custom {
+        a {
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $basecol;
+            }
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .customsize {
+        label {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $basecol;
+            }
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .prev, .next {
+        font-size: pxToRem(60px);
+        position: absolute;
+        top: 40%;
+        right: 2px;
+        opacity: 0.8;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        height: 60px;
+        width: 20px;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+            color: $basecol;
+        }
+    }
+
+    .prev {
+        right: none;
+        left: 2px;
+    }
+
+    .disable {
+        display: none;
+    }
+
+    .popUp:hover {
+        .prev, .next {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    #shipping {
+        display: none;
+    }
+}
+
+.scrollBox {
+    padding-bottom: 20px;
+    text-align: left;
+
+    > ul {
+        font-size: 0px;
+        border-bottom: 2px solid #4c4e44;
+        margin-bottom: 20px;
+
+        li {
+            font-size: pxToRem(16px);
+            text-transform: uppercase;
+            padding: 5px 15px;
+            display: inline-block;
+            color: $textcol;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            cursor: pointer;
+
+            &:hover, &.active {
+                color: #4c4e44;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -20px;
+                    width: 0px;
+                    height: 0px;
+                    left: 40%;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: #4c4e44 transparent transparent transparent;
+                }
+            }
+        }
+    }
+
+    > div, > section {
+        overflow-y: scroll;
+        height: 200px;
+    }
+}
+
+#description {
+    img {
+        display: none;
+    }
 }
