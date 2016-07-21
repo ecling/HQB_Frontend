@@ -25,6 +25,9 @@ header{
 	.navbar{
 		margin-top: 80px;
 		height: 174px;
+		position: relative;
+		top:80px;
+		z-index: 1;
 		a{
 			display: block;
 			width: 232px;
@@ -48,13 +51,13 @@ header{
 		}
 	}
 	ul{
-		display: inline-block;
+		position:relative;
 		width: 1200px;
 		background:#cfcfcf;
 		height: auto;
-		margin-top: -80px;
-		overflow: hidden;
 		padding-bottom:20px;
+		z-index: 100;
+		display: none;
 		li{
 			width: 281px;
 			float: left;

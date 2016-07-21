@@ -29,11 +29,21 @@ header{
 				float: left;
 				position:absolute;
 				text-align: center;
-				width: 140px;
-				height: 150px;
+				width: 148px;
+				height: 136px;
+				a{
+					display: inline-block;
+					width: 148px;
+					height: 136px; 
+					background: url(../images/beach.png) 0 0;
+					&:hover{
+						transition: all .5s ease;
+						background-position:0 -136px;
+					}
+				}
 				span{
 					display:block;
-					margin-top: -80px;
+					margin-top:55px;
 					font-family: Courier New;
 					font-size: 24px;
 					font-weight: bold;
@@ -58,7 +68,9 @@ header{
 		}		
 	}
 	.liebiao{
-		height: auto;
+		ul{
+			display: none;
+		}
 		li{
 			float: left;
 			border: 1px dashed #cfcfcf;
@@ -72,6 +84,10 @@ header{
 				border:1px solid #f39c11 ;
 			}
 			a{
+				display: block;
+				overflow: hidden;
+				height: 294px;
+				width: 100%;
 				color:#666;
 				word-break: break-normal ; 
 				word-wrap:break-word;
@@ -81,6 +97,9 @@ header{
 				}
 			}
 			img{
+				display: block;
+				width: 261px;
+				height: 261px;
 				margin-bottom: 5px;
 			}
 			h2{
