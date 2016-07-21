@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$ul = $(".wrap ul");
 	$ul.eq(0).css('display', 'block');
 	$a.on('click',animated);
+	
 	function animated(){
 		$this = $(this);
 		$this.animate({marginTop:'-70px'});
