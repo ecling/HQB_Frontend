@@ -7,7 +7,8 @@
 @import "../layout/_layout";
 @import "../components/_dropdown";
 @import "../components/_selectDrop";
-
+@import "../widget/page";
+@import "../layout/_list";
 @import "../layout/common";
 @import "../layout/header";
 @import "../layout/footer";
@@ -326,49 +327,6 @@
 
         .ansp {
             text-align: right;
-        }
-    }
-}
-
-.pager {
-    text-align: left;
-    overflow: hidden;
-    margin-bottom: 10px;
-
-    ul {
-        font-size: 0px;
-        float: right;
-        padding: 5px 0px;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0px 5px;
-    }
-
-    li.current {
-        font-size: pxToRem(14px);
-        padding: 5px 10px;
-        border: 1px solid $basecol;
-        color: $basecol;
-    }
-
-    span {
-        float: left;
-        margin-top: 10px;
-        font-size: pxToRem(14px);
-    }
-
-    a {
-        font-size: pxToRem(14px);
-        padding: 5px 10px;
-        display: block;
-        border: 1px solid #ededed;
-        transition: all 0.2s ease-in-out;
-
-        &.active, &:hover {
-            color: $basecol;
-            border-color: $basecol;
         }
     }
 }
