@@ -3,7 +3,8 @@
 @import "../layout/common.scss";
 @import "../layout/footer.scss";
 @import "../widget/progress.scss";
-input{
+input[type="radio"],
+input[type="checkbox"]{
 	outline:none;
 }
 .rl{
@@ -34,7 +35,7 @@ input{
 		text-indent:5px;
 		&:hover{
 			transition: box-shadow .5s ease;
-			box-shadow:0 0 5px red;
+			box-shadow:0 0 5px rgba(82, 168, 236, 1);
 			border:1px solid transparent;
 		}
 	}
@@ -131,7 +132,11 @@ input{
  			}
  		}
  		.city{
+ 			border:none;
  			margin:0 39px;
+ 			input{
+ 				width: 215px;
+ 			}
  		}
  	}
 	.ZIP{
@@ -287,7 +292,7 @@ input{
 			text-indent: 10px;
 			&:hover{
 				transition: box-shadow .5s ease;
-				box-shadow:0 0 5px red;
+				box-shadow:0 0 5px rgba(82, 168, 236, 0.8);
 				border:1px solid transparent;
 			}
 		}
