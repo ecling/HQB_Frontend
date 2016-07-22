@@ -6,6 +6,9 @@
 header{
 	padding-bottom:10px;
 }
+.spancolor{
+	color:#febe2f;
+}
 .banner{
 	span{
 		display:block;
@@ -24,7 +27,6 @@ header{
 }
 .wrap{
 	.navbar{
-		margin-top: 80px;
 		height: 174px;
 		position: relative;
 		top:80px;
@@ -37,6 +39,7 @@ header{
 			margin-left:50px;
 			&:hover{
 				span{
+					transition:color .3s ease;
 					color:#febe2f;
 				}
 			}
@@ -46,7 +49,6 @@ header{
 				font-weight: bold;
 				margin-top:-140px;
 				margin-left: 27px;
-				color:#434343;
 				transform:rotate(-4deg);
 			}			
 		}

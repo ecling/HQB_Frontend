@@ -6,6 +6,12 @@
 header{
 	padding-bottom:10px;
 }
+.abackground2{
+	background-position: 0 0;
+}
+.abackground1{
+	background-position: 0 -136px;
+}
 .banner{
 	span{
 		display:block;
@@ -24,8 +30,8 @@ header{
 }
 .wrap{
 	.navbar{
+		position: relative;
 		ul{
-			position: relative;
 			li{
 				float: left;
 				position:absolute;
@@ -36,7 +42,7 @@ header{
 					display: inline-block;
 					width: 148px;
 					height: 136px; 
-					background: url(../images/beach.png) 0 0;
+					background-image:url(../images/beach.png);
 					&:hover{
 						transition: all .5s ease;
 						background-position:0 -136px;
@@ -51,24 +57,25 @@ header{
 				}
 			}
 			.swimwear{
-				top:-176px;
+				top:30px;
 				left:210px;
 			}
 			.sandal{
-				top:-166px;
+				top:45px;
 				left:428px;
 			}
 			.jewelry{
-				top:-138px;
+				top:70px;
 				left:648px;
 			}
 			.sunglasses{
-				top:-130px;
+				top:80px;
 				left:866px;
 			}
 		}		
 	}
 	.liebiao{
+			margin-top:30px;
 		ul{
 			display: none;
 		}
