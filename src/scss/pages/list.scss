@@ -4,7 +4,7 @@
 @import "../layout/header.scss";
 @import "../widget/breadcrumb.scss";
 @import "../widget/page.scss";
-@import "../widget/libiao.scss";
+//@import "../widget/libiao.scss";
 @import "../layout/footer.scss";
 
 //old version
@@ -16,6 +16,48 @@
 @import "../layout/_product.scss";
 @import "../components/_dropdown";
 @import "../components/_selectDrop";
+.header{
+    line-height: 30px;
+    margin-bottom: 27px;
+    h1{
+        font-size: 18px;
+        float: left;
+    }
+    .view_mode{
+        float:right;
+        padding: 0 6px 0 25px;
+        border-top: 1px solid #f39c11;
+        border-bottom: 1px solid #f39c11;
+        em{
+            left: 20px;
+        }
+        .view_mode_list{
+            background:white;
+            width: 130px;
+            li{
+                height: 25px;
+                line-height: 25px;
+                padding-left:15px;
+                &:hover{
+                        background:#f39c11;
+                    a{
+                        color:white;
+                    }
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    color:#888;
+                    font-size: 12px;
+                }
+            }
+        }
+        .view{
+            margin-left: 45px;
+        }
+        
+    }       
+}
 
 .wrap{
 	padding-top:5px;

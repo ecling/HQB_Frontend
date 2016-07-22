@@ -7,6 +7,13 @@
 i,label,input,span,button,a{
 	display:inline-block;
 }
+p{
+	margin:0;
+}
+input[type="radio"],
+input[type="checkbox"]{
+	outline:none;
+}
 .fl{
 	float:left;
 }
@@ -114,7 +121,6 @@ i,label,input,span,button,a{
 						}
 						p{
 							color:#aaa;
-							margin-top:10px;
 						}
 					}
 					a:last-child{
@@ -184,12 +190,12 @@ i,label,input,span,button,a{
 		.rightD{
 			float:right;
 			width: 358px;
-			height: 520px;
+			height:auto;
 			padding: 30px 20px;
 			box-shadow:0 0 5px #cfcfcf;
 			border-radius:3px;
 			.rightHead{
-				margin-bottom:50px;
+				margin-bottom: 35px;
 				label{
 					display: block;
 					font-size: 14px;
@@ -207,7 +213,7 @@ i,label,input,span,button,a{
 					text-indent: 10px;
 					&:hover{
 						transition: box-shadow .5s ease;
-						box-shadow:0 0 5px red;
+						box-shadow:0 0 5px rgba(82, 168, 236, 1);
 						border:1px solid transparent;
 					}
 				}
@@ -235,9 +241,13 @@ i,label,input,span,button,a{
 			}
 			.rightcenter{
 				color:#666;
-				height: 100px;
+				height: auto;
 				border-bottom:1px dashed #bdbdbd;
 				font-size: 14px;
+				padding-bottom:20px;
+				p{
+					height: 20px;
+				}
 				span{
 					float: left;
 					height: 20px;
@@ -251,9 +261,9 @@ i,label,input,span,button,a{
 				}
 			}
 			.rightfoot{
-				height: 80px;
 				margin-top:20px;
 				p{
+					height: 20px;
 					font-size: 16px;
 					strong{
 						font-weight: bold;
@@ -266,7 +276,7 @@ i,label,input,span,button,a{
 					&+p{
 						text-align: right;
 						font-size: 14px;
-						height: 50px;
+						margin-bottom: 40px;
 					}
 				}
 				label{
@@ -290,6 +300,12 @@ i,label,input,span,button,a{
 					border-radius:3px;
 					margin-top:10px;
 					cursor: pointer;
+					&:hover{
+						transition: all .5s ease;
+						background:white;
+						color:#eeb053;
+						border:1px solid #eeb053;
+					}
 				}
 				i{
 					font-style: normal;
@@ -374,10 +390,6 @@ i,label,input,span,button,a{
 			margin-bottom:10px;
 			span{
 				margin-right:10px;
-			}
-			p{
-				height: 14px;
-				color:black;
 			}
 		}
 		.delete{
