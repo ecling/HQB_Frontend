@@ -28,56 +28,31 @@ header{
 	}
 }
 .wrap{
-	.navbar{
-		position: relative;
-		ul{
-			li{
-				float: left;
-				position:absolute;
-				text-align: center;
-				width: 148px;
-				height: 136px;
-				a{
-					display: inline-block;
-					width: 148px;
-					height: 136px; 
-					background-image:url(../images/beach.png);
-					&:hover{
-						transition: all .5s ease;
-						background-position:0 -136px;
-					}
-				}
-				span{
-					display:block;
-					margin-top:55px;
-					font-family: Courier New;
-					font-size: 24px;
-					font-weight: bold;
-				}
-			}
-			.swimwear{
-				top:30px;
-				left:210px;
-			}
-			.sandal{
-				top:45px;
-				left:428px;
-			}
-			.jewelry{
-				top:70px;
-				left:648px;
-			}
-			.sunglasses{
-				top:80px;
-				left:866px;
-			}
-		}		
-	}
+	position:relative;
 	.liebiao{
 			margin-top:30px;
-		ul{
-			display: none;
-		}
+			.Swimwear{
+				margin-bottom:20px;
+				>a{
+					display:block;
+					width: 148px;
+					height: 136px;
+					margin-left: 50px;
+					background:url(../images/beach.png) 0 0 ;
+					/*&:hover{
+						transition: all .5s ease;
+						background-position:0 -136px;
+					}*/
+				}
+				label{
+					display: inline-block;
+					margin-top:60px; 
+					margin-left:180px;
+					font-size: 34px;
+					font-weight: bold;
+					text-transform:uppercase;
+				}
+			}
 		li{
 			float: left;
 			border: 1px dashed #cfcfcf;
@@ -132,6 +107,65 @@ header{
 					transition:all .5s ease;
 					background:#f39c11 ;
 				}
+			}
+		}
+	}
+	#navigationbar{
+		position:absolute;
+		right:-92px;
+		top:162px;
+		text-align: center;
+		height: 511px;
+		ul{
+			width:90px;
+			background:#f5c170; 
+			margin-left:16px;
+			li{
+				width:70px;
+				height: 60px;
+				padding:0 10px;
+				&:hover{
+					transition: all .5s ease;
+					background:white;
+					a{
+						color:#f5c170;
+					}
+				}
+				a{
+					text-align: center;
+					display: inline-block;
+					color: white;
+					width: 70px;
+					height: 60px;
+					line-height: 60px;
+					border-bottom:1px dashed white;
+					font-weight: bold;
+					text-transform:uppercase;
+				}
+
+			}
+			li:last-child{
+				width:90px;
+				border:none;
+				padding: 0;
+			}
+		}
+		>a{
+			width: 90px;
+			height: 70px;	
+			display: block;
+			margin-left:16px;
+			margin-top: -1px;
+			background:#efefef;
+			border-radius:0 0 50px 50px;
+			span{
+				display: block;
+				color:#f5c170;
+				font-size:30px;
+			}
+			label{
+				color:#f5c170;
+				font-size:20px;
 			}
 		}
 	}
