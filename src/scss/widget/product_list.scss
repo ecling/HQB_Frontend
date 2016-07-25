@@ -138,6 +138,14 @@
 	+li:nth-child(4n){
 		margin-right: 0;
 	}
+	+li:nth-child(4n+1){
+		clear: left;
+	}
+}
+.product_list{
+	li{
+		position: relative;
+	}
 }
 .weddinglist{
 	.proItem{
