@@ -186,6 +186,7 @@
             margin-right: 35px;
             float: left;
         }
+
         .proReview{
             margin-right: 35px;
         }
@@ -642,8 +643,9 @@
            margin-left:-10px;
         }
         .hide1{
+            position:relative;
             color: white;
-            position: relative;
+            height: auto;
             img{
                 display: block;
                 float: left;

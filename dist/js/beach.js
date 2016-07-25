@@ -12,4 +12,6 @@ $(document).ready(function(){
 		$ul.css("display","none");
 		$ul.eq($t).css("display","block");
 	})
+	
+		
 });
