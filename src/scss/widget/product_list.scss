@@ -11,7 +11,7 @@
 		border-top: 1px solid #f39c11;
 		border-bottom: 1px solid #f39c11;
 		em{
-			left: 20px;
+			left: 61px;
 		}
 		.view_mode_list{
 			background:white;
@@ -164,31 +164,22 @@
 	#feiji{
 		transform:rotate(180deg);
 	}
-	i:hover{
-		transition: all .6s ease;
-		color:#e5941a;
-		+label{
-			transition: all .6s ease;
-			opacity: 1;
-			right: -10px;
-		}
+	.icon-xin:hover{
 		+.label1{
 			transition: all .6s ease;
 			opacity: 1;
-			right: -28px;
+			right: -30px;
 		}
 	}
 	label{
-		display: none;
 		width: 100px;
 		height: 20px;
 		line-height:20px;
 		text-align:center;
 		background:white;
 		border:1px solid #e5941a;
-		// box-shadow:0 0 6px #e5941a;
 		position:absolute;
-		top:338px;
+		bottom:33px;
 		right:-19px;
 		opacity: 0;
 		z-index: 100;
