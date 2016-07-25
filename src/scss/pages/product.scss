@@ -1,12 +1,12 @@
 @import "../help/_helper";
 @import "../base/_normalize";
-@import "../components/_colors";
-@import "../components/_form";
-@import "../components/_buttons";
-@import "../components/_selectDrop";
-@import "../layout/_layout";
-@import "../layout/_product";
 @import "../widget/color.scss";
+@import "../widget/form";
+@import "../widget/buttons";
+@import "../widget/selectDrop";
+@import "../widget/loading";    
+@import "../widget/product";
+@import "../widget/breadcrumb.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
@@ -166,9 +166,6 @@
 }
 
 .productDetail {
-    form:first-child{
-        margin-top:40px;
-    }
     .cheap{
         height: 80px;
         line-height: 80px;
@@ -186,8 +183,18 @@
             margin-right: 35px;   
         }
         .shipping{
-            width: 156px;
+            margin-right: 35px;
             float: left;
+        }
+
+        .proReview{
+            margin-right: 35px;
+        }
+        .ship{
+            display: inline;
+        }
+        .sku{
+            color: #f1f1f1;
         }
     }
     .countDown{
@@ -275,21 +282,20 @@
     }
 }
 .proDetailSimilar {
+    position: relative;
+    h5{
+        position: absolute;
+        top:-10px;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        background: white;
+        font-size: 16px;
+        color:#888;
+    }
     ul{
         margin-top:40px;
-        position: relative;
         border-top: 1px solid #ededed;
-        h5{
-            position: absolute;
-            margin-left:-35px;
-            top:-10px;
-            width: 80px;
-            height: 10px;
-            text-align: center;
-            background: white;
-            font-size: 16px;
-            color:#888;
-         }
         li{
             width: 100px;
             height: 100px;
@@ -425,6 +431,9 @@
     display: inline-block;
     vertical-align: top;
     margin-top: 20px;
+    header{
+        border: none;
+    }
 }
 
 .moreInfoAside {
@@ -474,9 +483,6 @@
         }
     }
     .std{
-        p{
-            height: 20px;
-        }
         .td{
             border-right:none;
             border-left:none;
@@ -509,8 +515,7 @@
         padding: 10px 15px;
         border-bottom: 3px solid transparent;
         transition: all 0.2s ease-in-out;
-
-         &:hover {         
+         &.active,&:hover {         
             transition: all ease-in 0.2s;
             border-bottom: 3px solid #e5941a;
             position: relative;
@@ -551,9 +556,16 @@
     }
 
     > div {
-        padding: 40px;
+        padding: 70px;
         border-top: none;
     }
+}
+
+#description{
+    padding: 70px;
+    >div{
+        padding: 0;
+    }        
 }
 
 .backUp {
@@ -643,12 +655,12 @@
             }
             label{
                 position:absolute;
-                top:15px;
+                top: 16px;
             }
             span{
                 position:absolute;
-                top:30px;
-                left:50px;
+                top: 27px;
+                left: 49px;
                 font-size: 40px;
                 color: white;
             }
@@ -691,7 +703,6 @@
                 border-bottom: 2px solid #e5941a;
             }
         }
-        padding-left:90px;
         .xingji{
             padding-bottom:20px;
             color:#003333;
@@ -817,7 +828,6 @@
     }
 }
 .switchImg{
-    margin-top:40px;
     .addthis_sharing_toolbox{
         margin: 40px 0 0 176px;
         a{
@@ -832,9 +842,8 @@
         margin-left:20px;
     }
     .buttonMore{
-        width:150px;
-        margin-left:275px;
         margin-bottom:40px;
+        text-align: left;
     }
     .reply{
         margin-bottom:40px;

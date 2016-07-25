@@ -1,16 +1,22 @@
 @import "../help/_helper";
 @import "../base/_normalize";
+@import "../widget/color.scss";
 @import "../components/_colors";
 @import "../components/_form";
 @import "../components/_slider";
 @import "../components/_buttons";
 @import "../layout/_layout";
-@import "../layout/_list";
 @import "../components/_selectDrop";
 @import "../layout/common";
 @import "../layout/header";
-@import "../layout/_product";
+@import "../widget/loading";
+@import "../widget/product";
+@import "../widget/product_list";
+@import "../widget/page";
 @import "../layout/footer";
+
+//new version
+@import "../widget/product_list.scss";
 
 .right {
     h3, .category-title h1 {
@@ -653,7 +659,4 @@
         cursor: not-allowed;
         background: #f1f1f1;
     }
-}
-.zhishidi-newarrival-index-index {
-    margin-top: 20px;
 }

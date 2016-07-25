@@ -1,21 +1,18 @@
+@import "../help/_helper.scss";
 @import "../widget/color.scss";
+@import "../base/_normalize.scss";
+@import "../widget/form.scss";
 @import "../widget/loading.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../widget/breadcrumb.scss";
+@import "../widget/product_list.scss";
+@import "../widget/product.scss";
 @import "../widget/page.scss";
-//@import "../widget/libiao.scss";
+@import "../widget/dropdown.scss";
+@import "../widget/selectDrop.scss";
 @import "../layout/footer.scss";
 
-//old version
-@import "../help/_helper.scss";
-@import "../base/_normalize.scss";
-@import "../components/_colors.scss";
-@import "../components/_form.scss";
-@import "../layout/_layout.scss";
-@import "../layout/_product.scss";
-@import "../components/_dropdown";
-@import "../components/_selectDrop";
 .header{
     line-height: 30px;
     margin-bottom: 27px;
@@ -93,6 +90,7 @@
     } 
 
 }
+
 
 .wrap{
 	padding-top:5px;
@@ -271,6 +269,13 @@
         opacity: 1;
         transform: none;
         text-align: left;
+    }
+}
+
+/* search result list */
+.zhishidi-searchproduct-result-index {
+    h3{
+        margin-bottom: 20px;
     }
 }
 
