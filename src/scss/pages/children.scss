@@ -25,47 +25,35 @@ header{
 	}
 }
 .wrap{
-	.navbar{
-		height: 174px;
-		position: relative;
-		top:80px;
-		z-index: 1;
-		a{
-			display: block;
-			width: 232px;
-			height: 174px;
-			float: left;
-			margin-left:50px;
-			&:hover{
-				span{
-					transition:color .3s ease;
-					color:#febe2f;
-				}
-			}
-			span{
-				display: block;
-				font-size:24px;
-				font-weight: bold;
-				margin-top:-140px;
-				margin-left: 27px;
-				transform:rotate(-4deg);
-			}			
-		}
+	position:relative;
+	>div{
+		margin-top: 20px;
+	}
+	div>span{
+		text-align: center;
+		width:232px;
+		transform: rotate(-5deg);
+		display: block;
+		margin-top:-140px;
+		font-size: 24px;
+		font-weight: bold;
+		color:#9a630c;
 	}
 	ul{
 		position:relative;
-		width: 1200px;
+		margin-left: 25px;
+		margin-top: 35px;
 		background:#cfcfcf;
 		height: auto;
 		padding-bottom:20px;
 		z-index: 100;
-		display: none;
+		width: 1090px;
 		li{
-			width: 281px;
+			width: 260px;
 			float: left;
 			text-align: center;
-			margin-top:20px;
-			margin-left: 15px;
+			margin-top:10px;
+			margin-left: 10px;
 			background:white;
 			&:hover{
 				.Buy{
@@ -82,7 +70,7 @@ header{
 				border: 1px solid transparent;
 				a{
 					display: inline-block;
-					width: 279px;
+					width:auto;
 					color:#666;
 					word-break:break-normal; 
 					word-wrap:break-word;
@@ -92,6 +80,8 @@ header{
 					}
 				}
 				img{
+					display:block;
+					width:100%;
 					margin-bottom: 5px;
 				}
 				h2{
@@ -119,4 +109,40 @@ header{
 			}
 		}
 	}
+	.navbar{
+		height:591px;
+		position:absolute;
+		right:-45px;
+		top:70px;
+		div{
+			position:absolute;
+			top:140px;
+			left:15px;
+			a{
+				display: block;
+				height:60px;
+				width: 90px;
+				border-radius:50%;
+				text-align: center;
+				margin-bottom: 12px;
+				padding-top:30px;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			a:last-child{
+				height:35px;
+				line-height: 40px;
+				width:115px;
+				font-size:18px;
+				color: white;
+				font-weight: bold;
+				padding:0 7px;
+				letter-spacing:10px;
+				margin-left:-10px;
+			}
+		}
+	}
+}
+.navbarStyle{
+	color:#9a630c;
 }

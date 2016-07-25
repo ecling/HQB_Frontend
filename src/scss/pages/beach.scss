@@ -33,20 +33,14 @@ header{
 			margin-top:30px;
 			.Swimwear{
 				margin-bottom:20px;
-				>a{
-					display:block;
-					width: 148px;
-					height: 136px;
-					margin-left: 50px;
-					background:url(../images/beach.png) 0 0 ;
-					/*&:hover{
-						transition: all .5s ease;
-						background-position:0 -136px;
-					}*/
+				img{
+					float: left;
 				}
 				label{
-					display: inline-block;
-					margin-top:60px; 
+					width:1200px;
+					display: block;
+					float: left;
+					margin-top:-80px; 
 					margin-left:180px;
 					font-size: 34px;
 					font-weight: bold;
@@ -134,7 +128,6 @@ header{
 				a{
 					text-align: center;
 					display: inline-block;
-					color: white;
 					width: 70px;
 					height: 60px;
 					line-height: 60px;
@@ -168,5 +161,11 @@ header{
 				font-size:20px;
 			}
 		}
+	}
+}
+.beachStyle{
+	background:white;
+	a{
+		color:#f5c170;
 	}
 }
