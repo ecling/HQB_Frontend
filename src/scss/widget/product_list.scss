@@ -161,8 +161,15 @@
 }
 
 .titletip{
-	#feiji{
+	.icon-feiji{
 		transform:rotate(180deg);
+		&:hover{
+			+.label2{
+			transition: all .6s ease;
+			opacity: 1;
+			right: -13px;
+			}
+		}
 	}
 	.icon-xin:hover{
 		+.label1{
