@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(function(){
         var _index=0;
+        $("#navigationbar ul li").eq(0).addClass("beachStyle");
         $("#navigationbar ul li").click(function(){
             $(this).addClass("beachStyle").siblings("li").removeClass("beachStyle");
             _index=$(this).index()+1;

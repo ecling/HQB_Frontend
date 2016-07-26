@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(function(){
         var _index=0;
+        $(".gotop a").eq(0).addClass('navbarStyle');
         $(".gotop a").eq(4).siblings().click(function(){
             $(this).addClass("navbarStyle").siblings("a").removeClass("navbarStyle");
             _index=$(this).index()+1;
