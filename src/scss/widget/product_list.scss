@@ -90,13 +90,16 @@
 	}
 	i{
 		position: relative;
-		color:#d8d8d8;
 		font-size: 20px;
+		color:#d8d8d8;
 		float:right;
 	}
 	.name{
 		padding: 9px 0;
 		margin: 0;
+		height:40px;
+		overflow: hidden;
+		word-wrap:break-word;
 		a{
 			color: #818181;
 			&:hover{

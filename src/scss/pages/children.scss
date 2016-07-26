@@ -73,7 +73,7 @@ header{
 					display: inline-block;
 					width:auto;
 					color:#666;
-					word-break:break-normal; 
+					height:280px;
 					word-wrap:break-word;
 					&:hover{
 						transition:color 0.5s ease;
@@ -97,6 +97,7 @@ header{
 				h3{
 					color:#333;
 					font-size: 18px;
+					padding-bottom:30px;
 				}
 			}
 			button{
@@ -111,10 +112,12 @@ header{
 		}
 	}
 	.navbar{
+		width: 156px;
 		height:591px;
 		position:absolute;
 		right:-45px;
 		top:70px;
+		z-index: 10000;
 		div{
 			position:absolute;
 			top:140px;

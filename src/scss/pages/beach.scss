@@ -31,6 +31,7 @@ header{
 .wrap{
 	position:relative;
 	.liebiao{
+		width: 1100px;
 			margin-top:30px;
 			.Swimwear{
 				margin-bottom:20px;
@@ -38,7 +39,7 @@ header{
 					float: left;
 				}
 				label{
-					width:1200px;
+					width:1100px;
 					display: block;
 					float: left;
 					margin-top:-80px; 
@@ -51,9 +52,9 @@ header{
 		li{
 			float: left;
 			border: 1px dashed #cfcfcf;
-			padding:10px 5px;
+			padding:5px;
 			text-align: center;
-			width: 261px;
+			width: 240px;
 			margin-top:20px;
 			margin-left:20px;
 			&:hover{
@@ -61,10 +62,10 @@ header{
 				border:1px solid #f39c11 ;
 			}
 			a{
+				height:300px;
 				display: block;
 				overflow: hidden;
 				color:#666;
-				word-break: break-normal ; 
 				word-wrap:break-word;
 				&:hover{
 					transition:color 0.5s ease;
@@ -81,6 +82,7 @@ header{
 				color:red;
 				font-size: 24px;
 				font-weight: bold;
+				margin:10px 0 20px 0;
 			}
 			h3{
 				color:#333;
@@ -94,7 +96,8 @@ header{
 				color:white;
 				border:none;
 				margin:0 auto;
-				margin-bottom: 20px;
+				margin-top:30px;
+				margin-bottom: 40px;
 				border-radius:3px;
 				&:hover{
 					transition:all .5s ease;
@@ -104,15 +107,19 @@ header{
 		}
 	}
 	#navigationbar{
-		position:absolute;
-		right:-92px;
-		top:162px;
 		text-align: center;
+		width: 120px;
+		position:absolute;
+		right:-10px;
+		top:162px;
 		height: 511px;
+		z-index: 100;
 		ul{
+			position:absolute;
+			top:203px;
+			left:9px;
 			width:90px;
 			background:#f5c170; 
-			margin-left:16px;
 			li{
 				width:70px;
 				height: 60px;
@@ -125,14 +132,19 @@ header{
 					}
 				}
 				a{
-					text-align: center;
 					display: inline-block;
 					width: 70px;
-					height: 60px;
 					line-height: 60px;
 					border-bottom:1px dashed white;
 					font-weight: bold;
 					text-transform:uppercase;
+					color:white;
+				}
+				&.beachStyle{
+					background:white;
+					a{
+						color:#f5c170;
+					}
 				}
 
 			}
@@ -140,31 +152,32 @@ header{
 				width:90px;
 				border:none;
 				padding: 0;
+				a{
+					width: 90px;
+				}
 			}
 		}
 		>a{
-			width: 90px;
+			position:absolute;
+			left:9px;
+			bottom:7px;
+			width:90px;
 			height: 70px;	
 			display: block;
-			margin-left:16px;
-			margin-top: -1px;
-			background:#efefef;
-			border-radius:0 0 50px 50px;
+			border-radius:0 0 45px 45px;
 			span{
 				display: block;
 				color:#f5c170;
 				font-size:30px;
+				cursor: pointer;
 			}
 			label{
 				color:#f5c170;
 				font-size:20px;
+				cursor: pointer;
 			}
 		}
 	}
 }
-.beachStyle{
-	background:white;
-	a{
-		color:#f5c170;
-	}
-}
+
+
