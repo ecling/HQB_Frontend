@@ -1,19 +1,41 @@
 $(document).ready(function(){
-	$a = $(".navbar a");
-	$a.eq(0).find("span").addClass('spancolor');
-	$a.eq(0).css("marginTop","-70px");
-	$ul = $(".wrap ul");
-	$ul.eq(0).css('display', 'block');
-	$a.on('click',animated);
-	
-	function animated(){
-		$this = $(this);
-		$this.animate({marginTop:'-70px'});
-		$this.find("span").addClass('spancolor');
-		$this.siblings("a").animate({marginTop:'0'});
-		$this.siblings("a").find("span").removeClass('spancolor');
-		$t = $this.index();
-		$ul.css('display','none');
-		$ul.eq($t).css('display', 'block');
-	};	
+	$(function(){
+        var _index=0;
+        $(".gotop a").eq(0).addClass('navbarStyle');
+        $(".gotop a").eq(4).siblings().click(function(){
+            $(this).addClass("navbarStyle").siblings("a").removeClass("navbarStyle");
+            _index=$(this).index()+1;
+            var _top=$("#louti"+_index).offset().top;
+            $("body,html").animate({scrollTop:_top},500);
+        });
+        $(".gotop a").eq(4).click(function(){
+            $("html,body").animate({scrollTop:0},500)
+            $(".gotop a").removeClass("navbarStyle");
+        });
+    });
+	$(window).scroll(function() {
+        var scrollHeight = $(window).scrollTop();
+    	var windowWidth = $(window).width();
+    	var navbarWidth = $(".navbar").width();
+        if (scrollHeight>770) {
+            $(".navbar").css({
+                "position":"fixed",
+                "top":"-28px",
+                "left":(windowWidth-navbarWidth-35)+'px',
+            });
+        }else{
+            $(".navbar").css({
+                "position":"absolute",
+                  "left":"1120px",
+                  "top":"70px",
+            })
+        }
+    });
+ 
+
+   window.onload = function(){
+   	$(window).trigger("scroll");
+   };
+ 
+
 });

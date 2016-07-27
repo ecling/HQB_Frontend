@@ -12,7 +12,6 @@
 @import "../widget/dropdown.scss";
 @import "../widget/selectDrop.scss";
 @import "../layout/footer.scss";
-
 .header{
     line-height: 30px;
     margin-bottom: 27px;
@@ -90,12 +89,9 @@
     } 
 
 }
-
-
 .wrap{
 	padding-top:5px;
 }
-
 .iconfontStyle{	
 	transition: transform 0.5s ease;
 	transform: rotate(90deg);
@@ -125,21 +121,21 @@
 
 		}
 	}
-		.list{
-			dt{
-				cursor:pointer;
-				&:hover{
-					color:#f39711;
-				}
-			}
-			.iconfont{
-				display: inline-block;
+	.list{
+		dt{
+			cursor:pointer;
+			&:hover{
 				color:#f39711;
 			}
-			dd{
-				margin-top:10px;
-			}
 		}
+		.iconfont{
+			display: inline-block;
+			color:#f39711;
+		}
+		dd{
+			margin-top:10px;
+		}
+	}
 	.title{
 		font-size: 18px;
 		line-height: 30px;
@@ -168,12 +164,12 @@
 		dd{
 			display:none;
 			a{
-				&:hover{
-					color:#f39711;
-				}
 				color: #aaa;
 				line-height: 20px;
 				margin-left: 17px;
+                &:hover{
+                    color:#f39711;
+                }
 			}
 		}
 		&.size{
@@ -253,7 +249,6 @@
     }
     .cheap {
         font-size: pxToRem(30px);
-        // color: #ff6a82;
         color: $red;
     }
     .pricey {
@@ -282,12 +277,10 @@
 /* qiuck view */
 .quickView {
     text-align: left;
-
     .productAside {
         width: auto;
         margin-right: 20px;
     }
-
     .switchImg {
         text-align: left;
 
@@ -298,24 +291,20 @@
             margin-top: 10px;
             margin-right: 0px;
         }
-
         li {
             margin: 0px 5px 0px 0px;
             width: 70px;
             height: 70px;
             display: inline-block;
         }
-
         > div {
             width: 400px;
         }
     }
-
     .productDetail {
         width: 500px;
         text-align: left;
     }
-
     .custom {
         a {
             transition: all 0.2s ease-in-out;
@@ -329,7 +318,6 @@
             margin-right: 5px;
         }
     }
-
     .customsize {
         label {
             cursor: pointer;
@@ -344,7 +332,6 @@
             display: none;
         }
     }
-
     .prev, .next {
         font-size: pxToRem(60px);
         position: absolute;
@@ -362,16 +349,13 @@
             color: $basecol;
         }
     }
-
     .prev {
         right: none;
         left: 2px;
     }
-
     .disable {
         display: none;
     }
-
     .popUp:hover {
         .prev, .next {
             visibility: visible;
@@ -383,7 +367,6 @@
         display: none;
     }
 }
-
 .scrollBox {
     padding-bottom: 20px;
     text-align: left;
@@ -405,7 +388,6 @@
 
             &:hover, &.active {
                 color: #4c4e44;
-
                 &:after {
                     content: "";
                     position: absolute;
@@ -498,6 +480,7 @@
                color:#bbb;
                font-size:18px;
                margin-left: 15px;
+               text-decoration: line-through;
             }
             +div{
                 font-size: 14px;
