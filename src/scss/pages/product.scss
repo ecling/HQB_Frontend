@@ -139,7 +139,11 @@
 
 .addthis_sharing_toolbox {
     vertical-align: middle !important;
-    margin-left: 20px;
+    margin: 40px 0 0 176px;
+    a{
+        border-radius:50%;
+        margin-left:10px;
+    }
 }
 
 .proDetailList {
@@ -240,28 +244,36 @@
             
         }
     }
-    .qty{
+    .numInput{
+        input{
+            height: 20px;
+            width: 50px;
+            border: none;
+            text-align: center;
+            outline: none;
+        }   
         i{
             display: inline-block;
             text-decoration: normal;
             text-align: center;
             width:90px;    
         }
-      .prev,.next{
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border-radius:50%;
-        border:1px dashed #888;
-        text-align: center;
-        font-size: 18px;
+        .minus,.plus{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius:50%;
+            border:1px solid #888;
+            text-align: center;
+            font-size: 18px;
+            line-height: 20px;
         }
-        .next{
-             border:1px solid #888;
+        .plus{
+            margin: 0 45px 0 10px;
         }
-        .prev{
-            margin-left:10px;
-        }
+    }
+    .points{
+        color: #e73620;
     }
     .proDetailAction{
         span{
@@ -827,16 +839,7 @@
 
     }
 }
-.switchImg{
-    .addthis_sharing_toolbox{
-        margin: 40px 0 0 176px;
-        a{
-            border-radius:50%;
-            margin-left:10px;
-        }
 
-    }
-}
 #question {
     label{
         margin-left:20px;
