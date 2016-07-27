@@ -14,21 +14,26 @@ $(document).ready(function(){
         });
     });
 	$(window).scroll(function() {
-        var scrollHright = $(window).scrollTop();
-        var windowWidth = $(window).width();
-        var navbarWidth = $("#navigationbar").width();
-        if (scrollHright>980) {
+        var leftValue = $('.liebiao').get('0').getBoundingClientRect().top;
+        if (leftValue<= 0) {
             $("#navigationbar").css({
-                "position":"fixed",
-                "top":"0",
-                "left":(windowWidth-navbarWidth-90)+'px',
+                "position":"absolute",
+                "top":-leftValue,
+                "left":"1080px",
             });
         }else{
             $("#navigationbar").css({
                 "position":"absolute",
-                  "left":"1100px",
+                  "left":"1080px",
                   "top":"162px",
             })
+        };
+
+        var luotiTop = $('#louti3').get('0').getBoundingClientRect().top;
+        console.log(luotiTop);
+        if (luotiTop <= 0) {
+            $("#navigationbar ul li").removeClass("beachStyle");
+            $("#navigationbar ul li").eq(2).addClass("beachStyle");
         }
     });	
 });
