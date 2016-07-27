@@ -1,69 +1,66 @@
 .progress{
 	height: 150px;
 	width: 100%;
+	position:relative;
 	img{
 		margin:30px auto 0;
 	}
-	ul{
-		width:810px;
+	.Shopping{
 		margin: 0 auto;
 		li{
 			margin-top:5px;
-			width: 25%;
+			width: 200px;
 			float: left;
 			text-align:center;
 			position:relative;
-			word-wrap: break-word;
 			word-break: normal; 
-			ul{
-				width: 1200px;
-				margin-top:-20px;
-				li{
-					width: 248px;
-					float: left;
-				}
-			}
-			span{
-				position:absolute;
-				left:88px;
-				top:-18px;
-				width:0px;
-			    height:0px;
-			  	border-width:6px;
-			  	border-style:solid;
-			  	border-color:#f39c11 #f39c11  transparent transparent;
-			  	background-color:transparent;
-			  	transform:rotate(45deg);
-			  	-webkit-transform:rotate(45deg);
-			  	-moz-transform:rotate(45deg);
-			  	-ms-transform:rotate(45deg);
-			  	-o-transform:rotate(45deg);
-			  	border-radius:50%;
-			}
-			.span2{
-				left:336px;
-				transform:rotate(-135deg);
-			}
-			i{
-				position:absolute;
-				top:-13px;
-				left:100px;
-				width:235px;
-				height:2px;
-				background:#f39c11;
-			}
 		}
 		.bag{
-			left:-62px;
+			left:130px;
 		}
 		.PlaceOrder{
-			left:-23px;
+			left:176px;
 		}
 		.pay{
-			left:24px;
+			left:224px;
 		}
 		.orderComplete{
-			left:68px;
+			left:272px;
 		}
+	}
+	.colored{
+		height: 20px;
+		position:absolute;
+		top:35px;
+		left: 228px;
+		li{
+			float: left;
+			.span1{
+				width:6px;
+				height:12px;
+				border-radius:12px 0 0 12px  ;
+				display: block;
+				float: left;
+				background:#f39c11;
+			}
+			.span2{
+				width:6px;
+				height:12px;
+				border-radius:0 12px 12px 0;
+				display: block;
+				float: left;
+				background:#f39c11;
+			}
+			i{
+				width:236px;
+				height:3px;
+				background:#f39c11;
+				line-height: 3px;
+				display: block;
+				float: left;
+				margin-top:5px;
+			}
+		}
+
 	}
 }

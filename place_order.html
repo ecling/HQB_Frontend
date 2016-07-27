@@ -5,13 +5,14 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1468310058_2910545.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1469583843_0046566.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/place_order.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/validate.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
+		<script type="text/javascript" src="dist/js/place_orden.js"></script>
 	</head>
 <body>
 	<div class="content w1200 clearfix">
@@ -34,7 +35,7 @@
 		</div>
 		<form action="demo_form.asp" method="POST" id="commentForm">
 			<div class="leftD fl">
-				<div class="shippingAddress  fl">
+				<div class="shippingAddress  fl" style="display:none;">
 					<h3>ShippingAddress</h3>
 					<div class="Firstname clearfix">
 						<div class="fl">
@@ -93,8 +94,41 @@
 						<label>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
 						<p></p>
 					</div>
-					<input type="submit" name="" value="SUBMIT">
 					<a href="#">Privacy & Security Policy</a>
+				</div>
+				<div class="Address" >
+					<h3>ShippingAddress</h3>
+					<div class="contentd">
+						<input type="radio" name="1">
+						<div class="fl">
+							<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+							<p><label>Phone Number:</label><span>123456798</span></p>
+							<p><label>E-mail:</label><span>123456789</span></p>
+							<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+							<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#">Edit</a></p>
+						</div>
+					</div>
+					<div class="contentd">
+						<input type="radio" name="1">
+						<div class="fl">
+							<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+							<p><label>Phone Number:</label><span>123456798</span></p>
+							<p><label>E-mail:</label><span>123456789</span></p>
+							<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+							<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#">Edit</a></p>
+						</div>
+					</div>
+					<div class="contentd">
+						<input type="radio" name="1">
+						<div class="fl">
+							<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+							<p><label>Phone Number:</label><span>123456798</span></p>
+							<p><label>E-mail:</label><span>123456789</span></p>
+							<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+							<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#">Edit</a></p>
+						</div>
+					</div>
+					<a href="#" class="clicked">Add New Address</a>					
 				</div>
 				<div class="shippingOptions fl">
 					<h3>shipping Options</h3>
@@ -173,6 +207,72 @@
 						<input type="submit" value="Place Your Order">
 						<i>You will enjoy free shipping with another $20</i>
 					</div>
+			</div>
+		</form>
+		<form action="demo_form.asp" method="POST" id="commentForm">
+			<div class="popup">
+				<i class="iconfont icon-close"></i>
+				<div class="Firstname clearfix">
+					<div class="fl">
+						<label for="Firstname">First name:</label><input type="text" name="firstname" id="Firstname" required/>
+						<p></p>
+						<label for="Phonenumber">Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+						<p></p>
+					</div>
+					<div class="rl">
+						<label for="Lastname">Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+						<P></P>
+						<label for="E-mail">E-mail address:</label><input type="text" name="email" id="E-mail" required/>
+						<p></p>
+					</div>
+				</div>
+				<div class="AddressLine1 clearfix">
+					<label for="Line1">Address Line1:</label><input type="text" name="" id="Line1" required/>
+					<p></p>
+				</div>
+				<div class="AddressLine2">
+					<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />
+					<p></p>
+				</div>
+				<div class="selectd ">
+					<ul>
+					    <li>
+					    	<label>Country / Region:</label>
+					    	<span></span>
+					    	<i class="iconfont icon-down"></i>
+					    	<ul>
+					    	    <li></li>
+					    	    <li></li>
+					    	    <li></li>
+					    	    <li></li>
+					    	</ul>
+					    </li>
+					    <li class="city">
+					    	<label for="city">City</label>
+					    	<input type="text" name="city" id="city" required/>
+					    	<p></p>
+					    </li>
+					    <li>
+					    	<label>States:</label>
+					    	<span></span>
+					    	<i class="iconfont icon-down"></i>
+					    	<ul>
+					    	    <li></li>
+					    	    <li></li>
+					    	    <li></li>
+					    	    <li></li>
+					    	</ul>
+					    </li>
+					</ul>
+				</div>
+				<div class=" ZIP fl">
+					<label>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
+					<p></p>
+				</div>
+				<input type="submit" name="" value="SUBMIT" id="submit">
+				<a href="#">Privacy & Security Policy</a>
+			</div>
+			<div class="mask">	
 			</div>
 		</form>
 	</div>
