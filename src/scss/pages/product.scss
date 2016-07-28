@@ -381,7 +381,6 @@
                 float: right;
                 width: 20px;
                 height: 20px;
-                border:1px solid #888;
             }     
         }
     }
@@ -705,7 +704,7 @@
     .evaluate{
         a{
             display: block;
-            width: 117px;
+            width: 120px;
             border-bottom: 2px solid #818181;
             margin: 5px auto;
             color:black;
@@ -821,7 +820,7 @@
 
 
 .buttonMore {
-    text-align: right;
+    text-align: center;
     margin-top: 20px;
     border: none;
     padding: 0px !important;
@@ -846,11 +845,14 @@
     }
     .buttonMore{
         margin-bottom:40px;
-        text-align: left;
     }
     .reply{
         margin-bottom:40px;
         margin-left:55px;
+        height:auto;
+        p{
+            height: 20px;
+        }
         label{
             display: block;
             height:6px;

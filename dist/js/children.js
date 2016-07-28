@@ -14,14 +14,12 @@ $(document).ready(function(){
         });
     });
 	$(window).scroll(function() {
-        var scrollHeight = $(window).scrollTop();
-    	var windowWidth = $(window).width();
-    	var navbarWidth = $(".navbar").width();
-        if (scrollHeight>770) {
+        var leftValue = $(".wrap").get('0').getBoundingClientRect().top;
+        if (leftValue<=0) {
             $(".navbar").css({
-                "position":"fixed",
-                "top":"-28px",
-                "left":(windowWidth-navbarWidth-35)+'px',
+                "position":"absolute",
+                "top":-leftValue,
+                "left":"1120px",
             });
         }else{
             $(".navbar").css({
