@@ -13,7 +13,7 @@ $(document).ready(function(){
         });
     });
 	$(window).scroll(function() {
-        var leftValue = $('#louti1').get('0').getBoundingClientRect().top;
+        var leftValue = $('.liebiao').get('0').getBoundingClientRect().top;
         if (leftValue<= 0) {
             $("#navigationbar").css({
                 "position":"absolute",
