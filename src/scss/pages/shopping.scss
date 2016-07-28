@@ -7,8 +7,19 @@
 i,label,input,span,button,a{
 	display:inline-block;
 }
-*{
-	margin:0;
+.colored{
+	li:nth-child(1){
+		display: none;
+	}
+	li:nth-child(2){
+		display: none;
+	}
+	li:nth-child(3){
+		display: none;
+	}
+	li:nth-child(4){
+		display: none;
+	}
 }
 
 .fl{
@@ -161,25 +172,19 @@ i,label,input,span,button,a{
 					width: 100px;
 					height: 100px;
 					text-align: center;
-					span{
-						border:1px solid #666;
-						width: 90px;
-						height: 30px;
-						line-height: 30px;
-						margin-top:10px;
-						font-size: 16px;
-						font-weight: bold;
-					}
+					margin-top: 10px;
 					p{
-						height: 20px;
+						font-size:20px;
 						line-height: 20px;
 						color: red;
-						i{
-							color:#818181;
-							text-decoration: line-through;
-							font-style: normal;
-							margin-right:5px;
-						}
+					}
+					i{
+						display: inline-block;
+						line-height:20px;
+						color:#818181;
+						text-decoration: line-through;
+						font-style: normal;
+						margin-right:5px;
 					}
 					label{
 						font-size:12px;

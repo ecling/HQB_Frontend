@@ -2,11 +2,6 @@
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
-
-*{
-	margin:0;
-	padding:0;
-}
 footer{
 	border:none;
 }
@@ -46,13 +41,16 @@ input[type="submit"]{
 	input[type="password"],
 	input[type="text"]{
 		width: 100%;
-		line-height: 35px;
+		height: 35px;
 		border:1px solid #dfdfdf;
 		font-size: 16px;
 		text-indent: 10px;
 		border-radius:3px;
 		&:hover{
 			box-shadow:0 0 5px rgba(82, 168, 236, 1);
+		}
+		&:focus{
+			border: 1px solid rgba(82, 168, 236, 1) ;
 		}
 	}
 	input[type="text"]{
