@@ -560,7 +560,7 @@
 			</div>
 		</header>
 		<div class="content w1200 clearfix">
-			<div class="progress">
+			<div class="progress cart">
 				<img src="dist/images/progress.jpg" alt="">
 				<ul class="Shopping">
 				    <li class="bag">Shopping bag</li>
@@ -575,76 +575,77 @@
 				    <li ><span class="span2"></span></li>
 				</ul>
 			</div>
-			<div class="items clearfix">
-				<div class="leftD fl">
-				<h2><span></span>ITEMS</h2>
-				<form action="demo_form.asp" method="get">
-					<div class="list">
-						<input type="checkbox" name="">
-						<div class="commodity fl">
-						<a href=""><img src="images/shopping-cart/shopping-cart1.jpg"alt=""></a>
-						<div class="listInformation fl">
-							<a href="#">
-							Vintage Flower One Shoulder
-							TrainMaternity
-							Wedding Dress
-							</a>
+			<div class="shopping_cart clearfix">
+				<div class="cart_left fl">
+					<h2><span></span>ITEMS</h2>
+					<form action="demo_form.asp" method="get">
+						<ul class="items">
+							<li class="list">
+								<input type="checkbox" name="">
+								<div class="commodity fl">
+								<a href=""><img src="images/shopping-cart/shopping-cart1.jpg"alt=""></a>
+								<div class="listInformation fl">
+									<a href="#">
+									Vintage Flower One Shoulder
+									TrainMaternity
+									Wedding Dress
+									</a>
+								</div>
+									<div class="listSize fl">
+										<p><span>Size</span><label>US 10</label></p>
+										<p><span>Color</span><label>Champagne</label></p>
+									</div>
+								</div>
+								<div class="action fl">
+									<a href="javascript:void" class="favorite"><span class="iconfont icon-favorite"></span></a>
+									<a href="javascript:void" class="delete"><span class="iconfont icon-shanchu"></span></a>
+									<a href="javascript:void" class="later">Save fot later</a>
+								</div>
+								<div class="listQty fl">
+									<a href="#" class="prev">-</a>
+									<input type="text" name="" value="1">	
+									<a href="#" class="next">+</a>
+								</div>
+								<div class="listmoney fl">
+									<p>$00.001</p>
+									<i>$998.98</i>
+									<label>Save $998.98</label>
+								</div>
+							</li>
+						</ul>									
+						<div class="itemsfoot">
+							<input type="checkbox" name="">
+						    <label>Select all</label>
+							<a href="#" class="Clear">Clear</a><a href="#" class="asfl">All Save For Later</a>
 						</div>
-							<div class="listSize fl">
-								<p><span>Size</span><label>US 10</label></p>
-								<p><span>Color</span><label>Champagne</label></p>
-							</div>
-						</div>
-						<div class="Save fl">
-							<a href="javascript:void" class="favorite"><span class="iconfont icon-favorite"></span></a>
-							<a href="javascript:void" class="shanchu"><span class="iconfont icon-shanchu"></span></a>
-							<a href="javascript:void" class="sft">Save fot later</a>
-						</div>
-						<div class="listQty fl">
-							<a href="#" class="prev">-</a>
-							<input type="text" name="" value="1">	
-							<a href="#" class="next">+</a>
-						</div>
-						<div class="listmoney fl">
-							<p>$00.001</p>
-							<i>$998.98</i>
-							<label>Save $998.98</label>
-						</div>
-					</div>									
-					<div class="itemsfoot">
-						<input type="checkbox" name="">
-					    <label>Select all</label>
-						<a href="#" class="Clear">Clear</a><a href="#" class="asfl">All Save For Later</a>
-					</div>
-				</form>
+					</form>
 				</div>
-				<div class="rightD fl">					
-					<div class="rightHead">
-						<form action="demo_form.asp" method="get">
-						<label for="CouponCode">Coupon Code</label><br/>
+				<div class="cart_right fl">					
+					<form id="discount-coupon-form" action="demo_form.asp" method="get">
+						<label for="CouponCode">Coupon Code</label>
 						<input type="text" name="fname" id="CouponCode"/>
 						<input type="submit" name="" value="APPLY"/>
-						</form>
-						<form action="demo_form.asp" method="get">
-						<label for="number">Enter a number of point you want to use</label><br/>
+					</form>
+					<form id="discount-points-form" action="demo_form.asp" method="get">
+						<label for="number">Enter a number of point you want to use</label>
 						<input type="text" name="fname"  id="number" />
 						<input type="submit" name="" value="YES"/>
-						</form>
 						<p>You have 38 H point,Most provinces $0.38</p>
-					</div>
-					<div class="rightcenter">
-						<p><span>Subtotal</span><label>$9998.98</label></p>
-						<p><span>Coupon discount</span><label>$9998.98</label></p>
-						<p><span>H point discount</span><label>$9998.98</label></p>
-						<p><span>All save</span><label>$9998.98</label></p>
-					</div>
-					<div class="rightfoot">
-						<p><strong>Frand Total</strong><span>$0.01</span></p>
+					</form>
+					
+					<div class="order_summary">
+						<p><span>Subtotal</span><span class="price">$9998.98</span></p>
+						<p><span>Coupon discount</span><span class="price">$9998.98</span></p>
+						<p><span>H point discount</span><span class="price">$9998.98</span></p>
+						<p><span>All save</span><span class="price">$9998.98</span></p>
+						<p class="grand"><span>Frand Total</span><span class="price">$0.01</span></p>
 						<p>You will earn 599 H point</p>
+					</div>
+					<div class="payments">
 						<label>---- OR ----</label>
-						<a href=""><img src="../../dist/images/shopping-cart3.jpg" alt="check out withPayPal"></a>
+						<a class="bottom paypal_express_checkout" href=""><img src="../../dist/images/shopping-cart3.jpg" alt="check out withPayPal"></a>
 						<img src="" alt="">
-						<input type="submit" value="Proceed to Checkout">
+						<a class="bottom proceed_to_checkout" href="">Proceed to Checkout</a>
 						<i>You will enjoy free shipping with another $20</i>
 					</div>
 				</div>
