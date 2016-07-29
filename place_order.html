@@ -37,13 +37,13 @@
 			<div class="leftD fl">
 				<div class="shippingAddress  fl" >
 					<h3>ShippingAddress</h3>
-					<div class="shipping-address-form">
+					<div class="shipping-address-form" style="display: none;" >
 						<div class="Firstname clearfix">
-							<div class="fl">
+							<div class="Firstname_left">
 								 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
 								<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
 							</div>
-							<div class="rl">
+							<div class="Firstname_right">
 								<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
 								<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
 							</div>
@@ -58,14 +58,13 @@
 							<ul>
 							    <li>
 							    	<label><span class="required">*</span>Country / Region:</label>
-							    	<span>3213123</span>
-							    	<i class="iconfont icon-down"></i>
-							    	<ul>
-							    	    <li>1</li>
-							    	    <li>2</li>
-							    	    <li>3</li>
-							    	    <li>4</li>
-							    	</ul>
+							    	<span></span>
+							    	<select>
+								    	  <option value ="volvo">Volvo</option>
+								    	  <option value ="saab">Saab</option>
+								    	  <option value="opel">Opel</option>
+								    	  <option value="audi">Audi</option>
+							    	</select>
 							    </li>
 							    <li class="city">
 							    	<label for="city"><span class="required">*</span>City</label>
@@ -74,13 +73,12 @@
 							    <li>
 							    	<label><span class="required">*</span>States:</label>
 							    	<span></span>
-							    	<i class="iconfont icon-down"></i>
-							    	<ul>
-							    	    <li></li>
-							    	    <li></li>
-							    	    <li></li>
-							    	    <li></li>
-							    	</ul>
+							    	<select>
+								    	  <option value ="volvo">Volvo</option>
+								    	  <option value ="saab">Saab</option>
+								    	  <option value="opel">Opel</option>
+								    	  <option value="audi">Audi</option>
+							    	</select>
 							    </li>
 							</ul>
 						</div>
@@ -90,7 +88,7 @@
 						<a href="#">Privacy & Security Policy</a>
 					</div>
 					<!-- customer has shipping address-->
-					<div class="address_list" style="display: none;" >
+					<div class="address_list" >
 						<div class="contentd">
 							<input type="radio" name="1">
 							<div class="fl">
@@ -129,49 +127,51 @@
 					<h3>Shipping method</h3>
 					<ul>
 					    <li>
-					    	<input type="radio" name="1"/>
-					    	<label>Super Saver Shipping</label>
-					    	<span>25 - 30 business days</span>
-					    	<i>$0.00</i>
-					    	<ul>
-					    	    <li>
+					    	<label for="Super">
+					    		<input type="radio" name="1" id="Super" />
+					    		<span class="title">Super Saver Shipping</span>
+					    		<span class="time">25 - 30 business days</span>
+					    		<span class="price">$0.00<span>
+					    	</label>
+					    	<label class="checkbox">
 					    	    	<input type="checkbox" name="">
-					    	    	<label>Tracking number</label>
-					    	    	<i>+$1.99</i>
-					    	    </li>
-					    	</ul>
+					    	    	<span class="Trackingnumber">Tracking number</span>
+					    	    	<span class="money">+$1.99</span>
+					    	</label>
 					    </li>
 					    <li>
-					    	<input type="radio" name="1"/>
-					    	<label>Standard Shipping</label>
-					    	<span>10-15 business days</span>
-					    	<i>$10.42</i>
-					    	<ul>
-					    	    <li>
-					    	    	<input type="checkbox" name="3">
-					    	    	<label>Tracking number</label>
-					    	    	<i>+$1.99</i>
-					    	    </li>
-					    	</ul>
+					    	<label for="Standard">
+					    		<input type="radio" name="1" id="Standard" />
+					    		<span class="title">Standard Shipping </span>
+					    		<span class="time">25 - 30 business days</span>
+					    		<span class="price">$0.00<span>
+					    	</label>
 					    </li>
 					    <li>
-					    	<input type="radio" name="1"/>
-					    	<label>Expedited Shipping</label>
-					    	<span>5-10 business days</span>
-					    	<i>$32.23</i>
-					    	<ul>
-					    	    <li>
-					    	    	<input type="checkbox" name="">
-					    	    	<label>Tracking number</label>
-					    	    	<i>+$1.99</i>
-					    	    </li>
-					    	</ul>
+					    	<label for="Expedited">
+					    		<input type="radio" name="1" id="Expedited" />
+					    		<span class="title">Expedited Shipping</span>
+					    		<span class="time">25 - 30 business days</span>
+					    		<span class="price">$0.00<span>
+					    	</label>
 					    </li>
+					    
 					</ul>
 				</div>
 				<div class="PaymentMethod fl">
 					<h3>Payment Method</h3>
-					<input type="radio" name="2"><label><a href="#"><img src="dist/images/place_order.png"></a></label>
+					<ul>
+						<li>
+							<input type="radio" name="2" id="list1"><label for="list1"><img src="dist/images/place_order.png"></label>
+						</li>
+						<li>
+							<input type="radio" name="2" id="list2"><label for="list2">32131</label>
+						</li>
+						<li>
+							<input type="radio" name="2" id="list3"><label for="list3">3513</label>
+						</li>
+					</ul>
+					
 				</div>
 				<div class="OrderRequest fl">
 					<h3>Order Request</h3>
@@ -193,7 +193,7 @@
 					<div class="rightcenter">
 						<p><span>Subtotal</span><label>$9998.98</label></p>
 						<p><span>Coupon discount</span><label>$9998.98</label></p>
-						<p><span>H point discount</span><label>$9998.98</label></p>
+						<p><span>H poian discount</span><label>$9998.98</label></p>
 						<p><span>All save</span><label>$9998.98</label></p>
 						<p><span>Shopping</span><label>$9998.98</label></p>
 						<p class="Grand"><strong>Grand Total</strong><span>$0.01</span></p>
@@ -206,61 +206,55 @@
 		</form>
 		<form action="demo_form.asp" method="POST" id="commentForm">
 			<div class="popup">
-				<i class="iconfont icon-close"></i>
-				<div class="Firstname clearfix">
-					<div class="fl">
-						<label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>
-						<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+						<div class="Firstname clearfix">
+							<div class="Firstname_left">
+								 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
+								<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+							</div>
+							<div class="Firstname_right">
+								<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+								<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
+							</div>
+						</div>
+						<div class="AddressLine1 clearfix">
+							<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>						
+						</div>
+						<div class="AddressLine2">
+							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+						</div>
+						<div class="selectd ">
+							<ul>
+							    <li>
+							    	<label><span class="required">*</span>Country / Region:</label>
+							    	<span></span>
+							    	<select>
+								    	  <option value ="volvo">Volvo</option>
+								    	  <option value ="saab">Saab</option>
+								    	  <option value="opel">Opel</option>
+								    	  <option value="audi">Audi</option>
+							    	</select>
+							    </li>
+							    <li class="city">
+							    	<label for="city"><span class="required">*</span>City</label>
+							    	<input type="text" name="city" id="city" required/>	
+							    </li>
+							    <li>
+							    	<label><span class="required">*</span>States:</label>
+							    	<span></span>
+							    	<select>
+								    	  <option value ="volvo">Volvo</option>
+								    	  <option value ="saab">Saab</option>
+								    	  <option value="opel">Opel</option>
+								    	  <option value="audi">Audi</option>
+							    	</select>
+							    </li>
+							</ul>
+						</div>
+						<div class=" ZIP fl">
+							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
+						</div>
+						<a href="#">Privacy & Security Policy</a>
 					</div>
-					<div class="rl">
-						<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
-						
-						<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>	
-					</div>
-				</div>
-				<div class="AddressLine1 clearfix">
-					<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>	
-				</div>
-				<div class="AddressLine2">
-					<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
-				</div>
-				<div class="selectd ">
-					<ul>
-					    <li>
-					    	<label><span class="required">*</span>Country / Region:</label>
-					    	<span></span>
-					    	<i class="iconfont icon-down"></i>
-					    	<ul>
-					    	    <li></li>
-					    	    <li></li>
-					    	    <li></li>
-					    	    <li></li>
-					    	</ul>
-					    </li>
-					    <li class="city">
-					    	<label for="city"><span class="required">*</span>City</label>
-					    	<input type="text" name="city" id="city" required/>
-					    	
-					    </li>
-					    <li>
-					    	<label><span class="required">*</span>States:</label>
-					    	<span></span>
-					    	<i class="iconfont icon-down"></i>
-					    	<ul>
-					    	    <li></li>
-					    	    <li></li>
-					    	    <li></li>
-					    	    <li></li>
-					    	</ul>
-					    </li>
-					</ul>
-				</div>
-				<div class=" ZIP fl">
-					<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
-				</div>
-				<input type="submit" name="" value="SUBMIT" id="submit">
-				<a href="javascript:void">Privacy & Security Policy</a>
-			</div>
 			<div class="mask">	
 			</div>
 		</form>
