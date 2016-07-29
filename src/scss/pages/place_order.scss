@@ -3,14 +3,22 @@
 @import '../layout/common.scss';
 @import '../layout/footer.scss';
 @import '../widget/progress.scss';
-.rl
+.colored
 {
-    float: right;
+    li:nth-child(2)
+    {
+        display: none;
+    }
+    li:nth-child(3)
+    {
+        display: none;
+    }
+    li:nth-child(4)
+    {
+        display: none;
+    }
 }
-.fl
-{
-    float: left;
-}
+
 .required
 {
     color: red;
@@ -114,233 +122,6 @@
     filter: alpha(opacity=60);
     -moz-opacity: .5;
 }
-.popup
-{
-    position: fixed;
-    z-index: 1003;
-    top: 50%;
-    left: 50%;
-
-    display: none;
-
-    width: 730px;
-    margin-top: -320px;
-    margin-left: -320px;
-    padding: 35px 25px;
-
-    background: white;
-    box-shadow: 0 0 10px #666;
-    > i
-    {
-        font-size: 30px;
-
-        position: absolute;
-        top: -15px;
-        right: -15px;
-
-        cursor: pointer;
-    }
-    input[type='text']
-    {
-        font-size: 16px;
-
-        height: 35px;
-
-        text-indent: 5px;
-
-        border: 1px solid #cfcfcf;
-        border-radius: 2px;
-        &:hover
-        {
-            border: 1px solid transparent;
-            box-shadow: 0 0 5px rgba(82, 168, 236, 1);
-        }
-    }
-    label
-    {
-        font-size: 14px;
-
-        display: block;
-
-        height: 20px;
-
-        color: #b0b0b0;
-    }
-    p
-    {
-        font-size: 14px;
-
-        width: 342px;
-        margin: 10px 0;
-
-        word-wrap: break-word;
-        word-break: break-normal;
-
-        color: red;
-    }
-    .fl
-    {
-        margin-right: 45px;
-    }
-    .Firstname
-    {
-        input
-        {
-            width: 340px;
-        }
-    }
-    .AddressLine2,
-    .AddressLine1
-    {
-        input
-        {
-            width: 100%;
-        }
-    }
-    .selectd
-    {
-        margin-top: 35px;
-        ul
-        {
-            li
-            {
-                position: relative;
-
-                float: left;
-
-                width: 215px;
-                height: 35px;
-
-                cursor: pointer;
-
-                border: 1px solid #cfcfcf;
-                &:hover
-                {
-                    i
-                    {
-                        transform: rotate(720deg);
-
-                        color: #e5941a;
-                    }
-                    ul
-                    {
-                        display: block;
-                    }
-                }
-                label
-                {
-                    line-height: 35px;
-
-                    height: 35px;
-                    margin-top: -35px;
-                }
-                ul
-                {
-                    position: absolute;
-                    top: 35px;
-                    left: -1px;
-
-                    display: none;
-
-                    border: 1px solid #cfcfcf;
-                    li
-                    {
-                        font-size: 14px;
-                        line-height: 35px;
-
-                        text-indent: 5px;
-
-                        border: none;
-                        background: white;
-                        &:hover
-                        {
-                            background: #cfcfcf;
-                        }
-                    }
-                }
-            }
-            i
-            {
-                float: right;
-
-                margin-top: 10px;
-                margin-right: 20px;
-            }
-            span
-            {
-                font-size: 16px;
-                line-height: 35px;
-
-                width: 185px;
-            }
-        }
-        .city
-        {
-            margin: 0 39px;
-
-            border: none;
-            input
-            {
-                width: 215px;
-            }
-        }
-    }
-    .ZIP
-    {
-        margin-bottom: 20px;
-        label
-        {
-            margin-top: 10px;
-        }
-        input
-        {
-            width: 729px;
-        }
-    }
-    input[type='submit']
-    {
-        font-size: 18px;
-
-        display: block;
-
-        width: 245px;
-        height: 30px;
-        margin: 10px auto;
-
-        color: white;
-        border: 1px solid #eeb053;
-        border-radius: 3px;
-        background: #eeb053;
-        &:hover
-        {
-            cursor: pointer;
-
-            color: #eeb053;
-            background: white;
-        }
-    }
-    a
-    {
-        display: block;
-
-        width: 135px;
-        margin: 0 auto;
-
-        color: #666;
-        border-bottom: 1px solid #666;
-        &:hover
-        {
-
-
-            color: #eeb053;
-            border-bottom: 1px solid #eeb053;
-        }
-    }
-}
-.shippingAddress
-{
-    border-top: 1px solid #cfcfcf;
-}
 
 .shipping-address-form
 {
@@ -390,15 +171,19 @@
 
         color: red;
     }
-    .fl
-    {
-        margin-right: 45px;
-    }
     .Firstname
     {
         input
         {
             width: 340px;
+        }
+        .Firstname_right
+        {
+            float: right;
+        }
+        .Firstname_left
+        {
+            float: left;
         }
     }
     .AddressLine2,
@@ -411,86 +196,19 @@
     }
     .selectd
     {
-        margin-top: 35px;
-        ul
-        {
-            li
-            {
-                position: relative;
-
-                float: left;
-
+        li{
+            float: left;
+            select{
+                display: inline-block;
                 width: 215px;
                 height: 35px;
-
-                cursor: pointer;
-
                 border: 1px solid #cfcfcf;
-                &:hover
-                {
-                    i
-                    {
-                        transform: rotate(720deg);
-						-webkit-transform: rotate(720deg);
-                        color: #e5941a;
-                    }
-                    ul
-                    {
-                        display: block;
-                    }
-                }
-                label
-                {
-                    line-height: 35px;
-
-                    height: 35px;
-                    margin-top: -35px;
-                }
-                ul
-                {
-                    position: absolute;
-                    top: 35px;
-                    left: -1px;
-
-                    display: none;
-
-                    border: 1px solid #cfcfcf;
-                    li
-                    {
-                        font-size: 14px;
-                        line-height: 35px;
-
-                        text-indent: 5px;
-
-                        border: none;
-                        background: white;
-                        &:hover
-                        {
-                            background: #cfcfcf;
-                        }
-                    }
-                }
-                span
-                {
-                    font-size: 16px;
-                    line-height: 35px;
-
-                    width: 185px;
-                    margin-left: 5px;
-                }
-                i
-                {
-                    float: right;
-
-                    margin-top: 10px;
-                    margin-right: 20px;
-                }
             }
         }
         .city
         {
             margin: 0 39px;
-
+            float: left;
             border: none;
             input
             {
@@ -527,71 +245,179 @@
         }
     }
 }
-
-.shippingOptions
-{
+.popup{
+    position: fixed;
+    top:20%;
+    left:25%;
     width: 730px;
-    margin-top: 30px;
+    margin-bottom: 45px;
     padding-left: 10px;
+    border: 1px solid red;
+    padding: 35px 25px;
+    z-index: 1000;
+    background: white;
+    input[type='text']
+    {
+        font-size: 16px;
 
-    border-top: 1px solid #cfcfcf;
-    li
+        height: 35px;
+
+        text-indent: 5px;
+
+        border: 1px solid #cfcfcf;
+        border-radius: 2px;
+        &:hover
+        {
+            border: 1px solid transparent;
+            box-shadow: 0 0 5px rgba(82, 168, 236, 1);
+        }
+    }
+    label
     {
         font-size: 14px;
 
-        height: 30px;
-        margin-bottom: 40px;
-        input
-        {
-            width: 16px;
-            height: 16px;
-        }
-        label
-        {
-            font-weight: bold;
-            line-height: 25px;
+        display: block;
 
-            display: inline-block;
+        height: 20px;
+        margin-top: 10px;
 
-            width: 155px;
-        }
+        color: #b0b0b0;
         span
         {
-            display: inline-block;
-
-            width: 480px;
-
-            text-align: center;
+            margin-right: 5px;
         }
-        i
+    }
+    p
+    {
+        font-size: 14px;
+
+        width: 342px;
+        margin: 10px 0;
+
+        word-wrap: break-word;
+        word-break: break-normal;
+
+        color: red;
+    }
+    .Firstname
+    {
+        input
         {
-            font-size: 16px;
-            font-weight: bold;
-            font-style: normal;
-
-            display: inline-block;
-
-            width: 60px;
-
-            text-align: right;
-
-            color: red;
+            width: 340px;
         }
-        ul
+        .Firstname_right
         {
-            margin-left: 25px;
+            float: right;
+        }
+        .Firstname_left
+        {
+            float: left;
+        }
+    }
+    .AddressLine2,
+    .AddressLine1
+    {
+        input
+        {
+            width: 100%;
+        }
+    }
+    .selectd
+    {
+        li{
+            float: left;
+            select{
+                display: inline-block;
+                width: 215px;
+                height: 35px;
+                border: 1px solid #cfcfcf;
+            }
+        }
+        .city
+        {
+            margin: 0 39px;
+            float: left;
+            border: none;
             input
             {
-                width: 13px;
-                height: 13px;
+                width: 215px;
             }
-            i,
-            label
-            {
-                font-size: 12px;
+        }
+    }
+    .ZIP
+    {
+        margin-bottom: 20px;
+        label
+        {
+            margin-top: 10px;
+        }
+        input
+        {
+            width: 729px;
+        }
+    }
+    a
+    {
+        display: block;
+        float: right;
 
-                width: auto;
-            }
+        width: 135px;
+        margin: 0 auto;
+
+        color: #666;
+        border-bottom: 1px solid #666;
+        &:hover
+        {
+            color: #eeb053;
+            border-bottom: 1px solid #eeb053;
+        }
+    }
+}
+.shippingAddress
+{
+    border-top: 1px solid #cfcfcf;
+}
+.shippingOptions
+{
+    width: 100%;
+    margin-top:50px;
+    li{
+        margin-bottom: 20px;
+    }
+    label{
+        display: block;
+        width: 100%;
+    }
+    span{
+        margin-bottom: 10px;
+    }
+    .title{
+        font-size: 14px;
+        color:#666;
+        font-weight: bold;
+        width: 350px;
+        display: inline-block;
+    }
+    .time{
+        font-size: 14px;
+        color:#333;
+        width: 200px;
+        display: inline-block;
+    }
+    .price{
+        font-size:16px ;
+        font-weight: bold;
+        color:red;
+        float: right;
+    }
+    .checkbox{
+        margin-left: 20px;
+        .Trackingnumber{
+            margin-left: 5px;
+        }
+        .money{
+            color:red;
+            margin-left: 10px;
         }
     }
 }
@@ -599,8 +425,6 @@
 {
     width: 730px;
     margin-top: 30px;
-    padding-left: 10px;
-
     border-top: 1px solid #cfcfcf;
     h3
     {
@@ -615,23 +439,26 @@
         color: #333;
         background: white;
     }
+    li{
+        width: 80%;
+        height: 75px;
+        label{
+            display: inline-block;
+            line-height: 70px;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+    }
     input
     {
         float: left;
-
-        width: 16px;
         height: 68px;
-    }
-    img
-    {
-        margin-left: 30px;
     }
 }
 .OrderRequest
 {
     width: 730px;
     margin-top: 30px;
-    padding-left: 10px;
 
     border-top: 1px solid #cfcfcf;
     p
@@ -667,7 +494,6 @@
     box-shadow: 0 0 5px #cfcfcf;
     .rightHead
     {
-        margin-bottom: 35px;
         label
         {
             font-size: 14px;
@@ -692,8 +518,6 @@
             border-radius: 3px;
             &:hover
             {
-
-
                 border: 1px solid transparent;
                 box-shadow: 0 0 5px rgba(82, 168, 236, .8);
             }
@@ -702,10 +526,13 @@
         {
             font-size: 18px;
             line-height: 35px;
+
             width: 98px;
             height: 35px;
+
             cursor: pointer;
             text-align: center;
+
             color: #eeb053;
             border: none;
             border: 1px solid #eeb053;
@@ -713,7 +540,6 @@
             background: white;
             &:hover
             {
-               
                 color: white;
                 background: #eeb053;
             }
@@ -730,6 +556,7 @@
         font-size: 14px;
 
         height: auto;
+        margin-top: 35px;
 
         color: #666;
         p
@@ -809,6 +636,7 @@
             &:hover
             {
                 cursor: pointer;
+
                 color: #eeb053;
                 border: 1px solid #eeb053;
                 background: white;
@@ -826,5 +654,5 @@
 
             text-align: center;
         }
-    }	
+    }
 }
