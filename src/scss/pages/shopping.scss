@@ -25,7 +25,43 @@ i,label,input,span,button,a{
 .fl{
 	float:left;
 }
-
+.shopnow{
+	width: 100%;
+	text-align: center;
+	img{
+		display: block;
+		margin:60px auto 0;
+	}
+	label{
+		color:#f39c11;
+		font-size: 24px;
+		font-weight: bold;
+		margin:20px 0;
+	}
+	p{
+		font-size: 18px ;
+		color:#aaa;
+		line-height: 30px;
+	}
+	a{
+		display: block;
+		width: 230px;
+		line-height: 35px;
+		color:white;
+		background: #eeb053;
+		text-align: center;
+		margin: 30px auto ;
+		font-size: 14px;
+		font-weight: bold;
+		border:1px solid #eeb053;
+		border-radius: 3px;
+		&:hover{
+			border:1px solid #eeb053;
+			color:#eeb053;
+			background: white;
+		}
+	}
+}
 .shopping_cart{
 	width: 100%;
 	height: auto;
@@ -130,7 +166,7 @@ i,label,input,span,button,a{
 						}
 					}
 				}
-				a:last-child{
+				.later{
 					color:#aaa;
 					border-bottom:1px solid #aaa;
 					&:hover{
@@ -192,6 +228,9 @@ i,label,input,span,button,a{
 			}
 		}
 	}
+	#discount-points-form{
+		margin-bottom: 35px;
+	}
 	.cart_right{
 		float:right;
 		width: 358px;
@@ -200,11 +239,11 @@ i,label,input,span,button,a{
 		box-shadow:0 0 5px #cfcfcf;
 		border-radius:3px;
 		#discount-coupon-form,#discount-points-form{
-			margin-bottom: 35px;
 			label{
 				display: block;
 				font-size: 14px;
 				font-weight:bold;
+				margin-bottom: 10px;
 			}
 			input[type="text"]{
 				font-size: 14px;
@@ -251,7 +290,9 @@ i,label,input,span,button,a{
 			font-size: 14px;
 			padding-bottom:20px;
 			.grand{
+				margin-top:20px;
 				border-top:1px dashed #bdbdbd;
+				padding-top: 20px;
 				span{
 					font-size: 16px;
 					font-weight: bold;
@@ -273,6 +314,9 @@ i,label,input,span,button,a{
 					width: 40%;
 					text-align: right;
 				}
+			}
+			.point{
+				float: right;
 			}
 		}
 		.payments{
@@ -317,6 +361,7 @@ i,label,input,span,button,a{
 				cursor: pointer;
 				line-height: 40px;
 				text-align: center;
+				border:1px solid #eeb053;
 				&:hover{
 					transition: all .5s ease;
 					background:white;
