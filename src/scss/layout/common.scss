@@ -4,7 +4,25 @@ html{
 *{
     margin:0;
     padding:0;
-    &:focus {outline: none;} 
+
+}
+input[typr="password"],
+input[type="text"]:focus{
+    border:1px solid rgba(82, 168, 236, .7);
+}
+input[type="radio"],
+input[type="button"],
+input[type="checkbox"]:focus{
+    outline: none;
+}
+a,button,i,span,
+input[type="text"],
+input[typr="password"],
+input[type="submit"]:hover{
+    transition:all .3s ease;
+    -o-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -webkit-transition:all .3s ease;
 }
 body{
 	color: #333;

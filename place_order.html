@@ -18,68 +18,61 @@
 	<div class="content w1200 clearfix">
 		<div class="logo "><a href="" title="" rel="nofollow"><img src="dist/images/logo.png" title="" /></a></div>
 		<div class="progress firecheckout">
-				<img src="dist/images/progress.jpg" alt="">
-				<ul class="Shopping">
-				    <li class="bag">Shopping bag</li>
-				    <li class="PlaceOrder">Place Order</li>
-				    <li class="pay">pay</li>
-				    <li class="orderComplete">order</li>
-				</ul>
-				<ul class="colored">
-				    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
-				    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
-				    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
-				    <li><span class="span2"></span></li>
-				</ul>
-			</div>
+			<img src="dist/images/progress.jpg" alt="">
+			<ul class="Shopping">
+			    <li class="bag">Shopping bag</li>
+			    <li class="PlaceOrder">Place Order</li>
+			    <li class="pay">pay</li>
+			    <li class="orderComplete">order</li>
+			</ul>
+			<ul class="colored">
+			    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
+			    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
+			    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
+			    <li><span class="span2"></span></li>
+			</ul>
+		</div>
 		
 		<form action="demo_form.asp" method="POST" id="commentForm">
 			<div class="leftD fl">
-				<div class="shippingAddress  fl">
+				<div class="shippingAddress  fl" >
 					<h3>ShippingAddress</h3>
 					<div class="shipping-address-form">
 						<div class="Firstname clearfix">
 							<div class="fl">
-								<label for="Firstname">First name:</label><input type="text" name="firstname" id="Firstname" required/>
-								<p></p>
-								<label for="Phonenumber">Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
-								<p></p>
+								 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
+								<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
 							</div>
 							<div class="rl">
-								<label for="Lastname">Last name:</label><input type="text" name="lastname" id="Lastname" required/>
-								<P></P>
-								<label for="E-mail">E-mail address:</label><input type="text" name="email" id="E-mail" required/>
-								<p></p>
+								<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+								<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
 							</div>
 						</div>
 						<div class="AddressLine1 clearfix">
-							<label for="Line1">Address Line1:</label><input type="text" name="" id="Line1" required/>
-							<p></p>
+							<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>						
 						</div>
 						<div class="AddressLine2">
-							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />
-							<p></p>
+							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 						</div>
 						<div class="selectd ">
 							<ul>
 							    <li>
-							    	<label>Country / Region:</label>
-							    	<span></span>
+							    	<label><span class="required">*</span>Country / Region:</label>
+							    	<span>3213123</span>
 							    	<i class="iconfont icon-down"></i>
 							    	<ul>
-							    	    <li></li>
-							    	    <li></li>
-							    	    <li></li>
-							    	    <li></li>
+							    	    <li>1</li>
+							    	    <li>2</li>
+							    	    <li>3</li>
+							    	    <li>4</li>
 							    	</ul>
 							    </li>
 							    <li class="city">
-							    	<label for="city">City</label>
-							    	<input type="text" name="city" id="city" required/>
-							    	<p></p>
+							    	<label for="city"><span class="required">*</span>City</label>
+							    	<input type="text" name="city" id="city" required/>	
 							    </li>
 							    <li>
-							    	<label>States:</label>
+							    	<label><span class="required">*</span>States:</label>
 							    	<span></span>
 							    	<i class="iconfont icon-down"></i>
 							    	<ul>
@@ -92,14 +85,12 @@
 							</ul>
 						</div>
 						<div class=" ZIP fl">
-							<label>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
-							<p></p>
+							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
 						<a href="#">Privacy & Security Policy</a>
 					</div>
-
 					<!-- customer has shipping address-->
-					<div class="address_list">
+					<div class="address_list" style="display: none;" >
 						<div class="contentd">
 							<input type="radio" name="1">
 							<div class="fl">
@@ -134,7 +125,7 @@
 					</div>
 				</div>
 				
-				<div class="shippingOptions fl">
+				<div class="shippingOptions fl" >
 					<h3>Shipping method</h3>
 					<ul>
 					    <li>
@@ -205,9 +196,9 @@
 						<p><span>H point discount</span><label>$9998.98</label></p>
 						<p><span>All save</span><label>$9998.98</label></p>
 						<p><span>Shopping</span><label>$9998.98</label></p>
+						<p class="Grand"><strong>Grand Total</strong><span>$0.01</span></p>
 					</div>
 					<div class="rightfoot">
-						<p><strong>Grand Total</strong><span>$0.01</span></p>
 						<input type="submit" value="Place Your Order">
 						<i>You will enjoy free shipping with another $20</i>
 					</div>
@@ -218,30 +209,25 @@
 				<i class="iconfont icon-close"></i>
 				<div class="Firstname clearfix">
 					<div class="fl">
-						<label for="Firstname">First name:</label><input type="text" name="firstname" id="Firstname" required/>
-						<p></p>
-						<label for="Phonenumber">Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
-						<p></p>
+						<label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>
+						<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
 					</div>
 					<div class="rl">
-						<label for="Lastname">Last name:</label><input type="text" name="lastname" id="Lastname" required/>
-						<P></P>
-						<label for="E-mail">E-mail address:</label><input type="text" name="email" id="E-mail" required/>
-						<p></p>
+						<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+						
+						<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>	
 					</div>
 				</div>
 				<div class="AddressLine1 clearfix">
-					<label for="Line1">Address Line1:</label><input type="text" name="" id="Line1" required/>
-					<p></p>
+					<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>	
 				</div>
 				<div class="AddressLine2">
-					<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />
-					<p></p>
+					<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 				</div>
 				<div class="selectd ">
 					<ul>
 					    <li>
-					    	<label>Country / Region:</label>
+					    	<label><span class="required">*</span>Country / Region:</label>
 					    	<span></span>
 					    	<i class="iconfont icon-down"></i>
 					    	<ul>
@@ -252,12 +238,12 @@
 					    	</ul>
 					    </li>
 					    <li class="city">
-					    	<label for="city">City</label>
+					    	<label for="city"><span class="required">*</span>City</label>
 					    	<input type="text" name="city" id="city" required/>
-					    	<p></p>
+					    	
 					    </li>
 					    <li>
-					    	<label>States:</label>
+					    	<label><span class="required">*</span>States:</label>
 					    	<span></span>
 					    	<i class="iconfont icon-down"></i>
 					    	<ul>
@@ -270,17 +256,15 @@
 					</ul>
 				</div>
 				<div class=" ZIP fl">
-					<label>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
-					<p></p>
+					<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>
 				</div>
 				<input type="submit" name="" value="SUBMIT" id="submit">
-				<a href="#">Privacy & Security Policy</a>
+				<a href="javascript:void">Privacy & Security Policy</a>
 			</div>
 			<div class="mask">	
 			</div>
 		</form>
 	</div>
-
 	<footer>
 			<div class="content w1200 clearfix">
 				<div class="cms_list fl">
