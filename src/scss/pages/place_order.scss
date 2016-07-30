@@ -47,23 +47,25 @@
     {
         font-style: normal;
     }
-    > a
+    .clicked
     {
         font-size: 14px;
         font-weight: bold;
         line-height: 40px;
-
         display: block;
-
         width: 300px;
         margin-top: 20px;
         margin-left: 35px;
-
         text-align: center;
-
         color: white;
         border-radius: 3px;
         background: #eeb053;
+        border: 1px solid #eeb035;
+        &:hover{
+            color:#eeb035;
+            border: 1px solid #eeb035;
+            background:white;
+        }
     }
     .contentd
     {
@@ -115,10 +117,8 @@
     z-index: 1002;
     top: 0;
     left: 0;
-
-         opacity: .5;
+    opacity: .5;
     background-color: #777;
-
     filter: alpha(opacity=60);
     -moz-opacity: .5;
 }
@@ -198,11 +198,17 @@
     {
         li{
             float: left;
-            select{
+           select{
                 display: inline-block;
                 width: 215px;
                 height: 35px;
                 border: 1px solid #cfcfcf;
+                text-indent: 5px;
+                appearance:none;
+                -moz-appearance:none;
+                -webkit-appearance:none;
+                background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
+                padding-right: 14px;
             }
         }
         .city
@@ -247,15 +253,22 @@
 }
 .popup{
     position: fixed;
-    top:20%;
+    top:10%;
     left:25%;
     width: 730px;
     margin-bottom: 45px;
     padding-left: 10px;
-    border: 1px solid red;
+    box-shadow:1px 1px  10px #333;
     padding: 35px 25px;
-    z-index: 1000;
+    z-index: 1003;
     background: white;
+    .icon-close{
+        position: absolute;
+        top:-15px;
+        right: -15px;
+        font-size: 30px;
+        cursor: pointer;
+    }
     input[type='text']
     {
         font-size: 16px;
@@ -286,18 +299,6 @@
         {
             margin-right: 5px;
         }
-    }
-    p
-    {
-        font-size: 14px;
-
-        width: 342px;
-        margin: 10px 0;
-
-        word-wrap: break-word;
-        word-break: break-normal;
-
-        color: red;
     }
     .Firstname
     {
@@ -331,8 +332,14 @@
                 width: 215px;
                 height: 35px;
                 border: 1px solid #cfcfcf;
+                text-indent: 5px;
+                appearance:none;
+                -moz-appearance:none;
+                -webkit-appearance:none;
+                background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
+                padding-right: 14px;
             }
-        }
+        }   
         .city
         {
             margin: 0 39px;
@@ -356,14 +363,29 @@
             width: 729px;
         }
     }
-    a
+    .btn{
+        display: block;
+        margin: 10px auto;
+        width: 245px;
+        height: 30px;
+        background: #eeb035;
+        color:white;
+        border: 1px solid #eeb035;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover{
+            color:#eeb035;
+            border: 1px solid #eeb035;
+            background:white;
+        }
+    }
+    .Privacy
     {
         display: block;
-        float: right;
-
         width: 135px;
         margin: 0 auto;
-
         color: #666;
         border-bottom: 1px solid #666;
         &:hover
