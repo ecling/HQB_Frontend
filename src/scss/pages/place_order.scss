@@ -507,13 +507,18 @@
 .rightD
 {
     float: right;
-
+    position: relative;
     width: 358px;
     height: auto;
     padding: 30px 20px;
 
     border-radius: 3px;
     box-shadow: 0 0 5px #cfcfcf;
+    .fixbox{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .rightHead
     {
         label
@@ -602,7 +607,7 @@
             text-align: right;
         }
     }
-    .Grand
+    .grand
     {
         font-size: 14px;
 

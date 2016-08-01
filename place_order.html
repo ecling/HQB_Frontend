@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="dist/js/validate.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/place_orden.js"></script>
+		<script type="text/javascript" src="dist/js/place_order.js"></script>
 	</head>
 <body>
 	<div class="content w1200 clearfix">
@@ -37,7 +37,7 @@
 			<div class="leftD fl">
 				<div class="shippingAddress  fl" >
 					<h3>ShippingAddress</h3>
-					<div class="shipping-address-form" style="display: none;" >
+					<div class="shipping-address-form">
 						<div class="Firstname clearfix">
 							<div class="Firstname_left">
 								 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
@@ -82,13 +82,13 @@
 							    </li>
 							</ul>
 						</div>
-						<div class=" ZIP fl">
+						<div class="ZIP fl">
 							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
 						<a href="#">Privacy & Security Policy</a>
 					</div>
 					<!-- customer has shipping address-->
-					<div class="address_list" >
+					<div class="address_list" style="display:none;">
 						<div class="contentd">
 							<input type="radio" name="1">
 							<div class="fl">
@@ -181,6 +181,7 @@
 				</div>
 			</div>
 			<div class="rightD fl">
+				<div class="fixbox">
 					<div class="rightHead">	
 						<label for="Coupon">Coupon Code</label><br/>
 						<input type="text" name=""  id="Coupon" />
@@ -199,12 +200,13 @@
 						<p class="Grand"><strong>Grand Total</strong><span>$0.01</span></p>
 					</div>
 					<div class="rightfoot">
-						<input type="submit" value="Place Your Order">
-						<i>You will enjoy free shipping with another $20</i>
+						<button class="button"></button>
+						<p>You will enjoy free shipping with another $20</p>
 					</div>
+				</div>
 			</div>
 		</form>
-		<form action="demo_form.asp" method="POST" id="commentForm2">
+		<form action="demo_form.asp" method="POST" id="commentForm2" style="display:none;">
 			<div class="popup">
 						<span class="iconfont icon-close"></span>
 						<div class="Firstname clearfix">
