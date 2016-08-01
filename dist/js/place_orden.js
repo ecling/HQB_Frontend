@@ -6,13 +6,13 @@ jQuery(document).ready(function($) {
     
 
     function show(){
-    	$(".popup").show();
+    	$(".shipping-address-form").show();
 		$(".mask").css("height",$(document).height());     
         $(".mask").css("width",$(document).width());     
         $(".mask").show(); 
     }
     function hide(){
-    	$(".popup").hide();
+    	$(".shipping-address-form").hide();
 		$(".mask").hide();
     }
 });
