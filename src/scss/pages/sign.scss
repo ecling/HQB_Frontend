@@ -5,7 +5,7 @@
 footer{
 	border:none;
 }
-input[type="submit"]{
+button{
 	display: block;
 	width: 100%;
 	line-height: 35px;
@@ -77,7 +77,8 @@ input[type="submit"]{
 	}
 }
 .signIn{
-	input[type="submit"]{
+	position: relative;
+	.sign{
 		text-align: center;
 		background: #f1a42d;
 		border:1px solid #f1a42d;
@@ -102,19 +103,21 @@ input[type="submit"]{
 		font-size:14px;
 		font-weight: bold;
 		width: 100%;
-		background:#34598c;
 		text-align: center;
 		line-height: 35px;
 		color:white;
+		background: #385c8d;
 		border:1px solid #34598c;
-		&:hover{
-			transition:all .5s ease;
-			color:#34598c;
-			background:white;
-			border:1px solid #34598c;
-		}
+		border-radius: 3px;
+		position: relative;
 		span{
-
+			display: inline-block;
+			position: absolute;
+			height: 35px;
+			width: 35px;
+			left:78px;
+			top:0;
+			background : url(../images/sign.jpg) no-repeat;
 		}
 		&+p{
 			margin-top:10px;
@@ -136,6 +139,14 @@ input[type="submit"]{
 		}
 		}
 	}
+	.dashed{
+		height: 360px;
+		width:1px;
+		border-right: 1px dashed #cfcfcf;
+		position: absolute;
+		top:40px ;
+		right:-88px;
+	}
 }
 .NewAccount{
 	input[type="checkbox"]{
@@ -153,7 +164,7 @@ input[type="submit"]{
 			}
 		}
 	}
-	input[type="submit"]{
+	.register{
 		background:black;
 		border:1px solid black;
 		&:hover{

@@ -3,6 +3,7 @@
 @import '../layout/common.scss';
 @import '../layout/footer.scss';
 @import '../widget/progress.scss';
+@import '../widget/cart_right.scss';
 .colored
 {
     li:nth-child(2)
@@ -18,7 +19,7 @@
         display: none;
     }
 }
-
+select::-ms-expand { display: none; };
 .required
 {
     color: red;
@@ -208,7 +209,6 @@
                 -moz-appearance:none;
                 -webkit-appearance:none;
                 background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
-                padding-right: 14px;
             }
         }
         .city
@@ -222,7 +222,7 @@
             }
         }
     }
-    .ZIP
+    .zip
     {
         margin-bottom: 20px;
         label
@@ -252,6 +252,7 @@
     }
 }
 .popup{
+    display: none;
     position: fixed;
     top:10%;
     left:25%;
@@ -351,7 +352,7 @@
             }
         }
     }
-    .ZIP
+    .zip
     {
         margin-bottom: 20px;
         label
@@ -363,7 +364,7 @@
             width: 729px;
         }
     }
-    .btn{
+    button{
         display: block;
         margin: 10px auto;
         width: 245px;
@@ -401,6 +402,7 @@
 }
 .shippingOptions
 {
+    border-top: 1px solid #cfcfcf;
     width: 100%;
     margin-top:50px;
     li{
@@ -504,6 +506,7 @@
         border-radius: 3px;
     }
 }
+
 .rightD
 {
     float: right;
@@ -683,3 +686,4 @@
         }
     }
 }
+
