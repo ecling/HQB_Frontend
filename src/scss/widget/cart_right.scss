@@ -1,10 +1,13 @@
 .cart_right{
 	float:right;
-	width: 358px;
-	height:auto;
-	padding: 30px 20px;
-	box-shadow:0 0 5px #cfcfcf;
+	width: 398px;
 	border-radius:3px;
+	position: relative;
+	.fixbox{
+		width: 358px;
+		padding: 30px 20px;
+		box-shadow:0 0 5px #cfcfcf;
+	}
 	.rightHead,
 	#discount-coupon-form,#discount-points-form{
 		label{
