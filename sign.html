@@ -5,7 +5,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1468310058_2910545.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470014255_5016336.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/sign.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
@@ -19,32 +19,34 @@
 
 			<div class="signIn fl">
 				<h2>Sign In</h2>
-				<form id="search_mini_form" method="get" action="com/search/result/">
+				<form id="signIn_form" method="get" action="com/search/result/">
 					<p><label for="E-mail">Email Address</label></p>
-					<input type="text" name="" id="E-mail">
+					<input type="text" name="" id="E-mail" required="required">
 					<p><label for="password">password</label></p>
-					<input type="password" name="" id="password">
+					<input type="password" name="" id="password" required="required">
 					<p><input type="checkbox" name="" checked="checked"><span>Remember Me</span> <a href="#">Forgot Your Password?</a></p>
-					<input type="submit" name="" value="Sign In">
+					<button type="submit" class="button sign"> Sign In</button>
 					<span>---- OR ----</span>
-					<a href="#" class="facebook"><span class="iconfont icon-facebook-side"></span>Connect with facebook</a>
+					<a href="#" class="facebook"><span></span>Connect with facebook</a>
 					<p><span>10% OFF</span>First Order</p>
 					<p>Login First To Get <span>10 H Points</span></p>
+					<div class="dashed">
+					</div>
 				</form>
 			</div>
 	
 			<div class="NewAccount fl">
 				<h2>Sign In</h2>
-				<form id="search_mini_form" method="get" action="com/search/result/">
+				<form id="Register_form" method="get" action="com/search/result/">
 					<p><label for="Address">Email Address</label></p>
-					<input type="text" name="" id="Address">
+					<input type="text" name="" id="Address" required="required" >
 					<p><label for="password1">password</label></p>
-					<input type="password" name="" id="password1">
+					<input type="password" name="" id="password1" required="required">
 					<p><label for="password2">Confirm Password</label></p>
-					<input type="password" name="" id="password2">
+					<input type="password" name="" id="password2" required="required">
 					<p><input type="checkbox" name="" checked="checked"><label>I agree to highqualitybuy.com </label><a href="#">Terms And Conditions</a></p>
 					<p><input type="checkbox" name="" checked="checked"><label>Sign up for newsletter</label></p>
-					<input type="submit" name="" value="Register">
+					<button type="submit" class="button register">Register</button>
 				</form>
 			</div>
 		</div>

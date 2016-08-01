@@ -1,0 +1,132 @@
+.cart_right{
+	float:right;
+	width: 358px;
+	height:auto;
+	padding: 30px 20px;
+	box-shadow:0 0 5px #cfcfcf;
+	border-radius:3px;
+	.rightHead,
+	#discount-coupon-form,#discount-points-form{
+		label{
+			display: block;
+			font-size: 14px;
+			font-weight:bold;
+			margin-bottom: 10px;
+		}
+		input[type="text"]{
+			font-size: 14px;
+			width: 235px;
+			height: 35px;
+			margin-right:15px;
+			margin-bottom:10px;
+			border:1px solid #dfdfdf;
+			border-radius:3px;
+			text-indent: 10px;
+			&:hover{
+				transition: box-shadow .5s ease;
+				box-shadow:0 0 5px rgba(82, 168, 236, 1);
+				border:1px solid transparent;
+			}
+			&:focus{
+					border:1px solid rgba(82, 168, 236, 1);
+				}
+		}
+		input[type="submit"]{
+			width: 98px;
+			line-height: 35px;
+			text-align:center;
+			color:#eeb053;
+			background:white;
+			border:none;
+			border-radius:3px;
+			cursor: pointer;
+			font-size:18px;
+			border:1px solid #eeb053;
+			&:hover{
+				transition: all .5s ease;
+				background: #eeb053;
+				color:white;
+			}
+		}
+		p{
+			color:#bdbdbd;
+		}
+	}
+	.order_summary{
+		color:#666;
+		height: auto;
+		font-size: 14px;
+		padding-bottom:20px;
+		margin-top: 35px;
+		.grand{
+			margin-top:20px;
+			border-top:1px dashed #bdbdbd;
+			padding-top: 20px;
+			span{
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.price{
+				color: red;
+			}
+		}
+		p{
+			height: 20px;
+			span{
+				float: left;
+				height: 20px;
+				width: 60%;
+			}
+			.price{
+				float: right;
+				height: 20px;
+				width: 40%;
+				text-align: right;
+			}
+		}
+		.point{
+			float: right;
+		}
+	}
+	.payments{
+		margin-top:20px;
+		label{
+			line-height: 43px;
+			height: 43px;
+			width: 139px;
+			text-align: center;
+			float: left;
+		}
+		img{
+			float: left;
+		}
+		.place_you_order,
+		.proceed_to_checkout{
+			width: 100%;
+			height: 40px;
+			background:#df8d0a;
+			color:white;
+			font-size: 14px;
+			font-weight: bold;
+			border:none;
+			border-radius:3px;
+			margin-top:10px;
+			cursor: pointer;
+			line-height: 40px;
+			text-align: center;
+			border:1px solid #eeb053;
+			&:hover{
+				transition: all .5s ease;
+				background:white;
+				color:#eeb053;
+				border:1px solid #eeb053;
+			}
+		}
+		p{
+			font-style: normal;
+			width:100%;
+			text-align:center;
+			margin-top:20px;
+		}
+	}
+}

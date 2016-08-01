@@ -81,8 +81,9 @@
 							    	</select>
 							    </li>
 							</ul>
+
 						</div>
-						<div class=" ZIP fl">
+						<div class=" zip fl">
 							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
 						<a href="#">Privacy & Security Policy</a>
@@ -180,7 +181,7 @@
 					<textarea name="message" cols="50" rows="6" class="required-entry" placeholder="Enter here..." ></textarea>
 				</div>
 			</div>
-			<div class="rightD fl">
+			<div class="cart_right fl">
 					<div class="rightHead">	
 						<label for="Coupon">Coupon Code</label><br/>
 						<input type="text" name=""  id="Coupon" />
@@ -190,19 +191,19 @@
 						<input type="submit" name="" value="YES"/>
 						<p>You have 38 H point,Most provinces $0.38</p>
 					</div>
-					<div class="rightcenter">
-						<p><span>Subtotal</span><label>$9998.98</label></p>
-						<p><span>Coupon discount</span><label>$9998.98</label></p>
-						<p><span>H poian discount</span><label>$9998.98</label></p>
-						<p><span>All save</span><label>$9998.98</label></p>
-						<p><span>Shopping</span><label>$9998.98</label></p>
-						<p class="Grand"><strong>Grand Total</strong><span>$0.01</span></p>
+					<div class="order_summary">
+						<p><span>Subtotal</span><span class="price">$9998.98</span></p>
+						<p><span>Coupon discount</span><span class="price">$9998.98</span></p>
+						<p><span>H point discount</span><span class="price">$9998.98</span></p>
+						<p><span>All save</span><span class="price">$9998.98</span></p>
+						<p><span>Shopping</span><span class="price">$9998.98</span></p>
+						<p class="grand"><span>Grand Total</span><span class="price">$0.01</span></p>
 					</div>
-					<div class="rightfoot">
-						<input type="submit" value="Place Your Order">
-						<i>You will enjoy free shipping with another $20</i>
+					<div class="payments">
+						<button type="submit" class="button place_you_order">Place Your Order</button>
+						<p>You will enjoy free shipping with another $20</p>
 					</div>
-			</div>
+				</div>
 		</form>
 		<form action="demo_form.asp" method="POST" id="commentForm2">
 			<div class="popup">
@@ -253,10 +254,10 @@
 							    </li>
 							</ul>
 						</div>
-						<div class=" ZIP fl">
+						<div class="zip fl">
 							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
-						<input type="submit" name="" value="submit" class="btn">
+						<button type="submit" class="button popup_submit">submit</button>
 						<a href="#" class="Privacy">Privacy & Security Policy</a>
 					</div>
 			<div class="mask">	
