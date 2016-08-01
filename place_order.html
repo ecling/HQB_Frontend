@@ -37,7 +37,7 @@
 			<div class="leftD fl">
 				<div class="shippingAddress  fl" >
 					<h3>ShippingAddress</h3>
-					<div class="shipping-address-form" style="display: none;" >
+					<div class="shipping-address-form" >
 						<div class="Firstname clearfix">
 							<div class="Firstname_left">
 								 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
@@ -59,11 +59,12 @@
 							    <li>
 							    	<label><span class="required">*</span>Country / Region:</label>
 							    	<span></span>
-							    	<select>
-								    	  <option value ="volvo">Volvo</option>
-								    	  <option value ="saab">Saab</option>
-								    	  <option value="opel">Opel</option>
-								    	  <option value="audi">Audi</option>
+							    	<select id="jungle" name="jungle" title="Please select something!" required>
+							    		<option></option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
 							    	</select>
 							    </li>
 							    <li class="city">
@@ -73,11 +74,12 @@
 							    <li>
 							    	<label><span class="required">*</span>States:</label>
 							    	<span></span>
-							    	<select>
-								    	  <option value ="volvo">Volvo</option>
-								    	  <option value ="saab">Saab</option>
-								    	  <option value="opel">Opel</option>
-								    	  <option value="audi">Audi</option>
+							    	<select id="fruit" name="fruit" title="Please select something!" required>
+								    	<option></option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
 							    	</select>
 							    </li>
 							</ul>
@@ -89,7 +91,7 @@
 						<a href="#">Privacy & Security Policy</a>
 					</div>
 					<!-- customer has shipping address-->
-					<div class="address_list" >
+					<div class="address_list"  >
 						<div class="contentd">
 							<input type="radio" name="1">
 							<div class="fl">
@@ -128,21 +130,21 @@
 					<h3>Shipping method</h3>
 					<ul>
 					    <li>
-					    	<label for="Super">
-					    		<input type="radio" name="1" id="Super" />
+					    	<label for="gender_male">
+					    		<input  type="radio" id="gender_male" value="m" name="gender" checked="true"/>
 					    		<span class="title">Super Saver Shipping</span>
 					    		<span class="time">25 - 30 business days</span>
 					    		<span class="price">$0.00<span>
 					    	</label>
 					    	<label class="checkbox">
-					    	    	<input type="checkbox" name="">
+					    	    	<input type="checkbox" name="" >
 					    	    	<span class="Trackingnumber">Tracking number</span>
 					    	    	<span class="money">+$1.99</span>
 					    	</label>
 					    </li>
 					    <li>
 					    	<label for="Standard">
-					    		<input type="radio" name="1" id="Standard" />
+					    		<input  type="radio" id="Standard" value="f" name="gender"/>
 					    		<span class="title">Standard Shipping </span>
 					    		<span class="time">25 - 30 business days</span>
 					    		<span class="price">$0.00<span>
@@ -150,7 +152,7 @@
 					    </li>
 					    <li>
 					    	<label for="Expedited">
-					    		<input type="radio" name="1" id="Expedited" />
+					    		<input  type="radio" id="Expedited" value="f" name="gender"/>
 					    		<span class="title">Expedited Shipping</span>
 					    		<span class="time">25 - 30 business days</span>
 					    		<span class="price">$0.00<span>
@@ -159,17 +161,17 @@
 					    
 					</ul>
 				</div>
-				<div class="PaymentMethod fl">
+				<div class="PaymentMethod fl"  >
 					<h3>Payment Method</h3>
 					<ul>
 						<li>
-							<input type="radio" name="2" id="list1"><label for="list1"><img src="dist/images/place_order.png"></label>
+							<input type="radio" name="PaymentMethod" id="list1" checked="true"><label for="list1"><img src="dist/images/place_order.png"></label>
 						</li>
 						<li>
-							<input type="radio" name="2" id="list2"><label for="list2">32131</label>
+							<input type="radio" name="PaymentMethod" id="list2" ><label for="list2">32131</label>
 						</li>
 						<li>
-							<input type="radio" name="2" id="list3"><label for="list3">3513</label>
+							<input type="radio" name="PaymentMethod" id="list3" ><label for="list3">3513</label>
 						</li>
 					</ul>
 					
@@ -229,7 +231,7 @@
 							    <li>
 							    	<label><span class="required">*</span>Country / Region:</label>
 							    	<span></span>
-							    	<select>
+							    	<select id="jungle" name="jungle" title="Please select something!" required>
 							    		<option value=""></option>
 								    	<option value ="volvo">Volvo</option>
 								    	<option value ="saab">Saab</option>
@@ -244,7 +246,7 @@
 							    <li>
 							    	<label><span class="required">*</span>States:</label>
 							    	<span></span>
-							    	<select>
+							    	<select id="fruit" name="fruit" title="Please select something!" required>
 							    	 	<option value=""></option>
 								    	<option value ="volvo">Volvo</option>
 								    	<option value ="saab">Saab</option>

@@ -132,11 +132,8 @@ select::-ms-expand { display: none; };
     input[type='text']
     {
         font-size: 16px;
-
         height: 35px;
-
         text-indent: 5px;
-
         border: 1px solid #cfcfcf;
         border-radius: 2px;
         &:hover
@@ -159,18 +156,6 @@ select::-ms-expand { display: none; };
         {
             margin-right: 5px;
         }
-    }
-    p
-    {
-        font-size: 14px;
-
-        width: 342px;
-        margin: 10px 0;
-
-        word-wrap: break-word;
-        word-break: break-normal;
-
-        color: red;
     }
     .Firstname
     {
@@ -405,6 +390,13 @@ select::-ms-expand { display: none; };
     border-top: 1px solid #cfcfcf;
     width: 100%;
     margin-top:50px;
+    position: relative;
+    p{
+        position: absolute;
+        top:15px;
+        left: 0;
+        font-size: 20px;
+    }
     li{
         margin-bottom: 20px;
     }
@@ -450,6 +442,13 @@ select::-ms-expand { display: none; };
     width: 730px;
     margin-top: 30px;
     border-top: 1px solid #cfcfcf;
+    position: relative;
+    p{
+        position: absolute;
+        top:10px;
+        left: 0;
+        font-size: 20px;
+    }
     h3
     {
         font-size: 18px;
@@ -502,7 +501,7 @@ select::-ms-expand { display: none; };
 
         resize: none;
         text-indent: 5px;
-
+    
         border-radius: 3px;
     }
 }
