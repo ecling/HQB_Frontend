@@ -55,10 +55,9 @@
 							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 						</div>
 						<div class="selectd ">
-							<ul>
-							    <li>
-							    	<label><span class="required">*</span>Country / Region:</label>
-							    	<span></span>
+							<ul >
+							    <li class="fl">
+							    	<label for="jungle"><span class="required">*</span>Country / Region:</label>
 							    	<select id="jungle" name="jungle" title="Please select something!" required>
 							    		<option></option>
 							    	  	<option value ="volvo">Volvo</option>
@@ -67,13 +66,8 @@
 							    	  	<option value="audi">Audi</option>
 							    	</select>
 							    </li>
-							    <li class="city">
-							    	<label for="city"><span class="required">*</span>City</label>
-							    	<input type="text" name="city" id="city" required/>	
-							    </li>
-							    <li>
-							    	<label><span class="required">*</span>States:</label>
-							    	<span></span>
+							    <li class="fr">
+							    	<label for="fruit"><span class="required">*</span>States:</label>
 							    	<select id="fruit" name="fruit" title="Please select something!" required>
 								    	<option></option>
 							    	  	<option value ="volvo">Volvo</option>
@@ -83,13 +77,17 @@
 							    	</select>
 							    </li>
 							</ul>
-
 						</div>
+
+						<div >
+					    	<label for="city"><span class="required">*</span>City</label>
+					    	<input type="text" name="city" id="city" class="city" required/>	
+						</div>	  
 
 						<div class=" zip fl">
 							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
-						<a href="#">Privacy & Security Policy</a>
+						<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>
 					</div>
 					<!-- customer has shipping address-->
 					<div class="address_list" style="display:none;">
@@ -212,8 +210,10 @@
 				</div>
 			</div>
 		</form>
-		<form action="demo_form.asp" method="POST" id="commentForm2" style="display:none;">
-			<div class="popup">
+		
+		<form action="demo_form.asp" method="POST" id="commentForm2">
+			<div class=" shipping-address-form popup">
+
 						<span class="iconfont icon-close"></span>
 						<div class="Firstname clearfix">
 							<div class="Firstname_left">
@@ -232,40 +232,38 @@
 							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 						</div>
 						<div class="selectd ">
-							<ul>
-							    <li>
-							    	<label><span class="required">*</span>Country / Region:</label>
-							    	<span></span>
+							<ul >
+							    <li class="fl">
+							    	<label for="jungle"><span class="required">*</span>Country / Region:</label>
 							    	<select id="jungle" name="jungle" title="Please select something!" required>
-							    		<option value=""></option>
-								    	<option value ="volvo">Volvo</option>
-								    	<option value ="saab">Saab</option>
-								    	<option value="opel">Opel</option>
-								    	<option value="audi">Audi</option>
+							    		<option></option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
 							    	</select>
 							    </li>
-							    <li class="city">
-							    	<label for="city"><span class="required">*</span>City</label>
-							    	<input type="text" name="city" id="city" required/>	
-							    </li>
-							    <li>
-							    	<label><span class="required">*</span>States:</label>
-							    	<span></span>
+							    <li class="fr">
+							    	<label for="fruit"><span class="required">*</span>States:</label>
 							    	<select id="fruit" name="fruit" title="Please select something!" required>
-							    	 	<option value=""></option>
-								    	<option value ="volvo">Volvo</option>
-								    	<option value ="saab">Saab</option>
-								    	<option value="opel">Opel</option>
-								    	<option value="audi">Audi</option>
+								    	<option></option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
 							    	</select>
 							    </li>
 							</ul>
+						</div>
+						<div>
+					    	<label for="city"><span class="required">*</span>City</label>
+					    	<input type="text" name="city" id="city" class="city" required/>	
 						</div>
 						<div class="zip fl">
 							<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
 						</div>
 						<button type="submit" class="button popup_submit">submit</button>
-						<a href="#" class="Privacy">Privacy & Security Policy</a>
+						<a href="#" class="privacy privacy_popup">Privacy & Security Policy</a>
 					</div>
 			<div class="mask">	
 			</div>

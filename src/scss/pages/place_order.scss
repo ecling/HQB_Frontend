@@ -20,10 +20,6 @@
     }
 }
 select::-ms-expand { display: none; };
-.required
-{
-    color: red;
-}
 .leftD
 {
     width: 730px;
@@ -131,7 +127,7 @@ select::-ms-expand { display: none; };
     padding-left: 10px;
     input[type='text']
     {
-        font-size: 16px;
+        font-size: 13px;
         height: 35px;
         text-indent: 5px;
         border: 1px solid #cfcfcf;
@@ -151,7 +147,7 @@ select::-ms-expand { display: none; };
         height: 20px;
         margin-top: 10px;
 
-        color: #b0b0b0;
+        color: #666;
         span
         {
             margin-right: 5px;
@@ -183,10 +179,9 @@ select::-ms-expand { display: none; };
     .selectd
     {
         li{
-            float: left;
            select{
                 display: inline-block;
-                width: 215px;
+                width: 340px;
                 height: 35px;
                 border: 1px solid #cfcfcf;
                 text-indent: 5px;
@@ -196,16 +191,10 @@ select::-ms-expand { display: none; };
                 background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
             }
         }
-        .city
-        {
-            margin: 0 39px;
-            float: left;
-            border: none;
-            input
-            {
-                width: 215px;
-            }
-        }
+    }
+    .city
+    {
+        width: 100%;
     }
     .zip
     {
@@ -219,14 +208,10 @@ select::-ms-expand { display: none; };
             width: 729px;
         }
     }
-    a
+    .privacy
     {
         display: block;
-        float: right;
-
         width: 135px;
-        margin: 0 auto;
-
         color: #666;
         border-bottom: 1px solid #666;
         &:hover
@@ -235,15 +220,16 @@ select::-ms-expand { display: none; };
             border-bottom: 1px solid #eeb053;
         }
     }
+    .privacy.privacy_address{
+        float: right;
+    }
 }
 .popup{
     display: none;
     position: fixed;
     top:10%;
-    left:25%;
-    width: 730px;
+    left:25%;  
     margin-bottom: 45px;
-    padding-left: 10px;
     box-shadow:1px 1px  10px #333;
     padding: 35px 25px;
     z-index: 1003;
@@ -254,100 +240,6 @@ select::-ms-expand { display: none; };
         right: -15px;
         font-size: 30px;
         cursor: pointer;
-    }
-    input[type='text']
-    {
-        font-size: 16px;
-
-        height: 35px;
-
-        text-indent: 5px;
-
-        border: 1px solid #cfcfcf;
-        border-radius: 2px;
-        &:hover
-        {
-            border: 1px solid transparent;
-            box-shadow: 0 0 5px rgba(82, 168, 236, 1);
-        }
-    }
-    label
-    {
-        font-size: 14px;
-
-        display: block;
-
-        height: 20px;
-        margin-top: 10px;
-
-        color: #b0b0b0;
-        span
-        {
-            margin-right: 5px;
-        }
-    }
-    .Firstname
-    {
-        input
-        {
-            width: 340px;
-        }
-        .Firstname_right
-        {
-            float: right;
-        }
-        .Firstname_left
-        {
-            float: left;
-        }
-    }
-    .AddressLine2,
-    .AddressLine1
-    {
-        input
-        {
-            width: 100%;
-        }
-    }
-    .selectd
-    {
-        li{
-            float: left;
-            select{
-                display: inline-block;
-                width: 215px;
-                height: 35px;
-                border: 1px solid #cfcfcf;
-                text-indent: 5px;
-                appearance:none;
-                -moz-appearance:none;
-                -webkit-appearance:none;
-                background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
-                padding-right: 14px;
-            }
-        }   
-        .city
-        {
-            margin: 0 39px;
-            float: left;
-            border: none;
-            input
-            {
-                width: 215px;
-            }
-        }
-    }
-    .zip
-    {
-        margin-bottom: 20px;
-        label
-        {
-            margin-top: 10px;
-        }
-        input
-        {
-            width: 729px;
-        }
     }
     button{
         display: block;
@@ -360,25 +252,15 @@ select::-ms-expand { display: none; };
         font-size: 14px;
         font-weight: bold;
         border-radius: 3px;
-        cursor: pointer;
         &:hover{
             color:#eeb035;
             border: 1px solid #eeb035;
             background:white;
         }
     }
-    .Privacy
+    .privacy.privacy_popup
     {
-        display: block;
-        width: 135px;
         margin: 0 auto;
-        color: #666;
-        border-bottom: 1px solid #666;
-        &:hover
-        {
-            color: #eeb053;
-            border-bottom: 1px solid #eeb053;
-        }
     }
 }
 .shippingAddress
@@ -482,26 +364,22 @@ select::-ms-expand { display: none; };
 {
     width: 730px;
     margin-top: 30px;
-
     border-top: 1px solid #cfcfcf;
     p
     {
         font-size: 14px;
         line-height: 20px;
-
         margin-bottom: 20px;
-
         color: #aaa;
     }
     textarea
     {
         font-size: 14px;
-
+        overflow-y:hidden;
         width: 100%;
-
+        border: 1px solid #cfcfcf;
         resize: none;
         text-indent: 5px;
-    
         border-radius: 3px;
     }
 }

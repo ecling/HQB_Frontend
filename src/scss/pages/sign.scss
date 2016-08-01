@@ -15,7 +15,9 @@ button{
 	text-align: center;
 	border-radius:3px;
 	cursor: pointer;
-	margin-top:30px;
+}
+.sign{
+	margin-top:50px;
 }
 .content{
 	padding-left:200px;
@@ -29,14 +31,13 @@ button{
 		font-weight: bold;
 		border-bottom:1px solid #cfcfcf;
 		padding-bottom:3px;
-		margin-bottom: 40px;
-	}
-	p{
-		margin-bottom: 10px;
+		margin-bottom: 30px;
 	}
 	label{
+		display:block;
 		font-size: 14px;
 		color:#818181;
+		margin-top: 20px;
 	}
 	input[type="password"],
 	input[type="text"]{
@@ -46,6 +47,7 @@ button{
 		font-size: 16px;
 		text-indent: 10px;
 		border-radius:3px;
+		margin-top:10px;
 		&:hover{
 			box-shadow:0 0 5px rgba(82, 168, 236, 1);
 		}
@@ -53,13 +55,10 @@ button{
 			border: 1px solid rgba(82, 168, 236, 1) ;
 		}
 	}
-	input[type="text"]{
-		margin-bottom: 25px;
+	.rememberme{
+		margin-top:10px;
 	}
-	input[type="password"]{
-		margin-bottom:10px;
-	}
-	input[type="checkbox"]{
+	.remember{
 		&+span{
 			color:#aaa;
 			margin-left:10px;
@@ -94,7 +93,7 @@ button{
 			font-size:14px;
 			font-weight: bold;
 			width: 100%;
-			line-height: 50px;
+			line-height: 60px;
 			text-align: center;
 		}
 	}
@@ -149,11 +148,15 @@ button{
 	}
 }
 .NewAccount{
+	p{
+		margin-top:10px;
+	}
 	input[type="checkbox"]{
-		&+label{
+		&+span{
 			color:#aaa;
 			margin-left:10px;
 			&+a{
+				margin-left: 3px;
 				color:#aaa;
 				border-bottom:1px solid #aaa;
 				&:hover{
@@ -167,6 +170,7 @@ button{
 	.register{
 		background:black;
 		border:1px solid black;
+		margin-top:37px;
 		&:hover{
 			transition: all .5s ease;
 			border:1px solid black;
