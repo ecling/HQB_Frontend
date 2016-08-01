@@ -19,7 +19,7 @@
         display: none;
     }
 }
-
+select::-ms-expand { display: none; };
 .required
 {
     color: red;
@@ -209,7 +209,6 @@
                 -moz-appearance:none;
                 -webkit-appearance:none;
                 background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
-                padding-right: 14px;
             }
         }
         .city
