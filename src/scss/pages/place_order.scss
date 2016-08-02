@@ -31,7 +31,6 @@ select::-ms-expand { display: none; };
         margin-top: -10px;
         margin-bottom: 30px;
         margin-left: -10px;
-
         background: white;
     }
 }
@@ -82,12 +81,10 @@ select::-ms-expand { display: none; };
     {
         height: 100px;
         padding-bottom: 10px;
-
         border-bottom: 1px dashed #666;
         p
         {
             height: 20px;
-
             color: #666;
             label
             {
@@ -97,7 +94,6 @@ select::-ms-expand { display: none; };
             {
                 margin-right: 5px;
                 margin-left: 500px;
-
                 color: #aaa;
             }
             a
@@ -119,7 +115,6 @@ select::-ms-expand { display: none; };
     filter: alpha(opacity=60);
     -moz-opacity: .5;
 }
-
 .shipping-address-form
 {
     width: 730px;
@@ -150,6 +145,7 @@ select::-ms-expand { display: none; };
         color: #666;
         span
         {
+            color:red;
             margin-right: 5px;
         }
     }
@@ -179,6 +175,7 @@ select::-ms-expand { display: none; };
     .selectd
     {
         li{
+            width: 342px;
            select{
                 display: inline-block;
                 width: 340px;
@@ -189,6 +186,9 @@ select::-ms-expand { display: none; };
                 -moz-appearance:none;
                 -webkit-appearance:none;
                 background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
+                .required-entry{
+                    width: 340px;
+                }
             }
         }
     }
@@ -334,13 +334,11 @@ select::-ms-expand { display: none; };
     h3
     {
         font-size: 18px;
-
         width: 170px;
         height: 10px;
         margin-top: -10px;
         margin-bottom: 30px;
         margin-left: -10px;
-
         color: #333;
         background: white;
     }
@@ -381,186 +379,6 @@ select::-ms-expand { display: none; };
         resize: none;
         text-indent: 5px;
         border-radius: 3px;
-    }
-}
-
-.rightD
-{
-    float: right;
-    position: relative;
-    width: 358px;
-    height: auto;
-    padding: 30px 20px;
-
-    border-radius: 3px;
-    box-shadow: 0 0 5px #cfcfcf;
-    .fixbox{
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .rightHead
-    {
-        label
-        {
-            font-size: 14px;
-            font-weight: bold;
-
-            display: block;
-
-            height: 10px;
-            margin-top: 10px;
-        }
-        input[type='text']
-        {
-            font-size: 14px;
-
-            width: 235px;
-            height: 35px;
-            margin-right: 20px;
-
-            text-indent: 10px;
-
-            border: 1px solid #dfdfdf;
-            border-radius: 3px;
-            &:hover
-            {
-                border: 1px solid transparent;
-                box-shadow: 0 0 5px rgba(82, 168, 236, .8);
-            }
-        }
-        input[type='submit']
-        {
-            font-size: 18px;
-            line-height: 35px;
-
-            width: 98px;
-            height: 35px;
-
-            cursor: pointer;
-            text-align: center;
-
-            color: #eeb053;
-            border: none;
-            border: 1px solid #eeb053;
-            border-radius: 3px;
-            background: white;
-            &:hover
-            {
-                color: white;
-                background: #eeb053;
-            }
-        }
-        p
-        {
-            margin-top: 10px;
-
-            color: #bdbdbd;
-        }
-    }
-    .rightcenter
-    {
-        font-size: 14px;
-
-        height: auto;
-        margin-top: 35px;
-
-        color: #666;
-        p
-        {
-            height: 20px;
-        }
-        span
-        {
-            float: left;
-
-            width: 60%;
-            height: 20px;
-        }
-        label
-        {
-            float: right;
-
-            width: 40%;
-            height: 20px;
-
-            text-align: right;
-        }
-    }
-    .grand
-    {
-        font-size: 14px;
-
-        margin-top: 20px;
-        padding-top: 20px;
-
-        color: #333;
-        border-top: 1px dashed #bdbdbd;
-        span
-        {
-            font-size: 20px;
-
-            float: right;
-
-            width: auto;
-
-            color: red;
-        }
-    }
-    .rightfoot
-    {
-        p
-        {
-            font-size: 16px;
-            strong
-            {
-                font-weight: bold;
-            }
-            span
-            {
-                font-weight: bold;
-
-                float: right;
-
-                color: red;
-            }
-        }
-        input
-        {
-            font-size: 14px;
-            font-weight: bold;
-
-            width: 100%;
-            height: 40px;
-            margin-top: 25px;
-
-            cursor: pointer;
-
-            color: white;
-            border: none;
-            border-radius: 3px;
-            background: #df8d0a;
-            &:hover
-            {
-                cursor: pointer;
-
-                color: #eeb053;
-                border: 1px solid #eeb053;
-                background: white;
-            }
-        }
-        i
-        {
-            font-size: 14px;
-            font-style: normal;
-
-            display: block;
-
-            width: 100%;
-            margin-top: 20px;
-
-            text-align: center;
-        }
     }
 }
 
