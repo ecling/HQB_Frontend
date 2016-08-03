@@ -186,9 +186,9 @@ select::-ms-expand { display: none; };
                 -moz-appearance:none;
                 -webkit-appearance:none;
                 background:url(../images/place_order_03.jpg) no-repeat scroll 93% center transparent;
-                .required-entry{
-                    width: 340px;
-                }
+            }
+            input[name="states"]{
+                    width: 338px;
             }
         }
     }

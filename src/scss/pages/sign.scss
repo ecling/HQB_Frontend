@@ -16,16 +16,15 @@ button{
 	border-radius:3px;
 	cursor: pointer;
 }
-.sign{
-	margin-top:50px;
-}
 .content{
-	padding-left:200px;
+	width:960px;
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
+
 .signIn,.NewAccount{
 	width: 388px;
 	margin-top:75px;
-	margin-right:175px;
 	h2{
 		font-size: 24px;
 		font-weight: bold;
@@ -33,11 +32,32 @@ button{
 		padding-bottom:3px;
 		margin-bottom: 30px;
 	}
-	label{
+	.label{
 		display:block;
 		font-size: 14px;
-		color:#818181;
+		color:#333;
 		margin-top: 20px;
+	}
+	.labeld{
+		display:block;
+		font-size: 12px;
+		color:#aaa;
+		margin-top: 10px;
+		input[type="checkbox"]{
+			margin-right: 5px;
+		}
+		a{
+			color:#aaa;
+			font-size: 12px;
+			border-bottom: 1px solid #aaa;
+			&:hover{
+				color:#f1a42d;
+				border-bottom: 1px solid #f1a42d;
+			}
+		}
+		.Forgot{
+			float: right;
+		}
 	}
 	input[type="password"],
 	input[type="text"]{
@@ -55,47 +75,28 @@ button{
 			border: 1px solid rgba(82, 168, 236, 1) ;
 		}
 	}
-	.rememberme{
-		margin-top:10px;
-	}
-	.remember{
-		&+span{
-			color:#aaa;
-			margin-left:10px;
-			&+a{
-				float: right;
-				color:#aaa;
-				border-bottom:1px solid #aaa;
-				&:hover{
-					transition: all .5s ease;
-					color:#f1a42d;
-					border-bottom:1px solid #f1a42d;
-				}
-			}
-		}
-	}
 }
 .signIn{
+	margin-right:175px;
 	position: relative;
 	.sign{
 		text-align: center;
 		background: #f1a42d;
 		border:1px solid #f1a42d;
-
+		margin-top:50px;
 		&:hover{
-			transition: all .5s ease;
 			background:white ;
 			border:1px solid #f1a42d;
 			color:#f1a42d;
 		}
-		&+span{
-			display: block;
-			font-size:14px;
-			font-weight: bold;
-			width: 100%;
-			line-height: 60px;
-			text-align: center;
-		}
+	}
+	.or{
+		display: block;
+		font-size:14px;
+		font-weight: bold;
+		width: 100%;
+		line-height: 60px;
+		text-align: center;
 	}
 	.facebook{
 		display: block;
@@ -118,69 +119,39 @@ button{
 			top:0;
 			background : url(../images/sign.jpg) no-repeat;
 		}
-		&+p{
-			margin-top:10px;
-			width: 100%;
-			text-align:center;
-			font-size:14px;
-			font-weight: bold;
-			span{
-				color:red;
-			}
-			&+p{
-			width: 100%;
-			text-align:center;
-			font-size:14px;
-			font-weight: bold;
-			span{
-				color:red;
-			}
-		}
+	}
+	p{
+		margin-top:10px;
+		width: 100%;
+		text-align:center;
+		font-size:14px;
+		font-weight: bold;
+		span{
+			color:red;
 		}
 	}
 	.dashed{
-		height: 360px;
-		width:1px;
-		border-right: 1px dashed #cfcfcf;
-		position: absolute;
-		top:40px ;
-		right:-88px;
+	height: 360px;
+	width:1px;
+	border-right: 1px dashed #cfcfcf;
+	position: absolute;
+	top:40px ;
+	right:-88px;
 	}
 }
-.NewAccount{
-	p{
-		margin-top:10px;
-	}
-	input[type="checkbox"]{
-		&+span{
-			color:#aaa;
-			margin-left:10px;
-			&+a{
-				margin-left: 3px;
-				color:#aaa;
-				border-bottom:1px solid #aaa;
-				&:hover{
-					transition: all .5s ease;
-					color:#f1a42d;
-					border-bottom:1px solid #f1a42d;
-				}
-			}
-		}
-	}
-	.register{
-		background:black;
-		border:1px solid black;
-		margin-top:37px;
-		&:hover{
-			transition: all .5s ease;
-			border:1px solid black;
-			background:white;
-			color:black;
 
-		}
+.register{
+	background:black;
+	border:1px solid black;
+	margin-top:37px;
+	&:hover{
+		border:1px solid black;
+		background:white;
+		color:black;
+
 	}
 }
+
 footer{
-	line-height:300px;
 	text-align:center;
 }
