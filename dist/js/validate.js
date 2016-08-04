@@ -42,4 +42,26 @@ jQuery(document).ready(function($) {
 	 	},
 
 	});
+	$("#editPassword_form").validate({
+		errorElement: "em",
+		rules: {
+	 	   password: {
+	 	    required: true,
+	 	    minlength: 8
+	 	   },
+	 	   newpassword:{
+	 	   	required: true,
+	 	    minlength: 8
+	 	   },
+	 	   confirm_password: {
+	 	    required: true,
+	 	    equalTo: "#password"
+	 	    },
+	 	},
+	 	messages: {
+	 		newpassword:"Please enter your new password.",
+	 		password:"Please enter your password.",
+	 		confirm_password: "Enter your password again.",
+	 	},
+	});
 });

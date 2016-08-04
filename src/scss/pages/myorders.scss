@@ -1,7 +1,9 @@
 @import "../widget/color.scss";
+@import "../widget/page.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
-@import "../layout/footer.scss";
+
+/* My Orders CSS */
 .myaccount{
 	width: 300px;
 	padding-top: 25px;
@@ -33,12 +35,20 @@
 			}
 			a{
 				font-size: 16px;
+				&:hover{
+					font-weight: bold;
+					color:#eeb053;
+				}
 			}
+		}
+		.myaccount_list_style{
+			font-weight: bold;
+			color:#eeb053;
 		}
 	}
 }
 .myorders{
-	padding-top: 50px;
+	padding-top: 35px;
 	width: 900px;
 	.myorders_head{
 		width: 100%;
@@ -56,13 +66,14 @@
 		top:-10px;
 		left:45px;
 		padding-top: 20px;
-		a{
+		.touxiang{
 			display: block;
 			width: 100px;
 			height: 100px;
 			border-radius: 50%;
 			overflow: hidden;
 			margin:0 auto 10px;
+			background:#eeb053;
 		}
 		p{
 			font-weight: bold;
@@ -76,6 +87,7 @@
 		.profile{
 			font-size: 12px;
 			color: #aaa;
+			height: 20px;
 			font-weight:normal;
 		}
 		i{
@@ -114,6 +126,9 @@
 			height: 30px;
 			color:#333;
 			font-size: 14px;
+			&:hover{
+				color:#eeb053;
+			}
 		}
 		.iconfont{
 			font-size: 20px;
@@ -128,24 +143,322 @@
 		height: 230px;
 		background: #f0f0f0;
 		padding: 20px;
+		box-sizing:border-box;
 		position: absolute;
 		top:-10px;
 		right: 0;
+		li{
+			width: 50%;
+			height: 50%;
+			text-align: center;
+			font-size: 15px;
+			font-weight: bold;
+			color:#333;
+			float: left;
+			padding-bottom: 20px;
+			.qty{
+				color:red;
+			}
+			.tubiao{
+				img{
+					margin:15px auto;
+				}
+			}
+		}
+		li:nth-child(2),
+		li:nth-child(1){
+			&:hover{
+				img{
+					transition:transform 1s ease-in-out;
+					transform:rotate(720deg);
+				}
+			}
+		}
+		li:nth-child(3),
+		li:nth-child(4){
+			&:hover{
+				img{
+					transition:transform 1s ease-in-out;
+					transform:rotateY(720deg);
+				}
+			}
+		}
+		i{
+			background: #eaeaea;
+			position: absolute;
+		}
+		.heng{
+			width: 280px;
+			height: 1px;
+			top:115px;
+			left: 20px;
+		}
+		.shu{
+			height: 190px;
+			width: 1px;
+			top:20px;
+			left:160px;
+		}
 	}
-	li{
-		width: 50%;
-		height: 50%;
+	.myorders_foot{
+		width: 100%;
+		height: 300px;
+		background: #f8f7f5;
+		margin-top:45px;
 		text-align: center;
-		font-size: 15px;
-		font-weight: bold;
-		color:#333;
+		.social{
+			padding-left: 35%;
+			li{
+				float: left;
+				margin-right: 15px;
+				.iconfont{
+					font-size: 40px;
+					border-radius: 50%;
+					&:hover{
+						color:red;
+					}
+				}
+			}
+		}
+		p{
+			margin: 10px 0 ;
+		}
+		.dizhi{
+			border: 1px solid #cfcfcf;
+			padding:5px;
+			background: white;
+		}
+		.copy{
+			display: inline-block;
+			width: 40px;
+			line-height: 26px;
+			background: #eeb053;
+			color:white;
+		}
+	}
+}
+/* My Orders CSS  --end--*/
+
+/* My Wishlist css */
+.mywishlist_list{
+	margin-top:20px;
+	background: #f8f7f5;
+	padding:20px 0 70px 20px;
+	li{
 		float: left;
-		.qty{
+		width: 418px;
+		background: white;
+		margin:0 20px 20px 0;
+		border:1px solid  transparent;
+		position: relative;
+		&:hover{
+			transition:all .3s ease;
+			border:1px solid  #eeb053;
+		}
+	}
+	.images_a{
+		display: block;
+		width:146px;
+		height: 146px;
+		background: green;
+		float: left;
+		margin-right: 15px;
+	}
+	.biaoti_a{
+		display: inline-block;
+		color:333;
+		margin-top:10px;
+		&:hover{
+			color:#eeb053;
+		}
+	}
+	.price{
+		display: inline-block;
+		color:red;
+		font-size: 18px;
+		font-weight: bold;
+		margin:15px 10px 10px 0;
+	}
+	.yuanjia{
+		color:#aaa;
+		text-decoration: line-through;
+	}
+	.buynow{
+		position: absolute;
+		bottom: 30px;
+		right: 20px;
+		display: block;
+		width: 105px;
+		line-height: 30px;
+		background: #eeb053;
+		color:white;
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+		border: 1px solid #eeb053;
+		border-radius: 3px;
+		&:hover{
+			color:#eeb053;
+			border: 1px solid #eeb053;
+			background: white;
+		}
+	}
+	.delete{
+		display: block;
+		position: absolute;
+		bottom:5px;
+		left: 160px;
+		&:hover{
 			color:red;
 		}
-		.tubiao{
-			
+		.iconfont{
+			margin-right: 10px;
 		}
 	}
-
 }
+.pager{
+	margin-top:- 50px;
+	margin-right: 10px;
+}
+/* My Wishlist css --end -- */
+
+/*Account Setting css*/
+.Account_Setting_tab{
+	background: #f8f7f5;
+	margin-top: 10px;
+	padding-bottom: 60px;
+	ul{
+		 padding-left:155px;
+		 padding-top: 30px;
+		li{
+			width: 200px;
+			line-height: 35px;
+			float: left;
+			text-align: center;
+			background: #ededed;
+			margin-right: 10px;
+			cursor: pointer;
+			.tab_span{
+				font-size: 14px;
+				font-weight: bold;
+				color:#333;
+			}
+			.iconfont{
+				font-size: 18px;
+				margin-right: 10px
+			}
+		}
+		.tab_style{
+			background: white;
+			span{
+				color:#eeb053;
+			}
+		}
+	}
+}
+.Account-Setting-font{
+	box-sizing:border-box;
+	width: 325px;
+	height: 476px;
+	background: #f8f7f5;
+	padding-left: 155px;
+	.iconfont{
+		display: block;
+		color:#dfdfdf;
+		font-size: 100px;
+		margin-bottom: 15px;
+		&+label{
+			color:#818181;
+			font-weight: bold;
+			margin-left: 10px;
+		}
+	}
+}
+.Account-Setting-form{
+	width: 575px;
+	height: 476px;
+	background: #f8f7f5;
+	.labeld{
+		display: block;
+		color:#818181;
+		margin-bottom: 5px;
+		margin-top: 15px;
+	}
+	.ms{
+		display: inline-block;
+		margin-top:10px;
+		margin-left: 5px;
+		margin-right: 20px;
+		color:#818181;
+		margin:10px 20px 0 5px;
+	}
+	select,
+	input[type="text"],
+	input[type="password"]{
+		display: block;
+		width: 450px;
+		height: 35px;
+		line-height: 35px;
+		border: 1px solid #dfdfdf;
+		border-radius: 3px;
+		text-indent: 5px;
+	}
+	.Setting_submit{
+		margin-top: 20px;
+		width: 215px;
+		height: 35px;
+		background: #eeb053;
+		color:white;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 35px;
+		text-align: center;
+		border: 1px solid #eeb053;
+		margin-bottom: 60px;
+	}
+}
+/*Account Setting css --end--*/
+
+/*eEdit Password  css */
+.editPassword{
+	background: #f8f7f5;
+	padding:70px 220px;
+	margin-top: 10px;
+	label{
+		display: block;
+		color:#aaa;
+		margin-bottom: 5px;
+		margin-bottom: 15px;
+	}
+	input{
+		width: 450px;
+		height: 35px;
+		border: 1px solid #cfcfcf;
+		border-radius: 3px;
+		text-indent: 5px;
+	}
+	.change{
+		display: block;
+		width: 215px;
+		height: 35px;
+		background: #eeb053;
+		color:white;
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+		border: 1px solid #eeb053;
+		margin-top: 20px;
+	}
+}
+/*eEdit Password  css  --end--*/
+
+/*save for later css*/
+.saveforlaterSize{
+	p{
+		height:15px;
+		span{
+			margin-right: 5px;
+		}
+	}
+}
+/*save for later css  --end --*/
