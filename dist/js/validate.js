@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
 	 		password:"Please enter your password.",
 	 	},
 	});
-
 	$("#register_form").validate({errorElement: "em",	
 	 	errorElement: "em",
 	 	rules: {
@@ -40,17 +39,50 @@ jQuery(document).ready(function($) {
 	 		password:"Please enter your password.",
 	 		confirm_password: "Enter your password again.",
 	 	},
-
 	});
-	$("#editPassword_form").validate({
-		errorElement: "em",
+	$("#account_setting_form").validate({errorElement: "p",
 		rules: {
-	 	   password: {
+	 	   email: {
+	 	    required: true,
+	 	    email: true
+	 	   },
+	 	   username:{
+	 	   	required: true,
+	 	   },
+	 	   number:{
+	 	   	required: true,
+	 	   },
+	 	},
+	 	messages: {
+	 		email: "Please enter a valid email address.",
+	 		username:"Please enter your username",
+	 		number:"Please enter your PhoneNumber",
+	 	},
+	});
+	$("#change_email_form").validate({errorElement: "p",
+		rules: {
+	 	   email: {
+	 	    required: true,
+	 	    email: true,
+	 	   },
+	 	   confirm_emails:{
+	 	   	required: true,
+	 	    email: true,
+	 	   },
+	 	},
+	 	messages:{
+	 		email: "Please enter a valid email address.",
+	 		confirm_emails:"Please enter a valid email address again.",
+	 	},
+	});
+	$("#change_password_form").validate({errorElement: "p",
+		rules: {
+	 	   password1: {
 	 	    required: true,
 	 	    minlength: 8
 	 	   },
-	 	   newpassword:{
-	 	   	required: true,
+	 	   password: {
+	 	    required: true,
 	 	    minlength: 8
 	 	   },
 	 	   confirm_password: {
@@ -59,7 +91,7 @@ jQuery(document).ready(function($) {
 	 	    },
 	 	},
 	 	messages: {
-	 		newpassword:"Please enter your new password.",
+	 		password1: "Please enter you original password.",
 	 		password:"Please enter your password.",
 	 		confirm_password: "Enter your password again.",
 	 	},

@@ -19,7 +19,7 @@
         display: none;
     }
 }
-select::-ms-expand { display: none; };
+
 .leftD
 {
     width: 730px;
@@ -127,11 +127,6 @@ select::-ms-expand { display: none; };
         text-indent: 5px;
         border: 1px solid #cfcfcf;
         border-radius: 2px;
-        &:hover
-        {
-            border: 1px solid transparent;
-            box-shadow: 0 0 5px rgba(82, 168, 236, 1);
-        }
     }
     label
     {

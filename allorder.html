@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Account Setting</title>
+	<title>All Orders</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470299933_3304758.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470218939_0189443.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/myorder.js"></script>
-		<script type="text/javascript" src="dist/js/validate.js"></script>
+		<script type="text/javascript" src="dist/js/allorders.js"></script>
 	</head>
 	<body>
 		<header>
@@ -567,89 +566,179 @@
 					My Account
 				</div>
 				<ul class="myaccount_list">
-					<li><span></span><a href="#">My Orders</a></li>
+					<li><span></span><a href="#" class="myaccount_list_style">My Orders</a></li>
 					<li><span></span><a href="#">H Points</a></li>
-					<li><span></span><a href="#">My Wishlist</a></li>	 
+					<li><span></span><a href="#">My Wishlist</a></li>	
 					<li><span></span><a href="#">Order Reviews</a></li>
 					<li><span></span><a href="#">My Invitation</a></li>
-					<li><span></span><a href="#" class="myaccount_list_style">Account Setting</a></li>
+					<li><span></span><a href="#">Account Setting</a></li>
 					<li><span></span><a href="#">Address Book</a></li>
+					<li><span></span><a href="#">Edit Password</a></li>
 					<li><span></span><a href="#">Save For Later</a></li>
 				</ul>
 			</div>	
-			<div class="myorders fr">
-			 	<h2>Account Setting</h2>
-			 	<div class="account_setting_tab">
-			 		<ul>
-			 			<li class="tab_style"><span class="iconfont icon-jichushezhi"></span><span class="tab_span">Account Setting</span></li>
-			 			<li><span class="iconfont icon-youjian"></span><span class="tab_span">Change Email</span></li>
-			 			<li><span class="iconfont icon-mima"></span><span class="tab_span">Change Password</span></li>
-			 		</ul>
-			 	</div>
-			 	<div class="account_setting_conter">
-					<div class="account-setting">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-touxiangzhuanhuan"></span>
-			 				<a href="#" title="" class="changeavatar">Change Avatar</a>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="account_setting_form" method="post" action="">
-								<label for="username" class="labeld">Username</label>
-								<input type="text" name="username" id="username" required />
-								<input type="radio" name="radio" id="ms" checked="checked">
-								<label for="ms" class="ms">Ms.</label>
-								<input type="radio" name="radio" id="mr">
-								<label for="mr" class="ms">Mr.</label>
-								<label for="email" class="labeld">Email</label>
-								<input type="text" name="email" id="email">
-								<label for="birthday" class="labeld">Birthday</label>
-								<select name=""	id="birthday" class="birthday">
-									<option value="">1</option>
-									<option	>2</option>	
-								</select>
 
-								<label for="country" class="labeld">Country</label>
-								<select name="" id="country" class="country" >
-									<option value="">1</option>
-									<option	>2</option>
-								</select>
-								<label for="phone" class="labeld">Phone</label>
-								<input type="text" name="number" id="phone" required>
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
+			<div class="myorders fr">
+				<div class="allorders_navbar">
+					<h2>My Orders</h2>
+					<a href="#">Shipped(<span class="shuliang">0</span>)</a>				
+					<a href="#">Paid(<span class="shuliang">0</span>)</a>
+					<a href="#" class="navbar_a_style">All Orders(<span class="shuliang">0</span>)</a>
+				</div>
+				<div class="allorders_list">
+					<div class="allorders_list_head">
+						<ul>
+							<li>Order NO.</li>
+							<li class="head_status">Products</li>
+							<li class="head_status">Status</li>
+							<li class="head_status" >Date</li>
+							<li class="head_status">Price</li>
+							<li class="head_status">Action</li>
+						</ul>
 					</div>
-					<div class=change-email" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-aite"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_email_form" method="post" action="">
-								<label for="Email" class="labeld">Email</label>
-								<input type="text" name="email" id="Email" required>
-								<label for="Confirm" class="labeld">Confirm Email</label>
-								<input type="text" name="confirm_emails" id="Confirm" class="{required:true,minlength:5,equalTo:'#Email'}">
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class="change-password" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-yaochi"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_password_form" method="post" action="">
-								<label for="Current" class="labeld">Current Password</label>
-								<input type="text" name="password1" id="Current"  required/>
-								<label for="password1" class="labeld">New Password</label>
-								<input type="text" name="password" id="password" class="{required:true,minlength:5}" >
-								<label for="password2" class="labeld">Confirm Password</label>
-								<input type="password" name="confirm_password" class="{required:true,minlength:5,equalTo:'#password'}" id="password2" >
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-			 	</div>
+					<ul class="allorders_list_ul">
+						<li class="status_waitingforpayment">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Waiting for Payment </li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Checkout</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+									<a href="#" title="" class="cancelorder">Cancel Order</a>
+								</li>
+							</ul>
+						</li>
+						<li class="status_waitingforshipment">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Waiting for Shipment </li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button paid">Paid</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+									<a href="#" title="" class="cancelorder">Cancel Order</a>
+								</li>
+							</ul>
+						</li>
+						<li class="status_waitingforshipped">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Shipped</li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Received</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+								</li>
+							</ul>
+						</li>
+						<li class="status_waitingforreviewed">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Reviewed </li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Received</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+								</li>
+							</ul>
+						</li>
+						<li class="status_waitingforcompleted">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img" >
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Completed </li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Buy again</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+								</li>
+							</ul>
+						</li>
+						<li class="status_waitingforcancled">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-xiangzuo"></a>
+									<a href="#" title="" class="iconfont icon-you"></a>
+								</li>
+								<li class="status">Cancled</li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Cancled</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>	
 	</body>

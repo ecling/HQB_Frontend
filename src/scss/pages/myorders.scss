@@ -2,7 +2,29 @@
 @import "../widget/page.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
-
+/*common css*/
+.button{
+	background: #eeb053;
+	color:white;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #eeb053;
+	border-radius: 3px;
+	&:hover{
+		color:#eeb053;
+		border: 1px solid #eeb053;
+		background: white;
+	}
+}
+select,
+input[type="text"],
+input[type="password"]{
+	display: block;
+	width: 450px;
+	height: 35px;
+	line-height: 35px;
+}
 /* My Orders CSS */
 .myaccount{
 	width: 300px;
@@ -239,6 +261,104 @@
 }
 /* My Orders CSS  --end--*/
 
+/*Account Setting css*/
+.account_setting_tab{
+	background: #f8f7f5;
+	margin-top: 10px;
+	padding-bottom: 60px;
+	ul{
+		 padding-left:155px;
+		 padding-top: 30px;
+		li{
+			width: 200px;
+			line-height: 35px;
+			float: left;
+			text-align: center;
+			background: #ededed;
+			margin-right: 10px;
+			cursor: pointer;
+			.tab_span{
+				font-size: 14px;
+				font-weight: bold;
+				color:#333;
+			}
+			.iconfont{
+				font-size: 18px;
+				margin-right: 10px
+			}
+		}
+		.tab_style{
+			background: white;
+			span{
+				color:#eeb053;
+			}
+		}
+	}
+}
+.account-setting-font{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	width: 325px;
+	height: 476px;
+	background: #f8f7f5;
+	padding-left: 155px;
+	.iconfont{
+		display: block;
+		color:#dfdfdf;
+		font-size: 100px;
+		margin-bottom: 15px;
+	}
+	.changeavatar{
+		color:#818181;
+		font-weight: bold;
+		margin-left: 10px;
+		&:hover{
+			color:#eeb053;
+		}
+	}
+}
+.account-setting-form{
+	width: 575px;
+	height: 476px;
+	background: #f8f7f5;
+	.labeld{
+		display: block;
+		color:#818181;
+		margin-bottom: 5px;
+		margin-top: 15px;
+	}
+	.ms{
+		display: inline-block;
+		margin-top:10px;
+		margin-left: 5px;
+		margin-right: 20px;
+		color:#818181;
+		margin:10px 20px 0 5px;
+	}
+	.Setting_submit{
+		margin-top: 20px;
+		width: 215px;
+		height: 35px;
+		font-size: 14px;
+		line-height: 35px;
+		margin-bottom: 60px;
+	}
+}
+/*Account Setting css --end--*/
+
+/*save for later css*/
+.saveforlatersize{
+	p{
+		height:15px;
+		span{
+			margin-right: 5px;
+		}
+	}
+}
+/*save for later css  --end --*/
+
 /* My Wishlist css */
 .mywishlist_list{
 	margin-top:20px;
@@ -290,18 +410,6 @@
 		display: block;
 		width: 105px;
 		line-height: 30px;
-		background: #eeb053;
-		color:white;
-		text-align: center;
-		font-size: 14px;
-		font-weight: bold;
-		border: 1px solid #eeb053;
-		border-radius: 3px;
-		&:hover{
-			color:#eeb053;
-			border: 1px solid #eeb053;
-			background: white;
-		}
 	}
 	.delete{
 		display: block;
@@ -322,143 +430,262 @@
 }
 /* My Wishlist css --end -- */
 
-/*Account Setting css*/
-.Account_Setting_tab{
-	background: #f8f7f5;
-	margin-top: 10px;
-	padding-bottom: 60px;
-	ul{
-		 padding-left:155px;
-		 padding-top: 30px;
-		li{
-			width: 200px;
-			line-height: 35px;
-			float: left;
-			text-align: center;
-			background: #ededed;
-			margin-right: 10px;
-			cursor: pointer;
-			.tab_span{
-				font-size: 14px;
-				font-weight: bold;
-				color:#333;
-			}
-			.iconfont{
-				font-size: 18px;
-				margin-right: 10px
-			}
-		}
-		.tab_style{
-			background: white;
-			span{
-				color:#eeb053;
-			}
-		}
-	}
-}
-.Account-Setting-font{
-	box-sizing:border-box;
-	width: 325px;
-	height: 476px;
-	background: #f8f7f5;
-	padding-left: 155px;
-	.iconfont{
-		display: block;
-		color:#dfdfdf;
-		font-size: 100px;
-		margin-bottom: 15px;
-		&+label{
-			color:#818181;
-			font-weight: bold;
-			margin-left: 10px;
-		}
-	}
-}
-.Account-Setting-form{
-	width: 575px;
-	height: 476px;
-	background: #f8f7f5;
-	.labeld{
-		display: block;
-		color:#818181;
-		margin-bottom: 5px;
-		margin-top: 15px;
-	}
-	.ms{
+/* All Orders css */
+.allorders_navbar{
+	h2{
 		display: inline-block;
-		margin-top:10px;
-		margin-left: 5px;
-		margin-right: 20px;
-		color:#818181;
-		margin:10px 20px 0 5px;
 	}
-	select,
-	input[type="text"],
-	input[type="password"]{
-		display: block;
-		width: 450px;
-		height: 35px;
-		line-height: 35px;
-		border: 1px solid #dfdfdf;
-		border-radius: 3px;
-		text-indent: 5px;
-	}
-	.Setting_submit{
-		margin-top: 20px;
-		width: 215px;
-		height: 35px;
-		background: #eeb053;
-		color:white;
-		font-weight: bold;
+	a{
 		font-size: 14px;
-		line-height: 35px;
-		text-align: center;
-		border: 1px solid #eeb053;
-		margin-bottom: 60px;
+		font-weight: bold;
+		color: #666;
+		float: right;
+		margin-left: 40px;
+	}
+	.shuliang{
+		color:red;
+	}
+	.navbar_a_style{
+		color:#eeb053;
 	}
 }
-/*Account Setting css --end--*/
-
-/*eEdit Password  css */
-.editPassword{
+.allorders_list{
+	box-sizing:border-box;
 	background: #f8f7f5;
-	padding:70px 220px;
-	margin-top: 10px;
-	label{
-		display: block;
+	padding:0 20px 50px 20px;
+	margin-top: 20px;
+}
+.allorders_list_head{
+	border-bottom: 1px solid #cfcfcf;
+	li{
+		width: 143px;
+		float: left;
 		color:#aaa;
-		margin-bottom: 5px;
-		margin-bottom: 15px;
-	}
-	input{
-		width: 450px;
-		height: 35px;
-		border: 1px solid #cfcfcf;
-		border-radius: 3px;
-		text-indent: 5px;
-	}
-	.change{
-		display: block;
-		width: 215px;
-		height: 35px;
-		background: #eeb053;
-		color:white;
-		text-align: center;
-		font-size: 14px;
 		font-weight: bold;
-		border: 1px solid #eeb053;
-		margin-top: 20px;
+		padding:15px 0;
+	}
+	.head_status{
+		text-indent: 20px;
 	}
 }
-/*eEdit Password  css  --end--*/
-
-/*save for later css*/
-.saveforlaterSize{
-	p{
-		height:15px;
-		span{
-			margin-right: 5px;
+.allorders_list_ul{
+	li{
+		padding-bottom: 5px;
+		border-bottom: 1px dashed #cfcfcf;
+		li{
+			border:none;
+			float: left;
 		}
 	}
 }
-/*save for later css  --end --*/
+
+.orderno{
+	padding-top:35px;
+	width: 160px;
+}
+.products_show_img{
+	height: 60px;
+	margin-top: 10px;
+	width:500%;
+	img{
+		width: 60px;
+		height: 60px;
+		float: left;
+	}
+}
+.products{
+	position: relative;
+	width: 60px;
+	margin-right:38px;
+	.products_show{
+		width: 60px;
+		height: 60px;
+	}
+	.iconfont{
+		font-size: 20px;
+		position: absolute;
+		top:40%;
+		z-index: 2000;
+		&:hover{
+			color:#eeb053;
+		}
+	}
+	.icon-xiangzuo{
+		left:-20px;
+	}
+	.icon-you{
+		right:-20px;
+	}
+}
+.status{
+	text-align: center;
+	padding-top:35px;
+	width: 143px;
+}
+.dete{
+	text-align: center;
+	padding-top:35px;
+	width: 143px;
+}
+.price{
+	text-align: center;
+	margin-left: 13px;
+	padding-top:35px;
+	text-align: center;
+	width: 100px;
+	margin-right: 22px;
+}
+.action{
+	margin-top:15px;
+	text-align: center;
+	width:160px;
+	.button{
+		display: block;
+		width:120px;
+		height: 20px; 
+		line-height: 20px;
+		margin: 0 auto 10px;
+	}
+}
+.paid{
+		background: #cfcfcf;
+		border:1px solid #cfcfcf;
+		&:hover{
+			background: #cfcfcf;
+			border:1px solid #cfcfcf;
+			color:white;
+		}
+	}
+.viewdetails{
+	margin-right: 10px;
+}
+.viewdetails,.cancelorder{
+	color:#aaa;
+	border-bottom: 1px solid #aaa;
+	&:hover{
+		color:#eeb053;
+		border-bottom: 1px solid #eeb053;
+	}
+}
+
+/* All Orders css --end-- */
+
+/*Order Reviews css*/
+.order_reviews_head{
+	h2,h3{
+		display: inline-block;
+	}
+	.iconfont{
+		color:#aaa;
+	}
+	a{
+		float: right;
+		margin-left: 10px;
+		font-weight: bold;
+	}
+}
+.order_reviews_conter{
+	background: #f8f7f5;
+	margin-top: 20px;
+	padding: 0 15px; 
+	.conter_head{
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px solid #cfcfcf;
+		label{
+			color:#aaa;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		.order_no,.tracking_no{
+			display: inline-block;
+			width: 295px;
+		}
+	}
+}
+.conter_list_li{
+	width: 620px;
+	border-right: 2px solid #cfcfcf;
+	padding:10px 0; 
+	li{
+		float: left;
+	}
+	.tupian{
+		display: block;
+		width: 60px;
+		height: 60px;
+		background: red;
+		margin-right: 10px;
+	}
+	.xinxi{
+		.xinxi_a{
+			color:#aaa;
+			width: 170px;
+			display: block;
+			text-overflow : ellipsis; 
+			white-space : nowrap; 
+			overflow : hidden; 
+			margin-bottom: 13px;
+		}
+		p{
+			color:#818181;
+			height: 15px;
+			span{
+				margin-left: 5px;
+			}
+		}
+	}
+	.conter_list_price,
+	.qty,
+	.point{
+		color:#aaa;
+		line-height: 60px;
+	}
+	.qty{
+		margin:0 50px;
+	}
+	.conter_list_price{
+		margin:0 32px 0 70px;
+	}	
+}
+.conter_list_right{
+	width: 248px;
+	box-sizing:border-box;
+	padding-top: 25px;
+	padding-left: 20px;
+	.list_right_price{
+		p{
+			height: 20px;
+			line-height: 20px;
+			width: 100%;
+			color:#666;
+		}
+		.prices{
+			float: right;
+		}
+		.total{
+			padding-top:10px;
+			margin-top: 10px;
+			border-top: 1px dashed #cfcfcf;
+			color:red;
+		}
+	}
+	.list_right_checkout{
+		span{
+			color:#666;
+			margin-right:15px;
+		}
+		.right_checkout{
+			width: 100px;
+			height: 20px;
+			line-height: 20px;
+			&+a{
+				color:#aaa;
+				border-bottom: 1px solid #aaa;
+				float: right;
+				margin:10px 10px 0 0;
+			}
+		}
+	}
+}
+/*Order Reviews css --end--*/

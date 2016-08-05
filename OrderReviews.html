@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Account Setting</title>
+	<title>Order Reviews</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470299933_3304758.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470386506_2993872.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/myorder.js"></script>
-		<script type="text/javascript" src="dist/js/validate.js"></script>
+		<script type="text/javascript" src="dist/js/allorders.js"></script>
 	</head>
 	<body>
 		<header>
@@ -567,89 +566,128 @@
 					My Account
 				</div>
 				<ul class="myaccount_list">
-					<li><span></span><a href="#">My Orders</a></li>
+					<li><span></span><a href="#" class="myaccount_list_style">My Orders</a></li>
 					<li><span></span><a href="#">H Points</a></li>
-					<li><span></span><a href="#">My Wishlist</a></li>	 
+					<li><span></span><a href="#">My Wishlist</a></li>	
 					<li><span></span><a href="#">Order Reviews</a></li>
 					<li><span></span><a href="#">My Invitation</a></li>
-					<li><span></span><a href="#" class="myaccount_list_style">Account Setting</a></li>
+					<li><span></span><a href="#">Account Setting</a></li>
 					<li><span></span><a href="#">Address Book</a></li>
+					<li><span></span><a href="#">Edit Password</a></li>
 					<li><span></span><a href="#">Save For Later</a></li>
 				</ul>
 			</div>	
-			<div class="myorders fr">
-			 	<h2>Account Setting</h2>
-			 	<div class="account_setting_tab">
-			 		<ul>
-			 			<li class="tab_style"><span class="iconfont icon-jichushezhi"></span><span class="tab_span">Account Setting</span></li>
-			 			<li><span class="iconfont icon-youjian"></span><span class="tab_span">Change Email</span></li>
-			 			<li><span class="iconfont icon-mima"></span><span class="tab_span">Change Password</span></li>
-			 		</ul>
-			 	</div>
-			 	<div class="account_setting_conter">
-					<div class="account-setting">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-touxiangzhuanhuan"></span>
-			 				<a href="#" title="" class="changeavatar">Change Avatar</a>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="account_setting_form" method="post" action="">
-								<label for="username" class="labeld">Username</label>
-								<input type="text" name="username" id="username" required />
-								<input type="radio" name="radio" id="ms" checked="checked">
-								<label for="ms" class="ms">Ms.</label>
-								<input type="radio" name="radio" id="mr">
-								<label for="mr" class="ms">Mr.</label>
-								<label for="email" class="labeld">Email</label>
-								<input type="text" name="email" id="email">
-								<label for="birthday" class="labeld">Birthday</label>
-								<select name=""	id="birthday" class="birthday">
-									<option value="">1</option>
-									<option	>2</option>	
-								</select>
 
-								<label for="country" class="labeld">Country</label>
-								<select name="" id="country" class="country" >
-									<option value="">1</option>
-									<option	>2</option>
-								</select>
-								<label for="phone" class="labeld">Phone</label>
-								<input type="text" name="number" id="phone" required>
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
+			<div class="myorders fr">
+				<div class="order_reviews_head">
+					<h2>Order Reviews - &nbsp;<h3>Detials</h3></h2>
+					<a href="#" title="" class="back">Back</a>
+					<a href="#" title="" class="iconfont icon-fanhuituichu"></a>
+				</div>
+				<div class="order_reviews_conter">
+					<div class="conter_head">
+						<label>Order NO.</label><span class="order_no">CS164112</span>
+						<label>Tracking NO.</label><span class="tracking_no">201608010010</span>
+						<span class="date">2016-07-26 18:04:12  </span>
+					</div>
+					<div class="conter_list" >
+						<div class="conter_list_left fl" >
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>			
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+						</div>
+						<div class="conter_list_right fl">	
+							<div class="list_right_price">
+								<p><span>Subtotal</span><span class="prices">$9998.98</span></p>
+								<p><span>Coupon discount</span><span class="prices">$9998.98</span></p>
+								<p><span>H point discount</span><span class="prices">$9998.98</span></p>
+								<p><span>Shipping</span><span class="prices">$9998.98</span></p>
+								<p class="total"><span>Total</span><span class="prices">$0.01</span></p>
+							</div>
+							<div class="list_right_checkout">
+								<span>Waiting for Payment </span>
+								<button type="submit" class="button right_checkout">Checkout</button>
+								<a href="#" title="">Cancel Order</a>
+							</div>
 						</div>
 					</div>
-					<div class=change-email" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-aite"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_email_form" method="post" action="">
-								<label for="Email" class="labeld">Email</label>
-								<input type="text" name="email" id="Email" required>
-								<label for="Confirm" class="labeld">Confirm Email</label>
-								<input type="text" name="confirm_emails" id="Confirm" class="{required:true,minlength:5,equalTo:'#Email'}">
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
+					<div class="conter_address">
+						
 					</div>
-					<div class="change-password" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-yaochi"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_password_form" method="post" action="">
-								<label for="Current" class="labeld">Current Password</label>
-								<input type="text" name="password1" id="Current"  required/>
-								<label for="password1" class="labeld">New Password</label>
-								<input type="text" name="password" id="password" class="{required:true,minlength:5}" >
-								<label for="password2" class="labeld">Confirm Password</label>
-								<input type="password" name="confirm_password" class="{required:true,minlength:5,equalTo:'#password'}" id="password2" >
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-			 	</div>
+				</div>
 			</div>
 		</div>	
 	</body>
