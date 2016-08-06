@@ -5,18 +5,31 @@ html{
     margin:0;
     padding:0;
 }
-input[typr="password"],
+select:focus,
+input[typr="password"]:focus,
 input[type="text"]:focus{
-    border:1px solid rgba(82, 168, 236, .7);
+    border:1px solid rgba(82, 168, 236, .7); 
 }
-input[type="radio"],
-input[type="button"],
+input[type="radio"]:focus,
+input[type="button"]:focus,
 input[type="checkbox"]:focus{
     outline: none;
 }
-a,button,i,span,
 input[type="text"],
-input[typr="password"],
+input[typr="password"]{
+    text-indent: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+}
+select:hover,
+input[type="text"]:hover,
+input[typr="password"]:hover{
+    box-shadow: 0 0 5px rgba(82, 168, 236, 1);
+    border: 1px solid  rgba(82, 168, 236, 1);
+}
+a:hover,button:hover,i:hover,span:hover,select:hover,
+input[type="text"]:hover,
+input[typr="password"]:hover,
 input[type="submit"]:hover{
     transition:all .3s ease;
     -o-transition:all .3s ease;
@@ -27,7 +40,13 @@ body{
 	color: #333;
 	font-size: 12px;
 }
-
+select::-ms-expand { display: none; };
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+}
 a{
 	text-decoration: none;
 	color: #333;
