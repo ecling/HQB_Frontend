@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Account Setting</title>
+	<title>Address Book</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470299933_3304758.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470467565_3698416.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="dist/js/validate.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/myorder.js"></script>
-		<script type="text/javascript" src="dist/js/validate.js"></script>
+		<script type="text/javascript" src="dist/js/place_order.js"></script>
 	</head>
 	<body>
 		<header>
@@ -572,85 +572,108 @@
 					<li><span></span><a href="http://localhost:3000/mywishlist.html">My Wishlist</a></li>	
 					<li><span></span><a href="http://localhost:3000/OrderReviews.html">Order Reviews</a></li>
 					<li><span></span><a href="#">My Invitation</a></li>
-					<li><span></span><a href="http://localhost:3000/accountsetting.html" class="myaccount_list_style">Account Setting</a></li>
-					<li><span></span><a href="http://localhost:3000/AddressBook.html#">Address Book</a></li>
+					<li><span></span><a href="http://localhost:3000/accountsetting.html">Account Setting</a></li>
+					<li><span></span><a href="http://localhost:3000/AddressBook.html#" class="myaccount_list_style">Address Book</a></li>
 					<li><span></span><a href="http://localhost:3000/saveforlater.html#">Save For Later</a></li>
-				</ul>
+				</ul>	
 			</div>	
 			<div class="myorders fr">
-			 	<h2>Account Setting</h2>
-			 	<div class="account_setting_tab">
-			 		<ul>
-			 			<li class="tab_style"><span class="iconfont icon-jichushezhi"></span><span class="tab_span">Account Setting</span></li>
-			 			<li><span class="iconfont icon-youjian"></span><span class="tab_span">Change Email</span></li>
-			 			<li><span class="iconfont icon-mima"></span><span class="tab_span">Change Password</span></li>
-			 		</ul>
-			 	</div>
-			 	<div class="account_setting_conter">
-					<div class="account-setting">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-touxiangzhuanhuan"></span>
-			 				<a href="#" title="" class="changeavatar">Change Avatar</a>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="account_setting_form" method="post" action="">
-								<label for="username" class="labeld">Username</label>
-								<input type="text" name="username" id="username" required />
-								<input type="radio" name="radio" id="ms" checked="checked">
-								<label for="ms" class="ms">Ms.</label>
-								<input type="radio" name="radio" id="mr">
-								<label for="mr" class="ms">Mr.</label>
-								<label for="email" class="labeld">Email</label>
-								<input type="text" name="email" id="email">
-								<label for="birthday" class="labeld">Birthday</label>
-								<select name=""	id="birthday" class="birthday">
-									<option value="">1</option>
-									<option	>2</option>	
-								</select>
-
-								<label for="country" class="labeld">Country</label>
-								<select name="" id="country" class="country" >
-									<option value="">1</option>
-									<option	>2</option>
-								</select>
-								<label for="phone" class="labeld">Phone</label>
-								<input type="text" name="number" id="phone" required>
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class=change-email" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-aite"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_email_form" method="post" action="">
-								<label for="Email" class="labeld">Email</label>
-								<input type="text" name="email" id="Email" required>
-								<label for="Confirm" class="labeld">Confirm Email</label>
-								<input type="text" name="confirm_emails" id="Confirm" class="{required:true,minlength:5,equalTo:'#Email'}">
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class="change-password" style="display: none;">
-						<div class="account-setting-font fl">
-							<span class="iconfont icon-yaochi"></span>
-						</div>
-						<div class="account-setting-form fr">
-							<form id="change_password_form" method="post" action="">
-								<label for="Current" class="labeld">Current Password</label>
-								<input type="text" name="password1" id="Current"  required/>
-								<label for="password1" class="labeld">New Password</label>
-								<input type="text" name="password" id="password" class="{required:true,minlength:5}" >
-								<label for="password2" class="labeld">Confirm Password</label>
-								<input type="password" name="confirm_password" class="{required:true,minlength:5,equalTo:'#password'}" id="password2" >
-								<button type="submit" class="button Setting_submit">Submit</button>
-							</form>
-						</div>
-					</div>
-			 	</div>
+				<h2>Address Book</h2>
+				<ul class="addressbook">
+					<li class="conter_address_left addressbook_address" >
+						<p><label>Name:</label><span>lastname  firstname</span></p>
+						<p><label>Phone Number:</label><span>123456798</span></p>
+						<p><label>E-mail:</label><span>123456789</span></p>
+						<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States xinduhui Los Angeles 20010 California United States</span></p>
+						<p class="postalcode"><label>ZIP/Postal Code:</label><span>20010</span></p>
+						<a href="#" title="" class="iconfont icon-shanchu"></a>					
+						<a href="#" title="" class="iconfont icon-xiugai"></a>
+						<a href="#" title="" class="defaultStyle default">Make Default</a>
+					</li>
+					<li class="conter_address_left addressbook_address" >
+						<p><label>Name:</label><span>lastname  firstname</span></p>
+						<p><label>Phone Number:</label><span>123456798</span></p>
+						<p><label>E-mail:</label><span>123456789</span></p>
+						<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States xinduhui Los Angeles 20010 California United States</span></p>
+						<p class="postalcode"><label>ZIP/Postal Code:</label><span>20010</span></p>
+						<a href="#" title="" class="iconfont icon-shanchu"></a>					
+						<a href="#" title="" class="iconfont icon-xiugai"></a>
+						<a href="#" title="" class="default">Default</a>
+					</li>
+					<li class="conter_address_left addressbook_address" >
+						<p><label>Name:</label><span>lastname  firstname</span></p>
+						<p><label>Phone Number:</label><span>123456798</span></p>
+						<p><label>E-mail:</label><span>123456789</span></p>
+						<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States xinduhui Los Angeles 20010 California United States</span></p>
+						<p class="postalcode"><label>ZIP/Postal Code:</label><span>20010</span></p>
+						<a href="#" title="" class="iconfont icon-shanchu"></a>					
+						<a href="#" title="" class="iconfont icon-xiugai"></a>
+						<a href="#" title="" class="default">Default</a>
+					</li>
+					<li class="new_address">
+						<a href="#" title="" class="new_address_a ">
+							<span class="iconfont icon-jiahao"></span>
+						</a>
+					</li>
+				</ul>
 			</div>
+			<form action="demo_form.asp" method="POST" id="commentForm2">
+				<div class=" shipping-address-form popup">
+					<span class="iconfont icon-close"></span>
+					<div class="Firstname clearfix">
+						<div class="Firstname_left">
+							 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
+							<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+						</div>
+						<div class="Firstname_right">
+							<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+							<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
+						</div>
+					</div>
+					<div class="AddressLine1 clearfix">
+						<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>						
+					</div>
+					<div class="AddressLine2">
+						<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+					</div>
+					<div class="selectd ">
+						<ul >
+						    <li class="fl">
+						    	<label for="jungle"><span class="required">*</span>Country / Region:</label>
+						    	<select id="jungle" name="jungle" title="Please select something!" required>
+						    		<option></option>
+						    	  	<option value ="volvo">Volvo</option>
+						    	  	<option value ="saab">Saab</option>
+						    	  	<option value="opel">Opel</option>
+						    	  	<option value="audi">Audi</option>
+						    	</select>
+						    </li>
+						    <li class="fr">
+						    	<label for="fruit"><span class="required">*</span>States:</label>
+						    	<select id="fruit" name="fruit" title="Please select something!" required>
+							    	<option></option>
+						    	  	<option value ="volvo">Volvo</option>
+						    	  	<option value ="saab">Saab</option>
+						    	  	<option value="opel">Opel</option>
+						    	  	<option value="audi">Audi</option>
+						    	  	<input type="text" name="states" class="states"/>
+						    	</select>
+						    </li>
+						</ul>
+					</div>
+					<div>
+				    	<label for="city"><span class="required">*</span>City</label>
+				    	<input type="text" name="city" id="city" class="city" required/>	
+					</div>
+					<div class="zip fl">
+						<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
+					</div>
+					<button type="submit" class="button popup_submit">submit</button>
+					<a href="#" class="privacy privacy_popup">Privacy & Security Policy</a>
+				</div>
+				<div class="mask">	
+				</div>
+			</form>
 		</div>	
 	</body>
 </html>

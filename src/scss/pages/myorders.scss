@@ -2,6 +2,7 @@
 @import "../widget/page.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
+@import '../widget/address_form.scss';
 /*common css*/
 .button{
 	background: #eeb053;
@@ -70,7 +71,7 @@ input[type="password"]{
 	}
 }
 .myorders{
-	padding-top: 35px;
+	padding-top:40px;
 	width: 900px;
 	.myorders_head{
 		width: 100%;
@@ -80,6 +81,9 @@ input[type="password"]{
 	}
 	.myorders_head_profile{
 		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-o-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		width: 200px;
 		height: 230px;
 		background: #eaeaea;
@@ -166,6 +170,9 @@ input[type="password"]{
 		background: #f0f0f0;
 		padding: 20px;
 		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-o-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		position: absolute;
 		top:-10px;
 		right: 0;
@@ -264,7 +271,7 @@ input[type="password"]{
 /*Account Setting css*/
 .account_setting_tab{
 	background: #f8f7f5;
-	margin-top: 10px;
+	margin-top: 20px;
 	padding-bottom: 60px;
 	ul{
 		 padding-left:155px;
@@ -424,10 +431,12 @@ input[type="password"]{
 		}
 	}
 }
-.pager{
+.saveforlater_pager,
+.mywishlist_pager{
 	margin-top:- 50px;
 	margin-right: 10px;
 }
+
 /* My Wishlist css --end -- */
 
 /* All Orders css */
@@ -451,8 +460,11 @@ input[type="password"]{
 }
 .allorders_list{
 	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	background: #f8f7f5;
-	padding:0 20px 50px 20px;
+	padding:0 20px 70px 20px;
 	margin-top: 20px;
 }
 .allorders_list_head{
@@ -478,7 +490,6 @@ input[type="password"]{
 		}
 	}
 }
-
 .orderno{
 	padding-top:35px;
 	width: 160px;
@@ -527,7 +538,7 @@ input[type="password"]{
 	padding-top:35px;
 	width: 143px;
 }
-.price{
+.status_waitingforpayment_price{
 	text-align: center;
 	margin-left: 13px;
 	padding-top:35px;
@@ -567,6 +578,9 @@ input[type="password"]{
 		border-bottom: 1px solid #eeb053;
 	}
 }
+.allorders_pager{
+	margin:25px 0;
+}
 
 /* All Orders css --end-- */
 
@@ -603,10 +617,19 @@ input[type="password"]{
 		}
 	}
 }
+.conter_list_left{
+	padding-top: 10px;
+}
 .conter_list_li{
-	width: 620px;
-	border-right: 2px solid #cfcfcf;
-	padding:10px 0; 
+	width: 610px;
+	padding:5px 0; 
+	border: 1px solid transparent;
+	&:hover{
+		-webkit-transition:all .3s ease;
+		transition:all .3s ease;
+		padding:5px;
+		border: 1px solid #eeb053;
+	}
 	li{
 		float: left;
 	}
@@ -626,6 +649,9 @@ input[type="password"]{
 			white-space : nowrap; 
 			overflow : hidden; 
 			margin-bottom: 13px;
+			&:hover{
+				color:#eeb053;
+			}
 		}
 		p{
 			color:#818181;
@@ -651,8 +677,13 @@ input[type="password"]{
 .conter_list_right{
 	width: 248px;
 	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	padding-top: 25px;
 	padding-left: 20px;
+	border-left: 1px solid #dfdfdf;
+	margin-top: 10px;
 	.list_right_price{
 		p{
 			height: 20px;
@@ -671,6 +702,7 @@ input[type="password"]{
 		}
 	}
 	.list_right_checkout{
+		margin-top: 20px;
 		span{
 			color:#666;
 			margin-right:15px;
@@ -679,13 +711,195 @@ input[type="password"]{
 			width: 100px;
 			height: 20px;
 			line-height: 20px;
+			font-size: 12px;
 			&+a{
 				color:#aaa;
 				border-bottom: 1px solid #aaa;
 				float: right;
 				margin:10px 10px 0 0;
+				&:hover{
+					color: #eeb053;
+					border-bottom: 1px solid #eeb053;
+				}
 			}
 		}
 	}
 }
+.conter_address{
+	margin-top: 20px;
+	.conter_address_center{
+		width: 195px;
+		height: 150px;
+		background:#f0f0f0;
+		padding:17px;
+		margin: 0 5px;
+		text-align: center;
+		border:1px solid #dfdfdf;
+	}
+	.conter_address_right{
+		background: #f0f0f0;
+		padding:17px;
+		width: 200px;
+		height: 150px;
+		border:1px solid #dfdfdf;
+		p{
+			color:#666;
+			margin-top: 10px;
+		}
+	}
+}
+.conter_operate{
+	width: 100%;
+	margin-top: 20px;
+	font-weight: bold;
+	.operate_date{
+		text-align: center;
+	}
+
+	.conter_operate_head{
+		border-bottom: 1px solid #dfdfdf;
+		padding-bottom: 10px;
+		span{
+			display: inline-block;
+			width: 33%;
+		}
+		.operate_{
+			text-indent: 20px;
+		}
+		.operate_0perator{
+			text-align: right;
+			padding-right: 20px;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+		}
+	}
+	.conter_operate_content{
+		border-bottom: 1px dashed #dfdfdf;
+		height: 40px;
+		line-height: 40px;
+		span{
+			display: inline-block;
+			width: 33%;
+		}
+		.operate_0perator{
+			text-align: right;
+			padding-right: 25px;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+		}
+	}
+}
+
+.conter_address_left{
+		width: 350px;
+		padding:15px;
+		label{
+			font-weight: bold;
+		}
+		h4,h5{
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		h5{
+			font-weight: normal;
+			margin-left: 10px;
+		}
+		p{
+			overflow: hidden;
+			margin: 10px 0;
+		}
+		span{
+			margin-left: 5px;
+		}
+	}
 /*Order Reviews css --end--*/
+/*Address Book css*/
+.orderreviews_address{
+	height: 150px;
+	border:2px dashed #eeb053;
+}
+.addressbook{
+	padding-top:35px;
+	background: #f8f7f5;
+	margin-top: 20px;
+	li{
+		float: left;
+		margin-left: 35px;
+		margin-bottom: 40px;
+	}
+}
+.addressbook_address{
+	border:2px dashed #cfcfcf;
+	height: 170px;
+	&:hover{
+		border: 2px solid #eeb053;
+	}
+	a{
+		float: right;
+		margin-left: 15px;
+	}
+	.icon-xiugai:hover{
+		color:#eeb053;
+	}
+	.icon-shanchu:hover{
+		color:red;
+	}
+	.default{
+		color:#aaa;
+		font-weight: bold;
+		border-bottom: 1px solid #aaa;
+
+		&:hover{
+			color:#eeb053;
+			border-bottom: 1px solid #eeb053;
+		}
+	}
+	.defaultStyle{
+		color:#eeb053;
+		border-bottom: 1px solid #eeb053;
+	}
+}
+.postalcode{
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #dfdfdf;
+}
+.new_address{
+	width: 384px;
+	height: 204px;
+	box-sizing:border-box;
+	border: 2px dashed #cfcfcf;
+	&:hover{
+		border: 2px solid #eeb053;
+	}
+	.new_address_a{
+		width: 130px;
+		height: 130px;
+		margin: 30px auto;
+		display: block;
+		background: white;
+		font-size: 40px;
+		color:#dfdfdf;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 120px;
+		border: 2px dashed white;
+		&:hover{
+			transform:rotate(360deg);
+			border: 2px dashed #eeb053;
+			span{
+				color:#eeb053;
+			}
+		}
+		&:focus{
+			border: 2px solid #eeb053;
+		}
+		span{
+			font-size:80px;
+		}
+	}
+}
+/*Address Book css -end--*/
