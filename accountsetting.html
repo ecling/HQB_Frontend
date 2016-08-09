@@ -7,12 +7,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470299933_3304758.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/croppie.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/myorder.js"></script>
 		<script type="text/javascript" src="dist/js/validate.js"></script>
+		<script type="text/javascript" src="dist/js/myorder.js"></script>
 	</head>
 	<body>
 		<header>
@@ -591,6 +592,17 @@
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-touxiangzhuanhuan"></span>
 			 				<a href="#" title="" class="changeavatar">Change Avatar</a>
+			 				<div class="actions">
+			 				    <button class="file-btn">
+			 				        <span>上传</span>
+			 				        <input type="file" id="upload" value="选择图片文件">
+			 				    </button>
+			 				    <div class="crop">
+			 				        <div id="upload-demo" class="croppie-container"><div class="cr-boundary" style="width: 300px; height: 300px;"><img class="cr-image"><div class="cr-viewport cr-vp-circle" style="width: 200px; height: 200px;"></div><div class="cr-overlay"></div></div><div class="cr-slider-wrap"><input type="range" class="cr-slider" step="0.01"></div></div>
+			 				        <button class="upload-result">裁剪</button>
+			 				    </div>
+			 				    <div id="result"></div>
+			 				</div>
 						</div>
 						<div class="account-setting-form fr">
 							<form id="account_setting_form" method="post" action="">
@@ -619,7 +631,7 @@
 							</form>
 						</div>
 					</div>
-					<div class=change-email" style="display: none;">
+					<div class=change-email" style=" display : none;">
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-aite"></span>
 						</div>
