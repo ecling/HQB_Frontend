@@ -10,7 +10,6 @@ $(function(){
                         url: e.target.result
                     });
                     $('.upload-demo').addClass('ready');
-                    // $('#blah').attr('src', e.target.result);
                 }
                 
                 reader.readAsDataURL(input.files[0]);
@@ -31,17 +30,18 @@ $(function(){
                 height: 300
             }
         });
-
+            
         $('#upload').on('change', function () { 
             $(".crop").show();
             readFile(this); 
         });
-        $('.upload-result').on('click', function (ev) {
+        $('.queding').on('click', function (ev) {
             $uploadCrop.croppie('result', 'canvas').then(function (resp) {
                 popupResult({
                     src: resp
                 });
             });
+            $(".crop").hide();
         });
         
     function popupResult(result) {
@@ -56,6 +56,16 @@ $(function(){
     }
 
 
-
+var $li = $(".account_setting_tab li");
+    var $div = $(".account_setting_conter>div");
+    $li.on('click', function() {
+        var $this = $(this);
+        $li.removeClass('tab_style');
+        $this.addClass('tab_style');
+        $index = $this.index();
+        $div.css('display','none');
+        $div.eq($index).css('display','block');
+    });
+    
 
 });

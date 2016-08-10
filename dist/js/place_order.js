@@ -3,7 +3,7 @@
 })(jQuery);
 
 $(function(){
-	(function(){
+	/*(function(){
 		var fixContainer = $('.fixbox');
 		var offset = fixContainer.offset();
 		$(window).scroll(function(){
@@ -22,7 +22,7 @@ $(function(){
 				$('.fixbox').css({'top':fix_top});
 			}
 		});
-	})();
+	})();*/
 
 	$(".clicked").on('click',show);
 	$(".contentd a").on('click',show);

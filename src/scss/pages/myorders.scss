@@ -3,6 +3,7 @@
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../widget/address_form.scss";
+@import "../widget/croppie.scss";
 /*common css*/
 .button{
 	background: #eeb053;
@@ -58,9 +59,9 @@ input[type="password"]{
 	.myaccount_list{
 		margin:20px 0 0 35px;
 		li{
-			margin-bottom: 20px;
+			margin-bottom: 17px;
 			span{
-				display: inline-block;
+				display: inline-block;	
 				width: 8px;
 				height: 8px;
 				background: #eeb053;
@@ -84,6 +85,10 @@ input[type="password"]{
 .myorders{
 	padding-top:40px;
 	width: 900px;
+	h2{
+		padding-left: 30px;
+		margin-bottom: 20px;
+	}
 	.myorders_head{
 		width: 100%;
 		height: 205px;
@@ -285,7 +290,6 @@ input[type="password"]{
 /*Account Setting css*/
 .account_setting_tab{
 	background: #f8f7f5;
-	margin-top: 20px;
 	padding-bottom: 60px;
 	ul{
 		 padding-left:155px;
@@ -316,14 +320,15 @@ input[type="password"]{
 		}
 	}
 }
+.account_setting_conter{
+	background: #f8f7f5;
+}
 .account-setting-font{
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	width: 325px;
-	height: 476px;
-	background: #f8f7f5;
 	padding-left: 155px;
 	.iconfont{
 		display: block;
@@ -332,6 +337,9 @@ input[type="password"]{
 		margin-bottom: 15px;
 	}
 	.file-btn{
+		margin-top: 10px;
+		background: #f8f7f5;
+		border: none;
 		color:#818181;
 		font-weight: bold;
 		margin-left: 10px;
@@ -342,8 +350,6 @@ input[type="password"]{
 }
 .account-setting-form{
 	width: 575px;
-	height: 476px;
-	background: #f8f7f5;
 	.labeld{
 		display: block;
 		color:#818181;
@@ -382,7 +388,6 @@ input[type="password"]{
 
 /* My Wishlist css */
 .mywishlist_list{
-	margin-top:20px;
 	background: #f8f7f5;
 	padding:20px 0 70px 20px;
 	li{
@@ -479,7 +484,6 @@ input[type="password"]{
 	-moz-box-sizing:border-box;
 	background: #f8f7f5;
 	padding:0 20px 70px 20px;
-	margin-top: 20px;
 }
 .allorders_list_head{
 	border-bottom: 1px solid #cfcfcf;
@@ -615,7 +619,6 @@ input[type="password"]{
 }
 .order_reviews_conter{
 	background: #f8f7f5;
-	margin-top: 20px;
 	padding: 0 15px; 
 	.conter_head{
 		height: 50px;
@@ -840,7 +843,6 @@ input[type="password"]{
 .addressbook{
 	padding-top:35px;
 	background: #f8f7f5;
-	margin-top: 20px;
 	li{
 		float: left;
 		margin-left: 35px;
@@ -848,14 +850,19 @@ input[type="password"]{
 	}
 }
 .addressbook_address{
-	border:2px dashed #cfcfcf;
-	height: 170px;
+	height: 175px;
+	//border:2px dashed #cfcfcf;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	&:hover{
-		border: 2px solid #eeb053;
+		//border:2px solid #cfcfcf;
+		-webkit-transition:all .3s ease;
+		transition:all .3s ease;
+		box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	}
 	a{
 		float: right;
 		margin-left: 15px;
+		height: 18px;
 	}
 	.icon-xiugai:hover{
 		color:#eeb053;
@@ -884,7 +891,7 @@ input[type="password"]{
 }
 .new_address{
 	width: 384px;
-	height: 204px;
+	height: 208px;
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
@@ -903,9 +910,10 @@ input[type="password"]{
 		color:#dfdfdf;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 120px;
+		line-height: 125px;
 		border: 2px dashed white;
 		&:hover{
+			-webkit-transform:rotate(360deg);
 			transform:rotate(360deg);
 			border: 2px dashed #eeb053;
 			span{
@@ -926,7 +934,6 @@ input[type="password"]{
 .orderreview_item{
 	background: #f8f7f5;
 	width:100%;
-	margin-top: 20px;
 	padding: 0 20px 70px 20px;
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
@@ -1028,22 +1035,25 @@ input[type="password"]{
 	}
 }
 /*Order_Reviews css --end--*/
-.file-btn {
+
+.file {
     position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    overflow: hidden;
+    color:#aaa;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
 }
-.file-btn input[type="file"] {
+.file input {
     position: absolute;
+    font-size: 100px;
+    right: 0;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     opacity: 0;
 }
-
-.actions {
-    padding: 5px 0;
+.file:hover {
+    color: #eeb053;
+    text-decoration: none;
 }
-.actions button {
-    margin-right: 5px;
-}
-.crop{display:none}
