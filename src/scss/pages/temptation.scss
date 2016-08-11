@@ -1,0 +1,128 @@
+@import "../base/_normalize.scss";
+@import "../widget/color.scss";
+@import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+.banner{
+	span{
+		display:block;
+		width: 1200px;
+		margin:5px auto;
+		color:#666;
+		label{
+			font-size: 12px;
+			font-family: Arial;	
+			margin-left: 5px;
+		}
+	}
+	img{
+		width: 100%;
+	}
+}
+.contentd{
+	background: url(../images/contentd-bj.jpg);
+
+}
+.wrap{
+	padding-top:29px;
+	position: relative;
+	width: 1140px;
+	margin: 0 auto;
+	box-shadow: 0 0 20px #aaa;
+	border-radius: 35px;
+	background: url(../images/qingqu-bj.jpg);
+}
+
+.item{
+	>img{
+		margin-left: 23px;
+	}
+	ul{
+		padding-left: 35px;
+	}
+	li{
+		float: left;
+		background: white;
+		margin-left: 15px;
+		margin-bottom: 30px;
+	}
+}
+
+.sexy_biaoti{
+	margin-right: 36px;
+	img{
+		box-shadow: 0 5px 5px #aaa;
+	}
+}
+.sexy_a{
+	display: block;
+	width: 317px;
+	color:#aaa;
+	font-size: 13px;
+	height: 360px;
+	&:hover{
+		color:#eeb053;
+	}
+	img{
+		margin-bottom: 15px;
+	}
+}
+.sexy_li{
+	border: 2px dashed #cfcfcf;
+	border-radius: 10px;
+	padding: 10px 10px 35px 10px;
+	text-align: center;
+	&:hover{
+		transition:all .3s ease;
+		border: 2px solid #eeb053;
+	}
+	h2{
+		font-weight: bold;
+		font-size: 24px;
+		margin: 25px 0 10px 0;
+	}
+	span{
+		text-decoration: line-through;
+		color:#aaa;
+		font-size: 14px;
+	}
+	h3{
+		width: 110px;
+		height: 30px;
+		line-height: 30px;
+		margin: 12px auto 25px;
+		background: url(../images/border-bj.jpg);
+	}
+	.shopnow{
+		font-size: 14px;
+		font-weight: bold;
+		&:hover{
+			color:#eeb053;
+		}
+	}
+}
+#navigationbar_sexy{
+	width: 134px;
+	height: 541px;
+	background: url(../images/daohang-bj.jpg);
+	ul{
+		position: absolute;
+		top:80px;
+		left:35px;
+		li{
+			width: 60px;
+			height:25px;
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 17px;
+		}
+		li:last-child{
+			margin-top: 45px;
+			letter-spacing :4px;
+			padding-left: 5px;
+		}
+	}
+}
+.beachStyle{
+	color:white;
+}
