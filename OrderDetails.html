@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Edit Password</title>
+	<title>Order Reviews</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470218939_0189443.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470386506_2993872.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="dist/js/validate.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
+		<script type="text/javascript" src="dist/js/allorders.js"></script>
 	</head>
 	<body>
 		<header>
@@ -566,30 +566,168 @@
 					My Account
 				</div>
 				<ul class="myaccount_list">
-					<li><span></span><a href="#">My Orders</a></li>
+					<li><span></span><a href="http://localhost:3000/myorders.html">My Orders</a></li>
 					<li><span></span><a href="#">H Points</a></li>
-					<li><span></span><a href="#">My Wishlist</a></li>
-					<li><span></span><a href="#">Order Reviews</a></li>
+					<li><span></span><a href="http://localhost:3000/mywishlist.html">My Wishlist</a></li>	
+					<li><span></span><a href="http://localhost:3000/OrderReviews.html" class="myaccount_list_style">Order Reviews</a></li>
 					<li><span></span><a href="#">My Invitation</a></li>
-					<li><span></span><a href="#">Account Setting</a></li>
-					<li><span></span><a href="#">Address Book</a></li>
-					<li><span></span><a href="#">Edit Password</a></li>
-					<li><span></span><a href="#">Save For Later</a></li>
+					<li><span></span><a href="http://localhost:3000/accountsetting.html">Account Setting</a></li>
+					<li><span></span><a href="http://localhost:3000/AddressBook.html#">Address Book</a></li>
+					<li><span></span><a href="http://localhost:3000/saveforlater.html#">Save For Later</a></li>
 				</ul>
 			</div>	
+
 			<div class="myorders fr">
-				<h2>Edit Password</h2>
-				<form id="editPassword_form" action="" method="POST" >
-					<div class="editPassword">
-						<label for="current">Current Password</label>
-						<input type="text" name="password" id="current" >  
-						<label for="new">New Password</label>
-						<input type="text" name="newpassword" id="new"> 
-						<label for="confirm">Confirm Password</label>
-						<input type="text" name="confirm_password" class="{required:true,minlength:5,equalTo:'#newpassword'}" id="confirm"> 
-						<button type="submit" class="botton change">Change</button>
+				<div class="order_reviews_head clearfix">
+					<h2>Order Reviews - &nbsp;<h3>Detials</h3></h2>
+					<a href="#" title="" class="back">Back</a>
+					<a href="#" title="" class="iconfont icon-fanhuituichu"></a>
+				</div>
+				<div class="order_reviews_conter ">
+					<div class="conter_head">
+						<label>Order NO.</label><span class="order_no">CS164112</span>
+						<label>Tracking NO.</label><span class="tracking_no">201608010010</span>
+						<span class="date">2016-07-26 18:04:12  </span>
 					</div>
-				</form>
+					<div class="conter_list clearfix" >
+						<div class="conter_list_left fl" >
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>			
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+						</div>
+						<div class="conter_list_right fr">	
+							<div class="list_right_price">
+								<p><span>Subtotal</span><span class="prices">$9998.98</span></p>
+								<p><span>Coupon discount</span><span class="prices">$9998.98</span></p>
+								<p><span>H point discount</span><span class="prices">$9998.98</span></p>
+								<p><span>Shipping</span><span class="prices">$9998.98</span></p>
+								<p class="total"><span>Total</span><span class="prices">$0.01</span></p>
+							</div>
+							<div class="list_right_checkout">
+								<span>Waiting for Payment </span>
+								<button type="submit" class="button right_checkout">Checkout</button>
+								<a href="#" title="">Cancel Order</a>
+							</div>
+						</div>
+					</div>
+					<div class="conter_address clearfix" >
+						<div class="conter_address_left orderreviews_address fl" >
+							<h4>Shipping Information</h4><h5>(Super Saver Shipping)</h5>
+							<p><label>Name:</label><span>lastname  firstname</span></p>
+							<p><label>Phone Number:</label><span>123456798</span></p>
+							<p><label>E-mail:</label><span>123456789</span></p>
+							<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States xinduhui Los Angeles 20010 California United States</span></p>
+							<p><label>ZIP/Postal Code:</label><span>20010</span>
+						</div>
+						<div class="conter_address_center fl">
+							
+						</div>
+						<div class="conter_address_right fl">
+							<h4>Order Request</h4>
+							<p>Please give me a small size clothes Please give me a small size clothes Please give me a small size cloth a small size clothes Please give me a small size clothes</p>
+						</div>
+					</div>
+					<div class="conter_operate clearfix">
+						<p class="conter_operate_head">
+							<span class="operate_">Operate</span>
+							<span class="operate_date">Date</span>
+							<span class="operate_0perator">Operator</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>	
 	</body>

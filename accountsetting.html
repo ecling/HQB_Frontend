@@ -11,8 +11,9 @@
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
-		<script type="text/javascript" src="dist/js/myorder.js"></script>
 		<script type="text/javascript" src="dist/js/validate.js"></script>
+		<script type="text/javascript" src="dist/js/croppie.min.js"></script>
+		<script type="text/javascript" src="dist/js/croppie.js"></script>
 	</head>
 	<body>
 		<header>
@@ -586,11 +587,20 @@
 			 			<li><span class="iconfont icon-mima"></span><span class="tab_span">Change Password</span></li>
 			 		</ul>
 			 	</div>
-			 	<div class="account_setting_conter">
-					<div class="account-setting">
+			 	<div class="account_setting_conter clearfix">
+					<div class="account-setting clearfix" >
 						<div class="account-setting-font fl">
-							<span class="iconfont icon-touxiangzhuanhuan"></span>
-			 				<a href="#" title="" class="changeavatar">Change Avatar</a>
+			 				<div id="result"> 
+								<span class="iconfont icon-touxiangzhuanhuan"></span>
+			 				</div>			 								
+				            <a href="javascript:;" class="file">Change Avatar
+				                <input type="file" name="" id="upload">
+				            </a>
+				            <div class="crop">
+								<div id="upload-demo">
+									<button class="button queding">OK</button>
+								</div>										
+							</div>	
 						</div>
 						<div class="account-setting-form fr">
 							<form id="account_setting_form" method="post" action="">
@@ -607,7 +617,6 @@
 									<option value="">1</option>
 									<option	>2</option>	
 								</select>
-
 								<label for="country" class="labeld">Country</label>
 								<select name="" id="country" class="country" >
 									<option value="">1</option>
@@ -619,7 +628,7 @@
 							</form>
 						</div>
 					</div>
-					<div class=change-email" style="display: none;">
+					<div class="change-email clearfix " style=" display : none;">
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-aite"></span>
 						</div>
@@ -633,7 +642,7 @@
 							</form>
 						</div>
 					</div>
-					<div class="change-password" style="display: none;">
+					<div class="change-password clearfix" style="display: none;">
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-yaochi"></span>
 						</div>
@@ -651,6 +660,6 @@
 					</div>
 			 	</div>
 			</div>
-		</div>	
+		</div>		
 	</body>
 </html>
