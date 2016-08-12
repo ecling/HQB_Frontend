@@ -8,7 +8,7 @@ $(document).ready(function(){
             $("body,html").animate({scrollTop:_top},500);
         }); 
         $("#navigationbar>a").click(function(){
-            $("html,body").animate({scrollTop:0},500)
+            $("html,body").animate({scrollTop:0},500);
             $("#navigationbar ul li").removeClass("beachStyle");
         });
     });
@@ -27,25 +27,37 @@ $(document).ready(function(){
                   "top":"162px",
             })
         };
-      /*  var navigationbar = $("#navigationbar");
-        var items = $(".item");
-        var currentId = "";
-        items.each(function(){
-        var m = $(this);
-        var top = $(document).scrollTop();
-            if (top>m.offset().top) {
-                currentId = "#" + m.attr("id");
-                console.log(currentId);
-            }else{
-                 return false;
-            }
-         });
-         var currentLink = navigationbar.find(".beachStyle");
-            if (currentId && currentLink.attr("href") != currentId) {
-                currentLink.removeClass("beachStyle");
-                navigationbar.find("[href=" + currentId + "]").addClass("beachStyle");
-            }*/
     });	
+
+    $(function(){
+        var _index=0;
+        $("#navigationbar_sexy a").click(function(){
+            $(this).addClass("beachStyle").parent("li").siblings().find("a").removeClass("beachStyle");
+            _index=$(this).parent("li").index()+1;
+            var _top=$("#item"+_index).offset().top;
+            $("body,html").animate({scrollTop:_top},500);
+        }); 
+        $(".gotop").click(function(){
+            $("html,body").animate({scrollTop:0},500);
+            $("#navigationbar_sexy a").removeClass("beachStyle");
+        });
+    });
+    $(window).scroll(function() {
+        var leftValue = $('.wrap').get('0').getBoundingClientRect().top;
+        if (leftValue<= 0) {
+            $("#navigationbar_sexy").css({
+                "position":"absolute",
+                "top":-leftValue,
+                "right":"-139px",
+            });
+        }else{
+            $("#navigationbar_sexy").css({
+                "position":"absolute",
+                  "right":"-139px",
+                  "top":"50px",
+            })
+        };
+    }); 
 });
 
 
