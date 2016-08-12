@@ -217,6 +217,8 @@ input[type="password"]{
 		li:nth-child(1){
 			&:hover{
 				img{
+					-webkit-transition:-webkit-transform 1s ease-in-out;
+					-webkit-transform:rotate(720deg);
 					transition:transform 1s ease-in-out;
 					transform:rotate(720deg);
 				}
@@ -226,6 +228,8 @@ input[type="password"]{
 		li:nth-child(4){
 			&:hover{
 				img{
+					-webkit-transition:-webkit-transform 1s ease-in-out;
+					-webkit-transform:rotateY(720deg);
 					transition:transform 1s ease-in-out;
 					transform:rotateY(720deg);
 				}
@@ -334,7 +338,6 @@ input[type="password"]{
 		display: block;
 		color:#dfdfdf;
 		font-size: 100px;
-		margin-bottom: 15px;
 	}
 	.file-btn{
 		margin-top: 10px;

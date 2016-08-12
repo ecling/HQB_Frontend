@@ -17,7 +17,7 @@ $(function(){
             else {
                 alert("Sorry - you're browser doesn't support the FileReader API");
             }
-        }
+        };
 
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
@@ -53,7 +53,7 @@ $(function(){
             html = '<img src="' + result.src + '" />';
         }
         $("#result").html(html);
-    }
+    };
 
 
 var $li = $(".account_setting_tab li");
