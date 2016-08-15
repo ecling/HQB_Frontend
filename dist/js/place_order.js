@@ -30,7 +30,8 @@ $(function(){
 	$(".new_address_a").on('click',show);
 	$(".icon-close").on('click',hide);
 	$("#submit").on('click',hide);
-    
+    $(".forgotten_password_button").on('click',show);
+    $(".close_popup").on('click',hide);
 
     function show(){
     	$(".popup").show(500);
