@@ -96,4 +96,21 @@ jQuery(document).ready(function($) {
 	 		confirm_password: "Enter your password again.",
 	 	},
 	});
+	$("#NewPassword_form").validate({
+		errorElement:"p",
+		rules: {
+	 	   password: {
+	 	    required: true,
+	 	    minlength: 8
+	 	   },
+	 	   confirm_password: {
+	 	    required: true,
+	 	    equalTo: "#password"
+	 	    },
+	 	},
+	 	messages: {
+	 		password:"Please enter your password.",
+	 		confirm_password: "Enter your password again.",
+	 	},
+	});
 });

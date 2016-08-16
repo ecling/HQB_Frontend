@@ -1293,13 +1293,17 @@ input[type="password"]{
 		margin-bottom: 45px;
 	}
 	label{
+		display: block;
 		color:#aaa;
+		margin-bottom: 10px;
+		margin-top: 25px;
 	}
 	input{
-		margin-bottom: 25px;
-		margin-top: 10px;
 		text-align: center;
 		font-size: 16px;
+	}
+	.forgotten_password_button{
+		margin-top: 25px;
 	}
 }
 /*CNew Password css --end--*/
