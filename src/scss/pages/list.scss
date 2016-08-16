@@ -547,3 +547,24 @@
         }
     }
 }
+/* dress css*/
+.deess_product_list2{
+    .addtobag {
+        margin-left: 100px;
+    }
+}
+.search{
+    .proItem:nth-child(4n+1){
+        clear: none;
+    }
+    .proItem:nth-child(4n){
+        margin-right:20px;
+    }
+    .proItem:nth-child(5n){
+        margin-right: 0;
+    }
+    .proItem{
+        margin-right: 20px;
+    }
+}
+/* dress css -- end --*/

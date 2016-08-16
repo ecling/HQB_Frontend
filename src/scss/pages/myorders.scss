@@ -30,14 +30,22 @@ input[type="password"]{
 /* My Orders CSS */
 /* copy tishi*/
 .copy-tips{
-	position:fixed;z-index:999;bottom:50%;left:50%;
-	margin:0 0 -20px -80px;background-color:rgba(0, 0, 0, 0.2);
+	position:fixed;
+	z-index:999;
+	bottom:50%;
+	left:50%;
+	margin:0 0 -20px -80px;
+	background-color:rgba(0, 0, 0, 0.2);
 	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);
-	padding:6px;}
+	padding:6px;
+}
 .copy-tips-wrap{
-	padding:10px 20px;text-align:center;
-	border:1px solid #F4D9A6;background-color:#FFFDEE;
-	font-size:14px;}
+	padding:10px 20px;
+	text-align:center;
+	border:1px solid #F4D9A6;
+	background-color:#FFFDEE;
+	font-size:14px;
+}
 /*copy end*/
 .myaccount{
 	width: 300px;
@@ -86,8 +94,10 @@ input[type="password"]{
 	padding-top:40px;
 	width: 900px;
 	h2{
-		padding-left: 30px;
 		margin-bottom: 20px;
+		span{
+			font-size: 14px;
+		}
 	}
 	.myorders_head{
 		width: 100%;
@@ -217,6 +227,8 @@ input[type="password"]{
 		li:nth-child(1){
 			&:hover{
 				img{
+					-webkit-transition:-webkit-transform 1s ease-in-out;
+					-webkit-transform:rotate(720deg);
 					transition:transform 1s ease-in-out;
 					transform:rotate(720deg);
 				}
@@ -226,6 +238,8 @@ input[type="password"]{
 		li:nth-child(4){
 			&:hover{
 				img{
+					-webkit-transition:-webkit-transform 1s ease-in-out;
+					-webkit-transform:rotateY(720deg);
 					transition:transform 1s ease-in-out;
 					transform:rotateY(720deg);
 				}
@@ -254,6 +268,7 @@ input[type="password"]{
 		background: #f8f7f5;
 		margin-top:45px;
 		text-align: center;
+		//background: url(../images/myshare.jpg);
 		.social{
 			padding-left: 35%;
 			li{
@@ -325,16 +340,15 @@ input[type="password"]{
 }
 .account-setting-font{
 	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	width: 325px;
 	padding-left: 155px;
 	.iconfont{
 		display: block;
 		color:#dfdfdf;
 		font-size: 100px;
-		margin-bottom: 15px;
 	}
 	.file-btn{
 		margin-top: 10px;
@@ -479,9 +493,9 @@ input[type="password"]{
 }
 .allorders_list{
 	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	background: #f8f7f5;
 	padding:0 20px 70px 20px;
 }
@@ -696,8 +710,8 @@ input[type="password"]{
 	width: 248px;
 	box-sizing:border-box;
 	-o-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	padding-top: 25px;
 	padding-left: 20px;
 	border-left: 1px solid #dfdfdf;
@@ -788,9 +802,9 @@ input[type="password"]{
 			text-align: right;
 			padding-right: 20px;
 			box-sizing:border-box;
-			-webkit-box-sizing:border-box;
 			-o-box-sizing:border-box;
 			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
 		}
 	}
 	.conter_operate_content{
@@ -805,9 +819,9 @@ input[type="password"]{
 			text-align: right;
 			padding-right: 25px;
 			box-sizing:border-box;
-			-webkit-box-sizing:border-box;
 			-o-box-sizing:border-box;
 			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
 		}
 	}
 }
@@ -893,9 +907,9 @@ input[type="password"]{
 	width: 384px;
 	height: 208px;
 	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	border: 2px dashed #cfcfcf;
 	&:hover{
 		border: 2px solid #eeb053;
@@ -936,9 +950,9 @@ input[type="password"]{
 	width:100%;
 	padding: 0 20px 70px 20px;
 	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	color: #aaa;
 	li{
 			float: left;
@@ -1057,3 +1071,239 @@ input[type="password"]{
     color: #eeb053;
     text-decoration: none;
 }
+
+/*==========================*/
+
+/*point css */
+.mypoint{
+	width: 900px;
+	height: 250px;
+	background: url(../images/point_03.jpg) no-repeat ;
+	padding:60px 0 0 160px;
+	margin-bottom: 20px;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	.mypoint_conter{
+		height: 95px;
+	}
+	.mgt60{
+		margin-top: 60px;
+	}
+	.mgr20{
+		margin-right: 20px;
+		text-align: center;
+	}
+	.point_save{
+		margin-bottom: 5px;
+	}
+	.point_get,
+	.point_save{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.point_val,
+	.point_save{
+		color:red;
+	}
+	.point_get{
+		color:#666;
+		position: relative;
+		&:hover{
+			border-bottom: 1px solid #666;
+		}
+		span{
+			display: inline-block;
+			text-align: center;
+			width: 12px;
+			height: 12px;
+			line-height: 12px;
+			border: 1px solid #666;
+			border-radius: 50%;
+			position: absolute;
+			top:-7px;
+			right: -18px;
+		}
+	}
+	.point_val{
+		font-size:60px ;
+	}
+	.point_point{
+		font-size: 27px;
+	}
+}
+.mypoint_details{
+	width: 100%;
+	padding: 0 40px 70px 40px;
+	background: #f8f7f5;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	span{
+		display: inline-block;
+		width: 270px;
+	}
+	.mypoint_details_head{
+		height: 40px;
+		line-height:40px;
+		color:#aaa;
+		border-bottom: 1px solid #aaa;
+	}
+	li{
+		height: 35px;
+		line-height: 35px;
+		border-bottom: 1px dashed #aaa;
+	}
+	.Detial,
+	.detial_li{
+		text-align: center;
+	}
+	.date_li{
+		text-align: right;
+	}
+	.Date{
+		text-indent:205px;
+	}
+}
+.mypoint_pager{
+	margin-top: -45px;
+	margin-right: 25px;
+}
+/* point css --end--*/
+
+/*My Invitation css*/
+.Invitation{
+	width: 900px;
+	height: 300px;
+	padding-top:230px ;
+	padding-left: 65px;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background: url(../images/invitation.jpg) no-repeat;
+	ul{
+		li{
+			float: left;
+			margin-right: 15px;
+			i{
+				font-size: 30px;
+			}
+			.icon-facebook{
+				color:#238fe2;
+			}
+			.icon-twitter{
+				color:#8eb91c;
+			}
+			.icon-inboxpinterest{
+				color:#c7393a;
+			}
+			.icon-tumblr1{
+				color:#47adc0;
+			}
+			.icon-google{
+				color:#e9bb21;
+			}
+			.icon-vkcircle{
+				color:#b74df4;
+			}
+		}
+	}
+	p{
+		margin-top: -40px;
+		margin-left: 310px;
+	}
+	.dizhi{
+		display:block;
+		margin-top: 10px;
+		margin-left:310px;
+		width: auto;
+	}
+	.copy{
+		float: right;
+		display: block;
+		color:white;
+		margin-right: 31px;
+		margin-top: -14px;
+	}
+}
+/*My Invitation css --end--*/
+
+/*Forgotten Password css */
+.forgotten_password{
+	width: 550px;
+	margin: 100px auto 300px;
+	text-align: center;
+	p{
+		font-size: 14px;
+		margin: 20px 0 50px 0;
+	}
+	input{
+		width: 285px;
+		height: 31px;
+		font-size: 16px;
+		text-indent: 5px;
+	}
+}
+.forgotten_password_footer{
+	width: 810px;
+	margin: 0 auto;
+	img{
+		display: inline-block;
+	}
+	p{
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+.forgotten_password_popup{
+	width: 500px;
+	text-align: center;
+	top:50%;
+	left:30%;
+	margin-top:-180px;
+	p{
+		font-size: 16px;
+	}
+	.close_popup{
+		display: block;
+		width: 115px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 16px;
+		margin: 40px auto;
+	}
+}
+.forgotten_password_button{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+}
+
+/*Forgotten Password css --end--*/
+
+/*New Password css */
+.new_password{
+	width: 450px;
+	margin: 100px auto 150px;
+	text-align: center;
+	h1{
+		margin-bottom: 45px;
+	}
+	label{
+		display: block;
+		color:#aaa;
+		margin-bottom: 10px;
+		margin-top: 25px;
+	}
+	input{
+		text-align: center;
+		font-size: 16px;
+	}
+	.forgotten_password_button{
+		margin-top: 25px;
+	}
+}
+/*CNew Password css --end--*/
