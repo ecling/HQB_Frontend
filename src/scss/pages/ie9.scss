@@ -35,8 +35,11 @@
 		display: none;
 	}
 }
-.menu:hover{
-	border:1px solid #dfdfdf;
+.menu{
+	border:1px solid transparent;
+	&:hover{
+		border:1px solid #dfdfdf;
+	}
 }
 .subNav{
 	border:1px solid #dfdfdf;
@@ -68,8 +71,12 @@
 		filter:alpha(opacity=50);
 	}
 	.p_quick_view{
-
+		background: #333;
+		opacity: 0.6;
+		filter:alpha(opacity=60);
+		color:white;
 	}
+
 }
 .last{
 	margin-right: 0;
