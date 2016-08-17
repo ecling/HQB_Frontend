@@ -26,7 +26,11 @@
 			}else{
 				left = parseInt(left)-list_width*num;
 			}
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			if(Modernizr.csstransforms3d){
+				ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			}else{
+				ul.animate({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
+			}
 		};
 		var prev = function(){
 			//var left = ul.css("left");
@@ -35,8 +39,11 @@
 			}else{
 				left = parseInt(left)+list_width*num;
 			}
-			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			if(Modernizr.csstransforms3d){
+				ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			}else{
+				ul.animate({"width":totalWidth,"overflow":"hidden","position":"relative","left":left});
+			}
 		};
 		init();
 		ListWidth();
