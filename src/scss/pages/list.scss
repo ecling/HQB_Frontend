@@ -93,8 +93,10 @@
 	padding-top:5px;
 }
 .iconfontStyle{	
-	transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+	-webkit-transition: transform 0.5s ease;
 	transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 .sidebox{
 	.color{

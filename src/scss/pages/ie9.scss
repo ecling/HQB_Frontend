@@ -71,10 +71,10 @@
 		filter:alpha(opacity=50);
 	}
 	.p_quick_view{
-		background: #333;
+		background: white;
 		opacity: 0.6;
 		filter:alpha(opacity=60);
-		color:white;
+		color:black;
 	}
 
 }
@@ -82,7 +82,16 @@
 	margin-right: 0;
 }
 /*list css --end--*/
-
+/*place order css*/
 .moreInfoSec i{
 	display: none;
 }
+.cart_right{
+	border:1px solid #cfcfcf;
+	.rightHead,#discount-coupon-form,#discount-points-form{
+		input[type="text"]:hover{
+			border:1px solid #52a8ec;
+		}
+	}
+}
+/*place order css -end--*/

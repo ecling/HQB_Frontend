@@ -179,9 +179,11 @@
 .titletip{
 	.icon-feiji{
 		transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
 		&:hover{
 			+.label2{
 			transition: all .6s ease;
+			-webkit-transition: all .6s ease;
 			opacity: 1;
 			filter:alpha(opacity=100);
 			right: -13px;
@@ -190,6 +192,7 @@
 	}
 	.icon-xin:hover{
 		+.label1{
+			-webkit-transition: all .6s ease;
 			transition: all .6s ease;
 			opacity: 1;
 			filter:alpha(opacity=100);
