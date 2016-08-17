@@ -8,17 +8,11 @@
 
 .colored
 {
-    li:nth-child(2)
-    {
-        display: none;
+    li{
+        display:none;
     }
-    li:nth-child(3)
-    {
-        display: none;
-    }
-    li:nth-child(4)
-    {
-        display: none;
+    li.active{
+        display:block;
     }
 }
 
