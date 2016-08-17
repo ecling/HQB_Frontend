@@ -8,17 +8,11 @@
 
 .colored
 {
-    li:nth-child(2)
-    {
-        display: none;
+    li{
+        display:none;
     }
-    li:nth-child(3)
-    {
-        display: none;
-    }
-    li:nth-child(4)
-    {
-        display: none;
+    li.active{
+        display:block;
     }
 }
 
@@ -169,10 +163,8 @@
     border-top: 1px solid #cfcfcf;
     position: relative;
     p{
-        position: absolute;
-        top:10px;
-        left: 0;
-        font-size: 20px;
+        font-size: 12px;
+        line-height: 20px;
     }
     h3
     {
@@ -186,12 +178,12 @@
         background: white;
     }
     li{
-        width: 80%;
-        height: 75px;
+        width: 90%;
         label{
+            width: 90%;
             display: inline-block;
             line-height: 70px;
-            font-size: 16px;
+            font-size: 14px;
             margin-left: 30px;
         }
     }

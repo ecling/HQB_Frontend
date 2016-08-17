@@ -15,10 +15,11 @@ header{
 					color: #fff;
 				}
 			}
-			padding-left: 12px;
 			width: 82px;
 			a{
 				line-height: 36px;
+				display: block;
+				padding-left: 12px;
 			}
 		}
 		em{
@@ -37,9 +38,10 @@ header{
 				}
 			}
 			width: 82px;
-			padding-left: 12px;
 			a{
 				line-height: 36px;
+				display: block;
+				padding-left: 12px;
 			}
 		}
 		.drop_content{

@@ -84,6 +84,7 @@ ul:after,.clearfix:after{
     height: 0;
     clear: both;
     visibility: hidden;
+    overflow: hidden;
 }
 
 .wrap{
