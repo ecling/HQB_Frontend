@@ -1,4 +1,5 @@
 header{
+	height: 187px;
 	border-bottom: 2px solid $maincolor;
 	.vertical{
 		line-height: 30px;
@@ -50,6 +51,7 @@ header{
 	}
 
 	.tool{
+		height: 30px;
 		.left{
 			float: left;
 			i{
@@ -117,6 +119,9 @@ header{
 	.logo{
 		margin-top: 20px;
 	}
+	.content{
+		height: 88px;
+	}
 	.search{
 		width: 480px;
 		height:38px;
@@ -132,6 +137,7 @@ header{
 				outline: none;
 				margin-left:20px;
 				height: 28px;
+				line-height: 28px;
 				width: 88%;
 			}
 			button{
@@ -289,6 +295,7 @@ header{
 	.top_nav{
 		position: relative;
 		margin-top: 22px;
+		height: 45px;
 		.nav{
 			margin-left: 285px;
 			padding-top: 4px;
@@ -383,7 +390,7 @@ header{
 					a{
 						color: #f39c11;
 					}
-					a::after{
+					a:after{
 						color: #f39c11;
 					}
 				}	
@@ -398,8 +405,8 @@ header{
 				padding-top: 20px; 
 				z-index: 10;
 				box-shadow: 0 2px 5px rgba(0,0,0,.3);
-				&::before{
-					content: " ";
+				&:before{
+					content: "";
 					position: absolute;
 					width: 20px;
 					min-height: 482px;

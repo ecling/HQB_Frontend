@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Product List</title>
-	<meta name="keywords" content="" />
+	<meta name="renderer" content="webkit">
 	<meta name="description" content="" />
 	<head>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1468573518_7888942.css">
@@ -12,6 +12,10 @@
 		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
 		<script type="text/javascript" src="dist/js/list.js"></script>
+		 <script type="text/javascript" src="dist/js/modernizr.custom.26361.js"></script>
+		<!--[if lt IE 9]> 
+		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
+		<![endif]-->	
 	</head>
 	<body>
 		<header>
@@ -83,7 +87,7 @@
 					<form id="search_mini_form" method="get" action="com/search/result/">
 						<div class="search-input">
 							<input id="search" class="input-text" type="search" placeholder="Search here ..." maxlength="128" value="" name="q" />
-							<button title="Search"><i class="iconfont icon-search"></i></botton>
+							<button title="Search"><i class="iconfont icon-search"></i></button>
 						</div>
 					</form>
 				</div>

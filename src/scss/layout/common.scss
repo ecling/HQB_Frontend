@@ -78,7 +78,7 @@ button{
 .fr{
 	float: right;
 }
-ul::after,.clearfix:after{
+ul:after,.clearfix:after{
 	content: ".";
     display: block;
     height: 0;
