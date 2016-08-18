@@ -9,15 +9,14 @@
 		<link rel="stylesheet" type="text/css" href="dist/css/myorders.css">
 		<script type="text/javascript" src="dist/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="dist/js/function.js"></script>
 		<script type="text/javascript" src="dist/js/common.js"></script>
 		<script type="text/javascript" src="dist/js/validate.js"></script>
-		<script type="text/javascript" src="dist/js/croppie.min.js"></script>
-		<script type="text/javascript" src="dist/js/croppie.js"></script>
 		<script type="text/javascript" src="dist/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
 		<![endif]-->
+		<script type="text/javascript" src="dist/js/croppie.min.js"></script>
+		<script type="text/javascript" src="dist/js/croppie.js"></script>
 	</head>
 	<body>
 		<header>
@@ -610,10 +609,12 @@
 							<form id="account_setting_form" method="post" action="">
 								<label for="username" class="labeld">Username</label>
 								<input type="text" name="username" id="username" required />
-								<input type="radio" name="radio" id="ms" checked="checked">
-								<label for="ms" class="ms">Ms.</label>
-								<input type="radio" name="radio" id="mr">
-								<label for="mr" class="ms">Mr.</label>
+								<p>
+									<input type="radio" name="radio" id="ms" checked="checked">
+									<label for="ms" class="ms">Ms.</label>
+									<input type="radio" name="radio" id="mr">
+									<label for="mr" class="ms">Mr.</label>
+								</p>
 								<label for="email" class="labeld">Email</label>
 								<input type="text" name="email" id="email">
 								<label for="birthday" class="labeld">Birthday</label>
