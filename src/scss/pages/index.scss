@@ -7,9 +7,10 @@
 .menu_slide{
 	margin-left: 250px;
 	.carousel{
-		width: 782px;
+		width: 762px;
 		margin: 6px 6px 0 7px;
 		position: relative;
+		overflow: hidden;
 		&:hover{
 			i{
 				opacity: 0.2;
@@ -27,6 +28,14 @@
 		li{
 			width: 762px;
 			height: 480px; 
+			float: left;
+			display: block;
+			img{
+				width: 100%;
+			}
+		}
+		.carousel_main{
+			width: 3810px;
 		}
 		i:hover{
 			opacity: 0.5;
@@ -48,6 +57,7 @@
 			position: absolute;
 			width: 100%;
 			top: 445px;
+			left:335px;
 			text-align: center;
 			li{
 				width: 10px;
@@ -72,7 +82,7 @@
 		}
 		.next{
 			top: 200px;
-			left: 758px+20px;
+			right:-20px;
 			&:before{
 				position: absolute;
 				left: -5px;
@@ -242,11 +252,11 @@
 .home_show{
 	margin-top: 83px;
 	position: relative;
+	overflow: hidden;
 	.title{
 		font-size: 30px;
 		color: #f39c11;
 		margin-bottom: 32px;
-		float: left;
 		border-bottom: 1px solid #f39c11;
 		i{
 			position: relative;
@@ -255,6 +265,7 @@
 		}
 	}
 	ul{
+		width: 1000%;
 		li{
 			background-color: #526989;
 			float:left;
@@ -290,5 +301,13 @@
 		&:before{
 			left: -39px;
 		}
+	}
+}
+
+.hot,.new{
+	width: 950px;
+	overflow: hidden;
+	ul{
+		width: 2655px;
 	}
 }

@@ -11,7 +11,7 @@
 		}
 		.next {
 			top:200px;
-			left:760px;
+			right:0;
 		}
 		.prev{
 			top:200px;
@@ -37,8 +37,11 @@
 }
 .menu{
 	border:1px solid transparent;
+	&.active{
+		border:1px solid #cfcfcf;
+	}
 	&:hover{
-		border:1px solid #dfdfdf;
+		border:1px solid #cfcfcf;
 	}
 }
 .subNav{
@@ -48,7 +51,6 @@
 		position: absolute;
 		width: 20px;
 		min-height: 420px;
-		background: red;
 		top: 0;
 		left: -13px;
 		background-color: #fff;
@@ -58,6 +60,12 @@
 /*index css -end--*/
 
 /*list css*/
+.search{
+	.proItem{
+		width: 216px;
+		margin-right: 24px;
+	}
+}
 .proItem{
 	box-sizing:border-box;
 	border:1px solid transparent;
@@ -71,10 +79,10 @@
 		filter:alpha(opacity=50);
 	}
 	.p_quick_view{
-		background: #333;
+		background: white;
 		opacity: 0.6;
 		filter:alpha(opacity=60);
-		color:white;
+		color:black;
 	}
 
 }
@@ -82,7 +90,32 @@
 	margin-right: 0;
 }
 /*list css --end--*/
-
+/*place order css*/
 .moreInfoSec i{
 	display: none;
 }
+.cart_right{
+	border:1px solid #cfcfcf;
+	.rightHead,#discount-coupon-form,#discount-points-form{
+		input[type="text"]:hover{
+			border:1px solid #52a8ec;
+		}
+	}
+}
+/*place order css -end--*/
+/* point css */
+.mypoint{ 
+	.point_val{
+		margin-top: 17px
+	}
+}
+/* point css --end--*/
+
+/*addressBook css*/
+.addressbook_address{
+	border:2px dashed #cfcfcf;
+	&:hover{
+		border:2px solid #eeb053;
+	}
+}
+/*addressBook css --end --*/

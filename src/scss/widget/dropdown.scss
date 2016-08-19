@@ -53,6 +53,7 @@
     	}
     	.fa-caret-down {
     		transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
     	}
     }
 }
