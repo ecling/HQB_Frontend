@@ -429,8 +429,9 @@
         border-left:1px solid transparent;
         border-right:1px solid transparent;
         margin-bottom: 10px;
+        transition: all .6s ease-in-out;
+        -webkit-transition: all .6s ease-in-out;
         &:hover{
-            transition: all .5s ease-in-out;
             padding:10px;
             border:1px solid #f6ba71;
         }

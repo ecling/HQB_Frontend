@@ -27,10 +27,10 @@ header{
 }
 .wrap{
 	position:relative;
-	>div{
+	.item{
 		margin-top: 20px;
 	}
-	div>span{
+	.item_a span{
 		text-align: center;
 		width:232px;
 		transform: rotate(-5deg);
@@ -39,6 +39,17 @@ header{
 		font-size: 24px;
 		font-weight: bold;
 		color:#9a630c;
+	}
+	.item_more{
+		display: inline-block;
+		font-size: 14px;
+		margin-right: 100px;
+		color:#aaa;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			color:#333;
+			border-bottom: 1px solid #333;
+		}
 	}
 	ul{
 		position:relative;
