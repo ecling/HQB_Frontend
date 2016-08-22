@@ -149,7 +149,7 @@ header{
 				float: right;
 				i{
 					display: inline-block;
-					margin-top: 5px;
+					margin-top: 9px;
 				}
 				&:hover{
 					i{
@@ -399,6 +399,7 @@ header{
 			}
 			.subNav{
 				position: absolute;
+				display: none;
 				width: 789px;
 				min-height: 462px;
 				left: 250px;
