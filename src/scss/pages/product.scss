@@ -1078,6 +1078,20 @@
         display: inline-block;
         vertical-align: top;
         width: 210px;
+        .proText{
+            display: block;
+            margin: 10px 0 ;
+        }
+        .proPrice{
+            .cheap{
+                font-size: 16px;
+                color: red;
+            }
+            .orig{
+                margin-left: 5px;
+                text-decoration: line-through;
+            }
+        }
     }
 
     ul {
