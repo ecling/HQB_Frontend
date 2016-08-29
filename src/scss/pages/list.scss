@@ -567,25 +567,7 @@
         margin-right: 0;
     }
     .proItem{
-        margin-right: 20px;
-        position: relative;
-        overflow: hidden;
-        &:after{
-            content: "";
-            position: absolute;
-            top:-150px;
-            left:-150px;
-            width: 80px;
-            height: 620px;
-            background: white;
-            transform:translateX(-100%) rotate(35deg);      
-        }        
+        margin-right: 20px;      
     }
-    .proItem:hover:after{
-        transition:all .5s ease-in-out;   
-        transform:translateX(800%)  rotate(35deg);
-        
-    } 
-    
 }
 /* dress css -- end --*/
