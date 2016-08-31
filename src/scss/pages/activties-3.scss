@@ -1,0 +1,245 @@
+@import "../base/_normalize.scss";
+@import "../widget/color.scss";
+@import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+.banner{
+	span{
+		display:block;
+		width: 1200px;
+		margin:5px auto;
+		color:#666;
+		label{
+			font-size: 12px;
+			font-family: Arial;	
+			margin-left: 5px;
+		}
+	}
+	img{
+		width: 100%;
+	}
+}
+.navbar{
+	width: 100%;
+	height: 86px; 
+	background: white;
+	.navbar_a{
+		width:176*3px;
+		margin: 0 auto;
+	}
+	a{
+		margin-top: 25px;
+		display: block;
+		float: left;
+		width: 146px;
+		height: 35px;
+		line-height: 35px;
+		background: #dfdfdf;
+		color:white;
+		font-size: 13px;
+		text-align: center;
+		border-radius: 35px;
+		margin-right: 30px;
+	}
+	.active{
+		background: #ff7171;
+	}
+}
+.itme{
+	margin-bottom: 20px;
+}
+.itme_head{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #ff7171;
+	margin: 0 0 60px;
+	.itme_head_center{
+		width: 205px;
+		height: 70px;
+		text-align: center;
+		background: white;
+		margin-left: 42%;
+		span{
+			display: block;
+		}
+		.dress{
+			font-size: 34px;
+			letter-spacing: 3px;
+		}
+		.line{
+			margin:15px auto 10px;
+			width: 73px;
+			height: 5px;
+			background: #aaa;
+			border-radius: 5px;
+		}
+		.sale{
+			font-size: 13px;
+			color:#aaa;
+		}
+	}
+}
+.itme_conter{
+	.marginright{
+		margin-right: 0;
+	}
+	li{
+		position: relative;
+		width: 373px;
+		float: left;
+		margin-right:40px;
+		margin-bottom: 30px;
+	}
+	.li_tip{
+		float: left;
+		width: 50px;
+		height: 100%;
+		.tip_stock,
+		.tip_zhekouyaopin,
+		.tip_kucunliang,
+		.tip_off,.tip_left{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			color:white;
+			text-align: center; 
+			font-size: 14px;
+			span{
+				display: block;	
+				margin-top: 8px;
+			}
+		}
+		.tip_kucunliang{
+			background: #ff7171;
+			.iconfont{
+				font-size: 25px;
+			}
+		}
+		.tip_zhekouyaopin{
+			background: #ff7171;
+			.iconfont{
+				font-size: 25px;
+				transform:rotate(-35deg);
+			}
+		}
+		.tip_off{
+			font-weight: bold;
+			background:#ff7171;
+		}
+		.tip_stock,
+		.tip_left{
+			background:#f4f4f4;
+			color:#c5c5c5;
+			span{
+				font-size: 20px;
+				color:#333;
+			}
+		}
+	}
+	.li_conter{
+		width: 323px;
+		float: right;
+		overflow: hidden;
+		position: relative;
+		z-index: 4;
+		&:hover .pop:before{
+			transform:translateX(0%);
+		}
+		&:hover .pop:after{
+			transform:translateY(0%);
+		}
+		&:hover{
+			.shop{
+				opacity: 1;
+			}
+		}
+		.pop{
+			&:after{
+				display: block;
+				content: "";
+				width: 100%;
+				height:323px;
+				position: absolute;
+				top:0;
+				left:0;
+				background: red;
+				opacity: 0.3;
+				z-index: 1;
+				filter:alpha(opacity=30);
+				transform:translateY(-100%);
+				transition:all ease-in-out .2s;
+			}
+			&:before{
+				display: block;
+				content: "";
+				text-align: center;
+				font-size: 20px;
+				width: 95px;
+				height: 95px;
+				border:1px solid white;
+				position: absolute;
+				top:35%;
+				left:40%;
+				z-index: 2;
+				transform:translateX(-300%);
+				transition:all ease-in-out .2s;
+			}
+		}
+		.biaoti{
+			width: 320px;
+			height: 28px;
+			overflow: hidden;
+			display: block;
+			font-size: 13px;
+			color: #aaa;
+			margin: 5px auto;
+			text-align: center;
+			&:hover{
+				color:#eeb053;
+			}
+		}
+		.price{
+			color:red;
+			font-size: 24px;
+		}
+		.orig{
+			margin-left: 3px;
+			margin-right: 32px;
+			color:#aaa;
+			font-size: 13px;
+			text-decoration: line-through;
+		}
+		.icon-daojishi{
+			font-size: 30px;
+			margin-right: 5px;
+		}
+		.time{
+			font-size: 16px;
+			letter-spacing: 3px;
+			font-weight: bold;
+			float: right;
+			margin-top: 9px;
+		}
+		.shop{
+			display:block;
+			text-align: center;
+			width: 100px;
+			height: 35px;
+			line-height: 35px;
+			background: black;
+			color:white;
+			position: absolute;
+			top:46%;
+			left: 47%;
+			font-size: 18px;
+			letter-spacing: 2px;
+			opacity:0;
+			filter:alpha(opacity=0);
+			transition:all ease .3s;
+			z-index: 2;
+		}
+	}	
+}
+footer{
+	margin-top: 0;
+}
