@@ -1,3 +1,4 @@
+@import '../components/_form';
 @import '../base/_normalize';
 @import '../widget/color.scss';
 @import '../layout/common.scss';
@@ -5,6 +6,8 @@
 @import '../widget/progress.scss';
 @import '../widget/cart_right.scss';
 @import '../widget/address_form.scss';
+@import "../layout/_layout.scss";
+@import "../widget/buttons.scss";
 
 .colored
 {
@@ -29,6 +32,50 @@
         background: white;
     }
 }
+
+
+.checkInfo {
+    label {
+        font-size: pxToRem(14px);
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        a {
+            text-transform: capitalize;
+            margin-left: 20px;
+            text-decoration: underline;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+        &.selected {
+            background: lighten(#eee, 2%);
+            a {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .input-box {
+        text-align: left;
+        margin: 10px;
+        span {
+            display: inline-block;
+            width: 200px;
+        }
+        input, select {
+            width: 280px;
+            box-sizing: border-box;
+        }
+    }
+    .notice {
+        padding-left: 215px;
+        color: #aaa;
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+}
+
 .address_list
 {
     width: 730px;
