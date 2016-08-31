@@ -7,7 +7,7 @@
 @import '../widget/cart_right.scss';
 @import '../widget/address_form.scss';
 @import "../layout/_layout.scss";
-@import "../widget/buttons.scss";
+@import '../widget/button.scss';
 
 .colored
 {
@@ -85,25 +85,13 @@
     {
         font-style: normal;
     }
-    .clicked
+    .button
     {
-        font-size: 14px;
-        font-weight: bold;
         line-height: 40px;
         display: block;
         width: 300px;
         margin-top: 20px;
         margin-left: 35px;
-        text-align: center;
-        color: white;
-        border-radius: 3px;
-        background: #eeb053;
-        border: 1px solid #eeb035;
-        &:hover{
-            color:#eeb035;
-            border: 1px solid #eeb035;
-            background:white;
-        }
     }
     .contentd
     {

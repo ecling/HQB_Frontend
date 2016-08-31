@@ -2,7 +2,7 @@
 @import "../base/_normalize";
 @import "../widget/color.scss";
 @import "../widget/form";
-@import "../widget/buttons";
+@import "../widget/button.scss";
 @import "../widget/selectDrop";
 @import "../widget/loading";    
 @import "../widget/product";
@@ -279,7 +279,6 @@
             vertical-align:0;
             width: 220px;
             height: 40px;
-            background: red;
             margin-top:10px;
         }
 
@@ -401,23 +400,12 @@
             font-size: 20px;
             color:red;
         }
-        button{
+        .button{
             margin-top:10px;
+            font-size: 12px;
             width:110px;
             height: 20px;
             line-height: 20px;
-            background:#e5941a;
-            text-align: center;
-            border:none;
-            color: white;
-            font-weight: bold;
-            &:hover{
-                transition: all 1s ease;
-                box-shadow:1px 1px 5px #e5941a;
-                -webkit-box-shadow:1px 1px 5px #e5941a;
-                -o-box-shadow:1px 1px 5px #e5941a;
-                -moz-box-shadow:1px 1px 5px #e5941a;
-            }
         }
     }
 }
@@ -810,14 +798,12 @@
     margin-top: 20px;
     border: none;
     padding: 0px !important;
-    .btn {
+    .button{
+        display: inline-block;
         width: 245px;
         height: 30px;
-        background: #eeb053;
-        text-align: center;
-
+        line-height: 30px;
     }
-
     a {
         transition: all 0.2s ease-in-out;
 
@@ -911,10 +897,9 @@
     input, textarea {
         @include inputfocus;
     }
-    .btn{
+    .button{
         width: 245px;
         height: 30px;
-        background:#eeb053;
         margin-left:273px;
         font-size: 16px;
     }
@@ -1078,6 +1063,20 @@
         display: inline-block;
         vertical-align: top;
         width: 210px;
+        .proText{
+            display: block;
+            margin: 10px 0 ;
+        }
+        .proPrice{
+            .cheap{
+                font-size: 16px;
+                color: red;
+            }
+            .orig{
+                margin-left: 5px;
+                text-decoration: line-through;
+            }
+        }
     }
 
     ul {

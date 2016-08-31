@@ -16,7 +16,6 @@
 		.prev{
 			top:200px;
 			left:0;
-
 		}
 	}
 }
@@ -85,7 +84,6 @@
 		filter:alpha(opacity=60);
 		color:black;
 	}
-
 }
 .last{
 	margin-right: 0;
@@ -120,3 +118,19 @@
 	}
 }
 /*addressBook css --end --*/
+
+/*activites css*/
+.wrap{
+	.activties_conter{
+		.pop:after{
+			display: none;
+		}
+		.pop:before{
+			display: none;
+		}
+		.shopnow{
+			display: none;
+		}
+	}
+}
+/*activites css --end--*/

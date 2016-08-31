@@ -4,25 +4,8 @@
 @import "../layout/header.scss";
 @import "../widget/address_form.scss";
 @import "../widget/croppie.scss";
+@import "../widget/button.scss";
 /*common css*/
-.button{
-	background: #eeb053;
-	color:white;
-	text-align: center;
-	font-size: 14px;
-	font-weight: bold;
-	border: 1px solid #eeb053;
-	border-radius: 3px;
-	transition:all .3s ease;
-    -o-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-	&:hover{
-		color:#eeb053;
-		border: 1px solid #eeb053;
-		background: white;
-	}
-}
 select,
 input[type="text"],
 input[type="password"]{

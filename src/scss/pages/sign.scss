@@ -1,4 +1,5 @@
 @import "../widget/color.scss";
+@import "../widget/button.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
@@ -10,12 +11,6 @@ button{
 	display: block;
 	width: 100%;
 	line-height: 35px;
-	color:white;
-	font-size:14px;
-	font-weight: bold;
-	text-align: center;
-	border-radius:3px;
-	cursor: pointer;
 }
 .content{
 	width:960px;
@@ -82,15 +77,7 @@ button{
 	margin-right:175px;
 	position: relative;
 	.sign{
-		text-align: center;
-		background: #f1a42d;
-		border:1px solid #f1a42d;
 		margin-top:50px;
-		&:hover{
-			background:white ;
-			border:1px solid #f1a42d;
-			color:#f1a42d;
-		}
 	}
 	.or{
 		display: block;

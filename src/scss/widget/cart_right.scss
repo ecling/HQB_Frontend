@@ -38,16 +38,10 @@
 		button{
 			width: 98px;
 			line-height: 35px;
-			text-align:center;
 			color:#eeb053;
 			background:white;
-			border:none;
-			border-radius:3px;
-			cursor: pointer;
-			font-size:18px;
 			border:1px solid #eeb053;
 			&:hover{
-				transition: all .5s ease;
 				background: #eeb053;
 				color:white;
 			}
@@ -108,23 +102,8 @@
 		.proceed_to_checkout{
 			width: 100%;
 			height: 40px;
-			background:#df8d0a;
-			color:white;
-			font-size: 14px;
-			font-weight: bold;
-			border:none;
-			border-radius:3px;
 			margin-top:10px;
-			cursor: pointer;
 			line-height: 40px;
-			text-align: center;
-			border:1px solid #eeb053;
-			&:hover{
-				transition: all .5s ease;
-				background:white;
-				color:#eeb053;
-				border:1px solid #eeb053;
-			}
 		}
 		p{
 			font-style: normal;

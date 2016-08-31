@@ -11,6 +11,7 @@
 @import "../widget/page.scss";
 @import "../widget/dropdown.scss";
 @import "../widget/selectDrop.scss";
+@import "../widget/button.scss";
 @import "../layout/footer.scss";
 .header{
     line-height: 30px;
@@ -520,21 +521,8 @@
             display:block;
             width: 180px;
             height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background: red;
-            color: white;
+            line-height: 40px;           
             float: left;
-            border-radius:3px;
-            font-size: 14px;
-            font-weight: bold;
-            border:1px solid transparent;
-            &:hover{
-                transition:all .5s ease;
-                border:1px solid red;
-                background:white;
-                color:red;
-            }
             &+a{
                 display:inline-block;
                 margin-left:20px;
@@ -567,7 +555,7 @@
         margin-right: 0;
     }
     .proItem{
-        margin-right: 20px;
+        margin-right: 20px;      
     }
 }
 /* dress css -- end --*/

@@ -7,7 +7,7 @@ $(document).ready(function(){
             var _top=$("#item"+_index).offset().top;
             $("body,html").animate({scrollTop:_top},500);
         }); 
-        $("#navigationbar>a").click(function(){
+        $(".gotop").click(function(){
             $("html,body").animate({scrollTop:0},500);
             $("#navigationbar ul li").removeClass("beachStyle");
         });
