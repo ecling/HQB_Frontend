@@ -203,6 +203,7 @@
     }
     .countDown{
         font-weight: bold;
+        font-size: 16px;
     }
     .proDetailOption{
         li{
@@ -274,14 +275,6 @@
             font-size:14px;
             color:#818181;
         }
-        button{
-            margin-right:30px;
-            vertical-align:0;
-            width: 220px;
-            height: 40px;
-            margin-top:10px;
-        }
-
     }
 }
 .proDetailSimilar {
@@ -601,13 +594,27 @@
     }
 
     .first {
-        line-height: 120px;
-        text-align: center;
-        background: #c3c3c3;
-        color: white;
-        width: 120px;
+        background: #fffcf7;
+        width: 110px;
         height: 120px;
-        font-size: pxToRem(16px);
+        font-size: pxToRem(12px);
+        padding-left: 10px;
+        span{
+            display: block;
+            margin-bottom: 5px;
+        }
+        .similar{
+            font-size: 28px;
+            color:#F39c11;
+            margin-top: 15px;
+        }
+        .supper{
+            color:#eeb053;
+        }
+        .hot{
+            font-size: 18px;
+             color:#eeb053;
+        }
     }
 }
 
@@ -1052,8 +1059,8 @@
      padding:30px 0;
 
     h3{
-        font-size: pxToRem(16px);
-        width: 160px;
+        font-size: pxToRem(24px);
+        padding-right: 30px;
         background:white;
         position: absolute;
         top:-12px;

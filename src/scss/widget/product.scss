@@ -245,7 +245,6 @@
         display: inline-block;
         font-size: 0px;
         max-width: calc(100% - 50px);
-
         > li {
             display: inline-block;
             margin: 0px 5px 5px 0px;
@@ -307,16 +306,15 @@
     font-size: pxToRem(16px);
     position: relative;
     font-size: 0px;
-    button {
+    .button {
         font-size: pxToRem(14px);
-        width: 135px;
+        width:220px;
         height: 40px;
         margin-right: 10px;
         box-sizing: border-box;
         display: inline-block;
         overflow: hidden;
         cursor: pointer;
-        vertical-align: middle;
         padding: 0px;
         border-radius: 4px;
         background: $basecol;
@@ -332,7 +330,9 @@
         }
 
         &:hover, &.active {
-            background: #f58500;
+            background: white;
+            color:#eeb053;
+            border: 1px solid #eeb053;
         }
 
         &.active {

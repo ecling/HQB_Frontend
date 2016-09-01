@@ -40,9 +40,9 @@
 		text-align: center;
 		border-radius: 35px;
 		margin-right: 30px;
-	}
-	.active{
-		background: #ff7171;
+		&.active{
+			background: #ff7171;
+		}
 	}
 }
 .itme{
@@ -120,6 +120,7 @@
 			.iconfont{
 				font-size: 25px;
 				transform:rotate(-35deg);
+				-webkit-transform:rotate(-35deg);
 			}
 		}
 		.tip_off{
@@ -144,9 +145,11 @@
 		z-index: 4;
 		&:hover .pop:before{
 			transform:translateX(0%);
+			-webkit-transform:translateX(0%);
 		}
 		&:hover .pop:after{
 			transform:translateY(0%);
+			-webkit-transform:translateY(0%);
 		}
 		&:hover{
 			.shop{
@@ -166,8 +169,11 @@
 				opacity: 0.3;
 				z-index: 1;
 				filter:alpha(opacity=30);
+				-webkit-transform:translateY(-100%);
 				transform:translateY(-100%);
+				-webkit-transition:all ease-in-out .2s;
 				transition:all ease-in-out .2s;
+
 			}
 			&:before{
 				display: block;
@@ -182,12 +188,14 @@
 				left:40%;
 				z-index: 2;
 				transform:translateX(-300%);
+				-webkit-transform:translateX(-300%);
 				transition:all ease-in-out .2s;
+				-webkit-transition:all ease-in-out .2s;
 			}
 		}
 		.biaoti{
 			width: 320px;
-			height: 28px;
+			height: 35px;
 			overflow: hidden;
 			display: block;
 			font-size: 13px;
@@ -210,15 +218,20 @@
 			text-decoration: line-through;
 		}
 		.icon-daojishi{
+			display: inline-block;
 			font-size: 30px;
-			margin-right: 5px;
+			height: 30px;
+			width: 30px;
+			 vertical-align: middle;
 		}
 		.time{
+			line-height: 40px;
+			height: 30px;
 			font-size: 16px;
 			letter-spacing: 3px;
 			font-weight: bold;
-			float: right;
-			margin-top: 9px;
+			float: right; 
+			 vertical-align: middle;
 		}
 		.shop{
 			display:block;
@@ -236,6 +249,7 @@
 			opacity:0;
 			filter:alpha(opacity=0);
 			transition:all ease .3s;
+			-webkit-transition:all ease .3s;
 			z-index: 2;
 		}
 	}	
