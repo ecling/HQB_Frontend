@@ -240,7 +240,7 @@
     .numInput{
         input{
             height: 20px;
-            width: 50px;
+            width: 57px;
             border: none;
             text-align: center;
             outline: none;
@@ -277,32 +277,7 @@
         }
     }
 }
-.proDetailSimilar {
-    position: relative;
-    h5{
-        position: absolute;
-        top:-10px;
-        width: 80px;
-        height: 20px;
-        text-align: center;
-        background: white;
-        font-size: 16px;
-        color:#888;
-    }
-    ul{
-        margin-top:40px;
-        border-top: 1px solid #ededed;
-        li{
-            width: 100px;
-            height: 100px;
-            float: left;
-            margin: 15px 5px;
-            img{
-                margin:auto;
-            }
-        }
-    }
-}
+
 /* saveMoney*/
 .saveMoney{
     margin-top:20px;
@@ -542,8 +517,12 @@
 .moreInfoSec{
     padding: 70px;
     >div{
-        padding: 0;
-    }        
+        padding: 0;        
+    } 
+    .moreInfoSec_form{
+        width: 600px;
+        margin:50px auto;
+    }       
 }
 
 .backUp {
@@ -845,17 +824,18 @@
     }
     label {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         > span {
-            color:#003333;
+            color:#aaa;
             width: 260px;
-            text-align: right;
-            margin-right: 10px;
-
-            &:after {
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            &:before {
                 content: "*";
-                margin-left: 5px;
+                margin-right: 5px;
                 color: $red;
                 display: inline-block;
                 vertical-align: middle;
@@ -864,39 +844,36 @@
 
         &:nth-of-type(7) {
             span {
-                &:after {
+                &:before {
                     content: "";
-                    margin-left: 5px;
+
                     display: inline-block;
                     width: 5px;
-
                 }
-            }
-        }
-        &:nth-of-type(8) {
-            span{
-                margin-top:-70px;
             }
         }
     }
 
     span {
-        display: inline-block;
+        display:block;
         vertical-align: middle;
     }
 
     .input-box {
-        display: inline-block;
+        display:block;
         vertical-align: middle;
-        width: 200px;
+        width: 600px;
+        height: 35px;
+        line-height: 35px;
         box-sizing: border-box;
-
         + em {
             margin-left: 20px;
         }
     }
 
     input {
+        height: 35px;
+
         width: 100%;
         box-sizing: border-box;
     }
