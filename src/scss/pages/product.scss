@@ -203,6 +203,7 @@
     }
     .countDown{
         font-weight: bold;
+        font-size: 16px;
     }
     .proDetailOption{
         li{
@@ -239,7 +240,7 @@
     .numInput{
         input{
             height: 20px;
-            width: 50px;
+            width: 57px;
             border: none;
             text-align: center;
             outline: none;
@@ -274,42 +275,9 @@
             font-size:14px;
             color:#818181;
         }
-        button{
-            margin-right:30px;
-            vertical-align:0;
-            width: 220px;
-            height: 40px;
-            margin-top:10px;
-        }
+    }
+}
 
-    }
-}
-.proDetailSimilar {
-    position: relative;
-    h5{
-        position: absolute;
-        top:-10px;
-        width: 80px;
-        height: 20px;
-        text-align: center;
-        background: white;
-        font-size: 16px;
-        color:#888;
-    }
-    ul{
-        margin-top:40px;
-        border-top: 1px solid #ededed;
-        li{
-            width: 100px;
-            height: 100px;
-            float: left;
-            margin: 15px 5px;
-            img{
-                margin:auto;
-            }
-        }
-    }
-}
 /* saveMoney*/
 .saveMoney{
     margin-top:20px;
@@ -549,8 +517,12 @@
 .moreInfoSec{
     padding: 70px;
     >div{
-        padding: 0;
-    }        
+        padding: 0;        
+    } 
+    .moreInfoSec_form{
+        width: 600px;
+        margin:50px auto;
+    }       
 }
 
 .backUp {
@@ -601,13 +573,27 @@
     }
 
     .first {
-        line-height: 120px;
-        text-align: center;
-        background: #c3c3c3;
-        color: white;
-        width: 120px;
+        background: #fffcf7;
+        width: 110px;
         height: 120px;
-        font-size: pxToRem(16px);
+        font-size: pxToRem(12px);
+        padding-left: 10px;
+        span{
+            display: block;
+            margin-bottom: 5px;
+        }
+        .similar{
+            font-size: 28px;
+            color:#F39c11;
+            margin-top: 15px;
+        }
+        .supper{
+            color:#eeb053;
+        }
+        .hot{
+            font-size: 18px;
+             color:#eeb053;
+        }
     }
 }
 
@@ -838,17 +824,18 @@
     }
     label {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         > span {
-            color:#003333;
+            color:#aaa;
             width: 260px;
-            text-align: right;
-            margin-right: 10px;
-
-            &:after {
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            &:before {
                 content: "*";
-                margin-left: 5px;
+                margin-right: 5px;
                 color: $red;
                 display: inline-block;
                 vertical-align: middle;
@@ -857,39 +844,36 @@
 
         &:nth-of-type(7) {
             span {
-                &:after {
+                &:before {
                     content: "";
-                    margin-left: 5px;
+
                     display: inline-block;
                     width: 5px;
-
                 }
-            }
-        }
-        &:nth-of-type(8) {
-            span{
-                margin-top:-70px;
             }
         }
     }
 
     span {
-        display: inline-block;
+        display:block;
         vertical-align: middle;
     }
 
     .input-box {
-        display: inline-block;
+        display:block;
         vertical-align: middle;
-        width: 200px;
+        width: 600px;
+        height: 35px;
+        line-height: 35px;
         box-sizing: border-box;
-
         + em {
             margin-left: 20px;
         }
     }
 
     input {
+        height: 35px;
+
         width: 100%;
         box-sizing: border-box;
     }
@@ -1052,8 +1036,8 @@
      padding:30px 0;
 
     h3{
-        font-size: pxToRem(16px);
-        width: 160px;
+        font-size: pxToRem(24px);
+        padding-right: 30px;
         background:white;
         position: absolute;
         top:-12px;
